@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tablefoodpic"
+    android:paddingTop="0dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/signupBut"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingTop="0dp"
+        android:text="@string/signup"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginBut"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingTop="0dp"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textColorHighlight="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/signupBut"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="450dp"
+        android:layout_height="700dp"
+        android:text="Welcome to Obande Digital Food "
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textColorHighlight="@color/black"
+        android:textSize="90dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

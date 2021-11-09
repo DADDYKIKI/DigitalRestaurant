@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Whiteblue"
+    android:textAlignment="center"
+    tools:context=".PageOne">
+
+    <TextView
+        android:id="@+id/pageOneMenuKey"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/homekeyback"
+        android:text="Menu"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/pageOneomekey"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="228dp"
+        android:background="@drawable/homekeyback"
+        android:text="Home"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toEndOf="@+id/pageOneMenuKey"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/searchLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="@color/Skyblue"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/searchLocation"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pageOneomekey" />
+
+    <TextView
+        android:id="@+id/findRestaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/Skyblue"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/findRestaurants"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchLocation" />
+
+    <TextView
+        android:id="@+id/findDishes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/Skyblue"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/findDishes"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/findRestaurants" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="233dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

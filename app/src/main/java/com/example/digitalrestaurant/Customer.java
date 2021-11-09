@@ -5,15 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class Customer extends AppCompatActivity //implements AdapterView.OnItemSelectedListener
+                                                         {
 
-    TextView loginText,signupText;
+
+    TextView loginText1,signupText1;
+
 
 
 
@@ -22,28 +22,35 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginText= (TextView) findViewById(R.id.loginBut);
-        signupText= (TextView) findViewById(R.id.signupBut);
+        loginText1= (TextView) findViewById(R.id.customerloginBut);
+        signupText1= (TextView) findViewById(R.id.customersignupBut);
+
+       // signupBut= (Button) findViewById(R.id.loginSubBtn);
 
 
-        loginText.setOnClickListener(new View.OnClickListener() {
+
+
+        loginText1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click(LoginPage.class);
+                click1(LoginPage.class);
+
             }
         });
 
-        signupText.setOnClickListener(new View.OnClickListener() {
+        signupText1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click(signupPage.class);
+                click1(SignupPage.class);
             }
         });
 
 
 
 
-        //SignupPage Spinner code
+
+
+     /*   //SignupPage Spinner code
         Spinner spinner1= (Spinner)findViewById(R.id.signupSpinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.locator,
@@ -52,16 +59,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner1.setAdapter(adapter);
         spinner1.setOnItemSelectedListener(this);
 
-
+*/
     }
 
-    public void click(Object x){
+    public void click1(Object x){
         Intent intent=new Intent(this, (Class<?>) x);
 
         startActivity(intent);
 
     }
-
+/*
 
 
     @Override
@@ -73,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
-    }
+    }*/
 }
 
 

@@ -11,6 +11,11 @@
     <string name="login_failed">"Login failed"</string>
     <string name="login">Login</string>
     <string name="signup">Signup</string>
+    <string name="searchLocation">Search Location</string>
+    <string name="findRestaurants">Find Restaurants</string>
+    <string name="findDishes">Find Dishes</string>
+    <string name="menu">Menu</string>
+    <string name="loginsignin">Sign in</string>
 
     <string-array name="locator">
         <item>Nigeria/Lagos</item>

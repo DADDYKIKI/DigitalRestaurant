@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Digital Restaurant</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="searchLocation">Search Location</string>
+    <string name="findRestaurants">Find Restaurants</string>
+    <string name="findDishes">Find Dishes</string>
+    <string name="menu">Menu</string>
+    <string name="loginsignin">Sign in</string>
+
+    <string-array name="locator">
+        <item>Nigeria/Lagos</item>
+        <item>Unite Kingdom/Glasgow</item>
+
+    </string-array>
+
+</resources>

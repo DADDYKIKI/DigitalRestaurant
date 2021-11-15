@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/locationName"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_margin="35dp"
+        android:layout_weight="1"
+        android:background="@drawable/selleruploadbtn"
+        android:paddingLeft="80dp"
+        android:paddingTop="70dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="50dp"
+        android:text="G1"
+        android:textSize="160dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

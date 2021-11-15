@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/towel"
+    tools:context=".FoodSeller">
+
+
+    <TextView
+        android:id="@+id/foodsellerSignupBut"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="28dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingTop="0dp"
+        android:text="@string/signup"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/areYouNewSell"
+        app:layout_constraintTop_toBottomOf="@+id/foodsellerMenuKey" />
+
+    <TextView
+        android:id="@+id/foodSellerloginBut"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="32dp"
+        android:drawablePadding="50dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingTop="0dp"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/customersignupBut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodsellerMenuKey" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="450dp"
+        android:layout_height="500dp"
+        android:editable="false"
+        android:text="Welcome to Obande Digital Food "
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textColorHighlight="@color/black"
+        android:textSize="90dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customersignupBut"
+        tools:ignore="UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/foodsellerMenuKey"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/homekeyback"
+        android:text="Menu"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/areYouNewSell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="60dp"
+        android:text="Are you a new user?"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodSellerloginBut" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

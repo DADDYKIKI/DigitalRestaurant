@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="340dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="7dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/restaurantImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/obandekitchen">
+
+                <TextView
+                    android:id="@+id/restaurantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Obande Kitchen"
+                    android:textAlignment="center"
+                    android:textColor="@color/Red"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="78dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <TextView
+                    android:id="@+id/restaurantLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="G1"
+                    android:textAlignment="center"
+                    android:textColor="@color/Red"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="121dp"
+                    tools:layout_editor_absoluteY="219dp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textAlignment="center"
+                    android:textColor="@color/Red"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:layout_editor_absoluteY="222dp" />
+
+                <TextView
+                    android:id="@+id/restaurantNationality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Nigerian"
+                    android:textAlignment="center"
+                    android:textColor="@color/Red"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="265dp"
+                    tools:layout_editor_absoluteY="229dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

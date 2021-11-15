@@ -8,35 +8,6 @@
     android:textAlignment="center"
     tools:context=".PageOne">
 
-    <TextView
-        android:id="@+id/pageOneomekey"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/homekeyback"
-        android:text="Home"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/pageOneMenuKey"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/homekeyback"
-        android:text="Menu"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
-        app:layout_constraintStart_toEndOf="@+id/pageOneomekey"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -52,6 +23,21 @@
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
+
+                <TextView
+                    android:id="@+id/pageOneMenuKey"
+                    android:layout_width="55dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/restaurantbackground"
+                    android:text="Menu"
+                    android:textAlignment="center"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.044"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/searchLocation"
@@ -118,9 +104,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="0dp" />
+                    tools:layout_editor_absoluteY="16dp" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

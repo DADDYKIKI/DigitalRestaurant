@@ -36,7 +36,6 @@ public class PageOne extends AppCompatActivity {
     RecyclerView recyclerView2;
 
     //Parameters for horizontal Location name display
-
     RecyclerView.Adapter godwinAdaptor3;
     ArrayList<LocationDetails> locationLists;
 
@@ -100,10 +99,10 @@ public class PageOne extends AppCompatActivity {
 
     public ArrayList<RestautantsDetails> populateItemInfo2(){
 
-        restaurantslist.add(new RestautantsDetails("Approko Kitchen","G1","Nigerian"));
-        restaurantslist.add(new RestautantsDetails("Obande Kitchen","L2","Nigerian"));
-        restaurantslist.add(new RestautantsDetails("Ada Restaurant and Bar","L1","Nigerian"));
-        restaurantslist.add(new RestautantsDetails("Stainless","G3","Nigerian"));
+        restaurantslist.add(new RestautantsDetails("Approko Kitchen","G1","Nigerian",R.drawable.aprokokitchen));
+        restaurantslist.add(new RestautantsDetails("Obande Kitchen","L2","Nigerian",R.drawable.obandekitchen));
+        restaurantslist.add(new RestautantsDetails("Ada Restaurant and Bar","L1","Nigerian",R.drawable.adakitchen));
+        restaurantslist.add(new RestautantsDetails("Stainless","G3","Nigerian",R.drawable.silver));
 
         return restaurantslist;
     }
@@ -120,5 +119,6 @@ public class PageOne extends AppCompatActivity {
         locationLists.add(new LocationDetails("R1"));
         locationLists.add(new LocationDetails("S5"));
 
-        return location
+        return locationLists;
+    }
 }

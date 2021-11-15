@@ -10,7 +10,7 @@ public class RestautantsDetails implements Serializable {
 
 
 
-    public RestautantsDetails(String restaurantsName, String restaurantsLocation,String restaurantNationality){//int restaurantImage){
+    public RestautantsDetails(String restaurantsName, String restaurantsLocation,String restaurantNationality,int restaurantImage){
 
         this.restaurantsName=restaurantsName;
         this.restaurantsLocation=restaurantsLocation;

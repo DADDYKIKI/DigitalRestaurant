@@ -43,9 +43,6 @@ public final class ActivityPageOneBinding implements ViewBinding {
   public final TextView pageOneMenuKey;
 
   @NonNull
-  public final TextView pageOneomekey;
-
-  @NonNull
   public final RecyclerView restaurantsRecycler;
 
   @NonNull
@@ -58,9 +55,8 @@ public final class ActivityPageOneBinding implements ViewBinding {
       @NonNull ConstraintLayout constraintLayout, @NonNull ConstraintLayout constraintLayout3,
       @NonNull TextView findDishes, @NonNull TextView findRestaurants,
       @NonNull RecyclerView locationRecycler, @NonNull RecyclerView myRecycler1,
-      @NonNull TextView pageOneMenuKey, @NonNull TextView pageOneomekey,
-      @NonNull RecyclerView restaurantsRecycler, @NonNull ScrollView scrollView2,
-      @NonNull TextView searchLocation) {
+      @NonNull TextView pageOneMenuKey, @NonNull RecyclerView restaurantsRecycler,
+      @NonNull ScrollView scrollView2, @NonNull TextView searchLocation) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
     this.constraintLayout3 = constraintLayout3;
@@ -69,7 +65,6 @@ public final class ActivityPageOneBinding implements ViewBinding {
     this.locationRecycler = locationRecycler;
     this.myRecycler1 = myRecycler1;
     this.pageOneMenuKey = pageOneMenuKey;
-    this.pageOneomekey = pageOneomekey;
     this.restaurantsRecycler = restaurantsRecycler;
     this.scrollView2 = scrollView2;
     this.searchLocation = searchLocation;
@@ -144,12 +139,6 @@ public final class ActivityPageOneBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.pageOneomekey;
-      TextView pageOneomekey = ViewBindings.findChildViewById(rootView, id);
-      if (pageOneomekey == null) {
-        break missingId;
-      }
-
       id = R.id.restaurantsRecycler;
       RecyclerView restaurantsRecycler = ViewBindings.findChildViewById(rootView, id);
       if (restaurantsRecycler == null) {
@@ -170,7 +159,7 @@ public final class ActivityPageOneBinding implements ViewBinding {
 
       return new ActivityPageOneBinding((ConstraintLayout) rootView, constraintLayout,
           constraintLayout3, findDishes, findRestaurants, locationRecycler, myRecycler1,
-          pageOneMenuKey, pageOneomekey, restaurantsRecycler, scrollView2, searchLocation);
+          pageOneMenuKey, restaurantsRecycler, scrollView2, searchLocation);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -39,7 +39,7 @@ public class PageOne extends AppCompatActivity {
     RecyclerView.Adapter godwinAdaptor3;
     ArrayList<LocationDetails> locationLists;
 
-    RecyclerView recyclerView3;
+    RecyclerView recyclerView3;//recycler
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

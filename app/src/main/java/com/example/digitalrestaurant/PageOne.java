@@ -36,10 +36,11 @@ public class PageOne extends AppCompatActivity {
     RecyclerView recyclerView2;
 
     //Parameters for horizontal Location name display
+
     RecyclerView.Adapter godwinAdaptor3;
     ArrayList<LocationDetails> locationLists;
 
-    RecyclerView recyclerView3;//recycler
+    RecyclerView recyclerView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class PageOne extends AppCompatActivity {
 
     public void makeAdaptor(){
 
-        //This codes are for horizontal Scroll
+
 
         recyclerView=findViewById(R.id.myRecycler1);
         recyclerView2=findViewById(R.id.restaurantsRecycler);

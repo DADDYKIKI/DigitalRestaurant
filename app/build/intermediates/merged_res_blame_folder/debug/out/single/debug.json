@@ -120,6 +120,10 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable/addtocartbtn.xml"
     },
     {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable_bordera.xml.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable/bordera.xml"
+    },
+    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
     },

@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/locationName"
-        android:layout_width="wrap_content"
-        android:layout_height="400dp"
-        android:layout_margin="35dp"
-        android:layout_weight="1"
-        android:background="@drawable/selleruploadbtn"
-        android:paddingLeft="80dp"
-        android:paddingTop="70dp"
-        android:paddingRight="50dp"
-        android:paddingBottom="50dp"
-        android:text="G1"
-        android:textSize="160dp"
-        android:textStyle="bold" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="421dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/locationName"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_margin="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/bordera"
+            android:paddingLeft="80dp"
+            android:paddingTop="70dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="50dp"
+            android:text="G1"
+            android:textSize="160dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

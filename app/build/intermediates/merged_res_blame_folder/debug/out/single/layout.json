@@ -16,12 +16,12 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/my_restaurants.xml"
     },
     {
-        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_seller_upload_page.xml",
-        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_seller_upload_page.xml"
-    },
-    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_seller_upload_page.xml",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_seller_upload_page.xml"
     },
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",

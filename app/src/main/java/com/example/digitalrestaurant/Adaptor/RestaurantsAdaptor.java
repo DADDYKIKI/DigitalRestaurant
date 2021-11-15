@@ -59,8 +59,7 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
         holder.restaurantLocation.setText(restaurantslist.get(position).getRestaurantsLocation());
         holder.restaurantNationality.setText(restaurantslist.get(position).getRestaurantNationality());
         holder.restaurantImage.setBackground(ContextCompat.getDrawable(holder.itemView.
-                getContext(),restaurantslist.get(position).getRestaurantImage()));//recycler background image
-
+                getContext(),restaurantslist.get(position).getRestaurantImage()));
 
 
     }

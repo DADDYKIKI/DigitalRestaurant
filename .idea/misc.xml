@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/addtocartbtn.xml" value="0.26979166666666665" />
+        <entry key="app/src/main/res/drawable/border1.xml" value="0.26875" />
+        <entry key="app/src/main/res/drawable/bordera.xml" value="0.1453125" />
         <entry key="app/src/main/res/drawable/homekeyback.xml" value="0.3260416666666667" />
         <entry key="app/src/main/res/drawable/restaurantbackground.xml" value="0.3260416666666667" />
         <entry key="app/src/main/res/drawable/selleruploadbtn.xml" value="0.3260416666666667" />
@@ -14,10 +16,11 @@
         <entry key="app/src/main/res/layout/activity_login_page.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_page1.xml" value="0.2504528985507246" />
-        <entry key="app/src/main/res/layout/activity_page_one.xml" value="0.3866146848602989" />
+        <entry key="app/src/main/res/layout/activity_page_one.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_seller_upload_page.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_signup_page.xml" value="0.245018115942029" />
         <entry key="app/src/main/res/layout/items_display.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/my_ada_restaurant.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/my_locations.xml" value="0.22509057971014493" />
         <entry key="app/src/main/res/layout/my_restaurants.xml" value="0.335" />
         <entry key="app/src/main/res/layout/vertical_scroll.xml" value="0.1875" />

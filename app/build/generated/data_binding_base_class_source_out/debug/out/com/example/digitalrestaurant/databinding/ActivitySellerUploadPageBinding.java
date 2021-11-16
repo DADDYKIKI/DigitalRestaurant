@@ -21,13 +21,13 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView menuKey;
+
+  @NonNull
   public final EditText nameOfItem;
 
   @NonNull
   public final EditText nationalityOfItem;
-
-  @NonNull
-  public final TextView pageOneMenuKey;
 
   @NonNull
   public final TextView pageOneomekey;
@@ -42,14 +42,13 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
   public final TextView selleruploadBtn;
 
   private ActivitySellerUploadPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull EditText nameOfItem, @NonNull EditText nationalityOfItem,
-      @NonNull TextView pageOneMenuKey, @NonNull TextView pageOneomekey,
-      @NonNull EditText pictureOfItem, @NonNull EditText priceOfItem,
-      @NonNull TextView selleruploadBtn) {
+      @NonNull TextView menuKey, @NonNull EditText nameOfItem, @NonNull EditText nationalityOfItem,
+      @NonNull TextView pageOneomekey, @NonNull EditText pictureOfItem,
+      @NonNull EditText priceOfItem, @NonNull TextView selleruploadBtn) {
     this.rootView = rootView;
+    this.menuKey = menuKey;
     this.nameOfItem = nameOfItem;
     this.nationalityOfItem = nationalityOfItem;
-    this.pageOneMenuKey = pageOneMenuKey;
     this.pageOneomekey = pageOneomekey;
     this.pictureOfItem = pictureOfItem;
     this.priceOfItem = priceOfItem;
@@ -83,6 +82,12 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.menuKey;
+      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
+      if (menuKey == null) {
+        break missingId;
+      }
+
       id = R.id.nameOfItem;
       EditText nameOfItem = ViewBindings.findChildViewById(rootView, id);
       if (nameOfItem == null) {
@@ -92,12 +97,6 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
       id = R.id.nationalityOfItem;
       EditText nationalityOfItem = ViewBindings.findChildViewById(rootView, id);
       if (nationalityOfItem == null) {
-        break missingId;
-      }
-
-      id = R.id.pageOneMenuKey;
-      TextView pageOneMenuKey = ViewBindings.findChildViewById(rootView, id);
-      if (pageOneMenuKey == null) {
         break missingId;
       }
 
@@ -125,9 +124,8 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySellerUploadPageBinding((ConstraintLayout) rootView, nameOfItem,
-          nationalityOfItem, pageOneMenuKey, pageOneomekey, pictureOfItem, priceOfItem,
-          selleruploadBtn);
+      return new ActivitySellerUploadPageBinding((ConstraintLayout) rootView, menuKey, nameOfItem,
+          nationalityOfItem, pageOneomekey, pictureOfItem, priceOfItem, selleruploadBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

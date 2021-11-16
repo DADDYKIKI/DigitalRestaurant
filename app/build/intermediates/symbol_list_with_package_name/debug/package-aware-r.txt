@@ -1728,7 +1728,6 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
-id VerticalPrice
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1782,9 +1781,15 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id adaFoodName
+id adaFoodNationality
+id adaPrice
+id adaRecycler1
+id adalabel
+id adarestaurantcard
 id add
+id addToCart
 id addTocar
-id addTocart1
 id alertTitle
 id aligned
 id all
@@ -1912,6 +1917,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id homeKey
 id honorRequest
 id icon
 id icon_group
@@ -1967,6 +1973,7 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id menuKey
 id message
 id middle
 id mini
@@ -2001,7 +2008,6 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
-id myRecycler1
 id nameOfItem
 id nationalityOfItem
 id navigation_header_container
@@ -2019,7 +2025,6 @@ id outline
 id outward
 id packed
 id pageHolder
-id pageOneMenuKey
 id pageOneomekey
 id parallax
 id parent
@@ -2177,6 +2182,7 @@ id username
 id view_offset_helper
 id view_tree_view_model_store_owner
 id visible
+id welcometxt
 id withText
 id withinBounds
 id wrap
@@ -2309,6 +2315,8 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout my_ada_restaurant
+layout my_ada_restaurant_card
 layout my_locations
 layout my_restaurants
 layout notification_action

@@ -39,7 +39,7 @@ public class GodwinAdaptor extends RecyclerView.Adapter<GodwinAdaptor.GodwinView
         public GodwinViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            price=itemView.findViewById(R.id.VerticalPrice);
+            price=itemView.findViewById(R.id.adaPrice);
             name=itemView.findViewById(R.id.jelof1);
             nationality=itemView.findViewById(R.id.nigerian1);
             horizontalImages=itemView.findViewById(R.id.pic1);

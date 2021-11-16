@@ -22,6 +22,9 @@ public final class ActivityPageOneBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final RecyclerView adaRecycler1;
+
+  @NonNull
   public final ConstraintLayout constraintLayout;
 
   @NonNull
@@ -37,10 +40,7 @@ public final class ActivityPageOneBinding implements ViewBinding {
   public final RecyclerView locationRecycler;
 
   @NonNull
-  public final RecyclerView myRecycler1;
-
-  @NonNull
-  public final TextView pageOneMenuKey;
+  public final TextView menuKey;
 
   @NonNull
   public final RecyclerView restaurantsRecycler;
@@ -52,19 +52,19 @@ public final class ActivityPageOneBinding implements ViewBinding {
   public final TextView searchLocation;
 
   private ActivityPageOneBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout constraintLayout, @NonNull ConstraintLayout constraintLayout3,
-      @NonNull TextView findDishes, @NonNull TextView findRestaurants,
-      @NonNull RecyclerView locationRecycler, @NonNull RecyclerView myRecycler1,
-      @NonNull TextView pageOneMenuKey, @NonNull RecyclerView restaurantsRecycler,
+      @NonNull RecyclerView adaRecycler1, @NonNull ConstraintLayout constraintLayout,
+      @NonNull ConstraintLayout constraintLayout3, @NonNull TextView findDishes,
+      @NonNull TextView findRestaurants, @NonNull RecyclerView locationRecycler,
+      @NonNull TextView menuKey, @NonNull RecyclerView restaurantsRecycler,
       @NonNull ScrollView scrollView2, @NonNull TextView searchLocation) {
     this.rootView = rootView;
+    this.adaRecycler1 = adaRecycler1;
     this.constraintLayout = constraintLayout;
     this.constraintLayout3 = constraintLayout3;
     this.findDishes = findDishes;
     this.findRestaurants = findRestaurants;
     this.locationRecycler = locationRecycler;
-    this.myRecycler1 = myRecycler1;
-    this.pageOneMenuKey = pageOneMenuKey;
+    this.menuKey = menuKey;
     this.restaurantsRecycler = restaurantsRecycler;
     this.scrollView2 = scrollView2;
     this.searchLocation = searchLocation;
@@ -97,6 +97,12 @@ public final class ActivityPageOneBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.adaRecycler1;
+      RecyclerView adaRecycler1 = ViewBindings.findChildViewById(rootView, id);
+      if (adaRecycler1 == null) {
+        break missingId;
+      }
+
       id = R.id.constraintLayout;
       ConstraintLayout constraintLayout = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout == null) {
@@ -127,15 +133,9 @@ public final class ActivityPageOneBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.myRecycler1;
-      RecyclerView myRecycler1 = ViewBindings.findChildViewById(rootView, id);
-      if (myRecycler1 == null) {
-        break missingId;
-      }
-
-      id = R.id.pageOneMenuKey;
-      TextView pageOneMenuKey = ViewBindings.findChildViewById(rootView, id);
-      if (pageOneMenuKey == null) {
+      id = R.id.menuKey;
+      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
+      if (menuKey == null) {
         break missingId;
       }
 
@@ -157,9 +157,9 @@ public final class ActivityPageOneBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPageOneBinding((ConstraintLayout) rootView, constraintLayout,
-          constraintLayout3, findDishes, findRestaurants, locationRecycler, myRecycler1,
-          pageOneMenuKey, restaurantsRecycler, scrollView2, searchLocation);
+      return new ActivityPageOneBinding((ConstraintLayout) rootView, adaRecycler1, constraintLayout,
+          constraintLayout3, findDishes, findRestaurants, locationRecycler, menuKey,
+          restaurantsRecycler, scrollView2, searchLocation);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

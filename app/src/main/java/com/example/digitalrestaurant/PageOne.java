@@ -61,7 +61,7 @@ public class PageOne extends AppCompatActivity {
 
 
 
-        recyclerView=findViewById(R.id.myRecycler1);
+        recyclerView=findViewById(R.id.adaRecycler1);
         recyclerView2=findViewById(R.id.restaurantsRecycler);
         recyclerView3=findViewById(R.id.locationRecycler);
 

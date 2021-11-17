@@ -10,10 +10,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.RestaurantsData.RestautantsDetails;
-import com.example.digitalrestaurant.UserData.ItemData;
 
 import java.util.ArrayList;
 
@@ -47,7 +45,7 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
     @NonNull
     @Override
     public RestaurantsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View restaurantView= LayoutInflater.from(parent.getContext()).inflate(R.layout.my_restaurants,parent,false );
+        View restaurantView= LayoutInflater.from(parent.getContext()).inflate(R.layout.restaurant_page_container,parent,false );
         return new RestaurantsAdaptor.RestaurantsViewHolder(restaurantView);
     }
 

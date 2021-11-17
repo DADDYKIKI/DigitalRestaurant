@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptor.LocationDetails.LocationDetails;
 import com.example.digitalrestaurant.R;
-import com.example.digitalrestaurant.UserData.ItemData;
 
 import java.util.ArrayList;
 
@@ -43,7 +42,7 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
         @NonNull
     @Override
     public LocationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View locations= LayoutInflater.from(parent.getContext()).inflate(R.layout.my_locations,parent,false );
+            View locations= LayoutInflater.from(parent.getContext()).inflate(R.layout.my_locations_container,parent,false );
             return new LocationAdaptor.LocationViewHolder(locations);
     }
 

@@ -1,22 +1,35 @@
 package com.example.digitalrestaurant.RestaurantsData;
 
+import com.example.digitalrestaurant.UserData.ItemData;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class RestautantsDetails implements Serializable {
 
     private String restaurantsName, restaurantsLocation,restaurantNationality;
+    ArrayList<ItemData> itemDatalist;
 
     private int restaurantImage;
 
 
 
-    public RestautantsDetails(String restaurantsName, String restaurantsLocation,String restaurantNationality,int restaurantImage){
+    public RestautantsDetails(String restaurantsName, String restaurantsLocation,String restaurantNationality,
+                              int restaurantImage,ArrayList<ItemData> itemDatalist){
 
         this.restaurantsName=restaurantsName;
         this.restaurantsLocation=restaurantsLocation;
         this.restaurantNationality=restaurantNationality;
         this.restaurantImage=restaurantImage;
+        this.itemDatalist=itemDatalist;
+    }
 
+    public ArrayList<ItemData> getItemDatalist() {
+        return itemDatalist;
+    }
+
+    public void setItemDatalist(ArrayList<ItemData> itemDatalist) {
+        this.itemDatalist = itemDatalist;
     }
 
     public int getRestaurantImage() {

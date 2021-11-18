@@ -21,7 +21,7 @@
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="424dp"
+                    android:layout_width="match_parent"
                     android:layout_height="236dp"
                     android:background="@drawable/adakitchen">
 
@@ -29,8 +29,8 @@
                         android:id="@+id/menuKey"
                         android:layout_width="55dp"
                         android:layout_height="30dp"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="28dp"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginTop="24dp"
                         android:background="@drawable/bordera"
                         android:text="Menu"
                         android:textAlignment="center"
@@ -43,7 +43,7 @@
                         android:id="@+id/homeKey"
                         android:layout_width="55dp"
                         android:layout_height="30dp"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="12dp"
                         android:background="@drawable/bordera"
                         android:text="Home"
                         android:textAlignment="center"
@@ -52,20 +52,21 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/menuKey"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.135" />
+                        app:layout_constraintVertical_bias="0.077" />
 
                     <TextView
                         android:id="@+id/welcometxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="156dp"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginTop="132dp"
                         android:text="Welcome to"
                         android:textAlignment="center"
-                        android:textColor="@color/Red"
+                        android:textColor="@color/purple_200"
                         android:textSize="30dp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toStartOf="@+id/adalabel"
-                        app:layout_constraintHorizontal_bias="0.428"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,38 +74,43 @@
                         android:id="@+id/adalabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Aproko Kitchen"
+                        android:layout_marginEnd="16dp"
+                        android:text="Ada Kitchen"
                         android:textAlignment="center"
-                        android:textColor="@color/Red"
+                        android:textColor="@color/purple_200"
                         android:textSize="30dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.8" />
+                        app:layout_constraintVertical_bias="0.673" />
 
                     <TextView
-                        android:id="@+id/obandelocate"
+                        android:id="@+id/Adalocate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="308dp"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="252dp"
+                        android:layout_marginBottom="24dp"
                         android:text="Location"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
-                        android:id="@+id/ObandeRestLocationAdd"
+                        android:id="@+id/AdaRestLocationAdd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="24dp"
                         android:text="G1"
+                        android:textColor="@color/white"
                         android:textSize="20dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.417"
+                        app:layout_constraintHorizontal_bias="0.027"
                         app:layout_constraintStart_toEndOf="@+id/obandelocate" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -114,13 +120,15 @@
                     android:layout_height="match_parent">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/aprokoKitchen"
+                        android:id="@+id/adaKitchen"
                         android:layout_width="match_parent"
                         android:layout_height="500dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -36,7 +36,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
         obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        obandeAdaptor=new PopularDishAdaptor(populateAdaPage());
+        obandeAdaptor=new PopularDishAdaptor(populateObandePage());
 
         obandeRecycler.setAdapter(obandeAdaptor);
 
@@ -44,15 +44,15 @@ public class ObandeKitchen extends AppCompatActivity {
 
     }
 
-    public ArrayList<ItemData> populateAdaPage(){
+    public ArrayList<ItemData> populateObandePage(){
 
 
-        obandeItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
-        obandeItems.add(new ItemData(8,"Rice/Plantain","African" ,R.drawable.jelofplantrain));
-        obandeItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
-        obandeItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
-        obandeItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone));
-        obandeItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic));
+        obandeItems.add(new ItemData(7,"MoiMoi","African" ,R.drawable.obandemoimoi));
+        obandeItems.add(new ItemData(15,"Egusi soup","African" ,R.drawable.obandeegusisoup));
+        obandeItems.add(new ItemData(10,"Fried Rice","African" ,R.drawable.obandefriedrice));
+        obandeItems.add(new ItemData(4,"Chin-Chin","African" ,R.drawable.obandechinchin));
+        obandeItems.add(new ItemData(21,"Fried Rice with goat meat","African" ,R.drawable.friedriceone));
+        obandeItems.add(new ItemData(7,"Pouridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans));
         obandeItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel));
         obandeItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
 

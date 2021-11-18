@@ -1632,7 +1632,14 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f080059
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f08005a
 int drawable abc_textfield_search_material 0x7f08005b
 int drawable abc_vector_test 0x7f08005c
+int drawable adaassortedbear 0x7f0800b4
+int drawable adacatfish 0x7f0800b5
+int drawable adachilledheineken 0x7f0800b6
+int drawable adaguinessbeer 0x7f0800b7
+int drawable adaherobear 0x7f0800b8
 int drawable adakitchen 0x7f08005d
+int drawable adapepersoup 0x7f0800b9
+int drawable adasoftdrinks 0x7f0800ba
 int drawable addtocartbtn 0x7f08005e
 int drawable aprokokitchen 0x7f08005f
 int drawable avd_hide_password 0x7f080060
@@ -1701,7 +1708,13 @@ int drawable notification_template_icon_bg 0x7f08009c
 int drawable notification_template_icon_low_bg 0x7f08009d
 int drawable notification_tile_bg 0x7f08009e
 int drawable notify_panel_notification_icon_bg 0x7f08009f
+int drawable obandechinchin 0x7f0800ae
+int drawable obandeegusisoup 0x7f0800af
+int drawable obandefriedrice 0x7f0800b0
 int drawable obandekitchen 0x7f0800a0
+int drawable obandemeat 0x7f0800b1
+int drawable obandemoimoi 0x7f0800b2
+int drawable obandepouridgebeans 0x7f0800b3
 int drawable poundedyam 0x7f0800a1
 int drawable restaurantbackground 0x7f0800a2
 int drawable selleruploadbtn 0x7f0800a3
@@ -1714,6 +1727,8 @@ int drawable towel 0x7f0800a9
 int drawable ukone 0x7f0800aa
 int drawable uktwo 0x7f0800ab
 int id ALT 0x7f090000
+int id AdaRestLocationAdd 0x7f0901ef
+int id Adalocate 0x7f0901f0
 int id BOTTOM_END 0x7f090001
 int id BOTTOM_START 0x7f090002
 int id CTRL 0x7f090003
@@ -1783,6 +1798,7 @@ int id actions 0x7f090042
 int id activity_chooser_view_content 0x7f090043
 int id adaFoodName 0x7f0901d6
 int id adaFoodNationality 0x7f0901d7
+int id adaKitchen 0x7f0901f1
 int id adaPrice 0x7f0901d8
 int id adalabel 0x7f0901da
 int id adarestaurantcard 0x7f0901db
@@ -2260,6 +2276,7 @@ int layout activity_login 0x7f0c001f
 int layout activity_main 0x7f0c0020
 int layout activity_seller_upload_page 0x7f0c0022
 int layout activity_signup_page 0x7f0c0023
+int layout ada_restaurant_homepage 0x7f0c0084
 int layout all_restaurant_food_container 0x7f0c007b
 int layout aproko_resataurant_homepage 0x7f0c0081
 int layout custom_dialog 0x7f0c0024

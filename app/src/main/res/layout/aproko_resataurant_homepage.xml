@@ -21,9 +21,9 @@
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="424dp"
+                    android:layout_width="match_parent"
                     android:layout_height="236dp"
-                    android:background="@drawable/adakitchen">
+                    android:background="@drawable/aprokokitchen">
 
                     <TextView
                         android:id="@+id/menuKey"

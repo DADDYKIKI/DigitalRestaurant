@@ -1633,7 +1633,14 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable adaassortedbear
+drawable adacatfish
+drawable adachilledheineken
+drawable adaguinessbeer
+drawable adaherobear
 drawable adakitchen
+drawable adapepersoup
+drawable adasoftdrinks
 drawable addtocartbtn
 drawable aprokokitchen
 drawable avd_hide_password
@@ -1702,7 +1709,13 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable obandechinchin
+drawable obandeegusisoup
+drawable obandefriedrice
 drawable obandekitchen
+drawable obandemeat
+drawable obandemoimoi
+drawable obandepouridgebeans
 drawable poundedyam
 drawable restaurantbackground
 drawable selleruploadbtn
@@ -1715,6 +1728,8 @@ drawable towel
 drawable ukone
 drawable uktwo
 id ALT
+id AdaRestLocationAdd
+id Adalocate
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -1784,6 +1799,7 @@ id actions
 id activity_chooser_view_content
 id adaFoodName
 id adaFoodNationality
+id adaKitchen
 id adaPrice
 id adalabel
 id adarestaurantcard
@@ -2261,6 +2277,7 @@ layout activity_login
 layout activity_main
 layout activity_seller_upload_page
 layout activity_signup_page
+layout ada_restaurant_homepage
 layout all_restaurant_food_container
 layout aproko_resataurant_homepage
 layout custom_dialog

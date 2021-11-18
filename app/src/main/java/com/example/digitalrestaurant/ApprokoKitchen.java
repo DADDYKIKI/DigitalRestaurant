@@ -15,11 +15,11 @@ import java.util.ArrayList;
 public class ApprokoKitchen extends AppCompatActivity {
 
 
-    RecyclerView.Adapter allInOneAdaptor;
+    RecyclerView.Adapter aprokoAdaptor;
 
-    RecyclerView allInOneRecycler;
+    RecyclerView aprokoRecycler;
 
-    ArrayList<ItemData> myItems;
+    ArrayList<ItemData> aprokoItems;
 
 
 
@@ -28,20 +28,20 @@ public class ApprokoKitchen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aproko_resataurant_homepage);
 
-        myItems=new ArrayList<ItemData>();
+        aprokoItems=new ArrayList<ItemData>();
         makAllRestaurantAdaptor();
 
     }
 
     public void makAllRestaurantAdaptor(){
 
-        allInOneRecycler =findViewById(R.id.aprokoKitchen);
+        aprokoRecycler =findViewById(R.id.aprokoKitchen);
 
-        allInOneRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        allInOneAdaptor=new PopularDishAdaptor(populateAdaPage());
+        aprokoAdaptor=new PopularDishAdaptor(populateAdaPage());
 
-        allInOneRecycler.setAdapter(allInOneAdaptor);
+        aprokoRecycler.setAdapter(aprokoAdaptor);
 
 
 
@@ -50,16 +50,17 @@ public class ApprokoKitchen extends AppCompatActivity {
     public ArrayList<ItemData> populateAdaPage(){
 
 
-        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
-        myItems.add(new ItemData(8,"Rice/Plantain","Asian" ,R.drawable.jelofplantrain));
-        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
-        myItems.add(new ItemData(15,"Sauce","Asain" ,R.drawable.mixture));
-        myItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone));
-        myItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic));
-        myItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel));
-        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
+        aprokoItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
+        aprokoItems.add(new ItemData(8,"Rice/Plantain","Asian" ,R.drawable.jelofplantrain));
+        aprokoItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
+        aprokoItems.add(new ItemData(15,"Sauce","Asain" ,R.drawable.mixture));
+        aprokoItems.add(new ItemData(15,"Sauce","Asain" ,R.drawable.mixture));
+        aprokoItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone));
+        aprokoItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic));
+        aprokoItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel));
+        aprokoItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
 
-        return myItems;
+        return aprokoItems;
     }
 
 

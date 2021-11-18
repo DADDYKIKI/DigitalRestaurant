@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
 import com.example.digitalrestaurant.Adaptor.PopularDishAdaptor;
 import com.example.digitalrestaurant.Adaptor.LocationAdaptor;
@@ -48,7 +47,7 @@ public class HomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.popular_dish_page);
+        setContentView(R.layout.homepage);
 
         myItems=new ArrayList<ItemData>();
         restaurantslist=new ArrayList<RestautantsDetails>();

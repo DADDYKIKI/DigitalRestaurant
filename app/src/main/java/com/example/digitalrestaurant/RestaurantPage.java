@@ -6,16 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.digitalrestaurant.Adaptor.LocationDetails.LocationDetails;
-import com.example.digitalrestaurant.Adaptor.PopularDishAdaptor;
 import com.example.digitalrestaurant.Adaptor.RestaurantsAdaptor;
-import com.example.digitalrestaurant.RestaurantsData.RestautantsDetails;
-import com.example.digitalrestaurant.UserData.ItemData;
-
-import java.util.ArrayList;
 
 public class RestaurantPage extends AppCompatActivity {
 
@@ -36,7 +29,7 @@ public class RestaurantPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.popular_dish_page);
+        setContentView(R.layout.homepage);
 
         setOnClickListener();
 }

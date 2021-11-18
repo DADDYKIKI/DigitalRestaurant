@@ -1894,8 +1894,6 @@ int id fill 0x7f0900ab
 int id fill_horizontal 0x7f0900ac
 int id fill_vertical 0x7f0900ad
 int id filled 0x7f0900ae
-int id findDishes 0x7f0900af
-int id findRestaurants 0x7f0900b0
 int id fitToContents 0x7f0900b1
 int id fixed 0x7f0900b2
 int id flip 0x7f0900b3
@@ -1918,6 +1916,7 @@ int id hideable 0x7f0900c3
 int id home 0x7f0900c4
 int id homeAsUp 0x7f0900c5
 int id homeKey 0x7f0901dd
+int id homepaglabel 0x7f0901e4
 int id honorRequest 0x7f0900c6
 int id icon 0x7f0900c7
 int id icon_group 0x7f0900c8
@@ -1933,7 +1932,7 @@ int id invisible 0x7f0900d1
 int id inward 0x7f0900d2
 int id italic 0x7f0900d3
 int id item_touch_helper_previous_elevation 0x7f0900d4
-int id jelof1 0x7f0900d5
+int id jelof 0x7f0901e3
 int id jumpToEnd 0x7f0900d6
 int id jumpToStart 0x7f0900d7
 int id labelGroup 0x7f0900d8
@@ -2022,6 +2021,7 @@ int id notification_main_column 0x7f090129
 int id notification_main_column_container 0x7f09012a
 int id off 0x7f09012b
 int id on 0x7f09012c
+int id ourExistence 0x7f0901e8
 int id outline 0x7f09012d
 int id outward 0x7f09012e
 int id packed 0x7f09012f
@@ -2074,7 +2074,6 @@ int id scrollIndicatorUp 0x7f09015e
 int id scrollView 0x7f09015f
 int id scrollView2 0x7f090160
 int id scrollable 0x7f090161
-int id searchLocation 0x7f090162
 int id search_badge 0x7f090163
 int id search_bar 0x7f090164
 int id search_button 0x7f090165
@@ -2149,7 +2148,9 @@ int id textStart 0x7f0901a9
 int id textTop 0x7f0901aa
 int id textView 0x7f0901ab
 int id textView2 0x7f0901d5
+int id textView3 0x7f0901d4
 int id textView4 0x7f0901ac
+int id textView6 0x7f0901e5
 int id text_input_end_icon 0x7f0901ad
 int id text_input_error_icon 0x7f0901ae
 int id text_input_start_icon 0x7f0901af
@@ -2184,6 +2185,7 @@ int id username 0x7f0901cb
 int id view_offset_helper 0x7f0901cc
 int id view_tree_view_model_store_owner 0x7f0901cd
 int id visible 0x7f0901ce
+int id welcome 0x7f0901e9
 int id welcometxt 0x7f0901df
 int id withText 0x7f0901cf
 int id withinBounds 0x7f0901d0
@@ -2275,6 +2277,7 @@ int layout design_navigation_menu 0x7f0c0030
 int layout design_navigation_menu_item 0x7f0c0031
 int layout design_text_input_end_icon 0x7f0c0032
 int layout design_text_input_start_icon 0x7f0c0033
+int layout homepage 0x7f0c0082
 int layout material_chip_input_combo 0x7f0c0035
 int layout material_clock_display 0x7f0c0036
 int layout material_clock_display_divider 0x7f0c0037
@@ -2324,7 +2327,6 @@ int layout notification_template_custom_big 0x7f0c0063
 int layout notification_template_icon_group 0x7f0c0064
 int layout notification_template_part_chronometer 0x7f0c0065
 int layout notification_template_part_time 0x7f0c0066
-int layout popular_dish_page 0x7f0c007e
 int layout popular_food_display_container 0x7f0c007f
 int layout restaurant_page_container 0x7f0c0080
 int layout select_dialog_item_material 0x7f0c0067

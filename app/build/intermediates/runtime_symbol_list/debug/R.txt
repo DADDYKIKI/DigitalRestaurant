@@ -1720,6 +1720,7 @@ int id CTRL 0x7f090003
 int id FUNCTION 0x7f090004
 int id META 0x7f090005
 int id NO_DEBUG 0x7f090006
+int id ObandeRestLocationAdd 0x7f0901ea
 int id SHIFT 0x7f090007
 int id SHOW_ALL 0x7f090008
 int id SHOW_PATH 0x7f090009
@@ -1791,11 +1792,10 @@ int id addTocar 0x7f090045
 int id alertTitle 0x7f090047
 int id aligned 0x7f090048
 int id all 0x7f090049
-int id allInOneContainer 0x7f0901e2
-int id allRestLocation 0x7f0901e0
 int id always 0x7f09004a
 int id animateToEnd 0x7f09004b
 int id animateToStart 0x7f09004c
+int id aprokoKitchen 0x7f0901eb
 int id areYouNewSell 0x7f09004d
 int id asConfigured 0x7f09004e
 int id async 0x7f09004f
@@ -1947,7 +1947,6 @@ int id linear 0x7f0900e0
 int id listMode 0x7f0900e1
 int id list_item 0x7f0900e2
 int id loading 0x7f0900e3
-int id locate 0x7f0901e1
 int id locationName 0x7f0900e4
 int id locationRecycler 0x7f0900e5
 int id login 0x7f0900e6
@@ -2019,6 +2018,8 @@ int id normal 0x7f090127
 int id notification_background 0x7f090128
 int id notification_main_column 0x7f090129
 int id notification_main_column_container 0x7f09012a
+int id obandeKitchen 0x7f0901ec
+int id obandelocate 0x7f0901ed
 int id off 0x7f09012b
 int id on 0x7f09012c
 int id ourExistence 0x7f0901e8
@@ -2327,6 +2328,7 @@ int layout notification_template_custom_big 0x7f0c0063
 int layout notification_template_icon_group 0x7f0c0064
 int layout notification_template_part_chronometer 0x7f0c0065
 int layout notification_template_part_time 0x7f0c0066
+int layout obande_restaurant_homepage 0x7f0c0083
 int layout popular_food_display_container 0x7f0c007f
 int layout restaurant_page_container 0x7f0c0080
 int layout select_dialog_item_material 0x7f0c0067

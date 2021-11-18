@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.digitalrestaurant.Adaptor.LocationDetails.LocationDetails;
+import com.example.digitalrestaurant.LocationDetails.LocationDetails;
 import com.example.digitalrestaurant.R;
 
 import java.util.ArrayList;

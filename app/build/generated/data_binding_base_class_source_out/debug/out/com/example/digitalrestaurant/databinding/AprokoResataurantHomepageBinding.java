@@ -23,13 +23,13 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final TextView ObandeRestLocationAdd;
+
+  @NonNull
   public final TextView adalabel;
 
   @NonNull
-  public final RecyclerView allInOneContainer;
-
-  @NonNull
-  public final TextView allRestLocation;
+  public final RecyclerView aprokoKitchen;
 
   @NonNull
   public final ConstraintLayout constraintLayout3;
@@ -38,10 +38,10 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
   public final TextView homeKey;
 
   @NonNull
-  public final TextView locate;
+  public final TextView menuKey;
 
   @NonNull
-  public final TextView menuKey;
+  public final TextView obandelocate;
 
   @NonNull
   public final ScrollView scrollView2;
@@ -50,18 +50,18 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
   public final TextView welcometxt;
 
   private AprokoResataurantHomepageBinding(@NonNull LinearLayout rootView,
-      @NonNull TextView adalabel, @NonNull RecyclerView allInOneContainer,
-      @NonNull TextView allRestLocation, @NonNull ConstraintLayout constraintLayout3,
-      @NonNull TextView homeKey, @NonNull TextView locate, @NonNull TextView menuKey,
+      @NonNull TextView ObandeRestLocationAdd, @NonNull TextView adalabel,
+      @NonNull RecyclerView aprokoKitchen, @NonNull ConstraintLayout constraintLayout3,
+      @NonNull TextView homeKey, @NonNull TextView menuKey, @NonNull TextView obandelocate,
       @NonNull ScrollView scrollView2, @NonNull TextView welcometxt) {
     this.rootView = rootView;
+    this.ObandeRestLocationAdd = ObandeRestLocationAdd;
     this.adalabel = adalabel;
-    this.allInOneContainer = allInOneContainer;
-    this.allRestLocation = allRestLocation;
+    this.aprokoKitchen = aprokoKitchen;
     this.constraintLayout3 = constraintLayout3;
     this.homeKey = homeKey;
-    this.locate = locate;
     this.menuKey = menuKey;
+    this.obandelocate = obandelocate;
     this.scrollView2 = scrollView2;
     this.welcometxt = welcometxt;
   }
@@ -93,21 +93,21 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.ObandeRestLocationAdd;
+      TextView ObandeRestLocationAdd = ViewBindings.findChildViewById(rootView, id);
+      if (ObandeRestLocationAdd == null) {
+        break missingId;
+      }
+
       id = R.id.adalabel;
       TextView adalabel = ViewBindings.findChildViewById(rootView, id);
       if (adalabel == null) {
         break missingId;
       }
 
-      id = R.id.allInOneContainer;
-      RecyclerView allInOneContainer = ViewBindings.findChildViewById(rootView, id);
-      if (allInOneContainer == null) {
-        break missingId;
-      }
-
-      id = R.id.allRestLocation;
-      TextView allRestLocation = ViewBindings.findChildViewById(rootView, id);
-      if (allRestLocation == null) {
+      id = R.id.aprokoKitchen;
+      RecyclerView aprokoKitchen = ViewBindings.findChildViewById(rootView, id);
+      if (aprokoKitchen == null) {
         break missingId;
       }
 
@@ -123,15 +123,15 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.locate;
-      TextView locate = ViewBindings.findChildViewById(rootView, id);
-      if (locate == null) {
-        break missingId;
-      }
-
       id = R.id.menuKey;
       TextView menuKey = ViewBindings.findChildViewById(rootView, id);
       if (menuKey == null) {
+        break missingId;
+      }
+
+      id = R.id.obandelocate;
+      TextView obandelocate = ViewBindings.findChildViewById(rootView, id);
+      if (obandelocate == null) {
         break missingId;
       }
 
@@ -147,9 +147,9 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new AprokoResataurantHomepageBinding((LinearLayout) rootView, adalabel,
-          allInOneContainer, allRestLocation, constraintLayout3, homeKey, locate, menuKey,
-          scrollView2, welcometxt);
+      return new AprokoResataurantHomepageBinding((LinearLayout) rootView, ObandeRestLocationAdd,
+          adalabel, aprokoKitchen, constraintLayout3, homeKey, menuKey, obandelocate, scrollView2,
+          welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

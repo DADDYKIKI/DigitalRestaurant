@@ -31,7 +31,10 @@
             android:name="com.example.digitalrestaurant.HomePage"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.AllInOneKitchen"
+            android:name="com.example.digitalrestaurant.ApprokoKitchen"
+            android:exported="false" />
+        <activity
+            android:name="com.example.digitalrestaurant.ObandeKitchen"
             android:exported="false" />
         <activity
             android:name="com.example.digitalrestaurant.SignupPage"

@@ -22,7 +22,10 @@
             android:name=".HomePage"
             android:exported="false" />
         <activity
-            android:name=".AllInOneKitchen"
+            android:name=".ApprokoKitchen"
+            android:exported="false" />
+        <activity
+            android:name=".ObandeKitchen"
             android:exported="false" />
         <activity
             android:name=".SignupPage"

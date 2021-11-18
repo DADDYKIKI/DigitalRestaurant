@@ -1721,6 +1721,7 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id ObandeRestLocationAdd
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1792,11 +1793,10 @@ id addTocar
 id alertTitle
 id aligned
 id all
-id allInOneContainer
-id allRestLocation
 id always
 id animateToEnd
 id animateToStart
+id aprokoKitchen
 id areYouNewSell
 id asConfigured
 id async
@@ -1948,7 +1948,6 @@ id linear
 id listMode
 id list_item
 id loading
-id locate
 id locationName
 id locationRecycler
 id login
@@ -2020,6 +2019,8 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id obandeKitchen
+id obandelocate
 id off
 id on
 id ourExistence
@@ -2328,6 +2329,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout obande_restaurant_homepage
 layout popular_food_display_container
 layout restaurant_page_container
 layout select_dialog_item_material

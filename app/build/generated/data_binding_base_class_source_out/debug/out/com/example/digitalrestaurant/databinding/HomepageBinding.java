@@ -22,9 +22,6 @@ public final class HomepageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final RecyclerView allInOneContainer;
-
-  @NonNull
   public final ConstraintLayout constraintLayout;
 
   @NonNull
@@ -35,6 +32,9 @@ public final class HomepageBinding implements ViewBinding {
 
   @NonNull
   public final TextView menuKey;
+
+  @NonNull
+  public final RecyclerView obandeKitchen;
 
   @NonNull
   public final TextView ourExistence;
@@ -52,17 +52,17 @@ public final class HomepageBinding implements ViewBinding {
   public final TextView welcome;
 
   private HomepageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView allInOneContainer, @NonNull ConstraintLayout constraintLayout,
-      @NonNull ConstraintLayout constraintLayout3, @NonNull RecyclerView locationRecycler,
-      @NonNull TextView menuKey, @NonNull TextView ourExistence,
+      @NonNull ConstraintLayout constraintLayout, @NonNull ConstraintLayout constraintLayout3,
+      @NonNull RecyclerView locationRecycler, @NonNull TextView menuKey,
+      @NonNull RecyclerView obandeKitchen, @NonNull TextView ourExistence,
       @NonNull RecyclerView restaurantsRecycler, @NonNull ScrollView scrollView2,
       @NonNull TextView textView6, @NonNull TextView welcome) {
     this.rootView = rootView;
-    this.allInOneContainer = allInOneContainer;
     this.constraintLayout = constraintLayout;
     this.constraintLayout3 = constraintLayout3;
     this.locationRecycler = locationRecycler;
     this.menuKey = menuKey;
+    this.obandeKitchen = obandeKitchen;
     this.ourExistence = ourExistence;
     this.restaurantsRecycler = restaurantsRecycler;
     this.scrollView2 = scrollView2;
@@ -97,12 +97,6 @@ public final class HomepageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.allInOneContainer;
-      RecyclerView allInOneContainer = ViewBindings.findChildViewById(rootView, id);
-      if (allInOneContainer == null) {
-        break missingId;
-      }
-
       id = R.id.constraintLayout;
       ConstraintLayout constraintLayout = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout == null) {
@@ -124,6 +118,12 @@ public final class HomepageBinding implements ViewBinding {
       id = R.id.menuKey;
       TextView menuKey = ViewBindings.findChildViewById(rootView, id);
       if (menuKey == null) {
+        break missingId;
+      }
+
+      id = R.id.obandeKitchen;
+      RecyclerView obandeKitchen = ViewBindings.findChildViewById(rootView, id);
+      if (obandeKitchen == null) {
         break missingId;
       }
 
@@ -157,9 +157,9 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new HomepageBinding((ConstraintLayout) rootView, allInOneContainer, constraintLayout,
-          constraintLayout3, locationRecycler, menuKey, ourExistence, restaurantsRecycler,
-          scrollView2, textView6, welcome);
+      return new HomepageBinding((ConstraintLayout) rootView, constraintLayout, constraintLayout3,
+          locationRecycler, menuKey, obandeKitchen, ourExistence, restaurantsRecycler, scrollView2,
+          textView6, welcome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

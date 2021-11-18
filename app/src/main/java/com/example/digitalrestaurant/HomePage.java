@@ -11,7 +11,7 @@ import android.view.View;
 
 import com.example.digitalrestaurant.Adaptor.PopularDishAdaptor;
 import com.example.digitalrestaurant.Adaptor.LocationAdaptor;
-import com.example.digitalrestaurant.Adaptor.LocationDetails.LocationDetails;
+import com.example.digitalrestaurant.LocationDetails.LocationDetails;
 import com.example.digitalrestaurant.Adaptor.RestaurantsAdaptor;
 import com.example.digitalrestaurant.RestaurantsData.RestautantsDetails;
 import com.example.digitalrestaurant.UserData.ItemData;
@@ -70,7 +70,7 @@ public class HomePage extends AppCompatActivity {
         setMyOnclickListener();
 
 
-        recyclerView=findViewById(R.id.allInOneContainer);
+        recyclerView=findViewById(R.id.obandeKitchen);
         recyclerView2=findViewById(R.id.restaurantsRecycler);
         recyclerView3=findViewById(R.id.locationRecycler);
 
@@ -96,8 +96,8 @@ public class HomePage extends AppCompatActivity {
         AllInOneListener2=new RestaurantsAdaptor.AllInOneRecyclerViewListener() {
             @Override
             public void onClickMe(View v, int position) {
-                Intent intent =new Intent(getApplicationContext(), AllInOneKitchen.class);
-                //Intent intent2 =new Intent(getApplicationContext(), AllInOneKitchen.class);
+                Intent intent =new Intent(getApplicationContext(), ApprokoKitchen.class);
+                Intent intent2 =new Intent(getApplicationContext(), ObandeKitchen.class);
 
                 intent.putExtra("name",restaurantslist.get(position).getRestaurantsName());
                 intent.putExtra("location",restaurantslist.get(position).getRestaurantsLocation());
@@ -106,6 +106,11 @@ public class HomePage extends AppCompatActivity {
                 if(restaurantslist.get(position).getRestaurantsName().equals("Approko Kitchen")){
 
                     startActivity(intent);
+                }
+
+               else if(restaurantslist.get(position).getRestaurantsName().equals("Obande Kitchen")){
+
+                   startActivity(intent2);
                 }
 
 

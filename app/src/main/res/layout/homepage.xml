@@ -79,7 +79,7 @@
                 android:layout_height="300dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/allInOneContainer"
+                    android:id="@+id/obandeKitchen"
                     android:layout_width="417dp"
                     android:layout_height="296dp"
                     app:layout_constraintBottom_toBottomOf="parent"

@@ -1,4 +1,4 @@
-package com.example.digitalrestaurant.Adaptor.LocationDetails;
+package com.example.digitalrestaurant.LocationDetails;
 
 import java.io.Serializable;
 

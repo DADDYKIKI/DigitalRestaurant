@@ -38,7 +38,7 @@ public class RestaurantPage extends AppCompatActivity {
         listener = new RestaurantsAdaptor.AllInOneRecyclerViewListener() {
             @Override
             public void onClickMe(View v, int position) {
-                startActivity(new Intent(getApplicationContext(), AllInOneKitchen.class));
+                startActivity(new Intent(getApplicationContext(), ApprokoKitchen.class));
 
 
             }

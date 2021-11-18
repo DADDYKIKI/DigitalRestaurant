@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/eatingchicken"
     android:textAlignment="center"
-    tools:context=".PopularDish">
+    tools:context=".HomePage">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -100,7 +100,7 @@
                 android:layout_height="300dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/adaRecycler1"
+                    android:id="@+id/allInOneContainer"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     app:layout_constraintEnd_toEndOf="parent"

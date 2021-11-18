@@ -100,12 +100,12 @@ ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/mai
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:20:13-37
 	android:name
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:19:13-37
-activity#com.example.digitalrestaurant.PopularDish
+activity#com.example.digitalrestaurant.HomePage
 ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:21:9-23:40
 	android:exported
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:22:13-40
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:22:13-37
 activity#com.example.digitalrestaurant.SignupPage
 ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:24:9-26:40
 	android:exported

@@ -22,7 +22,7 @@ public final class PopularDishPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final RecyclerView adaRecycler1;
+  public final RecyclerView allInOneContainer;
 
   @NonNull
   public final ConstraintLayout constraintLayout;
@@ -52,13 +52,13 @@ public final class PopularDishPageBinding implements ViewBinding {
   public final TextView searchLocation;
 
   private PopularDishPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView adaRecycler1, @NonNull ConstraintLayout constraintLayout,
+      @NonNull RecyclerView allInOneContainer, @NonNull ConstraintLayout constraintLayout,
       @NonNull ConstraintLayout constraintLayout3, @NonNull TextView findDishes,
       @NonNull TextView findRestaurants, @NonNull RecyclerView locationRecycler,
       @NonNull TextView menuKey, @NonNull RecyclerView restaurantsRecycler,
       @NonNull ScrollView scrollView2, @NonNull TextView searchLocation) {
     this.rootView = rootView;
-    this.adaRecycler1 = adaRecycler1;
+    this.allInOneContainer = allInOneContainer;
     this.constraintLayout = constraintLayout;
     this.constraintLayout3 = constraintLayout3;
     this.findDishes = findDishes;
@@ -97,9 +97,9 @@ public final class PopularDishPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.adaRecycler1;
-      RecyclerView adaRecycler1 = ViewBindings.findChildViewById(rootView, id);
-      if (adaRecycler1 == null) {
+      id = R.id.allInOneContainer;
+      RecyclerView allInOneContainer = ViewBindings.findChildViewById(rootView, id);
+      if (allInOneContainer == null) {
         break missingId;
       }
 
@@ -157,9 +157,9 @@ public final class PopularDishPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new PopularDishPageBinding((ConstraintLayout) rootView, adaRecycler1, constraintLayout,
-          constraintLayout3, findDishes, findRestaurants, locationRecycler, menuKey,
-          restaurantsRecycler, scrollView2, searchLocation);
+      return new PopularDishPageBinding((ConstraintLayout) rootView, allInOneContainer,
+          constraintLayout, constraintLayout3, findDishes, findRestaurants, locationRecycler,
+          menuKey, restaurantsRecycler, scrollView2, searchLocation);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -32,7 +32,7 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (loginEmail.getText().toString().equals(email)&&loginPass.getText().toString().equals(password)){
-                click2(PopularDish.class);
+                click2(HomePage.class);
 
                     setTextInvisible(v);
 

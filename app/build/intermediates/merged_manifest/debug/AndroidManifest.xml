@@ -28,7 +28,7 @@
             android:name="com.example.digitalrestaurant.Customer"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.PopularDish"
+            android:name="com.example.digitalrestaurant.HomePage"
             android:exported="false" />
         <activity
             android:name="com.example.digitalrestaurant.SignupPage"

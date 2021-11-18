@@ -19,7 +19,7 @@
             android:name=".Customer"
             android:exported="false" />
         <activity
-            android:name=".PopularDish"
+            android:name=".HomePage"
             android:exported="false" />
         <activity
             android:name=".SignupPage"

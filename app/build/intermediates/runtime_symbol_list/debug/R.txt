@@ -1783,7 +1783,6 @@ int id activity_chooser_view_content 0x7f090043
 int id adaFoodName 0x7f0901d6
 int id adaFoodNationality 0x7f0901d7
 int id adaPrice 0x7f0901d8
-int id adaRecycler1 0x7f0901d9
 int id adalabel 0x7f0901da
 int id adarestaurantcard 0x7f0901db
 int id add 0x7f090044
@@ -1792,6 +1791,8 @@ int id addTocar 0x7f090045
 int id alertTitle 0x7f090047
 int id aligned 0x7f090048
 int id all 0x7f090049
+int id allInOneContainer 0x7f0901e2
+int id allRestLocation 0x7f0901e0
 int id always 0x7f09004a
 int id animateToEnd 0x7f09004b
 int id animateToStart 0x7f09004c
@@ -1947,6 +1948,7 @@ int id linear 0x7f0900e0
 int id listMode 0x7f0900e1
 int id list_item 0x7f0900e2
 int id loading 0x7f0900e3
+int id locate 0x7f0901e1
 int id locationName 0x7f0900e4
 int id locationRecycler 0x7f0900e5
 int id login 0x7f0900e6

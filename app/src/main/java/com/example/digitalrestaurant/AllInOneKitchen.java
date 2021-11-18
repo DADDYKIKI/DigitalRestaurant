@@ -6,55 +6,107 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.digitalrestaurant.Adaptor.AllInOneKitchenAdaptor;
+
+import com.example.digitalrestaurant.Adaptor.PopularDishAdaptor;
+import com.example.digitalrestaurant.RestaurantsData.RestautantsDetails;
+import com.example.digitalrestaurant.UserData.ItemData;
 
 import java.util.ArrayList;
 
 public class AllInOneKitchen extends AppCompatActivity {
 
-    ArrayList<AllInOneKitchenData> allInOneKitchenDatalist;
 
-    RecyclerView.Adapter adaAdaptor;
+    RecyclerView.Adapter allInOneAdaptor;
 
-    RecyclerView adaRecycler;
+    RecyclerView allInOneRecycler;
+
+    ArrayList<ItemData> myItems;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.all_restaurant_page);
 
-        allInOneKitchenDatalist =new ArrayList<AllInOneKitchenData>();
+        myItems=new ArrayList<ItemData>();
+        makAllRestaurantAdaptor();
+
+    }
+
+    public void makAllRestaurantAdaptor(){
+
+        allInOneRecycler =findViewById(R.id.allInOneContainer);
+
+        allInOneRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+
+        allInOneAdaptor=new PopularDishAdaptor(populateAdaPage());
+
+        allInOneRecycler.setAdapter(allInOneAdaptor);
+
 
 
     }
 
-    public void makeAdaAdaptor(){
-
-        adaRecycler =findViewById(R.id.adaRecycler1);
-
-        adaRecycler .setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-
-        adaAdaptor=new AllInOneKitchenAdaptor(populateAdaPageWithData());
-
-        adaRecycler.setAdapter(adaAdaptor);
+    public ArrayList<ItemData> populateAdaPage(){
 
 
+        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
+        myItems.add(new ItemData(8,"Rice/Plantain","African" ,R.drawable.jelofplantrain));
+        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
+        myItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone));
+        myItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic));
+        myItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel));
+        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
 
+        return myItems;
     }
 
-    public ArrayList<AllInOneKitchenData> populateAdaPageWithData(){
+    public ArrayList<ItemData> populateObandePage(){
 
-        allInOneKitchenDatalist.add(new AllInOneKitchenData(12,"Meat","European" ,R.drawable.justmeats));
-        allInOneKitchenDatalist.add(new AllInOneKitchenData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain));
-        allInOneKitchenDatalist.add(new AllInOneKitchenData(4,"Hot Dog","European" ,R.drawable.uktwo));
-        allInOneKitchenDatalist.add(new AllInOneKitchenData(15,"Sauce","European" ,R.drawable.mixture));
-        allInOneKitchenDatalist.add(new AllInOneKitchenData(21,"Fried Rice","European" ,R.drawable.friedriceone));
-        allInOneKitchenDatalist.add(new AllInOneKitchenData(7,"Assorted meats","European" ,R.drawable.tablefoodpic));
-        allInOneKitchenDatalist.add(new AllInOneKitchenData(10,"Pounded Yam","European" ,R.drawable.towel));
-        allInOneKitchenDatalist.add(new AllInOneKitchenData(12,"Hot Dog++","European" ,R.drawable.uktwo));
 
-        return allInOneKitchenDatalist;
+        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
+        myItems.add(new ItemData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain));
+        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
+        myItems.add(new ItemData(21,"Fried Rice","European" ,R.drawable.friedriceone));
+        myItems.add(new ItemData(7,"Assorted meats","European" ,R.drawable.tablefoodpic));
+        myItems.add(new ItemData(10,"Pounded Yam","European" ,R.drawable.towel));
+        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
 
+        return myItems;
     }
+
+    public ArrayList<ItemData> populateAprokoPage(){
+
+
+        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
+        myItems.add(new ItemData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain));
+        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
+        myItems.add(new ItemData(21,"Fried Rice","European" ,R.drawable.friedriceone));
+        myItems.add(new ItemData(7,"Assorted meats","European" ,R.drawable.tablefoodpic));
+        myItems.add(new ItemData(10,"Pounded Yam","European" ,R.drawable.towel));
+        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
+
+        return myItems;
     }
+
+    public ArrayList<ItemData> populateStainlessPage(){
+
+
+        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
+        myItems.add(new ItemData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain));
+        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
+        myItems.add(new ItemData(21,"Fried Rice","European" ,R.drawable.friedriceone));
+        myItems.add(new ItemData(7,"Assorted meats","European" ,R.drawable.tablefoodpic));
+        myItems.add(new ItemData(10,"Pounded Yam","European" ,R.drawable.towel));
+        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
+
+        return myItems;
+    }
+
+
+}

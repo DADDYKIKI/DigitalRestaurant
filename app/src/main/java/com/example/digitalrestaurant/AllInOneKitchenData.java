@@ -12,6 +12,13 @@ public class AllInOneKitchenData implements Serializable {
     ArrayList<ItemData> itemDatalist;
 
 
+    public AllInOneKitchenData(int foodPrice,  String foodName, String foodNationality,int foodImage) {
+        this.foodPrice = foodPrice;
+        this.foodImage = foodImage;
+        this.foodName = foodName;
+        this.foodNationality = foodNationality;
+    }
+
     public AllInOneKitchenData(int foodPrice, int foodImage, String foodName, String foodNationality,
                                String kichenName, String kitchenLocation, ArrayList<ItemData> itemDatalist) {
         this.foodPrice = foodPrice;
@@ -22,6 +29,8 @@ public class AllInOneKitchenData implements Serializable {
         this.kitchenLocation = kitchenLocation;
         this.itemDatalist = itemDatalist;
     }
+
+
 
     public int getFoodPrice() {
         return foodPrice;

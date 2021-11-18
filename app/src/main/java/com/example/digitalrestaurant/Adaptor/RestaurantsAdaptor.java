@@ -19,27 +19,39 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
 
     ArrayList<RestautantsDetails> restaurantslist;
 
-    public RestaurantsAdaptor(ArrayList<RestautantsDetails> restaurantslist) {
+    AllInOneRecyclerViewListener listener;
+
+    public RestaurantsAdaptor(ArrayList<RestautantsDetails> restaurantslist,AllInOneRecyclerViewListener listener) {
         this.restaurantslist = restaurantslist;
+        this.listener=listener;
         // this.context = context;
 
     }
 
 
 
-    public class RestaurantsViewHolder extends RecyclerView.ViewHolder {
+    public class RestaurantsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView restaurantName,restaurantLocation,restaurantNationality;
         ConstraintLayout restaurantImage;
 
         public RestaurantsViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            itemView.setOnClickListener(this);
+
+
             restaurantName = itemView.findViewById(R.id.restaurantName);
             restaurantLocation = itemView.findViewById(R.id.restaurantLocation);
             restaurantNationality=itemView.findViewById(R.id.restaurantNationality);
             restaurantImage=itemView.findViewById(R.id.restaurantImage);
         }
-            }
+
+        @Override
+        public void onClick(View v) {
+
+        }
+    }
 
 
     @NonNull
@@ -66,6 +78,12 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
             public int getItemCount() {
                 return restaurantslist.size();
             }
+
+    public interface AllInOneRecyclerViewListener{
+
+        void onClickMe(View v, int position);
+
+    }
 
 
 }

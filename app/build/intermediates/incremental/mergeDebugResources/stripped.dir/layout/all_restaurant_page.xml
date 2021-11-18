@@ -56,7 +56,7 @@
                         android:id="@+id/welcometxt"
                         android:layout_width="wrap_content"
                         android:layout_height="33dp"
-                        android:layout_marginTop="148dp"
+                        android:layout_marginTop="120dp"
                         android:text="Welcome to"
                         android:textAlignment="center"
                         android:textColor="@color/purple_700"
@@ -73,13 +73,37 @@
                         android:layout_height="wrap_content"
                         android:text="Ada Kitchen"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/Red"
                         android:textSize="30dp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintHorizontal_bias="0.975"
                         app:layout_constraintStart_toStartOf="parent"
-                        tools:layout_editor_absoluteY="148dp" />
+                        tools:layout_editor_absoluteY="121dp" />
+
+                    <TextView
+                        android:id="@+id/locate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="308dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Location"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/allRestLocation"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="G1"
+                        android:textSize="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.417"
+                        app:layout_constraintStart_toEndOf="@+id/locate" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -88,7 +112,7 @@
                     android:layout_height="match_parent">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/adaRecycler1"
+                        android:id="@+id/allInOneContainer"
                         android:layout_width="match_parent"
                         android:layout_height="500dp"
                         app:layout_constraintBottom_toBottomOf="parent"

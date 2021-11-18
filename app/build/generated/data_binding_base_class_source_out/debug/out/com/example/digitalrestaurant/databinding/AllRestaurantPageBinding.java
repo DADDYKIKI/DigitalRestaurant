@@ -23,16 +23,22 @@ public final class AllRestaurantPageBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final RecyclerView adaRecycler1;
+  public final TextView adalabel;
 
   @NonNull
-  public final TextView adalabel;
+  public final RecyclerView allInOneContainer;
+
+  @NonNull
+  public final TextView allRestLocation;
 
   @NonNull
   public final ConstraintLayout constraintLayout3;
 
   @NonNull
   public final TextView homeKey;
+
+  @NonNull
+  public final TextView locate;
 
   @NonNull
   public final TextView menuKey;
@@ -43,15 +49,18 @@ public final class AllRestaurantPageBinding implements ViewBinding {
   @NonNull
   public final TextView welcometxt;
 
-  private AllRestaurantPageBinding(@NonNull LinearLayout rootView,
-      @NonNull RecyclerView adaRecycler1, @NonNull TextView adalabel,
+  private AllRestaurantPageBinding(@NonNull LinearLayout rootView, @NonNull TextView adalabel,
+      @NonNull RecyclerView allInOneContainer, @NonNull TextView allRestLocation,
       @NonNull ConstraintLayout constraintLayout3, @NonNull TextView homeKey,
-      @NonNull TextView menuKey, @NonNull ScrollView scrollView2, @NonNull TextView welcometxt) {
+      @NonNull TextView locate, @NonNull TextView menuKey, @NonNull ScrollView scrollView2,
+      @NonNull TextView welcometxt) {
     this.rootView = rootView;
-    this.adaRecycler1 = adaRecycler1;
     this.adalabel = adalabel;
+    this.allInOneContainer = allInOneContainer;
+    this.allRestLocation = allRestLocation;
     this.constraintLayout3 = constraintLayout3;
     this.homeKey = homeKey;
+    this.locate = locate;
     this.menuKey = menuKey;
     this.scrollView2 = scrollView2;
     this.welcometxt = welcometxt;
@@ -84,15 +93,21 @@ public final class AllRestaurantPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.adaRecycler1;
-      RecyclerView adaRecycler1 = ViewBindings.findChildViewById(rootView, id);
-      if (adaRecycler1 == null) {
-        break missingId;
-      }
-
       id = R.id.adalabel;
       TextView adalabel = ViewBindings.findChildViewById(rootView, id);
       if (adalabel == null) {
+        break missingId;
+      }
+
+      id = R.id.allInOneContainer;
+      RecyclerView allInOneContainer = ViewBindings.findChildViewById(rootView, id);
+      if (allInOneContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.allRestLocation;
+      TextView allRestLocation = ViewBindings.findChildViewById(rootView, id);
+      if (allRestLocation == null) {
         break missingId;
       }
 
@@ -105,6 +120,12 @@ public final class AllRestaurantPageBinding implements ViewBinding {
       id = R.id.homeKey;
       TextView homeKey = ViewBindings.findChildViewById(rootView, id);
       if (homeKey == null) {
+        break missingId;
+      }
+
+      id = R.id.locate;
+      TextView locate = ViewBindings.findChildViewById(rootView, id);
+      if (locate == null) {
         break missingId;
       }
 
@@ -126,8 +147,8 @@ public final class AllRestaurantPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new AllRestaurantPageBinding((LinearLayout) rootView, adaRecycler1, adalabel,
-          constraintLayout3, homeKey, menuKey, scrollView2, welcometxt);
+      return new AllRestaurantPageBinding((LinearLayout) rootView, adalabel, allInOneContainer,
+          allRestLocation, constraintLayout3, homeKey, locate, menuKey, scrollView2, welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -22,42 +22,34 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
 
     //Context context;
 
-    AllInOneRecyclerViewListener listener;
+
 
     ArrayList<ItemData> itemDatalist;
 
-    public PopularDishAdaptor(ArrayList<ItemData> itemDatalist, AllInOneRecyclerViewListener listener) {
+    public PopularDishAdaptor(ArrayList<ItemData> itemDatalist) {
         this.itemDatalist = itemDatalist;
-        this.listener=listener;
+
        // this.context = context;
 
     }
 
-    public class GodwinViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class GodwinViewHolder extends RecyclerView.ViewHolder {
         TextView price,name,nationality;
-        RatingBar ratingBar;
-        ImageView horizontalImages,verticalImages;
-        //ConstraintLayout myPage;
+        ImageView foodImages,verticalImages;
+
 
         public GodwinViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            itemView.setOnClickListener(this);
-
             price=itemView.findViewById(R.id.adaPrice);
             name=itemView.findViewById(R.id.jelof1);
             nationality=itemView.findViewById(R.id.nigerian1);
-            horizontalImages=itemView.findViewById(R.id.pic1);
-            //verticalImages=itemView.findViewById(R.id.pic1);
-            //myPage=itemView.findViewById(R.id.pageHolder);
+            foodImages=itemView.findViewById(R.id.pic1);
 
 
         }
 
-        @Override
-        public void onClick(View v) {
 
-        }
     }
 
     @NonNull
@@ -72,7 +64,7 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
         holder.price.setText(String.valueOf(itemDatalist.get(position).getPrice()));
         holder.name.setText(itemDatalist.get(position).getName());
         holder.nationality.setText(itemDatalist.get(position).getNationality());
-        Glide.with(holder.itemView.getContext()).load(itemDatalist.get(position).getImageURL()).into(holder.horizontalImages);
+        Glide.with(holder.itemView.getContext()).load(itemDatalist.get(position).getImageURL()).into(holder.foodImages);
         //holder.images.setImageResource(itemDatalist.get(position).getImageURL());
 
 
@@ -83,10 +75,6 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
         return itemDatalist.size();
     }
 
-    public interface AllInOneRecyclerViewListener{
 
-        void onClickMe(View v, int position);
-
-    }
 
 }

@@ -48,8 +48,8 @@
 29-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:20:13-37
 30        <activity
 30-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:21:9-23:40
-31            android:name="com.example.digitalrestaurant.PopularDish"
-31-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:22:13-40
+31            android:name="com.example.digitalrestaurant.HomePage"
+31-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:22:13-37
 32            android:exported="false" />
 32-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:23:13-37
 33        <activity

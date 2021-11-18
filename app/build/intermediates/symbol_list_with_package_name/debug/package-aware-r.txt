@@ -1784,7 +1784,6 @@ id activity_chooser_view_content
 id adaFoodName
 id adaFoodNationality
 id adaPrice
-id adaRecycler1
 id adalabel
 id adarestaurantcard
 id add
@@ -1793,6 +1792,8 @@ id addTocar
 id alertTitle
 id aligned
 id all
+id allInOneContainer
+id allRestLocation
 id always
 id animateToEnd
 id animateToStart
@@ -1948,6 +1949,7 @@ id linear
 id listMode
 id list_item
 id loading
+id locate
 id locationName
 id locationRecycler
 id login

@@ -4,7 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -42,7 +41,7 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
             super(itemView);
 
             price=itemView.findViewById(R.id.adaPrice);
-            name=itemView.findViewById(R.id.jelof1);
+            name=itemView.findViewById(R.id.jelof);
             nationality=itemView.findViewById(R.id.nigerian1);
             foodImages=itemView.findViewById(R.id.pic1);
 

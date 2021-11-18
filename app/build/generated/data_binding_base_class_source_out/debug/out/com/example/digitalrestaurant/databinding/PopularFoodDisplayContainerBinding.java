@@ -25,9 +25,6 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
   public final TextView adaPrice;
 
   @NonNull
-  public final TextView addToCart;
-
-  @NonNull
   public final ConstraintLayout addTocar;
 
   @NonNull
@@ -48,13 +45,15 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
   @NonNull
   public final RatingBar ratingBar1;
 
+  @NonNull
+  public final TextView textView2;
+
   private PopularFoodDisplayContainerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView adaPrice, @NonNull TextView addToCart, @NonNull ConstraintLayout addTocar,
-      @NonNull TextView jelof1, @NonNull TextView nigerian1, @NonNull ConstraintLayout pageHolder,
-      @NonNull ImageView pic1, @NonNull TextView poundSign, @NonNull RatingBar ratingBar1) {
+      @NonNull TextView adaPrice, @NonNull ConstraintLayout addTocar, @NonNull TextView jelof1,
+      @NonNull TextView nigerian1, @NonNull ConstraintLayout pageHolder, @NonNull ImageView pic1,
+      @NonNull TextView poundSign, @NonNull RatingBar ratingBar1, @NonNull TextView textView2) {
     this.rootView = rootView;
     this.adaPrice = adaPrice;
-    this.addToCart = addToCart;
     this.addTocar = addTocar;
     this.jelof1 = jelof1;
     this.nigerian1 = nigerian1;
@@ -62,6 +61,7 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
     this.pic1 = pic1;
     this.poundSign = poundSign;
     this.ratingBar1 = ratingBar1;
+    this.textView2 = textView2;
   }
 
   @Override
@@ -94,12 +94,6 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
       id = R.id.adaPrice;
       TextView adaPrice = ViewBindings.findChildViewById(rootView, id);
       if (adaPrice == null) {
-        break missingId;
-      }
-
-      id = R.id.addToCart;
-      TextView addToCart = ViewBindings.findChildViewById(rootView, id);
-      if (addToCart == null) {
         break missingId;
       }
 
@@ -141,8 +135,14 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new PopularFoodDisplayContainerBinding((ConstraintLayout) rootView, adaPrice,
-          addToCart, addTocar, jelof1, nigerian1, pageHolder, pic1, poundSign, ratingBar1);
+      id = R.id.textView2;
+      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
+      if (textView2 == null) {
+        break missingId;
+      }
+
+      return new PopularFoodDisplayContainerBinding((ConstraintLayout) rootView, adaPrice, addTocar,
+          jelof1, nigerian1, pageHolder, pic1, poundSign, ratingBar1, textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

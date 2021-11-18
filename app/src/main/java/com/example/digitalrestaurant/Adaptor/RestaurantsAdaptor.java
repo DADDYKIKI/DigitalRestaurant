@@ -17,13 +17,13 @@ import java.util.ArrayList;
 
 public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.RestaurantsViewHolder>{
 
-    ArrayList<RestautantsDetails> restaurantslist;
+    private ArrayList<RestautantsDetails> restaurantslist;
 
-    AllInOneRecyclerViewListener listener;
+    private AllInOneRecyclerViewListener allInOneListener;
 
-    public RestaurantsAdaptor(ArrayList<RestautantsDetails> restaurantslist,AllInOneRecyclerViewListener listener) {
+    public RestaurantsAdaptor(ArrayList<RestautantsDetails> restaurantslist,AllInOneRecyclerViewListener allInOneListener) {
         this.restaurantslist = restaurantslist;
-        this.listener=listener;
+        this.allInOneListener=allInOneListener;
         // this.context = context;
 
     }
@@ -49,7 +49,7 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
 
         @Override
         public void onClick(View v) {
-
+            allInOneListener.onClickMe(itemView,getAdapterPosition());
         }
     }
 

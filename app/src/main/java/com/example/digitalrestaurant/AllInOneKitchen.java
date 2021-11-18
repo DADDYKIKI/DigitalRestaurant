@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.digitalrestaurant.Adaptor.PopularDishAdaptor;
-import com.example.digitalrestaurant.RestaurantsData.RestautantsDetails;
 import com.example.digitalrestaurant.UserData.ItemData;
 
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class AllInOneKitchen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.all_restaurant_page);
+        setContentView(R.layout.aproko_resataurant_homepage);
 
         myItems=new ArrayList<ItemData>();
         makAllRestaurantAdaptor();

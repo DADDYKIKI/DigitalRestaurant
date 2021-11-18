@@ -43,27 +43,29 @@
                         android:id="@+id/homeKey"
                         android:layout_width="55dp"
                         android:layout_height="30dp"
-                        android:layout_marginTop="28dp"
+                        android:layout_marginStart="24dp"
                         android:background="@drawable/bordera"
                         android:text="Home"
                         android:textAlignment="center"
                         android:textColor="@color/design_default_color_on_secondary"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/menuKey"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:layout_editor_absoluteX="110dp" />
+                        app:layout_constraintVertical_bias="0.164" />
 
                     <TextView
                         android:id="@+id/welcometxt"
                         android:layout_width="wrap_content"
                         android:layout_height="33dp"
-                        android:layout_marginTop="120dp"
+                        android:layout_marginTop="128dp"
                         android:text="Welcome to"
                         android:textAlignment="center"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/Red"
                         android:textSize="30dp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.282"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -71,15 +73,17 @@
                         android:id="@+id/adalabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ada Kitchen"
+                        android:text="Aproko Kitchen"
                         android:textAlignment="center"
                         android:textColor="@color/Red"
                         android:textSize="30dp"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.975"
+                        app:layout_constraintHorizontal_bias="0.935"
                         app:layout_constraintStart_toStartOf="parent"
-                        tools:layout_editor_absoluteY="121dp" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.8" />
 
                     <TextView
                         android:id="@+id/locate"
@@ -94,12 +98,12 @@
 
                     <TextView
                         android:id="@+id/allRestLocation"
-                        android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:text="G1"
                         android:textSize="20dp"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.417"

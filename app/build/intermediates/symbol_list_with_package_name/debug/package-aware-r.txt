@@ -2149,6 +2149,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView2
 id textView4
 id text_input_end_icon
 id text_input_error_icon
@@ -2258,7 +2259,7 @@ layout activity_main
 layout activity_seller_upload_page
 layout activity_signup_page
 layout all_restaurant_food_container
-layout all_restaurant_page
+layout aproko_resataurant_homepage
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

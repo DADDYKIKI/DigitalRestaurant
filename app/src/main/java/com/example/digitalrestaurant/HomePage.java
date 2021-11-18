@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.digitalrestaurant.Adaptor.PopularDishAdaptor;
 import com.example.digitalrestaurant.Adaptor.LocationAdaptor;
@@ -22,25 +24,25 @@ public class HomePage extends AppCompatActivity {
     //Parameters for horizontal dish display
     RecyclerView.Adapter godwinAdaptor,godwinAdaptor2,godwinAdaptor3;
 
-    RestaurantsAdaptor.AllInOneRecyclerViewListener listener;
+    private RestaurantsAdaptor.AllInOneRecyclerViewListener AllInOneListener2;
 
-    RecyclerView recyclerView,recyclerView2,recyclerView3;
+    private RecyclerView recyclerView,recyclerView2,recyclerView3;
 
 
-    ArrayList<ItemData> myItems;
+    private ArrayList<ItemData> myItems;
     Context context;
 
 
     //Parameters for horizontal Restaurants name display
 
-    ArrayList<RestautantsDetails> restaurantslist;
+    private ArrayList<RestautantsDetails> restaurantslist;
 
 
     //Parameters for horizontal Location name display
 
-    ArrayList<LocationDetails> locationLists;
+    private ArrayList<LocationDetails> locationLists;
 
-    RestaurantsAdaptor.AllInOneRecyclerViewListener listener2;
+    private RestaurantsAdaptor.AllInOneRecyclerViewListener listener2;
 
 
     @Override
@@ -51,6 +53,8 @@ public class HomePage extends AppCompatActivity {
         myItems=new ArrayList<ItemData>();
         restaurantslist=new ArrayList<RestautantsDetails>();
         locationLists=new ArrayList<LocationDetails>();
+
+        //TextView restaurantName= (TextView) findViewById(R.id.enterLoginEmail);
 
 
 
@@ -64,7 +68,7 @@ public class HomePage extends AppCompatActivity {
     public void makeAdaptor(){
 
 
-
+        setMyOnclickListener();
 
 
         recyclerView=findViewById(R.id.allInOneContainer);
@@ -76,22 +80,41 @@ public class HomePage extends AppCompatActivity {
         recyclerView3.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
         godwinAdaptor=new PopularDishAdaptor(populateAdaPage());
-        godwinAdaptor2=new RestaurantsAdaptor(populateItemInfo2(),listener);
+        godwinAdaptor2=new RestaurantsAdaptor(populateItemInfo2(),AllInOneListener2);
         godwinAdaptor3=new LocationAdaptor(populateItemInfo3());
-
-
-
 
         recyclerView.setAdapter(godwinAdaptor);
         recyclerView2.setAdapter(godwinAdaptor2);
         recyclerView3.setAdapter(godwinAdaptor3);
 
 
-
     }
 
 
 
+    public void setMyOnclickListener(){
+
+        AllInOneListener2=new RestaurantsAdaptor.AllInOneRecyclerViewListener() {
+            @Override
+            public void onClickMe(View v, int position) {
+                Intent intent =new Intent(getApplicationContext(), AllInOneKitchen.class);
+                //Intent intent2 =new Intent(getApplicationContext(), AllInOneKitchen.class);
+
+                intent.putExtra("name",restaurantslist.get(position).getRestaurantsName());
+                intent.putExtra("location",restaurantslist.get(position).getRestaurantsLocation());
+                intent.putExtra("nationality",restaurantslist.get(position).getRestaurantNationality());
+
+                if(restaurantslist.get(position).getRestaurantsName().equals("Approko Kitchen")){
+
+                    startActivity(intent);
+                }
+
+
+            }
+        };
+
+
+    }
 
 
 

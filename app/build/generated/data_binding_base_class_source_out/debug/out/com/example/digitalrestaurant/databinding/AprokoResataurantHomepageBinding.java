@@ -18,7 +18,7 @@ import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
-public final class AllRestaurantPageBinding implements ViewBinding {
+public final class AprokoResataurantHomepageBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
 
@@ -49,11 +49,11 @@ public final class AllRestaurantPageBinding implements ViewBinding {
   @NonNull
   public final TextView welcometxt;
 
-  private AllRestaurantPageBinding(@NonNull LinearLayout rootView, @NonNull TextView adalabel,
-      @NonNull RecyclerView allInOneContainer, @NonNull TextView allRestLocation,
-      @NonNull ConstraintLayout constraintLayout3, @NonNull TextView homeKey,
-      @NonNull TextView locate, @NonNull TextView menuKey, @NonNull ScrollView scrollView2,
-      @NonNull TextView welcometxt) {
+  private AprokoResataurantHomepageBinding(@NonNull LinearLayout rootView,
+      @NonNull TextView adalabel, @NonNull RecyclerView allInOneContainer,
+      @NonNull TextView allRestLocation, @NonNull ConstraintLayout constraintLayout3,
+      @NonNull TextView homeKey, @NonNull TextView locate, @NonNull TextView menuKey,
+      @NonNull ScrollView scrollView2, @NonNull TextView welcometxt) {
     this.rootView = rootView;
     this.adalabel = adalabel;
     this.allInOneContainer = allInOneContainer;
@@ -73,14 +73,14 @@ public final class AllRestaurantPageBinding implements ViewBinding {
   }
 
   @NonNull
-  public static AllRestaurantPageBinding inflate(@NonNull LayoutInflater inflater) {
+  public static AprokoResataurantHomepageBinding inflate(@NonNull LayoutInflater inflater) {
     return inflate(inflater, null, false);
   }
 
   @NonNull
-  public static AllRestaurantPageBinding inflate(@NonNull LayoutInflater inflater,
+  public static AprokoResataurantHomepageBinding inflate(@NonNull LayoutInflater inflater,
       @Nullable ViewGroup parent, boolean attachToParent) {
-    View root = inflater.inflate(R.layout.all_restaurant_page, parent, false);
+    View root = inflater.inflate(R.layout.aproko_resataurant_homepage, parent, false);
     if (attachToParent) {
       parent.addView(root);
     }
@@ -88,7 +88,7 @@ public final class AllRestaurantPageBinding implements ViewBinding {
   }
 
   @NonNull
-  public static AllRestaurantPageBinding bind(@NonNull View rootView) {
+  public static AprokoResataurantHomepageBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
@@ -147,8 +147,9 @@ public final class AllRestaurantPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new AllRestaurantPageBinding((LinearLayout) rootView, adalabel, allInOneContainer,
-          allRestLocation, constraintLayout3, homeKey, locate, menuKey, scrollView2, welcometxt);
+      return new AprokoResataurantHomepageBinding((LinearLayout) rootView, adalabel,
+          allInOneContainer, allRestLocation, constraintLayout3, homeKey, locate, menuKey,
+          scrollView2, welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -99,6 +99,7 @@ public class HomePage extends AppCompatActivity {
                 Intent intent =new Intent(getApplicationContext(), ApprokoKitchen.class);
                 Intent intent2 =new Intent(getApplicationContext(), ObandeKitchen.class);
                 Intent intent3 =new Intent(getApplicationContext(), AdaKitchen.class);
+                Intent intent4 =new Intent(getApplicationContext(), Stainless.class);
 
                 intent.putExtra("name",restaurantslist.get(position).getRestaurantsName());
                 intent.putExtra("location",restaurantslist.get(position).getRestaurantsLocation());
@@ -117,6 +118,11 @@ public class HomePage extends AppCompatActivity {
                 else if (restaurantslist.get(position).getRestaurantsName().equals("Ada Restaurant and Bar")){
 
                     startActivity(intent3);
+                }
+
+                else if (restaurantslist.get(position).getRestaurantsName().equals("Stainless")){
+
+                    startActivity(intent4);
                 }
 
 

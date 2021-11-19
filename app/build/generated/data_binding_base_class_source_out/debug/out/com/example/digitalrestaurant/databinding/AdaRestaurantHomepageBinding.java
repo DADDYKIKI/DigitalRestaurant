@@ -32,9 +32,6 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
   public final RecyclerView adaKitchen;
 
   @NonNull
-  public final TextView adalabel;
-
-  @NonNull
   public final ConstraintLayout constraintLayout3;
 
   @NonNull
@@ -47,22 +44,25 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
   public final ScrollView scrollView2;
 
   @NonNull
+  public final TextView stainlesslabel;
+
+  @NonNull
   public final TextView welcometxt;
 
   private AdaRestaurantHomepageBinding(@NonNull LinearLayout rootView,
       @NonNull TextView AdaRestLocationAdd, @NonNull TextView Adalocate,
-      @NonNull RecyclerView adaKitchen, @NonNull TextView adalabel,
-      @NonNull ConstraintLayout constraintLayout3, @NonNull TextView homeKey,
-      @NonNull TextView menuKey, @NonNull ScrollView scrollView2, @NonNull TextView welcometxt) {
+      @NonNull RecyclerView adaKitchen, @NonNull ConstraintLayout constraintLayout3,
+      @NonNull TextView homeKey, @NonNull TextView menuKey, @NonNull ScrollView scrollView2,
+      @NonNull TextView stainlesslabel, @NonNull TextView welcometxt) {
     this.rootView = rootView;
     this.AdaRestLocationAdd = AdaRestLocationAdd;
     this.Adalocate = Adalocate;
     this.adaKitchen = adaKitchen;
-    this.adalabel = adalabel;
     this.constraintLayout3 = constraintLayout3;
     this.homeKey = homeKey;
     this.menuKey = menuKey;
     this.scrollView2 = scrollView2;
+    this.stainlesslabel = stainlesslabel;
     this.welcometxt = welcometxt;
   }
 
@@ -111,12 +111,6 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.adalabel;
-      TextView adalabel = ViewBindings.findChildViewById(rootView, id);
-      if (adalabel == null) {
-        break missingId;
-      }
-
       id = R.id.constraintLayout3;
       ConstraintLayout constraintLayout3 = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout3 == null) {
@@ -141,6 +135,12 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.stainlesslabel;
+      TextView stainlesslabel = ViewBindings.findChildViewById(rootView, id);
+      if (stainlesslabel == null) {
+        break missingId;
+      }
+
       id = R.id.welcometxt;
       TextView welcometxt = ViewBindings.findChildViewById(rootView, id);
       if (welcometxt == null) {
@@ -148,7 +148,7 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
       }
 
       return new AdaRestaurantHomepageBinding((LinearLayout) rootView, AdaRestLocationAdd,
-          Adalocate, adaKitchen, adalabel, constraintLayout3, homeKey, menuKey, scrollView2,
+          Adalocate, adaKitchen, constraintLayout3, homeKey, menuKey, scrollView2, stainlesslabel,
           welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);

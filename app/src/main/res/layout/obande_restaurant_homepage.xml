@@ -65,13 +65,13 @@
                         android:textColor="@color/white"
                         android:textSize="30dp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/adalabel"
+                        app:layout_constraintEnd_toStartOf="@+id/stainlesslabel"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/adalabel"
+                        android:id="@+id/stainlesslabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="60dp"

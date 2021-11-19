@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/drawable/selleruploadbtn.xml" value="0.3260416666666667" />
         <entry key="app/src/main/res/layout-w936dp/Obande_resataurant_homepage.xml" value="0.335" />
         <entry key="app/src/main/res/layout-w936dp/obande_resataurant_homepage.xml" value="0.14515132798023472" />
+        <entry key="app/src/main/res/layout-w936dp/stainless_restaurant_homepage.xml" value="0.16051912568306012" />
         <entry key="app/src/main/res/layout/activity_customer_page.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_food_seller.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_intro_page.xml" value="0.18614130434782608" />
@@ -36,6 +37,7 @@
         <entry key="app/src/main/res/layout/popular_dish_page.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/popular_food_display_container.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/restaurant_page_container.xml" value="0.21875" />
+        <entry key="app/src/main/res/layout/stainless_restaurant_homepage2.xml" value="0.2128623188405797" />
         <entry key="app/src/main/res/layout/vertical_scroll.xml" value="0.1875" />
       </map>
     </option>

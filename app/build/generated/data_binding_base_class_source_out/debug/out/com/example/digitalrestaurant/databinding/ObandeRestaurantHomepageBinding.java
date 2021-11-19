@@ -26,9 +26,6 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
   public final TextView ObandeRestLocationAdd;
 
   @NonNull
-  public final TextView adalabel;
-
-  @NonNull
   public final ConstraintLayout constraintLayout3;
 
   @NonNull
@@ -47,23 +44,25 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
   public final ScrollView scrollView2;
 
   @NonNull
+  public final TextView stainlesslabel;
+
+  @NonNull
   public final TextView welcometxt;
 
   private ObandeRestaurantHomepageBinding(@NonNull LinearLayout rootView,
-      @NonNull TextView ObandeRestLocationAdd, @NonNull TextView adalabel,
-      @NonNull ConstraintLayout constraintLayout3, @NonNull TextView homeKey,
-      @NonNull TextView menuKey, @NonNull RecyclerView obandeKitchen,
+      @NonNull TextView ObandeRestLocationAdd, @NonNull ConstraintLayout constraintLayout3,
+      @NonNull TextView homeKey, @NonNull TextView menuKey, @NonNull RecyclerView obandeKitchen,
       @NonNull TextView obandelocate, @NonNull ScrollView scrollView2,
-      @NonNull TextView welcometxt) {
+      @NonNull TextView stainlesslabel, @NonNull TextView welcometxt) {
     this.rootView = rootView;
     this.ObandeRestLocationAdd = ObandeRestLocationAdd;
-    this.adalabel = adalabel;
     this.constraintLayout3 = constraintLayout3;
     this.homeKey = homeKey;
     this.menuKey = menuKey;
     this.obandeKitchen = obandeKitchen;
     this.obandelocate = obandelocate;
     this.scrollView2 = scrollView2;
+    this.stainlesslabel = stainlesslabel;
     this.welcometxt = welcometxt;
   }
 
@@ -97,12 +96,6 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
       id = R.id.ObandeRestLocationAdd;
       TextView ObandeRestLocationAdd = ViewBindings.findChildViewById(rootView, id);
       if (ObandeRestLocationAdd == null) {
-        break missingId;
-      }
-
-      id = R.id.adalabel;
-      TextView adalabel = ViewBindings.findChildViewById(rootView, id);
-      if (adalabel == null) {
         break missingId;
       }
 
@@ -142,6 +135,12 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.stainlesslabel;
+      TextView stainlesslabel = ViewBindings.findChildViewById(rootView, id);
+      if (stainlesslabel == null) {
+        break missingId;
+      }
+
       id = R.id.welcometxt;
       TextView welcometxt = ViewBindings.findChildViewById(rootView, id);
       if (welcometxt == null) {
@@ -149,8 +148,8 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
       }
 
       return new ObandeRestaurantHomepageBinding((LinearLayout) rootView, ObandeRestLocationAdd,
-          adalabel, constraintLayout3, homeKey, menuKey, obandeKitchen, obandelocate, scrollView2,
-          welcometxt);
+          constraintLayout3, homeKey, menuKey, obandeKitchen, obandelocate, scrollView2,
+          stainlesslabel, welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

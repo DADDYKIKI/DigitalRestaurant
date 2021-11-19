@@ -28,6 +28,9 @@
             android:name=".AdaKitchen"
             android:exported="false" />
         <activity
+            android:name=".Stainless"
+            android:exported="false" />
+        <activity
             android:name=".ObandeKitchen"
             android:exported="false" />
         <activity

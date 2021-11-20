@@ -1,5 +1,6 @@
 package com.example.digitalrestaurant;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,8 @@ import com.example.digitalrestaurant.UserData.ItemData;
 import java.util.ArrayList;
 
 public class ApprokoKitchen extends AppCompatActivity {
+
+    private PopularDishAdaptor.AdaRecyclerViewListener adalistener2;
 
 
     RecyclerView.Adapter aprokoAdaptor;
@@ -35,15 +38,34 @@ public class ApprokoKitchen extends AppCompatActivity {
 
     public void makAllRestaurantAdaptor(){
 
+
+
+        setAprokoOnclickListener();
+
         aprokoRecycler =findViewById(R.id.aprokoKitchen);
 
         aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        aprokoAdaptor=new PopularDishAdaptor(populateAdaPage());
+        aprokoAdaptor=new PopularDishAdaptor(populateAdaPage(),adalistener2);
 
         aprokoRecycler.setAdapter(aprokoAdaptor);
 
 
+
+    }
+
+    public void setAprokoOnclickListener(){
+
+        adalistener2= (v, position) -> {
+
+            Intent intent5 =new Intent(getApplicationContext(), Order.class);
+
+            intent5.putExtra("name",aprokoItems.get(position).getName());
+            intent5.putExtra("imageUrl",aprokoItems.get(position).getImageURL());
+            intent5.putExtra("nationality",aprokoItems.get(position).getNationality());
+            intent5.putExtra("price",aprokoItems.get(position).getPrice());
+
+            startActivity(intent5);};
 
     }
 

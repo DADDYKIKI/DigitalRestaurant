@@ -25,6 +25,8 @@ public class HomePage extends AppCompatActivity {
 
     private RestaurantsAdaptor.AllInOneRecyclerViewListener AllInOneListener2;
 
+    PopularDishAdaptor.AdaRecyclerViewListener adalistener2;
+
     private RecyclerView recyclerView,recyclerView2,recyclerView3;
 
 
@@ -78,7 +80,7 @@ public class HomePage extends AppCompatActivity {
         recyclerView2.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView3.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        godwinAdaptor=new PopularDishAdaptor(populateAdaPage());
+        godwinAdaptor=new PopularDishAdaptor(populateAdaPage(),adalistener2);
         godwinAdaptor2=new RestaurantsAdaptor(populateItemInfo2(),AllInOneListener2);
         godwinAdaptor3=new LocationAdaptor(populateItemInfo3());
 
@@ -93,40 +95,34 @@ public class HomePage extends AppCompatActivity {
 
     public void setMyOnclickListener(){
 
-        AllInOneListener2=new RestaurantsAdaptor.AllInOneRecyclerViewListener() {
-            @Override
-            public void onClickMe(View v, int position) {
-                Intent intent =new Intent(getApplicationContext(), ApprokoKitchen.class);
-                Intent intent2 =new Intent(getApplicationContext(), ObandeKitchen.class);
-                Intent intent3 =new Intent(getApplicationContext(), AdaKitchen.class);
-                Intent intent4 =new Intent(getApplicationContext(), Stainless.class);
+        AllInOneListener2= (v, position) -> {
 
-                intent.putExtra("name",restaurantslist.get(position).getRestaurantsName());
-                intent.putExtra("location",restaurantslist.get(position).getRestaurantsLocation());
-                intent.putExtra("nationality",restaurantslist.get(position).getRestaurantNationality());
+            Intent intent =new Intent(getApplicationContext(), ApprokoKitchen.class);
+            Intent intent2 =new Intent(getApplicationContext(), ObandeKitchen.class);
+            Intent intent3 =new Intent(getApplicationContext(), AdaKitchen.class);
+            Intent intent4 =new Intent(getApplicationContext(), Stainless.class);
 
-                if(restaurantslist.get(position).getRestaurantsName().equals("Approko Kitchen")){
+            if(restaurantslist.get(position).getRestaurantsName().equals("Approko Kitchen")){
 
-                    startActivity(intent);
-                }
-
-                else if(restaurantslist.get(position).getRestaurantsName().equals("Obande Kitchen")){
-
-                   startActivity(intent2);
-                }
-
-                else if (restaurantslist.get(position).getRestaurantsName().equals("Ada Restaurant and Bar")){
-
-                    startActivity(intent3);
-                }
-
-                else if (restaurantslist.get(position).getRestaurantsName().equals("Stainless")){
-
-                    startActivity(intent4);
-                }
-
-
+                startActivity(intent);
             }
+
+            else if(restaurantslist.get(position).getRestaurantsName().equals("Obande Kitchen")){
+
+               startActivity(intent2);
+            }
+
+            else if (restaurantslist.get(position).getRestaurantsName().equals("Ada Restaurant and Bar")){
+
+                startActivity(intent3);
+            }
+
+            else if (restaurantslist.get(position).getRestaurantsName().equals("Stainless")){
+
+                startActivity(intent4);
+            }
+
+
         };
 
 

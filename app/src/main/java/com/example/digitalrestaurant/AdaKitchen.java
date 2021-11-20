@@ -1,5 +1,6 @@
 package com.example.digitalrestaurant;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import com.example.digitalrestaurant.UserData.ItemData;
 import java.util.ArrayList;
 
 public class AdaKitchen extends AppCompatActivity {
+
+    private PopularDishAdaptor.AdaRecyclerViewListener adalistener2;
 
     private RecyclerView.Adapter adaAdaptor;
 
@@ -32,11 +35,14 @@ public class AdaKitchen extends AppCompatActivity {
     }
     public void makeAdaRestaurantAdaptor(){
 
+
+        setAdaOnclickListener();
+
         adaRecycler =findViewById(R.id.adaKitchen);
 
         adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        adaAdaptor=new PopularDishAdaptor(populateAdaPage());
+        adaAdaptor=new PopularDishAdaptor(populateAdaPage(),adalistener2);
 
         adaRecycler.setAdapter(adaAdaptor);
 
@@ -44,12 +50,34 @@ public class AdaKitchen extends AppCompatActivity {
 
     }
 
+    public void setAdaOnclickListener(){
+
+        adalistener2= (v, position) -> {
+
+            Intent intent5 =new Intent(getApplicationContext(), Order.class);
+
+            intent5.putExtra("name",adaItems.get(position).getName());
+            intent5.putExtra("imageUrl",adaItems.get(position).getImageURL());
+            intent5.putExtra("nationality",adaItems.get(position).getNationality());
+            intent5.putExtra("price",adaItems.get(position).getPrice());
+
+            startActivity(intent5);};
+
+    }
+
+
+
+
+
+
+
+
     public ArrayList<ItemData> populateAdaPage(){
 
         adaItems.add(new ItemData(12,"Catfish peppered soup","African" ,R.drawable.adacatfish));
         adaItems.add(new ItemData(9,"MoiMoi","African" ,R.drawable.obandemoimoi));
         adaItems.add(new ItemData(18,"Egusi soup","African" ,R.drawable.obandeegusisoup));
-        adaItems.add(new ItemData(6,"Acolic drinks","" ,R.drawable.adaassortedbear));
+        adaItems.add(new ItemData(6,"Alcoholic drinks","" ,R.drawable.adaassortedbear));
         adaItems.add(new ItemData(3,"Chin-Chin","African" ,R.drawable.obandechinchin));
         adaItems.add(new ItemData(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone));
         adaItems.add(new ItemData(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans));

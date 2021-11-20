@@ -19,20 +19,23 @@ import java.util.ArrayList;
 
 public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.GodwinViewHolder> {
 
+    private AdaRecyclerViewListener adaListener;
+
     //Context context;
 
 
 
     ArrayList<ItemData> itemDatalist;
 
-    public PopularDishAdaptor(ArrayList<ItemData> itemDatalist) {
+    public PopularDishAdaptor(ArrayList<ItemData> itemDatalist,AdaRecyclerViewListener adaListener) {
         this.itemDatalist = itemDatalist;
+        this.adaListener=adaListener;
 
        // this.context = context;
 
     }
 
-    public class GodwinViewHolder extends RecyclerView.ViewHolder {
+    public class GodwinViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView price,name,nationality;
         ImageView foodImages,verticalImages;
 
@@ -45,10 +48,15 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
             nationality=itemView.findViewById(R.id.nigerian1);
             foodImages=itemView.findViewById(R.id.pic1);
 
+            itemView.setOnClickListener(this);
 
         }
 
 
+        @Override
+        public void onClick(View v) {
+            adaListener.onClick(itemView,getAdapterPosition());
+        }
     }
 
     @NonNull
@@ -74,6 +82,10 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
         return itemDatalist.size();
     }
 
+    public interface AdaRecyclerViewListener{
 
+        void onClick(View v, int position);
+
+    }
 
 }

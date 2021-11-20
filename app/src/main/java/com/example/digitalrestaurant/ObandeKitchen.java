@@ -1,5 +1,6 @@
 package com.example.digitalrestaurant;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import com.example.digitalrestaurant.UserData.ItemData;
 import java.util.ArrayList;
 
 public class ObandeKitchen extends AppCompatActivity {
+
+    private PopularDishAdaptor.AdaRecyclerViewListener adalistener2;
 
     RecyclerView.Adapter obandeAdaptor;
 
@@ -32,15 +35,32 @@ public class ObandeKitchen extends AppCompatActivity {
 }
     public void makeAprokoRestaurantAdaptor(){
 
+        setObandeOnclickListener();
+
         obandeRecycler =findViewById(R.id.obandeKitchen);
 
         obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        obandeAdaptor=new PopularDishAdaptor(populateObandePage());
+        obandeAdaptor=new PopularDishAdaptor(populateObandePage(),adalistener2);
 
         obandeRecycler.setAdapter(obandeAdaptor);
 
 
+
+    }
+
+    public void setObandeOnclickListener(){
+
+        adalistener2= (v, position) -> {
+
+            Intent intent5 =new Intent(getApplicationContext(), Order.class);
+
+            intent5.putExtra("name",obandeItems.get(position).getName());
+            intent5.putExtra("imageUrl",obandeItems.get(position).getImageURL());
+            intent5.putExtra("nationality",obandeItems.get(position).getNationality());
+            intent5.putExtra("price",obandeItems.get(position).getPrice());
+
+            startActivity(intent5);};
 
     }
 

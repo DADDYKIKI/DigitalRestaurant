@@ -1,5 +1,6 @@
 package com.example.digitalrestaurant;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 public class Stainless extends AppCompatActivity {
 
 
-
+    private PopularDishAdaptor.AdaRecyclerViewListener adalistener2;
 
     private RecyclerView.Adapter stainlessAdaptor;
 
@@ -35,15 +36,32 @@ public class Stainless extends AppCompatActivity {
     }
     public void makeAdaRestaurantAdaptor(){
 
+        setStainlessOnclickListener();
+
         stainlessRecycler =findViewById(R.id.stainlessKitchen);
 
         stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        stainlessAdaptor=new PopularDishAdaptor(populateStainlessPage());
+        //stainlessAdaptor=new PopularDishAdaptor(populateStainlessPage());
 
         stainlessRecycler.setAdapter(stainlessAdaptor);
 
 
+
+    }
+
+    public void setStainlessOnclickListener(){
+
+        adalistener2= (v, position) -> {
+
+            Intent intent5 =new Intent(getApplicationContext(), Order.class);
+
+            intent5.putExtra("name",stainlessItems.get(position).getName());
+            intent5.putExtra("imageUrl",stainlessItems.get(position).getImageURL());
+            intent5.putExtra("nationality",stainlessItems.get(position).getNationality());
+            intent5.putExtra("price",stainlessItems.get(position).getPrice());
+
+            startActivity(intent5);};
 
     }
 

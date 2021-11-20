@@ -1663,6 +1663,7 @@ int drawable design_snackbar_background 0x7f080070
 int drawable eatingchicken 0x7f080071
 int drawable friedriceone 0x7f080072
 int drawable homekeyback 0x7f080073
+int drawable ic_baseline_add_chart_24 0x7f0800bb
 int drawable ic_baseline_search_24 0x7f080074
 int drawable ic_clock_black_24dp 0x7f080075
 int drawable ic_keyboard_black_24dp 0x7f080076
@@ -1850,6 +1851,7 @@ int id clockwise 0x7f090070
 int id collapseActionView 0x7f090071
 int id confirm_button 0x7f090072
 int id constraintLayout 0x7f090073
+int id constraintLayout2 0x7f0901f6
 int id constraintLayout3 0x7f090074
 int id container 0x7f090075
 int id content 0x7f090076
@@ -1991,6 +1993,7 @@ int id menuKey 0x7f0901de
 int id message 0x7f0900fd
 int id middle 0x7f0900fe
 int id mini 0x7f0900ff
+int id minus 0x7f0901f7
 int id month_grid 0x7f090100
 int id month_navigation_bar 0x7f090101
 int id month_navigation_fragment_toggle 0x7f090102
@@ -2037,6 +2040,8 @@ int id obandeKitchen 0x7f0901ec
 int id obandelocate 0x7f0901ed
 int id off 0x7f09012b
 int id on 0x7f09012c
+int id orderbtn 0x7f0901f8
+int id ordering_container 0x7f0901f9
 int id ourExistence 0x7f0901e8
 int id outline 0x7f09012d
 int id outward 0x7f09012e
@@ -2057,6 +2062,7 @@ int id percent 0x7f09013d
 int id pic1 0x7f09013e
 int id pictureOfItem 0x7f09013f
 int id pin 0x7f090140
+int id plus 0x7f0901fa
 int id position 0x7f090141
 int id postLayout 0x7f090142
 int id poundSign 0x7f090143
@@ -2167,7 +2173,6 @@ int id textSpacerNoTitle 0x7f0901a8
 int id textStart 0x7f0901a9
 int id textTop 0x7f0901aa
 int id textView 0x7f0901ab
-int id textView2 0x7f0901d5
 int id textView3 0x7f0901d4
 int id textView4 0x7f0901ac
 int id textView6 0x7f0901e5
@@ -2280,7 +2285,6 @@ int layout activity_main 0x7f0c0020
 int layout activity_seller_upload_page 0x7f0c0022
 int layout activity_signup_page 0x7f0c0023
 int layout ada_restaurant_homepage 0x7f0c0084
-int layout all_restaurant_food_container 0x7f0c007b
 int layout aproko_resataurant_homepage 0x7f0c0081
 int layout custom_dialog 0x7f0c0024
 int layout design_bottom_navigation_item 0x7f0c0025
@@ -2349,6 +2353,7 @@ int layout notification_template_icon_group 0x7f0c0064
 int layout notification_template_part_chronometer 0x7f0c0065
 int layout notification_template_part_time 0x7f0c0066
 int layout obande_restaurant_homepage 0x7f0c0083
+int layout order 0x7f0c0086
 int layout popular_food_display_container 0x7f0c007f
 int layout restaurant_page_container 0x7f0c0080
 int layout select_dialog_item_material 0x7f0c0067

@@ -16,7 +16,7 @@ import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
-public final class AllRestaurantFoodContainerBinding implements ViewBinding {
+public final class OrderBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
 
@@ -36,18 +36,40 @@ public final class AllRestaurantFoodContainerBinding implements ViewBinding {
   public final TextView addToCart;
 
   @NonNull
+  public final ConstraintLayout constraintLayout2;
+
+  @NonNull
+  public final TextView minus;
+
+  @NonNull
+  public final TextView orderbtn;
+
+  @NonNull
+  public final ConstraintLayout orderingContainer;
+
+  @NonNull
+  public final TextView plus;
+
+  @NonNull
   public final TextView poundSign;
 
-  private AllRestaurantFoodContainerBinding(@NonNull LinearLayout rootView,
-      @NonNull TextView adaFoodName, @NonNull TextView adaFoodNationality,
-      @NonNull TextView adaPrice, @NonNull ConstraintLayout adarestaurantcard,
-      @NonNull TextView addToCart, @NonNull TextView poundSign) {
+  private OrderBinding(@NonNull LinearLayout rootView, @NonNull TextView adaFoodName,
+      @NonNull TextView adaFoodNationality, @NonNull TextView adaPrice,
+      @NonNull ConstraintLayout adarestaurantcard, @NonNull TextView addToCart,
+      @NonNull ConstraintLayout constraintLayout2, @NonNull TextView minus,
+      @NonNull TextView orderbtn, @NonNull ConstraintLayout orderingContainer,
+      @NonNull TextView plus, @NonNull TextView poundSign) {
     this.rootView = rootView;
     this.adaFoodName = adaFoodName;
     this.adaFoodNationality = adaFoodNationality;
     this.adaPrice = adaPrice;
     this.adarestaurantcard = adarestaurantcard;
     this.addToCart = addToCart;
+    this.constraintLayout2 = constraintLayout2;
+    this.minus = minus;
+    this.orderbtn = orderbtn;
+    this.orderingContainer = orderingContainer;
+    this.plus = plus;
     this.poundSign = poundSign;
   }
 
@@ -58,14 +80,14 @@ public final class AllRestaurantFoodContainerBinding implements ViewBinding {
   }
 
   @NonNull
-  public static AllRestaurantFoodContainerBinding inflate(@NonNull LayoutInflater inflater) {
+  public static OrderBinding inflate(@NonNull LayoutInflater inflater) {
     return inflate(inflater, null, false);
   }
 
   @NonNull
-  public static AllRestaurantFoodContainerBinding inflate(@NonNull LayoutInflater inflater,
-      @Nullable ViewGroup parent, boolean attachToParent) {
-    View root = inflater.inflate(R.layout.all_restaurant_food_container, parent, false);
+  public static OrderBinding inflate(@NonNull LayoutInflater inflater, @Nullable ViewGroup parent,
+      boolean attachToParent) {
+    View root = inflater.inflate(R.layout.order, parent, false);
     if (attachToParent) {
       parent.addView(root);
     }
@@ -73,7 +95,7 @@ public final class AllRestaurantFoodContainerBinding implements ViewBinding {
   }
 
   @NonNull
-  public static AllRestaurantFoodContainerBinding bind(@NonNull View rootView) {
+  public static OrderBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
@@ -108,14 +130,45 @@ public final class AllRestaurantFoodContainerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.constraintLayout2;
+      ConstraintLayout constraintLayout2 = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout2 == null) {
+        break missingId;
+      }
+
+      id = R.id.minus;
+      TextView minus = ViewBindings.findChildViewById(rootView, id);
+      if (minus == null) {
+        break missingId;
+      }
+
+      id = R.id.orderbtn;
+      TextView orderbtn = ViewBindings.findChildViewById(rootView, id);
+      if (orderbtn == null) {
+        break missingId;
+      }
+
+      id = R.id.ordering_container;
+      ConstraintLayout orderingContainer = ViewBindings.findChildViewById(rootView, id);
+      if (orderingContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.plus;
+      TextView plus = ViewBindings.findChildViewById(rootView, id);
+      if (plus == null) {
+        break missingId;
+      }
+
       id = R.id.poundSign;
       TextView poundSign = ViewBindings.findChildViewById(rootView, id);
       if (poundSign == null) {
         break missingId;
       }
 
-      return new AllRestaurantFoodContainerBinding((LinearLayout) rootView, adaFoodName,
-          adaFoodNationality, adaPrice, adarestaurantcard, addToCart, poundSign);
+      return new OrderBinding((LinearLayout) rootView, adaFoodName, adaFoodNationality, adaPrice,
+          adarestaurantcard, addToCart, constraintLayout2, minus, orderbtn, orderingContainer, plus,
+          poundSign);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

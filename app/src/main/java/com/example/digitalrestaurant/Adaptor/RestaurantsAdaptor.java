@@ -50,6 +50,7 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
         @Override
         public void onClick(View v) {
             allInOneListener.onClickMe(itemView,getAdapterPosition());
+
         }
     }
 

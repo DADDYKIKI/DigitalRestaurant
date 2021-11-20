@@ -34,6 +34,9 @@
             android:name="com.example.digitalrestaurant.ApprokoKitchen"
             android:exported="false" />
         <activity
+            android:name="com.example.digitalrestaurant.Order"
+            android:exported="false" />
+        <activity
             android:name="com.example.digitalrestaurant.AdaKitchen"
             android:exported="false" />
         <activity

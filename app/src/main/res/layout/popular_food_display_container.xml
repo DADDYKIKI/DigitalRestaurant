@@ -9,14 +9,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/pageHolder"
         android:layout_width="400dp"
-        android:layout_height="500dp"
+        android:layout_height="400dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="500dp"
+            android:layout_height="400dp"
             android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,26 +27,27 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="400dp"
-                android:layout_height="450dp"
+                android:layout_height="400dp"
                 android:background="@drawable/ic_launcher_background">
 
                 <TextView
                     android:id="@+id/adaPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="20dp"
                     android:text="10"
                     android:textColor="@color/black"
                     android:textSize="40dp"
                     android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/pic1" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.72" />
 
                 <ImageView
                     android:id="@+id/pic1"
                     android:layout_width="400dp"
-                    android:layout_height="300dp"
+                    android:layout_height="250dp"
                     android:layout_marginTop="4dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -57,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_margin="10dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="64dp"
                     android:text="Jelof Rice"
                     android:textAlignment="center"
                     android:textColor="@color/design_default_color_error"
@@ -65,22 +66,24 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.188"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintHorizontal_bias="0.146"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pic1"
+                    app:layout_constraintVertical_bias="0.31" />
 
                 <TextView
                     android:id="@+id/poundSign"
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:layout_marginStart="312dp"
-                    android:layout_marginTop="308dp"
+                    android:layout_marginTop="252dp"
                     android:height="40dp"
                     android:text="£"
                     android:textColor="@color/black"
                     android:textSize="40dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/adaPrice"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/pic1" />
 
@@ -107,27 +110,15 @@
                     android:id="@+id/nigerian1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="360dp"
+                    android:layout_marginTop="268dp"
                     android:text="African"
                     android:textColor="@color/purple_500"
                     android:textSize="25dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.226"
+                    app:layout_constraintHorizontal_bias="0.198"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:text="Click to buy"
-                    android:textColor="@color/Red"
-                    android:textSize="21dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.114"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/pic1" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -136,6 +127,23 @@
                     android:text="TextView"
                     tools:layout_editor_absoluteX="5dp"
                     tools:layout_editor_absoluteY="20dp" />
+
+                <TextView
+                    android:id="@+id/addToCart"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/addtocartbtn"
+                    android:padding="5dp"
+                    android:text="ADD"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>

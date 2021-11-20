@@ -22,12 +22,6 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView adaPrice;
-
-  @NonNull
-  public final TextView addToCart;
-
-  @NonNull
   public final ConstraintLayout addTocar;
 
   @NonNull
@@ -35,6 +29,9 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
 
   @NonNull
   public final TextView nigerian1;
+
+  @NonNull
+  public final TextView orderPrice;
 
   @NonNull
   public final ConstraintLayout pageHolder;
@@ -46,25 +43,28 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
   public final TextView poundSign;
 
   @NonNull
+  public final TextView quantityTxt;
+
+  @NonNull
   public final RatingBar ratingBar1;
 
   @NonNull
   public final TextView textView3;
 
   private PopularFoodDisplayContainerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView adaPrice, @NonNull TextView addToCart, @NonNull ConstraintLayout addTocar,
-      @NonNull TextView jelof, @NonNull TextView nigerian1, @NonNull ConstraintLayout pageHolder,
-      @NonNull ImageView pic1, @NonNull TextView poundSign, @NonNull RatingBar ratingBar1,
+      @NonNull ConstraintLayout addTocar, @NonNull TextView jelof, @NonNull TextView nigerian1,
+      @NonNull TextView orderPrice, @NonNull ConstraintLayout pageHolder, @NonNull ImageView pic1,
+      @NonNull TextView poundSign, @NonNull TextView quantityTxt, @NonNull RatingBar ratingBar1,
       @NonNull TextView textView3) {
     this.rootView = rootView;
-    this.adaPrice = adaPrice;
-    this.addToCart = addToCart;
     this.addTocar = addTocar;
     this.jelof = jelof;
     this.nigerian1 = nigerian1;
+    this.orderPrice = orderPrice;
     this.pageHolder = pageHolder;
     this.pic1 = pic1;
     this.poundSign = poundSign;
+    this.quantityTxt = quantityTxt;
     this.ratingBar1 = ratingBar1;
     this.textView3 = textView3;
   }
@@ -96,18 +96,6 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.adaPrice;
-      TextView adaPrice = ViewBindings.findChildViewById(rootView, id);
-      if (adaPrice == null) {
-        break missingId;
-      }
-
-      id = R.id.addToCart;
-      TextView addToCart = ViewBindings.findChildViewById(rootView, id);
-      if (addToCart == null) {
-        break missingId;
-      }
-
       ConstraintLayout addTocar = (ConstraintLayout) rootView;
 
       id = R.id.jelof;
@@ -119,6 +107,12 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
       id = R.id.nigerian1;
       TextView nigerian1 = ViewBindings.findChildViewById(rootView, id);
       if (nigerian1 == null) {
+        break missingId;
+      }
+
+      id = R.id.orderPrice;
+      TextView orderPrice = ViewBindings.findChildViewById(rootView, id);
+      if (orderPrice == null) {
         break missingId;
       }
 
@@ -140,6 +134,12 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.quantityTxt;
+      TextView quantityTxt = ViewBindings.findChildViewById(rootView, id);
+      if (quantityTxt == null) {
+        break missingId;
+      }
+
       id = R.id.ratingBar1;
       RatingBar ratingBar1 = ViewBindings.findChildViewById(rootView, id);
       if (ratingBar1 == null) {
@@ -152,9 +152,8 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new PopularFoodDisplayContainerBinding((ConstraintLayout) rootView, adaPrice,
-          addToCart, addTocar, jelof, nigerian1, pageHolder, pic1, poundSign, ratingBar1,
-          textView3);
+      return new PopularFoodDisplayContainerBinding((ConstraintLayout) rootView, addTocar, jelof,
+          nigerian1, orderPrice, pageHolder, pic1, poundSign, quantityTxt, ratingBar1, textView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

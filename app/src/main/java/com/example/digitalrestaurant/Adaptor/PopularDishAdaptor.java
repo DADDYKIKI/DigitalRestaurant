@@ -43,7 +43,7 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
         public GodwinViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            price=itemView.findViewById(R.id.adaPrice);
+            price=itemView.findViewById(R.id.orderPrice);
             name=itemView.findViewById(R.id.jelof);
             nationality=itemView.findViewById(R.id.nigerian1);
             foodImages=itemView.findViewById(R.id.pic1);

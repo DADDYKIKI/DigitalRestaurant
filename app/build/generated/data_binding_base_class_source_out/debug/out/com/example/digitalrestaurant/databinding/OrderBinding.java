@@ -21,60 +21,78 @@ public final class OrderBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final TextView adaFoodName;
-
-  @NonNull
-  public final TextView adaFoodNationality;
-
-  @NonNull
-  public final TextView adaPrice;
-
-  @NonNull
   public final ConstraintLayout adarestaurantcard;
 
   @NonNull
-  public final TextView addToCart;
+  public final TextView addToCartbtn;
 
   @NonNull
   public final ConstraintLayout constraintLayout2;
 
   @NonNull
-  public final TextView minus;
+  public final TextView minusBtn;
 
   @NonNull
-  public final TextView orderbtn;
+  public final TextView orderFoodName;
+
+  @NonNull
+  public final TextView orderNationality;
+
+  @NonNull
+  public final TextView orderPrice;
 
   @NonNull
   public final ConstraintLayout orderingContainer;
 
   @NonNull
-  public final TextView plus;
+  public final TextView plusBtn;
 
   @NonNull
   public final TextView poundSign;
 
   @NonNull
+  public final TextView poundSign2;
+
+  @NonNull
+  public final TextView priceOfItem;
+
+  @NonNull
+  public final TextView quantityTxt;
+
+  @NonNull
   public final TextView textView2;
 
-  private OrderBinding(@NonNull LinearLayout rootView, @NonNull TextView adaFoodName,
-      @NonNull TextView adaFoodNationality, @NonNull TextView adaPrice,
-      @NonNull ConstraintLayout adarestaurantcard, @NonNull TextView addToCart,
-      @NonNull ConstraintLayout constraintLayout2, @NonNull TextView minus,
-      @NonNull TextView orderbtn, @NonNull ConstraintLayout orderingContainer,
-      @NonNull TextView plus, @NonNull TextView poundSign, @NonNull TextView textView2) {
+  @NonNull
+  public final TextView totalOrderPrice;
+
+  @NonNull
+  public final TextView totalPrice;
+
+  private OrderBinding(@NonNull LinearLayout rootView, @NonNull ConstraintLayout adarestaurantcard,
+      @NonNull TextView addToCartbtn, @NonNull ConstraintLayout constraintLayout2,
+      @NonNull TextView minusBtn, @NonNull TextView orderFoodName,
+      @NonNull TextView orderNationality, @NonNull TextView orderPrice,
+      @NonNull ConstraintLayout orderingContainer, @NonNull TextView plusBtn,
+      @NonNull TextView poundSign, @NonNull TextView poundSign2, @NonNull TextView priceOfItem,
+      @NonNull TextView quantityTxt, @NonNull TextView textView2, @NonNull TextView totalOrderPrice,
+      @NonNull TextView totalPrice) {
     this.rootView = rootView;
-    this.adaFoodName = adaFoodName;
-    this.adaFoodNationality = adaFoodNationality;
-    this.adaPrice = adaPrice;
     this.adarestaurantcard = adarestaurantcard;
-    this.addToCart = addToCart;
+    this.addToCartbtn = addToCartbtn;
     this.constraintLayout2 = constraintLayout2;
-    this.minus = minus;
-    this.orderbtn = orderbtn;
+    this.minusBtn = minusBtn;
+    this.orderFoodName = orderFoodName;
+    this.orderNationality = orderNationality;
+    this.orderPrice = orderPrice;
     this.orderingContainer = orderingContainer;
-    this.plus = plus;
+    this.plusBtn = plusBtn;
     this.poundSign = poundSign;
+    this.poundSign2 = poundSign2;
+    this.priceOfItem = priceOfItem;
+    this.quantityTxt = quantityTxt;
     this.textView2 = textView2;
+    this.totalOrderPrice = totalOrderPrice;
+    this.totalPrice = totalPrice;
   }
 
   @Override
@@ -104,33 +122,15 @@ public final class OrderBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.adaFoodName;
-      TextView adaFoodName = ViewBindings.findChildViewById(rootView, id);
-      if (adaFoodName == null) {
-        break missingId;
-      }
-
-      id = R.id.adaFoodNationality;
-      TextView adaFoodNationality = ViewBindings.findChildViewById(rootView, id);
-      if (adaFoodNationality == null) {
-        break missingId;
-      }
-
-      id = R.id.adaPrice;
-      TextView adaPrice = ViewBindings.findChildViewById(rootView, id);
-      if (adaPrice == null) {
-        break missingId;
-      }
-
       id = R.id.adarestaurantcard;
       ConstraintLayout adarestaurantcard = ViewBindings.findChildViewById(rootView, id);
       if (adarestaurantcard == null) {
         break missingId;
       }
 
-      id = R.id.addToCart;
-      TextView addToCart = ViewBindings.findChildViewById(rootView, id);
-      if (addToCart == null) {
+      id = R.id.addToCartbtn;
+      TextView addToCartbtn = ViewBindings.findChildViewById(rootView, id);
+      if (addToCartbtn == null) {
         break missingId;
       }
 
@@ -140,15 +140,27 @@ public final class OrderBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.minus;
-      TextView minus = ViewBindings.findChildViewById(rootView, id);
-      if (minus == null) {
+      id = R.id.minusBtn;
+      TextView minusBtn = ViewBindings.findChildViewById(rootView, id);
+      if (minusBtn == null) {
         break missingId;
       }
 
-      id = R.id.orderbtn;
-      TextView orderbtn = ViewBindings.findChildViewById(rootView, id);
-      if (orderbtn == null) {
+      id = R.id.orderFoodName;
+      TextView orderFoodName = ViewBindings.findChildViewById(rootView, id);
+      if (orderFoodName == null) {
+        break missingId;
+      }
+
+      id = R.id.orderNationality;
+      TextView orderNationality = ViewBindings.findChildViewById(rootView, id);
+      if (orderNationality == null) {
+        break missingId;
+      }
+
+      id = R.id.orderPrice;
+      TextView orderPrice = ViewBindings.findChildViewById(rootView, id);
+      if (orderPrice == null) {
         break missingId;
       }
 
@@ -158,9 +170,9 @@ public final class OrderBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.plus;
-      TextView plus = ViewBindings.findChildViewById(rootView, id);
-      if (plus == null) {
+      id = R.id.plusBtn;
+      TextView plusBtn = ViewBindings.findChildViewById(rootView, id);
+      if (plusBtn == null) {
         break missingId;
       }
 
@@ -170,15 +182,46 @@ public final class OrderBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.poundSign2;
+      TextView poundSign2 = ViewBindings.findChildViewById(rootView, id);
+      if (poundSign2 == null) {
+        break missingId;
+      }
+
+      id = R.id.priceOfItem;
+      TextView priceOfItem = ViewBindings.findChildViewById(rootView, id);
+      if (priceOfItem == null) {
+        break missingId;
+      }
+
+      id = R.id.quantityTxt;
+      TextView quantityTxt = ViewBindings.findChildViewById(rootView, id);
+      if (quantityTxt == null) {
+        break missingId;
+      }
+
       id = R.id.textView2;
       TextView textView2 = ViewBindings.findChildViewById(rootView, id);
       if (textView2 == null) {
         break missingId;
       }
 
-      return new OrderBinding((LinearLayout) rootView, adaFoodName, adaFoodNationality, adaPrice,
-          adarestaurantcard, addToCart, constraintLayout2, minus, orderbtn, orderingContainer, plus,
-          poundSign, textView2);
+      id = R.id.totalOrderPrice;
+      TextView totalOrderPrice = ViewBindings.findChildViewById(rootView, id);
+      if (totalOrderPrice == null) {
+        break missingId;
+      }
+
+      id = R.id.totalPrice;
+      TextView totalPrice = ViewBindings.findChildViewById(rootView, id);
+      if (totalPrice == null) {
+        break missingId;
+      }
+
+      return new OrderBinding((LinearLayout) rootView, adarestaurantcard, addToCartbtn,
+          constraintLayout2, minusBtn, orderFoodName, orderNationality, orderPrice,
+          orderingContainer, plusBtn, poundSign, poundSign2, priceOfItem, quantityTxt, textView2,
+          totalOrderPrice, totalPrice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

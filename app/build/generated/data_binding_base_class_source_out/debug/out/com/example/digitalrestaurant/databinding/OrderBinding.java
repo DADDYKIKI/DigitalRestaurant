@@ -53,12 +53,15 @@ public final class OrderBinding implements ViewBinding {
   @NonNull
   public final TextView poundSign;
 
+  @NonNull
+  public final TextView textView2;
+
   private OrderBinding(@NonNull LinearLayout rootView, @NonNull TextView adaFoodName,
       @NonNull TextView adaFoodNationality, @NonNull TextView adaPrice,
       @NonNull ConstraintLayout adarestaurantcard, @NonNull TextView addToCart,
       @NonNull ConstraintLayout constraintLayout2, @NonNull TextView minus,
       @NonNull TextView orderbtn, @NonNull ConstraintLayout orderingContainer,
-      @NonNull TextView plus, @NonNull TextView poundSign) {
+      @NonNull TextView plus, @NonNull TextView poundSign, @NonNull TextView textView2) {
     this.rootView = rootView;
     this.adaFoodName = adaFoodName;
     this.adaFoodNationality = adaFoodNationality;
@@ -71,6 +74,7 @@ public final class OrderBinding implements ViewBinding {
     this.orderingContainer = orderingContainer;
     this.plus = plus;
     this.poundSign = poundSign;
+    this.textView2 = textView2;
   }
 
   @Override
@@ -166,9 +170,15 @@ public final class OrderBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView2;
+      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
+      if (textView2 == null) {
+        break missingId;
+      }
+
       return new OrderBinding((LinearLayout) rootView, adaFoodName, adaFoodNationality, adaPrice,
           adarestaurantcard, addToCart, constraintLayout2, minus, orderbtn, orderingContainer, plus,
-          poundSign);
+          poundSign, textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

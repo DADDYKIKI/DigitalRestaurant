@@ -24,21 +24,22 @@ public class Order extends AppCompatActivity {
 
         String foodName = "";
         String foodNationality = "";
-        //int foodPrice=0;
-        //ConstraintLayout foodImage=0;
+        int foodImage=0;
+        int foodPrice=0;
+
 
         Bundle extras=getIntent().getExtras();
 
         if(extras!=null){
             foodName= extras.getString("name");
             foodNationality= extras.getString("nationality");
-            //foodPrice=extras.getInt("price");
-            //foodImage=extras.getInt("imageUrl");
+            foodPrice=extras.getInt("price");
+            foodImage=extras.getInt("imageUrl");
 
         }
-       // adaFoodPrice.setText(foodPrice);
+        adaFoodPrice.setText(String.valueOf(foodPrice));
         adaFoodName.setText(foodName);
         adaFoodNationality.setText(foodNationality);
-        //adaFoodImages.setBackground(foodImage);
+        adaFoodImages.setBackgroundResource(foodImage);
 
 }}

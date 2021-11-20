@@ -2,8 +2,10 @@ com/example/digitalrestaurant/databinding/AprokoResataurantHomepageBinding.java
  com.example.digitalrestaurant.databinding.AprokoResataurantHomepageBinding
 com/example/digitalrestaurant/databinding/ActivityIntroPageBinding.java
  com.example.digitalrestaurant.databinding.ActivityIntroPageBinding
-com/example/digitalrestaurant/databinding/ObandeRestaurantHomepageBinding.java
- com.example.digitalrestaurant.databinding.ObandeRestaurantHomepageBinding
+com/example/digitalrestaurant/FoodSeller.java
+ com.example.digitalrestaurant.FoodSeller
+ com.example.digitalrestaurant.FoodSeller$1
+ com.example.digitalrestaurant.FoodSeller$2
 com/example/digitalrestaurant/Customer.java
  com.example.digitalrestaurant.Customer
  com.example.digitalrestaurant.Customer$1
@@ -20,8 +22,6 @@ com/example/digitalrestaurant/SignupPage.java
  com.example.digitalrestaurant.SignupPage
 com/example/digitalrestaurant/databinding/StainlessRestaurantHomepage2Binding.java
  com.example.digitalrestaurant.databinding.StainlessRestaurantHomepage2Binding
-com/example/digitalrestaurant/Adaptor/StainlessAdaptor.java
- com.example.digitalrestaurant.Adaptor.StainlessAdaptor
 com/example/digitalrestaurant/SellerUploadPage.java
  com.example.digitalrestaurant.SellerUploadPage
 com/example/digitalrestaurant/databinding/ActivityFoodSellerBinding.java
@@ -30,8 +30,8 @@ com/example/digitalrestaurant/IntroPage.java
  com.example.digitalrestaurant.IntroPage
  com.example.digitalrestaurant.IntroPage$1
  com.example.digitalrestaurant.IntroPage$2
-com/example/digitalrestaurant/Adaptor/ObandeKitechenAdaptor.java
- com.example.digitalrestaurant.Adaptor.ObandeKitechenAdaptor
+com/example/digitalrestaurant/HomePage.java
+ com.example.digitalrestaurant.HomePage
 com/example/digitalrestaurant/AllInOneKitchenData.java
  com.example.digitalrestaurant.AllInOneKitchenData
 com/example/digitalrestaurant/RestaurantsData/RestautantsDetails.java
@@ -40,10 +40,9 @@ com/example/digitalrestaurant/databinding/ActivitySellerUploadPageBinding.java
  com.example.digitalrestaurant.databinding.ActivitySellerUploadPageBinding
 com/example/digitalrestaurant/databinding/HomepageBinding.java
  com.example.digitalrestaurant.databinding.HomepageBinding
-com/example/digitalrestaurant/Adaptor/PopularDishAdaptor.java
- com.example.digitalrestaurant.Adaptor.PopularDishAdaptor
- com.example.digitalrestaurant.Adaptor.PopularDishAdaptor$AdaRecyclerViewListener
- com.example.digitalrestaurant.Adaptor.PopularDishAdaptor$GodwinViewHolder
+com/example/digitalrestaurant/LoginPage.java
+ com.example.digitalrestaurant.LoginPage
+ com.example.digitalrestaurant.LoginPage$1
 com/example/digitalrestaurant/databinding/MyLocationsContainerBinding.java
  com.example.digitalrestaurant.databinding.MyLocationsContainerBinding
 com/example/digitalrestaurant/data/model/LoggedInUser.java
@@ -55,15 +54,12 @@ com/example/digitalrestaurant/Adaptor/RestaurantsAdaptor.java
  com.example.digitalrestaurant.Adaptor.RestaurantsAdaptor
  com.example.digitalrestaurant.Adaptor.RestaurantsAdaptor$AllInOneRecyclerViewListener
  com.example.digitalrestaurant.Adaptor.RestaurantsAdaptor$RestaurantsViewHolder
-com/example/digitalrestaurant/LoginPage.java
- com.example.digitalrestaurant.LoginPage
- com.example.digitalrestaurant.LoginPage$1
+com/example/digitalrestaurant/databinding/ObandeRestaurantHomepageBinding.java
+ com.example.digitalrestaurant.databinding.ObandeRestaurantHomepageBinding
 com/example/digitalrestaurant/databinding/ActivitySignupPageBinding.java
  com.example.digitalrestaurant.databinding.ActivitySignupPageBinding
-com/example/digitalrestaurant/FoodSeller.java
- com.example.digitalrestaurant.FoodSeller
- com.example.digitalrestaurant.FoodSeller$1
- com.example.digitalrestaurant.FoodSeller$2
+com/example/digitalrestaurant/data/LoginDataSource.java
+ com.example.digitalrestaurant.data.LoginDataSource
 com/example/digitalrestaurant/PopulateRestaurant.java
  com.example.digitalrestaurant.PopulateRestaurant
 com/example/digitalrestaurant/databinding/OrderBinding.java
@@ -77,24 +73,18 @@ com/example/digitalrestaurant/data/Result.java
  com.example.digitalrestaurant.data.Result$Success
 com/example/digitalrestaurant/databinding/PopularFoodDisplayContainerBinding.java
  com.example.digitalrestaurant.databinding.PopularFoodDisplayContainerBinding
-com/example/digitalrestaurant/data/LoginDataSource.java
- com.example.digitalrestaurant.data.LoginDataSource
+com/example/digitalrestaurant/Adaptor/PopularDishAdaptor.java
+ com.example.digitalrestaurant.Adaptor.PopularDishAdaptor
+ com.example.digitalrestaurant.Adaptor.PopularDishAdaptor$AdaRecyclerViewListener
+ com.example.digitalrestaurant.Adaptor.PopularDishAdaptor$GodwinViewHolder
 com/example/digitalrestaurant/databinding/ActivityMainBinding.java
  com.example.digitalrestaurant.databinding.ActivityMainBinding
 com/example/digitalrestaurant/databinding/AdaRestaurantHomepageBinding.java
  com.example.digitalrestaurant.databinding.AdaRestaurantHomepageBinding
 com/example/digitalrestaurant/data/LoginRepository.java
  com.example.digitalrestaurant.data.LoginRepository
-com/example/digitalrestaurant/Adaptor/AprokoKitchenAdaptor.java
- com.example.digitalrestaurant.Adaptor.AprokoKitchenAdaptor
-com/example/digitalrestaurant/Adaptor/AdaKitechenAdaptor.java
- com.example.digitalrestaurant.Adaptor.AdaKitechenAdaptor
- com.example.digitalrestaurant.Adaptor.AdaKitechenAdaptor$AdaKitechenViewHolder
- com.example.digitalrestaurant.Adaptor.AdaKitechenAdaptor$AdaRecyclerViewListener
 com/example/digitalrestaurant/ObandeKitchen.java
  com.example.digitalrestaurant.ObandeKitchen
-com/example/digitalrestaurant/HomePage.java
- com.example.digitalrestaurant.HomePage
 com/example/digitalrestaurant/Stainless.java
  com.example.digitalrestaurant.Stainless
 com/example/digitalrestaurant/ApprokoKitchen.java

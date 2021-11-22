@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class ApprokoKitchen extends AppCompatActivity {
 
-    private PopularDishAdaptor.AdaRecyclerViewListener adalistener2;
+    private PopularDishAdaptor.RestaurantsRecyclerViewListener adalistener2;
 
 
     RecyclerView.Adapter aprokoAdaptor;
@@ -46,7 +46,7 @@ public class ApprokoKitchen extends AppCompatActivity {
 
         aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        aprokoAdaptor=new PopularDishAdaptor(populateAdaPage(),adalistener2);
+        aprokoAdaptor=new PopularDishAdaptor(populateAprokoPage(),adalistener2);
 
         aprokoRecycler.setAdapter(aprokoAdaptor);
 
@@ -69,7 +69,7 @@ public class ApprokoKitchen extends AppCompatActivity {
 
     }
 
-    public ArrayList<ItemData> populateAdaPage(){
+    public  ArrayList<ItemData> populateAprokoPage(){
 
 
         aprokoItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));

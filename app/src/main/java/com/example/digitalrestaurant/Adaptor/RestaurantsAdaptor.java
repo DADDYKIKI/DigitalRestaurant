@@ -11,17 +11,17 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.R;
-import com.example.digitalrestaurant.RestaurantsData.RestautantsDetails;
+import com.example.digitalrestaurant.RestaurantsData.RestaurantsDetails;
 
 import java.util.ArrayList;
 
 public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.RestaurantsViewHolder>{
 
-    private ArrayList<RestautantsDetails> restaurantslist;
+    private ArrayList<RestaurantsDetails> restaurantslist;
 
     private AllInOneRecyclerViewListener allInOneListener;
 
-    public RestaurantsAdaptor(ArrayList<RestautantsDetails> restaurantslist,AllInOneRecyclerViewListener allInOneListener) {
+    public RestaurantsAdaptor(ArrayList<RestaurantsDetails> restaurantslist, AllInOneRecyclerViewListener allInOneListener) {
         this.restaurantslist = restaurantslist;
         this.allInOneListener=allInOneListener;
         // this.context = context;
@@ -77,8 +77,10 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
 
             @Override
             public int getItemCount() {
-                return restaurantslist.size();
+
+        return restaurantslist.size();
             }
+
 
     public interface AllInOneRecyclerViewListener{
 

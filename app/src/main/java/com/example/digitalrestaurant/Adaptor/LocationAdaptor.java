@@ -15,13 +15,17 @@ import java.util.ArrayList;
 
 public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.LocationViewHolder>{
 
-    ArrayList<LocationDetails>  locationLists;
+    private ArrayList<LocationDetails>  locationLists;
+
+
 
     public LocationAdaptor(ArrayList<LocationDetails> locationLists) {
         this.locationLists= locationLists;
         // this.context = context;
 
     }
+
+
 
 
     public class LocationViewHolder extends RecyclerView.ViewHolder {
@@ -33,8 +37,13 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
 
             super(itemView);
 
+
+
             LocationName = itemView.findViewById(R.id.locationName);
+
+
         }
+
     }
 
 
@@ -55,8 +64,16 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
 
     @Override
     public int getItemCount() {
+
+
         return locationLists.size();
     }
+
+
+
+
+
+
 
 
 }

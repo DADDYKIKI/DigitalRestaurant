@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class Stainless extends AppCompatActivity {
 
 
-    private PopularDishAdaptor.AdaRecyclerViewListener adalistener2;
+    private PopularDishAdaptor.RestaurantsRecyclerViewListener adalistener2;
 
     private RecyclerView.Adapter stainlessAdaptor;
 
@@ -70,14 +70,12 @@ public class Stainless extends AppCompatActivity {
         stainlessItems.add(new ItemData(12,"Catfish peppered soup","African" ,R.drawable.adacatfish));
         stainlessItems.add(new ItemData(9,"MoiMoi","African" ,R.drawable.obandemoimoi));
         stainlessItems.add(new ItemData(18,"Egusi soup","African" ,R.drawable.obandeegusisoup));
-        stainlessItems.add(new ItemData(6,"Acolic drinks","" ,R.drawable.adaassortedbear));
         stainlessItems.add(new ItemData(3,"Chin-Chin","African" ,R.drawable.obandechinchin));
         stainlessItems.add(new ItemData(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone));
         stainlessItems.add(new ItemData(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans));
         stainlessItems.add(new ItemData(3,"Soft drinks","" ,R.drawable.adasoftdrinks));
         stainlessItems.add(new ItemData(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup));
         stainlessItems.add(new ItemData(5,"Heineken Pride","" ,R.drawable.adachilledheineken));
-        stainlessItems.add(new ItemData(5,"Hero bear","" ,R.drawable.adaherobear));
         stainlessItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer));
 
         return stainlessItems;

@@ -6,17 +6,24 @@ import java.io.Serializable;
 public class ItemData implements Serializable {
 
     private int price, imageURL;
-    private String name, nationality;
+    private String name, nationality,alcoholic;
 
-    public ItemData(int price,  String name, String nationality, int imageURL) {
+    public ItemData(int price,  String name, String nationality,int imageURL) {
         this.price = price;
         this.name = name;
         this.nationality = nationality;
+      //  this.alcoholic=alcoholic;
         this.imageURL= imageURL;
 
     }
 
+    public String getAlcoholic() {
+        return alcoholic;
+    }
 
+    public void setAlcoholic(String alcoholic) {
+        this.alcoholic = alcoholic;
+    }
 
     public int getPrice() {
         return price;

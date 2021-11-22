@@ -18,6 +18,7 @@
         <activity
             android:name=".Customer"
             android:exported="false" />
+
         <activity
             android:name=".HomePage"
             android:exported="false" />

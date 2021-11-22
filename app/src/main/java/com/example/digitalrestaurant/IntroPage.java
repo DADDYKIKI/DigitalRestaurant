@@ -19,23 +19,9 @@ public class IntroPage extends AppCompatActivity {
         customerTxt= (TextView) findViewById(R.id.introCustmerText);
         foodSellerTxt= (TextView) findViewById(R.id.introFoodsellerText);
 
-        customerTxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        customerTxt.setOnClickListener(v -> clickIntro(Customer.class));
 
-                clickIntro(Customer.class);
-
-            }
-        });
-
-        foodSellerTxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                clickIntro(FoodSeller.class);
-
-            }
-        });
+        foodSellerTxt.setOnClickListener(v -> clickIntro(FoodSeller.class));
     }
 
 

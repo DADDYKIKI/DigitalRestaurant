@@ -48,14 +48,10 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
   @NonNull
   public final RatingBar ratingBar1;
 
-  @NonNull
-  public final TextView textView3;
-
   private PopularFoodDisplayContainerBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout addTocar, @NonNull TextView jelof, @NonNull TextView nigerian1,
       @NonNull TextView orderPrice, @NonNull ConstraintLayout pageHolder, @NonNull ImageView pic1,
-      @NonNull TextView poundSign, @NonNull TextView quantityTxt, @NonNull RatingBar ratingBar1,
-      @NonNull TextView textView3) {
+      @NonNull TextView poundSign, @NonNull TextView quantityTxt, @NonNull RatingBar ratingBar1) {
     this.rootView = rootView;
     this.addTocar = addTocar;
     this.jelof = jelof;
@@ -66,7 +62,6 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
     this.poundSign = poundSign;
     this.quantityTxt = quantityTxt;
     this.ratingBar1 = ratingBar1;
-    this.textView3 = textView3;
   }
 
   @Override
@@ -146,14 +141,8 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView3;
-      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
-      if (textView3 == null) {
-        break missingId;
-      }
-
       return new PopularFoodDisplayContainerBinding((ConstraintLayout) rootView, addTocar, jelof,
-          nigerian1, orderPrice, pageHolder, pic1, poundSign, quantityTxt, ratingBar1, textView3);
+          nigerian1, orderPrice, pageHolder, pic1, poundSign, quantityTxt, ratingBar1);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

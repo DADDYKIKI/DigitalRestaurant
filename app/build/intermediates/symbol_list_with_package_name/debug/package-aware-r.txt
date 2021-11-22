@@ -1828,6 +1828,9 @@ id bounce
 id buttonPanel
 id cache_measures
 id cancel_button
+id cartConstraint
+id cartRecycler
+id cartTitle
 id center
 id center_horizontal
 id center_vertical
@@ -1851,6 +1854,7 @@ id confirm_button
 id constraintLayout
 id constraintLayout2
 id constraintLayout3
+id constraintLayout4
 id container
 id content
 id contentPanel
@@ -1946,6 +1950,9 @@ id introWelcomeTxt
 id invisible
 id inward
 id italic
+id itemName
+id itemPrice
+id itemQuantity
 id item_touch_helper_previous_elevation
 id jelof
 id jumpToEnd
@@ -1959,9 +1966,13 @@ id leftToRight
 id line1
 id line3
 id linear
+id listLocation
 id listMode
 id list_item
+id listsOfRestNames
 id loading
+id locatedrestaurantback
+id locatedrestaurantname
 id locationName
 id locationRecycler
 id login
@@ -2176,9 +2187,9 @@ id textStart
 id textTop
 id textView
 id textView2
-id textView3
 id textView4
 id textView6
+id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2291,6 +2302,8 @@ layout activity_seller_upload_page
 layout activity_signup_page
 layout ada_restaurant_homepage
 layout aproko_resataurant_homepage
+layout cart
+layout cart_container
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2308,6 +2321,8 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout homepage
+layout located_restaurants
+layout located_restaurants_container
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

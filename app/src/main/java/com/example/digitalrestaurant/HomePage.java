@@ -7,13 +7,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.Toast;
+
 
 import com.example.digitalrestaurant.Adaptor.PopularDishAdaptor;
 import com.example.digitalrestaurant.Adaptor.LocationAdaptor;
 import com.example.digitalrestaurant.LocationDetails.LocationDetails;
 import com.example.digitalrestaurant.Adaptor.RestaurantsAdaptor;
-import com.example.digitalrestaurant.RestaurantsData.RestautantsDetails;
+import com.example.digitalrestaurant.RestaurantsData.RestaurantsDetails;
 import com.example.digitalrestaurant.UserData.ItemData;
 
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class HomePage extends AppCompatActivity {
 
     private RestaurantsAdaptor.AllInOneRecyclerViewListener AllInOneListener2;
 
-    PopularDishAdaptor.AdaRecyclerViewListener adalistener2;
+    PopularDishAdaptor.RestaurantsRecyclerViewListener adalistener2;
 
     private RecyclerView recyclerView,recyclerView2,recyclerView3;
 
@@ -36,7 +37,7 @@ public class HomePage extends AppCompatActivity {
 
     //Parameters for horizontal Restaurants name display
 
-    private ArrayList<RestautantsDetails> restaurantslist;
+    private ArrayList<RestaurantsDetails> restaurantslist;
 
 
     //Parameters for horizontal Location name display
@@ -52,7 +53,7 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.homepage);
 
         myItems=new ArrayList<ItemData>();
-        restaurantslist=new ArrayList<RestautantsDetails>();
+        restaurantslist=new ArrayList<RestaurantsDetails>();
         locationLists=new ArrayList<LocationDetails>();
 
         //TextView restaurantName= (TextView) findViewById(R.id.enterLoginEmail);
@@ -109,7 +110,7 @@ public class HomePage extends AppCompatActivity {
 
             else if(restaurantslist.get(position).getRestaurantsName().equals("Obande Kitchen")){
 
-               startActivity(intent2);
+                startActivity(intent2);
             }
 
             else if (restaurantslist.get(position).getRestaurantsName().equals("Ada Restaurant and Bar")){
@@ -132,17 +133,17 @@ public class HomePage extends AppCompatActivity {
 
 
 
-   public ArrayList<ItemData> populateAdaPage(){
+    public ArrayList<ItemData> populateAdaPage(){
 
 
-       myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
-       myItems.add(new ItemData(8,"Rice/Plantain","African" ,R.drawable.jelofplantrain));
-       myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
-       myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
-       myItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone));
-       myItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic));
-       myItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel));
-       myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
+        myItems.add(new ItemData(8,"Rice/Plantain","African" ,R.drawable.jelofplantrain));
+        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
+        myItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone));
+        myItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic));
+        myItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel));
+        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
 
         return myItems;
     }
@@ -194,15 +195,15 @@ public class HomePage extends AppCompatActivity {
 
 
 
-    public ArrayList<RestautantsDetails> populateItemInfo2(){
+    public ArrayList<RestaurantsDetails> populateItemInfo2(){
 
-        restaurantslist.add(new RestautantsDetails("Approko Kitchen","G1",
-                                "Nigerian",R.drawable.aprokokitchen,populateAprokoPage()));
-        restaurantslist.add(new RestautantsDetails("Obande Kitchen","L2",
-                            "Nigerian",R.drawable.obandekitchen,populateObandePage()));
-        restaurantslist.add(new RestautantsDetails("Ada Restaurant and Bar",
+        restaurantslist.add(new RestaurantsDetails("Approko Kitchen","G1",
+                "Nigerian",R.drawable.aprokokitchen,populateAprokoPage()));
+        restaurantslist.add(new RestaurantsDetails("Obande Kitchen","L2",
+                "Nigerian",R.drawable.obandekitchen,populateObandePage()));
+        restaurantslist.add(new RestaurantsDetails("Ada Restaurant and Bar",
                 "L1","Nigerian",R.drawable.adakitchen,populateAdaPage()));
-        restaurantslist.add(new RestautantsDetails("Stainless",
+        restaurantslist.add(new RestaurantsDetails("Stainless",
                 "G3","Nigerian",R.drawable.silver,populateStainlessPage()));
 
         return restaurantslist;

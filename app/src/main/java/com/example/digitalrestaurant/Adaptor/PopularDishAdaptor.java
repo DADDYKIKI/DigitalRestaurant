@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.GodwinViewHolder> {
 
-    private AdaRecyclerViewListener adaListener;
+    private RestaurantsRecyclerViewListener restaurantListener;
 
     //Context context;
 
@@ -27,9 +27,9 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
 
     ArrayList<ItemData> itemDatalist;
 
-    public PopularDishAdaptor(ArrayList<ItemData> itemDatalist,AdaRecyclerViewListener adaListener) {
+    public PopularDishAdaptor(ArrayList<ItemData> itemDatalist,RestaurantsRecyclerViewListener restaurantListener) {
         this.itemDatalist = itemDatalist;
-        this.adaListener=adaListener;
+        this.restaurantListener=restaurantListener;
 
        // this.context = context;
 
@@ -55,7 +55,7 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
 
         @Override
         public void onClick(View v) {
-            adaListener.onClick(itemView,getAdapterPosition());
+            restaurantListener.onClick(itemView,getAdapterPosition());
         }
     }
 
@@ -82,7 +82,7 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
         return itemDatalist.size();
     }
 
-    public interface AdaRecyclerViewListener{
+    public interface RestaurantsRecyclerViewListener{
 
         void onClick(View v, int position);
 

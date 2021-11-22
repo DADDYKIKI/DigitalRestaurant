@@ -27,20 +27,17 @@ public class LoginPage extends AppCompatActivity {
         loginBut = (Button)findViewById(R.id.loginSubBtn);
 
 
-        loginBut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        loginBut.setOnClickListener(v -> {
 
-                if (loginEmail.getText().toString().equals(email)&&loginPass.getText().toString().equals(password)){
-                click2(HomePage.class);
+            if (loginEmail.getText().toString().equals(email)&&loginPass.getText().toString().equals(password)){
+            click2(HomePage.class);
 
-                    setTextInvisible(v);
+                setTextInvisible(v);
 
-           }
+       }
 
-                      else{ setTextVisible( v) ;   }
+                  else{ setTextVisible( v) ;   }
 
-            }
         });
         }
 

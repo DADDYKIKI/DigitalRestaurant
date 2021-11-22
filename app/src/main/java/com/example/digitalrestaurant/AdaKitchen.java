@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class AdaKitchen extends AppCompatActivity {
 
-    private PopularDishAdaptor.AdaRecyclerViewListener adalistener2;
+    private PopularDishAdaptor.RestaurantsRecyclerViewListener adalistener2;
 
     private RecyclerView.Adapter adaAdaptor;
 

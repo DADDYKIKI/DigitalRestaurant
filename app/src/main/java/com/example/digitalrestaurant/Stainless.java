@@ -42,7 +42,7 @@ public class Stainless extends AppCompatActivity {
 
         stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        //stainlessAdaptor=new PopularDishAdaptor(populateStainlessPage());
+        stainlessAdaptor=new PopularDishAdaptor(populateStainlessPage(),adalistener2);
 
         stainlessRecycler.setAdapter(stainlessAdaptor);
 

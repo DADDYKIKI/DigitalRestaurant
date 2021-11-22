@@ -15,7 +15,7 @@
     <string name="findRestaurants">Find Restaurants</string>
     <string name="findDishes">Find Dishes</string>
     <string name="menu">Menu</string>
-    <string name="loginsignin">Sign in</string>
+    <string name="signinLabel">Sign in</string>
 
     <string-array name="locator">
         <item>Nigeria/Lagos</item>

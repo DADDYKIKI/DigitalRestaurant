@@ -53,6 +53,7 @@
         android:layout_width="450dp"
         android:layout_height="500dp"
         android:editable="false"
+        android:fontFamily="sans-serif-thin"
         android:text="Welcome to Obande Digital Food "
         android:textAlignment="center"
         android:textColor="@android:color/holo_orange_dark"

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptor.PopularDishAdaptor;
 import com.example.digitalrestaurant.UserData.ItemData;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -22,15 +23,34 @@ public class AdaKitchen extends AppCompatActivity {
 
     private ArrayList<ItemData> adaItems;
 
+    FloatingActionButton basket;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ada_restaurant_homepage);
 
-        adaItems=new ArrayList<ItemData>();
+        adaItems= new ArrayList<>();
+        basket=(FloatingActionButton) findViewById(R.id.floatingActionButton);
 
         makeAdaRestaurantAdaptor();
+        openMyBasket();
+
+    }
+
+    public void openMyBasket(){
+
+        basket.setOnClickListener(v -> {
+
+            Intent intent =new Intent(AdaKitchen.this, Cart.class);
+            startActivity(intent);
+
+
+        });
+
+
+
 
     }
     public void makeAdaRestaurantAdaptor(){

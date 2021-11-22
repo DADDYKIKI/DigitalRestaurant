@@ -40,6 +40,9 @@
             android:name="com.example.digitalrestaurant.AdaKitchen"
             android:exported="false" />
         <activity
+            android:name="com.example.digitalrestaurant.Cart"
+            android:exported="false" />
+        <activity
             android:name="com.example.digitalrestaurant.Stainless"
             android:exported="false" />
         <activity
@@ -60,6 +63,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

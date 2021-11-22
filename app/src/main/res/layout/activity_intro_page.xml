@@ -18,6 +18,7 @@
             android:id="@+id/introWelcomeTxt"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
+            android:fontFamily="sans-serif"
             android:text="WELCOME"
             android:textAlignment="center"
             android:textColor="@color/white"

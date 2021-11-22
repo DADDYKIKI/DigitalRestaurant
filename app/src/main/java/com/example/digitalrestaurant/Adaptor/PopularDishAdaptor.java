@@ -55,6 +55,7 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
 
         @Override
         public void onClick(View v) {
+
             restaurantListener.onClick(itemView,getAdapterPosition());
         }
     }

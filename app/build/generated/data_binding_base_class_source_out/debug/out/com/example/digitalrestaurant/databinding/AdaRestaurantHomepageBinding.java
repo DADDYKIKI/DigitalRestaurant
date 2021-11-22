@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.digitalrestaurant.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -35,6 +36,9 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
   public final ConstraintLayout constraintLayout3;
 
   @NonNull
+  public final FloatingActionButton floatingActionButton;
+
+  @NonNull
   public final TextView homeKey;
 
   @NonNull
@@ -52,13 +56,15 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
   private AdaRestaurantHomepageBinding(@NonNull LinearLayout rootView,
       @NonNull TextView AdaRestLocationAdd, @NonNull TextView Adalocate,
       @NonNull RecyclerView adaKitchen, @NonNull ConstraintLayout constraintLayout3,
-      @NonNull TextView homeKey, @NonNull TextView menuKey, @NonNull ScrollView scrollView2,
-      @NonNull TextView stainlesslabel, @NonNull TextView welcometxt) {
+      @NonNull FloatingActionButton floatingActionButton, @NonNull TextView homeKey,
+      @NonNull TextView menuKey, @NonNull ScrollView scrollView2, @NonNull TextView stainlesslabel,
+      @NonNull TextView welcometxt) {
     this.rootView = rootView;
     this.AdaRestLocationAdd = AdaRestLocationAdd;
     this.Adalocate = Adalocate;
     this.adaKitchen = adaKitchen;
     this.constraintLayout3 = constraintLayout3;
+    this.floatingActionButton = floatingActionButton;
     this.homeKey = homeKey;
     this.menuKey = menuKey;
     this.scrollView2 = scrollView2;
@@ -117,6 +123,12 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.floatingActionButton;
+      FloatingActionButton floatingActionButton = ViewBindings.findChildViewById(rootView, id);
+      if (floatingActionButton == null) {
+        break missingId;
+      }
+
       id = R.id.homeKey;
       TextView homeKey = ViewBindings.findChildViewById(rootView, id);
       if (homeKey == null) {
@@ -148,8 +160,8 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
       }
 
       return new AdaRestaurantHomepageBinding((LinearLayout) rootView, AdaRestLocationAdd,
-          Adalocate, adaKitchen, constraintLayout3, homeKey, menuKey, scrollView2, stainlesslabel,
-          welcometxt);
+          Adalocate, adaKitchen, constraintLayout3, floatingActionButton, homeKey, menuKey,
+          scrollView2, stainlesslabel, welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

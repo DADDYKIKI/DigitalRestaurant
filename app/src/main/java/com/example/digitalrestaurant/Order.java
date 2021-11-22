@@ -1,11 +1,15 @@
 package com.example.digitalrestaurant;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import java.util.ArrayList;
 
 public class Order extends AppCompatActivity {
 
@@ -16,6 +20,8 @@ public class Order extends AppCompatActivity {
     private String foodName = "";
     private String foodNationality = "";
     private int foodImage=0;
+
+    ArrayList<OrderDetails> orderList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,8 @@ public class Order extends AppCompatActivity {
         plusBtn=findViewById(R.id.plusBtn);
         minusBtn=findViewById(R.id.minusBtn);
         totalOrderPrice=findViewById(R.id.totalOrderPrice);
+
+        orderList=new ArrayList<>();
 
 
 
@@ -54,7 +62,11 @@ public class Order extends AppCompatActivity {
         adaFoodImages.setBackgroundResource(foodImage);
         totalOrderPrice.setText(String.valueOf(foodPrice));
 
+
+
         setOrderQuantity();
+        setAddToCartBtnListener();
+
 
 }
 
@@ -81,9 +93,27 @@ public class Order extends AppCompatActivity {
                             quantityNumber -= 1;
                             quantityText.setText(String.valueOf(quantityNumber));
                             totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
+
+
                         }
 
                 }});
+            orderList.add(new OrderDetails(foodPrice*quantityNumber,quantityNumber,foodName));
+
+
+    }
+
+    public void setAddToCartBtnListener(){
+
+        addToCartBtn.setOnClickListener(v -> {
+            Intent intent=new Intent(this, Cart.class);
+
+            intent.putExtra(Cart.MY_ORDER,orderList);
+
+            Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
+
+        });
+
 
 
     }

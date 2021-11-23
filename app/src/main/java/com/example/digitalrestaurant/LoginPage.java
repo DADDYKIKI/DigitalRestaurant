@@ -29,14 +29,14 @@ public class LoginPage extends AppCompatActivity {
 
         loginBut.setOnClickListener(v -> {
 
-            if (loginEmail.getText().toString().equals(email)&&loginPass.getText().toString().equals(password)){
-            click2(HomePage.class);
+            if (loginEmail.getText().toString().equals(email) && loginPass.getText().toString().equals(password)) {
+                LoginPage.this.click2(HomePage.class);
 
-                setTextInvisible(v);
+                LoginPage.this.setTextInvisible(v);
 
-       }
-
-                  else{ setTextVisible( v) ;   }
+            } else {
+                LoginPage.this.setTextVisible(v);
+            }
 
         });
         }

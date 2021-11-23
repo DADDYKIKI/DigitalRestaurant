@@ -29,6 +29,9 @@
             android:name=".Order"
             android:exported="false" />
         <activity
+            android:name=".OrderState"
+            android:exported="false" />
+        <activity
             android:name=".AdaKitchen"
             android:exported="false" />
         <activity

@@ -32,10 +32,10 @@ public class AdaKitchen extends AppCompatActivity {
         setContentView(R.layout.ada_restaurant_homepage);
 
         adaItems= new ArrayList<>();
-        basket=(FloatingActionButton) findViewById(R.id.floatingActionButton);
+        basket=findViewById(R.id.floatingActionButton);
+        openMyBasket();
 
         makeAdaRestaurantAdaptor();
-        openMyBasket();
 
     }
 

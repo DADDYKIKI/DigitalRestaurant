@@ -62,24 +62,24 @@ public class Order extends AppCompatActivity {
         adaFoodImages.setBackgroundResource(foodImage);
         totalOrderPrice.setText(String.valueOf(foodPrice));
 
+        OrderState orderState1=new OrderState();
 
-
-        setOrderQuantity();
-        setAddToCartBtnListener();
+        setOrderQuantity(orderState1);
+        setAddToCartBtnListener(orderState1);
 
 
 }
 
-        public void setOrderQuantity(){
+        public void setOrderQuantity(OrderState orderState){
 
             plusBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
 
-                    quantityNumber+=1;
-                    quantityText.setText(String.valueOf(quantityNumber));
-                    totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
+                    orderState.incrementQuantity();
+                    quantityText.setText(String.valueOf(orderState.getQuantity()));
+                    totalOrderPrice.setText(String.valueOf(foodPrice*orderState.getQuantity()));
 
 
                 }});
@@ -89,28 +89,26 @@ public class Order extends AppCompatActivity {
                         public void onClick(View v) {
 
 
-                        if(quantityNumber>1) {
-                            quantityNumber -= 1;
-                            quantityText.setText(String.valueOf(quantityNumber));
-                            totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
+                        if(orderState.getQuantity()>1) {
+                            quantityText.setText(String.valueOf(orderState.getQuantity()));
+                            totalOrderPrice.setText(String.valueOf(foodPrice*orderState.getQuantity()));
 
 
                         }
 
                 }});
-            orderList.add(new OrderDetails(foodPrice*quantityNumber,quantityNumber,foodName));
 
 
     }
 
-    public void setAddToCartBtnListener(){
+    public void setAddToCartBtnListener(OrderState orderState){
 
         addToCartBtn.setOnClickListener(v -> {
             Intent intent=new Intent(this, Cart.class);
-
+            orderList.add(new OrderDetails(foodPrice*orderState.getQuantity(),orderState.getQuantity(),foodName));
             intent.putExtra(Cart.MY_ORDER,orderList);
-
             Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
 
         });
 

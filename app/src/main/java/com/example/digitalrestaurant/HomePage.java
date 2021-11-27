@@ -7,15 +7,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.widget.TextView;
 
 
-import com.example.digitalrestaurant.Adaptor.PopularDishAdaptor;
-import com.example.digitalrestaurant.Adaptor.LocationAdaptor;
-import com.example.digitalrestaurant.LocationDetails.LocationDetails;
-import com.example.digitalrestaurant.Adaptor.RestaurantsAdaptor;
-import com.example.digitalrestaurant.RestaurantsData.RestaurantsDetails;
-import com.example.digitalrestaurant.UserData.ItemData;
+import com.example.digitalrestaurant.Adaptors.PopularDishAdaptor;
+import com.example.digitalrestaurant.Adaptors.LocationAdaptor;
+import com.example.digitalrestaurant.Kitchens.AdaKitchen;
+import com.example.digitalrestaurant.Kitchens.ApprokoKitchen;
+import com.example.digitalrestaurant.Kitchens.ObandeKitchen;
+import com.example.digitalrestaurant.Kitchens.Stainless;
+import com.example.digitalrestaurant.Details.LocationDetails.LocationDetails;
+import com.example.digitalrestaurant.Adaptors.RestaurantsAdaptor;
+import com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails;
+import com.example.digitalrestaurant.Details.ItemData;
 
 import java.util.ArrayList;
 
@@ -46,11 +50,15 @@ public class HomePage extends AppCompatActivity {
 
     private RestaurantsAdaptor.AllInOneRecyclerViewListener listener2;
 
+    TextView menuKey;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
+
+        menuKey=findViewById(R.id.menuKey);
 
         myItems=new ArrayList<ItemData>();
         restaurantslist=new ArrayList<RestaurantsDetails>();
@@ -61,10 +69,23 @@ public class HomePage extends AppCompatActivity {
 
 
         makeAdaptor();
+        menuKey();
 
 
 
     }
+
+    public void menuKey(){
+        menuKey.setOnClickListener(v -> {
+            Intent intent2=new Intent(this, Menu.class);
+            startActivity(intent2);
+            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+
+
+        });
+
+    }
+
 
 
     public void makeAdaptor(){
@@ -208,6 +229,8 @@ public class HomePage extends AppCompatActivity {
 
         return restaurantslist;
     }
+
+
 
 
 

@@ -10,47 +10,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalRestaurant">
         <activity
-            android:name=".SellerUploadPage"
+            android:name=".Authentications.SellerUploadPage"
             android:exported="false" />
         <activity
-            android:name=".FoodSeller"
-            android:exported="false" />
-        <activity
-            android:name=".Customer"
+            android:name=".Authentications.Customer"
             android:exported="false" />
 
         <activity
             android:name=".HomePage"
             android:exported="false" />
         <activity
-            android:name=".ApprokoKitchen"
+            android:name=".Kitchens.ApprokoKitchen"
             android:exported="false" />
+
         <activity
             android:name=".Order"
             android:exported="false" />
         <activity
-            android:name=".OrderState"
+            android:name=".Menu"
             android:exported="false" />
         <activity
-            android:name=".AdaKitchen"
+            android:name=".Kitchens.AdaKitchen"
             android:exported="false" />
         <activity
             android:name=".Cart"
             android:exported="false" />
         <activity
-            android:name=".Stainless"
+            android:name=".Kitchens.Stainless"
             android:exported="false" />
         <activity
-            android:name=".ObandeKitchen"
+            android:name=".Kitchens.ObandeKitchen"
             android:exported="false" />
         <activity
-            android:name=".SignupPage"
+            android:name=".Authentications.SignupPage"
             android:exported="false" />
         <activity
-            android:name=".LoginPage"
+            android:name=".Authentications.LoginPage"
             android:exported="false" />
         <activity
-            android:name=".IntroPage"
+            android:name=".Authentications.IntroPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.digitalrestaurant.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,6 +25,9 @@ public final class StainlessRestaurantHomepage2Binding implements ViewBinding {
 
   @NonNull
   public final ConstraintLayout constraintLayout3;
+
+  @NonNull
+  public final FloatingActionButton floatingActionButton;
 
   @NonNull
   public final TextView homeKey;
@@ -50,13 +54,15 @@ public final class StainlessRestaurantHomepage2Binding implements ViewBinding {
   public final TextView welcometxt;
 
   private StainlessRestaurantHomepage2Binding(@NonNull LinearLayout rootView,
-      @NonNull ConstraintLayout constraintLayout3, @NonNull TextView homeKey,
+      @NonNull ConstraintLayout constraintLayout3,
+      @NonNull FloatingActionButton floatingActionButton, @NonNull TextView homeKey,
       @NonNull TextView menuKey, @NonNull ScrollView scrollView2,
       @NonNull RecyclerView stainlessKitchen, @NonNull TextView stainlessRestLocationAdd,
       @NonNull TextView stainlesslabel, @NonNull TextView stainlesslocate,
       @NonNull TextView welcometxt) {
     this.rootView = rootView;
     this.constraintLayout3 = constraintLayout3;
+    this.floatingActionButton = floatingActionButton;
     this.homeKey = homeKey;
     this.menuKey = menuKey;
     this.scrollView2 = scrollView2;
@@ -97,6 +103,12 @@ public final class StainlessRestaurantHomepage2Binding implements ViewBinding {
       id = R.id.constraintLayout3;
       ConstraintLayout constraintLayout3 = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout3 == null) {
+        break missingId;
+      }
+
+      id = R.id.floatingActionButton;
+      FloatingActionButton floatingActionButton = ViewBindings.findChildViewById(rootView, id);
+      if (floatingActionButton == null) {
         break missingId;
       }
 
@@ -149,8 +161,8 @@ public final class StainlessRestaurantHomepage2Binding implements ViewBinding {
       }
 
       return new StainlessRestaurantHomepage2Binding((LinearLayout) rootView, constraintLayout3,
-          homeKey, menuKey, scrollView2, stainlessKitchen, stainlessRestLocationAdd, stainlesslabel,
-          stainlesslocate, welcometxt);
+          floatingActionButton, homeKey, menuKey, scrollView2, stainlessKitchen,
+          stainlessRestLocationAdd, stainlesslabel, stainlesslocate, welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

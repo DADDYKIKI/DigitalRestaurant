@@ -33,6 +33,7 @@
         <entry key="app/src/main/res/layout/items_display.xml" value="0.335" />
         <entry key="app/src/main/res/layout/located_restaurants.xml" value="0.20969202898550723" />
         <entry key="app/src/main/res/layout/located_restaurants_container.xml" value="0.20652173913043478" />
+        <entry key="app/src/main/res/layout/menu.xml" value="0.19655797101449277" />
         <entry key="app/src/main/res/layout/my_ada_restaurant.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/my_ada_restaurant_card.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/my_locations.xml" value="0.22509057971014493" />
@@ -43,6 +44,7 @@
         <entry key="app/src/main/res/layout/popular_dish_page.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/popular_food_display_container.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/restaurant_page_container.xml" value="0.21875" />
+        <entry key="app/src/main/res/layout/stainless_menu.xml" value="0.19655797101449277" />
         <entry key="app/src/main/res/layout/stainless_restaurant_homepage2.xml" value="0.2128623188405797" />
         <entry key="app/src/main/res/layout/vertical_scroll.xml" value="0.1875" />
       </map>

@@ -7,29 +7,71 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/restaurantbackground">
 
-        <TextView
-            android:id="@+id/cartTitle"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="4dp"
-            android:text="My Basket"
-            android:textAlignment="center"
-            android:textColor="@color/purple_500"
-            android:textSize="50dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/orderRecyclerview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/cartTitle"
+                android:layout_width="286dp"
+                android:layout_height="80dp"
+                android:background="@drawable/restaurantbackground"
+                android:text="My Basket"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/homeKey"
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/restaurantbackground"
+                android:text="Home"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/menuKey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cartTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.431" />
+
+            <TextView
+                android:id="@+id/menuKey"
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/restaurantbackground"
+                android:text="Menu"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cartTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/cartRecycler"
-            android:layout_width="409dp"
-            android:layout_height="625dp"
+            android:id="@+id/orderRecyclerview"
+            android:layout_width="407dp"
+            android:layout_height="577dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cartTitle" />
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

@@ -23,25 +23,25 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView areYouNewSell;
 
   @NonNull
-  public final TextView customerMenuKey;
-
-  @NonNull
   public final TextView customerloginBut;
 
   @NonNull
   public final TextView customersignupBut;
 
   @NonNull
+  public final TextView menuKey;
+
+  @NonNull
   public final TextView textView;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView areYouNewSell,
-      @NonNull TextView customerMenuKey, @NonNull TextView customerloginBut,
-      @NonNull TextView customersignupBut, @NonNull TextView textView) {
+      @NonNull TextView customerloginBut, @NonNull TextView customersignupBut,
+      @NonNull TextView menuKey, @NonNull TextView textView) {
     this.rootView = rootView;
     this.areYouNewSell = areYouNewSell;
-    this.customerMenuKey = customerMenuKey;
     this.customerloginBut = customerloginBut;
     this.customersignupBut = customersignupBut;
+    this.menuKey = menuKey;
     this.textView = textView;
   }
 
@@ -78,12 +78,6 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.customerMenuKey;
-      TextView customerMenuKey = ViewBindings.findChildViewById(rootView, id);
-      if (customerMenuKey == null) {
-        break missingId;
-      }
-
       id = R.id.customerloginBut;
       TextView customerloginBut = ViewBindings.findChildViewById(rootView, id);
       if (customerloginBut == null) {
@@ -96,14 +90,20 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.menuKey;
+      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
+      if (menuKey == null) {
+        break missingId;
+      }
+
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, areYouNewSell, customerMenuKey,
-          customerloginBut, customersignupBut, textView);
+      return new ActivityMainBinding((ConstraintLayout) rootView, areYouNewSell, customerloginBut,
+          customersignupBut, menuKey, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

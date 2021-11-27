@@ -19,46 +19,43 @@
         android:testOnly="true"
         android:theme="@style/Theme.DigitalRestaurant" >
         <activity
-            android:name="com.example.digitalrestaurant.SellerUploadPage"
+            android:name="com.example.digitalrestaurant.Authentications.SellerUploadPage"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.FoodSeller"
-            android:exported="false" />
-        <activity
-            android:name="com.example.digitalrestaurant.Customer"
+            android:name="com.example.digitalrestaurant.Authentications.Customer"
             android:exported="false" />
         <activity
             android:name="com.example.digitalrestaurant.HomePage"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.ApprokoKitchen"
+            android:name="com.example.digitalrestaurant.Kitchens.ApprokoKitchen"
             android:exported="false" />
         <activity
             android:name="com.example.digitalrestaurant.Order"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.OrderState"
+            android:name="com.example.digitalrestaurant.Menu"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.AdaKitchen"
+            android:name="com.example.digitalrestaurant.Kitchens.AdaKitchen"
             android:exported="false" />
         <activity
             android:name="com.example.digitalrestaurant.Cart"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.Stainless"
+            android:name="com.example.digitalrestaurant.Kitchens.Stainless"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.ObandeKitchen"
+            android:name="com.example.digitalrestaurant.Kitchens.ObandeKitchen"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.SignupPage"
+            android:name="com.example.digitalrestaurant.Authentications.SignupPage"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.LoginPage"
+            android:name="com.example.digitalrestaurant.Authentications.LoginPage"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.IntroPage"
+            android:name="com.example.digitalrestaurant.Authentications.IntroPage"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

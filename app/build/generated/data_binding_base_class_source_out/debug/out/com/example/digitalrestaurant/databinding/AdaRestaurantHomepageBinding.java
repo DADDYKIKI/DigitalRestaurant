@@ -30,7 +30,7 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
   public final TextView Adalocate;
 
   @NonNull
-  public final RecyclerView adaKitchen;
+  public final RecyclerView adaKitchenRecycler;
 
   @NonNull
   public final ConstraintLayout constraintLayout3;
@@ -55,14 +55,14 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
 
   private AdaRestaurantHomepageBinding(@NonNull LinearLayout rootView,
       @NonNull TextView AdaRestLocationAdd, @NonNull TextView Adalocate,
-      @NonNull RecyclerView adaKitchen, @NonNull ConstraintLayout constraintLayout3,
+      @NonNull RecyclerView adaKitchenRecycler, @NonNull ConstraintLayout constraintLayout3,
       @NonNull FloatingActionButton floatingActionButton, @NonNull TextView homeKey,
       @NonNull TextView menuKey, @NonNull ScrollView scrollView2, @NonNull TextView stainlesslabel,
       @NonNull TextView welcometxt) {
     this.rootView = rootView;
     this.AdaRestLocationAdd = AdaRestLocationAdd;
     this.Adalocate = Adalocate;
-    this.adaKitchen = adaKitchen;
+    this.adaKitchenRecycler = adaKitchenRecycler;
     this.constraintLayout3 = constraintLayout3;
     this.floatingActionButton = floatingActionButton;
     this.homeKey = homeKey;
@@ -111,9 +111,9 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.adaKitchen;
-      RecyclerView adaKitchen = ViewBindings.findChildViewById(rootView, id);
-      if (adaKitchen == null) {
+      id = R.id.adaKitchenRecycler;
+      RecyclerView adaKitchenRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (adaKitchenRecycler == null) {
         break missingId;
       }
 
@@ -160,7 +160,7 @@ public final class AdaRestaurantHomepageBinding implements ViewBinding {
       }
 
       return new AdaRestaurantHomepageBinding((LinearLayout) rootView, AdaRestLocationAdd,
-          Adalocate, adaKitchen, constraintLayout3, floatingActionButton, homeKey, menuKey,
+          Adalocate, adaKitchenRecycler, constraintLayout3, floatingActionButton, homeKey, menuKey,
           scrollView2, stainlesslabel, welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);

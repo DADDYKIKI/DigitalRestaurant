@@ -26,23 +26,23 @@ public final class ActivityFoodSellerBinding implements ViewBinding {
   public final TextView foodSellerloginBut;
 
   @NonNull
-  public final TextView foodsellerMenuKey;
+  public final TextView foodsellerSignupBut;
 
   @NonNull
-  public final TextView foodsellerSignupBut;
+  public final TextView menuKey;
 
   @NonNull
   public final TextView textView;
 
   private ActivityFoodSellerBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextView areYouNewSell, @NonNull TextView foodSellerloginBut,
-      @NonNull TextView foodsellerMenuKey, @NonNull TextView foodsellerSignupBut,
+      @NonNull TextView foodsellerSignupBut, @NonNull TextView menuKey,
       @NonNull TextView textView) {
     this.rootView = rootView;
     this.areYouNewSell = areYouNewSell;
     this.foodSellerloginBut = foodSellerloginBut;
-    this.foodsellerMenuKey = foodsellerMenuKey;
     this.foodsellerSignupBut = foodsellerSignupBut;
+    this.menuKey = menuKey;
     this.textView = textView;
   }
 
@@ -85,15 +85,15 @@ public final class ActivityFoodSellerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.foodsellerMenuKey;
-      TextView foodsellerMenuKey = ViewBindings.findChildViewById(rootView, id);
-      if (foodsellerMenuKey == null) {
-        break missingId;
-      }
-
       id = R.id.foodsellerSignupBut;
       TextView foodsellerSignupBut = ViewBindings.findChildViewById(rootView, id);
       if (foodsellerSignupBut == null) {
+        break missingId;
+      }
+
+      id = R.id.menuKey;
+      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
+      if (menuKey == null) {
         break missingId;
       }
 
@@ -104,7 +104,7 @@ public final class ActivityFoodSellerBinding implements ViewBinding {
       }
 
       return new ActivityFoodSellerBinding((ConstraintLayout) rootView, areYouNewSell,
-          foodSellerloginBut, foodsellerMenuKey, foodsellerSignupBut, textView);
+          foodSellerloginBut, foodsellerSignupBut, menuKey, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

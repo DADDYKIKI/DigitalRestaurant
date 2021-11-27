@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blackmaneatingbugger"
-    tools:context=".SellerUploadPage">
+    tools:context=".Authentications.SellerUploadPage">
+
+
 
     <TextView
         android:id="@+id/menuKey"

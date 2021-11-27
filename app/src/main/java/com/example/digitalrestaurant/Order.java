@@ -1,15 +1,26 @@
 package com.example.digitalrestaurant;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.digitalrestaurant.Adaptors.MyCursorAdaptor;
+import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
+import com.example.digitalrestaurant.Database.DatabaseHelper;
+import com.example.digitalrestaurant.Details.OrderDetails;
+import com.example.digitalrestaurant.Kitchens.AdaKitchen;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order extends AppCompatActivity {
 
@@ -21,7 +32,22 @@ public class Order extends AppCompatActivity {
     private String foodNationality = "";
     private int foodImage=0;
 
-    ArrayList<OrderDetails> orderList;
+    private RecyclerView.Adapter orderAdaptor;
+
+    private OrderAdaptor.OderListener orderListener;
+
+    private RecyclerView cartRecycler;
+
+
+
+    List<OrderDetails> orderList;
+
+
+    //...................Database .........................
+
+    private DatabaseHelper myCartDatabaseHelper;
+
+    //................................................
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +67,7 @@ public class Order extends AppCompatActivity {
 
         orderList=new ArrayList<>();
 
-
-
-
-
+        orderList=findViewById(R.id.orderRecyclerview);
 
 
         Bundle extras=getIntent().getExtras();
@@ -62,24 +85,42 @@ public class Order extends AppCompatActivity {
         adaFoodImages.setBackgroundResource(foodImage);
         totalOrderPrice.setText(String.valueOf(foodPrice));
 
-        OrderState orderState1=new OrderState();
 
-        setOrderQuantity(orderState1);
-        setAddToCartBtnListener(orderState1);
+
+
+
+
+        setOrderQuantity();
+        AddToCartBtnListener();
+
+
+       // setMyAdaptor();
+
 
 
 }
 
-        public void setOrderQuantity(OrderState orderState){
+    public void setMyAdaptor(){
+
+        myCartDatabaseHelper=new DatabaseHelper(this);
+
+        cartRecycler= findViewById(R.id.orderRecyclerview);
+        cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        orderAdaptor=new OrderAdaptor(orderListener,myCartDatabaseHelper.viewMyData(),this);
+        cartRecycler.setAdapter(orderAdaptor);
+
+
+    }
+
+        public void setOrderQuantity(){//............Calculating total quantity and total price..........
 
             plusBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-
-                    orderState.incrementQuantity();
-                    quantityText.setText(String.valueOf(orderState.getQuantity()));
-                    totalOrderPrice.setText(String.valueOf(foodPrice*orderState.getQuantity()));
+                    quantityNumber++;
+                    quantityText.setText(String.valueOf(quantityNumber));
+                    totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
 
 
                 }});
@@ -89,9 +130,11 @@ public class Order extends AppCompatActivity {
                         public void onClick(View v) {
 
 
-                        if(orderState.getQuantity()>1) {
-                            quantityText.setText(String.valueOf(orderState.getQuantity()));
-                            totalOrderPrice.setText(String.valueOf(foodPrice*orderState.getQuantity()));
+                        if(quantityNumber>1) {
+
+                            quantityNumber--;
+                            quantityText.setText(String.valueOf(quantityNumber));
+                            totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
 
 
                         }
@@ -101,21 +144,31 @@ public class Order extends AppCompatActivity {
 
     }
 
-    public void setAddToCartBtnListener(OrderState orderState){
+    public void AddToCartBtnListener(){//................Add to Database...................
 
         addToCartBtn.setOnClickListener(v -> {
-            Intent intent=new Intent(this, Cart.class);
-            orderList.add(new OrderDetails(foodPrice*orderState.getQuantity(),orderState.getQuantity(),foodName));
-            intent.putExtra(Cart.MY_ORDER,orderList);
+
+            DatabaseHelper myDatabaseHelper=new DatabaseHelper(this);
+
+            boolean addToCart=
+                    myDatabaseHelper.addData(foodName,String.valueOf(quantityNumber),String.valueOf(foodPrice*quantityNumber));
+
+           if(addToCart==true)
             Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+           else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
+
 
         });
 
 
 
-    }
+    }}
 
 
 
-}
+
+
+
+
+
+

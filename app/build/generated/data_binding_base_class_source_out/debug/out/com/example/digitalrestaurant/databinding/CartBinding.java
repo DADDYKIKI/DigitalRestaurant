@@ -21,16 +21,25 @@ public final class CartBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final RecyclerView cartRecycler;
-
-  @NonNull
   public final TextView cartTitle;
 
-  private CartBinding(@NonNull LinearLayout rootView, @NonNull RecyclerView cartRecycler,
-      @NonNull TextView cartTitle) {
+  @NonNull
+  public final TextView homeKey;
+
+  @NonNull
+  public final TextView menuKey;
+
+  @NonNull
+  public final RecyclerView orderRecyclerview;
+
+  private CartBinding(@NonNull LinearLayout rootView, @NonNull TextView cartTitle,
+      @NonNull TextView homeKey, @NonNull TextView menuKey,
+      @NonNull RecyclerView orderRecyclerview) {
     this.rootView = rootView;
-    this.cartRecycler = cartRecycler;
     this.cartTitle = cartTitle;
+    this.homeKey = homeKey;
+    this.menuKey = menuKey;
+    this.orderRecyclerview = orderRecyclerview;
   }
 
   @Override
@@ -60,19 +69,32 @@ public final class CartBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.cartRecycler;
-      RecyclerView cartRecycler = ViewBindings.findChildViewById(rootView, id);
-      if (cartRecycler == null) {
-        break missingId;
-      }
-
       id = R.id.cartTitle;
       TextView cartTitle = ViewBindings.findChildViewById(rootView, id);
       if (cartTitle == null) {
         break missingId;
       }
 
-      return new CartBinding((LinearLayout) rootView, cartRecycler, cartTitle);
+      id = R.id.homeKey;
+      TextView homeKey = ViewBindings.findChildViewById(rootView, id);
+      if (homeKey == null) {
+        break missingId;
+      }
+
+      id = R.id.menuKey;
+      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
+      if (menuKey == null) {
+        break missingId;
+      }
+
+      id = R.id.orderRecyclerview;
+      RecyclerView orderRecyclerview = ViewBindings.findChildViewById(rootView, id);
+      if (orderRecyclerview == null) {
+        break missingId;
+      }
+
+      return new CartBinding((LinearLayout) rootView, cartTitle, homeKey, menuKey,
+          orderRecyclerview);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

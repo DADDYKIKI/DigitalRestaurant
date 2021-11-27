@@ -13,16 +13,20 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            tools:layout_editor_absoluteX="411dp">
+            android:layout_width="389dp"
+            android:layout_height="299dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.272"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="366dp"
                 android:layout_height="346dp"
                 android:layout_margin="20dp"
-                tools:layout_editor_absoluteX="22dp"
-                tools:layout_editor_absoluteY="38dp">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/adarestaurantcard"
@@ -38,7 +42,7 @@
             android:id="@+id/quantityTxt"
             android:layout_width="80dp"
             android:layout_height="70dp"
-            android:layout_marginTop="104dp"
+            android:layout_marginTop="108dp"
             android:background="@drawable/restaurantbackground"
             android:padding="5dp"
             android:text="1"
@@ -174,20 +178,20 @@
             android:id="@+id/totalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="20dp"
             android:text="Total Order Price:"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/orderPrice"
-            app:layout_constraintVertical_bias="0.56" />
+            app:layout_constraintVertical_bias="0.558" />
 
         <TextView
             android:id="@+id/totalOrderPrice"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:layout_marginTop="136dp"
+            android:layout_marginTop="192dp"
             android:layout_marginEnd="8dp"
             android:text="10"
             android:textColor="@color/Red"
@@ -202,8 +206,8 @@
             android:id="@+id/poundSign2"
             android:layout_width="20dp"
             android:layout_height="35dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="136dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="192dp"
             android:text="£"
             android:textColor="@color/Red"
             android:textSize="30dp"

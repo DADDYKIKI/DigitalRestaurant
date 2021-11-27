@@ -1127,6 +1127,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color orange
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1140,6 +1141,7 @@ color purple_500
 color purple_700
 color radiobutton_themeable_attribute_color
 color re
+color redishorang
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -1805,7 +1807,7 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
-id adaKitchen
+id adaKitchenRecycler
 id adarestaurantcard
 id add
 id addToCartbtn
@@ -1827,6 +1829,7 @@ id autoCompleteToStart
 id bac
 id barrier
 id baseline
+id basket
 id beginOnFirstDraw
 id beginning
 id blocking
@@ -1836,7 +1839,6 @@ id buttonPanel
 id cache_measures
 id cancel_button
 id cartConstraint
-id cartRecycler
 id cartTitle
 id center
 id center_horizontal
@@ -1871,7 +1873,6 @@ id cos
 id counterclockwise
 id custom
 id customPanel
-id customerMenuKey
 id customerloginBut
 id customersignupBut
 id cut
@@ -1926,7 +1927,6 @@ id flip
 id floating
 id floatingActionButton
 id foodSellerloginBut
-id foodsellerMenuKey
 id foodsellerSignupBut
 id forever
 id ghost_view
@@ -1978,14 +1978,13 @@ id listLocation
 id listMode
 id list_item
 id listsOfRestNames
-id loading
 id locatedrestaurantback
 id locatedrestaurantname
 id locationName
 id locationRecycler
-id login
 id loginSubBtn
 id loginWarningText
+id logout
 id masked
 id material_clock_display
 id material_clock_face
@@ -2060,6 +2059,7 @@ id on
 id orderFoodName
 id orderNationality
 id orderPrice
+id orderRecyclerview
 id ordering_container
 id ourExistence
 id outline
@@ -2072,7 +2072,6 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
-id password
 id password_toggle
 id path
 id pathRelative
@@ -2195,7 +2194,9 @@ id textStart
 id textTop
 id textView
 id textView2
+id textView3
 id textView4
+id textView5
 id textView6
 id textView9
 id text_input_end_icon
@@ -2230,7 +2231,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id username
 id view_offset_helper
 id view_tree_view_model_store_owner
 id visible
@@ -2304,7 +2304,6 @@ layout abc_tooltip
 layout activity_customer_page
 layout activity_food_seller
 layout activity_intro_page
-layout activity_login
 layout activity_main
 layout activity_seller_upload_page
 layout activity_signup_page
@@ -2345,6 +2344,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout menu
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2931,6 +2931,7 @@ style Theme_AppCompat_Light_Dialog_MinWidth
 style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
+style Theme_AppCompat_Transparent
 style Theme_Design
 style Theme_Design_BottomSheetDialog
 style Theme_Design_Light

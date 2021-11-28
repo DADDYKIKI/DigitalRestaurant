@@ -17,8 +17,8 @@ public class IntroPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_page);
 
-        customerTxt= (TextView) findViewById(R.id.introCustmerText);
-        foodSellerTxt= (TextView) findViewById(R.id.introFoodsellerText);
+        customerTxt= findViewById(R.id.introCustmerText);
+        foodSellerTxt= findViewById(R.id.introFoodsellerText);
 
         customerTxt.setOnClickListener(v -> clickIntro(Customer.class));
 

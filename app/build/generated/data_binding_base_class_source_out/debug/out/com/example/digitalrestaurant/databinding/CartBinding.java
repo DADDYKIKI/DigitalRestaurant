@@ -32,14 +32,26 @@ public final class CartBinding implements ViewBinding {
   @NonNull
   public final RecyclerView orderRecyclerview;
 
+  @NonNull
+  public final TextView textView10;
+
+  @NonNull
+  public final TextView textView7;
+
+  @NonNull
+  public final TextView textView8;
+
   private CartBinding(@NonNull LinearLayout rootView, @NonNull TextView cartTitle,
-      @NonNull TextView homeKey, @NonNull TextView menuKey,
-      @NonNull RecyclerView orderRecyclerview) {
+      @NonNull TextView homeKey, @NonNull TextView menuKey, @NonNull RecyclerView orderRecyclerview,
+      @NonNull TextView textView10, @NonNull TextView textView7, @NonNull TextView textView8) {
     this.rootView = rootView;
     this.cartTitle = cartTitle;
     this.homeKey = homeKey;
     this.menuKey = menuKey;
     this.orderRecyclerview = orderRecyclerview;
+    this.textView10 = textView10;
+    this.textView7 = textView7;
+    this.textView8 = textView8;
   }
 
   @Override
@@ -93,8 +105,26 @@ public final class CartBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView10;
+      TextView textView10 = ViewBindings.findChildViewById(rootView, id);
+      if (textView10 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView7;
+      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
+      if (textView7 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView8;
+      TextView textView8 = ViewBindings.findChildViewById(rootView, id);
+      if (textView8 == null) {
+        break missingId;
+      }
+
       return new CartBinding((LinearLayout) rootView, cartTitle, homeKey, menuKey,
-          orderRecyclerview);
+          orderRecyclerview, textView10, textView7, textView8);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -10,21 +10,6 @@
 
 
     <TextView
-        android:id="@+id/menuKey"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/homekeyback"
-        android:text="Menu"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/customersignupBut"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -48,7 +33,6 @@
         android:id="@+id/customerloginBut"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:drawablePadding="50dp"
         android:editable="false"
         android:ems="10"
@@ -63,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuKey" />
+        tools:layout_editor_absoluteY="76dp" />
 
     <TextView
         android:id="@+id/textView"

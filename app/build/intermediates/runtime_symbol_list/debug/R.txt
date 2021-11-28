@@ -1981,7 +1981,6 @@ int id locatedrestaurantback 0x7f0900f3
 int id locatedrestaurantname 0x7f0900f4
 int id locationName 0x7f0900f5
 int id locationRecycler 0x7f0900f6
-int id loginSubBtn 0x7f0900f8
 int id loginWarningText 0x7f0900f9
 int id logout 0x7f090204
 int id masked 0x7f0900fa
@@ -2134,6 +2133,7 @@ int id showCustom 0x7f09018c
 int id showHome 0x7f09018d
 int id showTitle 0x7f09018e
 int id signInLabelText 0x7f09018f
+int id signSubBtn 0x7f090207
 int id signupAge 0x7f090190
 int id signupEmail 0x7f090191
 int id signupName 0x7f090192
@@ -2192,11 +2192,14 @@ int id textSpacerNoTitle 0x7f0901c6
 int id textStart 0x7f0901c7
 int id textTop 0x7f0901c8
 int id textView 0x7f0901c9
+int id textView10 0x7f090206
 int id textView2 0x7f0901ca
 int id textView3 0x7f0901cb
 int id textView4 0x7f0901cc
 int id textView5 0x7f090201
 int id textView6 0x7f0901cd
+int id textView7 0x7f090202
+int id textView8 0x7f090203
 int id textView9 0x7f0901ce
 int id text_input_end_icon 0x7f0901cf
 int id text_input_error_icon 0x7f0901d0

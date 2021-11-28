@@ -15,12 +15,22 @@ import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String MY_DATABASE_NAME="GodwinCart";
+    public static final String MY_DATABASE_NAME="Godwin.db";
     public static final String MY_TABLE_NAME="GodwinTable";
-    public static final String COLUMN1="ID";
-    public static final String COLUMN2="Food_Name";
-    public static final String COLUMN3="Total_Quantity";
-    public static final String COLUMN4="Total_Price";
+    public static final String MY_USER_AND_PASS_TABLE="GodwinUserTable";
+    public static final String COLUMNNAME1="ID";
+    public static final String COLUMNNAME2="Food_Name";
+    public static final String COLUMNNAME3="Total_Quantity";
+    public static final String COLUMNNAME4="Total_Price";
+
+    public static final String COLUMNUSER1="ID";
+    public static final String COLUMNUSER2="nameOfUser";
+    public static final String COLUMNUSER3="email";
+    public static final String COLUMNUSER4="Passwords";
+    public static final String COLUMNUSER5="age";
+
+
+
 
     ArrayList<OrderDetails> order;
 
@@ -33,10 +43,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("CREATE TABLE " + MY_TABLE_NAME + "("
-                + COLUMN1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + COLUMN2 + " TEXT, "
-                + COLUMN3 + " INTEGER, "
-                + COLUMN4 + " INTEGER)");
+                + COLUMNNAME1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COLUMNNAME2 + " TEXT, "
+                + COLUMNNAME3 + " INTEGER, "
+                + COLUMNNAME4 + " INTEGER)");
+
+        db.execSQL("CREATE TABLE " + MY_USER_AND_PASS_TABLE + "("
+                + COLUMNUSER1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COLUMNUSER2 + " TEXT, "
+                + COLUMNUSER3 + " TEXT, "
+                + COLUMNUSER4 + " INTEGER, "
+                + COLUMNUSER5 + " TEXT)");
 
 
 
@@ -45,18 +62,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             db.execSQL("DROP TABLE IF EXISTS "+MY_TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS "+MY_USER_AND_PASS_TABLE );
             onCreate(db);
     }
 
 
-    public boolean addData(String foodName,String quantity,String totalPrice){
+    public boolean addData(String  foodName, String quantity, String totalPrice){
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
 
         ContentValues contentV=new ContentValues();
-        contentV.put(COLUMN2,foodName);
-        contentV.put(COLUMN3,quantity);
-        contentV.put(COLUMN4,totalPrice);
+        contentV.put(COLUMNNAME2,foodName);
+        contentV.put(COLUMNNAME3,quantity);
+        contentV.put(COLUMNNAME4,totalPrice);
 
         long output=myDatabase.insert(MY_TABLE_NAME,null,contentV);
 
@@ -66,10 +84,49 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    public boolean addDataUserAndPAss(String name, String  email, String age, String password){
+
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+
+        ContentValues contentV=new ContentValues();
+        contentV.put(COLUMNUSER2,name);
+        contentV.put(COLUMNUSER3,email);
+        contentV.put(COLUMNUSER4,age);
+        contentV.put(COLUMNUSER5,password);
+
+
+        long output=myDatabase.insert(MY_USER_AND_PASS_TABLE,null,contentV);
+
+        if(output==-1) return false;
+        else return  true;
+
+
+    }
+
+    public boolean checkUserName(String email){
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+        Cursor cur2=myDatabase.rawQuery("select * from "+MY_TABLE_NAME+" where email=?", new String[]{email});
+
+        if(cur2.getCount()>0)return true;
+        else return false;
+
+
+    }
+
+    public boolean checkUserNameAndPassword(String email,String Password){
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+        Cursor cur3=myDatabase.rawQuery("select * from "+MY_TABLE_NAME+" where email=? and password=?", new String[]{email});
+
+        if(cur3.getCount()>0)return true;
+        else return false;
+
+
+    }
+
     public Cursor viewMyData(){
 
-        SQLiteDatabase myDatabase=this.getReadableDatabase();
-        Cursor cur=myDatabase.rawQuery("select * from "+MY_TABLE_NAME+" order by id desc ",null);
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+        Cursor cur=myDatabase.rawQuery("select * from "+MY_TABLE_NAME,null);
      /*   if (cur.moveToFirst()){
 
             do{
@@ -85,10 +142,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-}*/
-        cur.close();
-        myDatabase.close();
-        return  cur;
+}*/     return  cur;
+
+
     }
 
 

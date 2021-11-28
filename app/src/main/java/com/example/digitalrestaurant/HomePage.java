@@ -30,7 +30,7 @@ public class HomePage extends AppCompatActivity {
 
     private RestaurantsAdaptor.AllInOneRecyclerViewListener AllInOneListener2;
 
-    PopularDishAdaptor.RestaurantsRecyclerViewListener adalistener2;
+    private PopularDishAdaptor.RestaurantsRecyclerViewListener adalistener2;
 
     private RecyclerView recyclerView,recyclerView2,recyclerView3;
 

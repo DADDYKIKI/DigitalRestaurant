@@ -29,20 +29,15 @@ public final class ActivityFoodSellerBinding implements ViewBinding {
   public final TextView foodsellerSignupBut;
 
   @NonNull
-  public final TextView menuKey;
-
-  @NonNull
   public final TextView textView;
 
   private ActivityFoodSellerBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextView areYouNewSell, @NonNull TextView foodSellerloginBut,
-      @NonNull TextView foodsellerSignupBut, @NonNull TextView menuKey,
-      @NonNull TextView textView) {
+      @NonNull TextView foodsellerSignupBut, @NonNull TextView textView) {
     this.rootView = rootView;
     this.areYouNewSell = areYouNewSell;
     this.foodSellerloginBut = foodSellerloginBut;
     this.foodsellerSignupBut = foodsellerSignupBut;
-    this.menuKey = menuKey;
     this.textView = textView;
   }
 
@@ -91,12 +86,6 @@ public final class ActivityFoodSellerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.menuKey;
-      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
-      if (menuKey == null) {
-        break missingId;
-      }
-
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
@@ -104,7 +93,7 @@ public final class ActivityFoodSellerBinding implements ViewBinding {
       }
 
       return new ActivityFoodSellerBinding((ConstraintLayout) rootView, areYouNewSell,
-          foodSellerloginBut, foodsellerSignupBut, menuKey, textView);
+          foodSellerloginBut, foodsellerSignupBut, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

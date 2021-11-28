@@ -2,48 +2,65 @@ package com.example.digitalrestaurant.Authentications;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import com.example.digitalrestaurant.HomePage;
-import com.example.digitalrestaurant.Menu;
+import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.R;
 
 public class SignupPage extends AppCompatActivity {
 
-    TextView homeKey,menuKey;
+    EditText signupName,signupEmail,signupAge,signupPaswd;
+
+    Button signSubBtn;
+
+    DatabaseHelper helper;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_page);
 
-        homeKey=findViewById(R.id.homeKey);
-        menuKey=findViewById(R.id.menuKey);
+        signupName = findViewById(R.id.signupName);
+        signupEmail = findViewById(R.id.signupEmail);
+        signupAge = findViewById(R.id.signupAge);
+        signupPaswd = (findViewById(R.id.signupPaswd));
 
-        homeKey();
-        menuKey();
+        signSubBtn = (findViewById(R.id.signSubBtn));
+
+
+        signin();
+
     }
 
-    public void homeKey(){
-        homeKey.setOnClickListener(v -> {
-            Intent intent=new Intent(this, HomePage.class);
-            startActivity(intent);
-            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.fade_out);
+    public void signin(){
+        signSubBtn.setOnClickListener(v -> {
+
+            helper=new DatabaseHelper(this);
+
+            String name= signupName.getText().toString();
+            String email= signupEmail.getText().toString();
+            String age= signupAge.getText().toString();
+            String password= signupPaswd.getText().toString();
+
+
+
+            boolean signup=
+                    helper.addDataUserAndPAss(name,email,age,password);
+
+            if(signup==true)
+                Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
+            else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
+
 
         });
-
-    }
-
-    public void menuKey(){
-        menuKey.setOnClickListener(v -> {
-            Intent intent2=new Intent(this, Menu.class);
-            startActivity(intent2);
-            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+        }
 
 
-        });
 
-    }
+
 }

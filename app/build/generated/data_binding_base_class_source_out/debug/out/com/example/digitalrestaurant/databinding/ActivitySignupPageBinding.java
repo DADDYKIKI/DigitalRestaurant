@@ -22,10 +22,10 @@ public final class ActivitySignupPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button loginSubBtn;
+  public final TextView menuKey;
 
   @NonNull
-  public final TextView menuKey;
+  public final Button signSubBtn;
 
   @NonNull
   public final EditText signupAge;
@@ -42,13 +42,13 @@ public final class ActivitySignupPageBinding implements ViewBinding {
   @NonNull
   public final ConstraintLayout signupSubmtBtn;
 
-  private ActivitySignupPageBinding(@NonNull ConstraintLayout rootView, @NonNull Button loginSubBtn,
-      @NonNull TextView menuKey, @NonNull EditText signupAge, @NonNull EditText signupEmail,
+  private ActivitySignupPageBinding(@NonNull ConstraintLayout rootView, @NonNull TextView menuKey,
+      @NonNull Button signSubBtn, @NonNull EditText signupAge, @NonNull EditText signupEmail,
       @NonNull EditText signupName, @NonNull EditText signupPaswd,
       @NonNull ConstraintLayout signupSubmtBtn) {
     this.rootView = rootView;
-    this.loginSubBtn = loginSubBtn;
     this.menuKey = menuKey;
+    this.signSubBtn = signSubBtn;
     this.signupAge = signupAge;
     this.signupEmail = signupEmail;
     this.signupName = signupName;
@@ -83,15 +83,15 @@ public final class ActivitySignupPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.loginSubBtn;
-      Button loginSubBtn = ViewBindings.findChildViewById(rootView, id);
-      if (loginSubBtn == null) {
-        break missingId;
-      }
-
       id = R.id.menuKey;
       TextView menuKey = ViewBindings.findChildViewById(rootView, id);
       if (menuKey == null) {
+        break missingId;
+      }
+
+      id = R.id.signSubBtn;
+      Button signSubBtn = ViewBindings.findChildViewById(rootView, id);
+      if (signSubBtn == null) {
         break missingId;
       }
 
@@ -121,7 +121,7 @@ public final class ActivitySignupPageBinding implements ViewBinding {
 
       ConstraintLayout signupSubmtBtn = (ConstraintLayout) rootView;
 
-      return new ActivitySignupPageBinding((ConstraintLayout) rootView, loginSubBtn, menuKey,
+      return new ActivitySignupPageBinding((ConstraintLayout) rootView, menuKey, signSubBtn,
           signupAge, signupEmail, signupName, signupPaswd, signupSubmtBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);

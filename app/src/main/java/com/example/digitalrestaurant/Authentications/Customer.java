@@ -16,7 +16,7 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
                                                          {
 
 
-    TextView loginText1,signupText1,menuKey;;
+    TextView loginText1,signupText1;;
 
 
 
@@ -26,7 +26,7 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        menuKey=findViewById(R.id.menuKey);
+
 
         loginText1= findViewById(R.id.customerloginBut);
         signupText1= findViewById(R.id.customersignupBut);
@@ -34,7 +34,6 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
        // signupBut= (Button) findViewById(R.id.loginSubBtn);
 
 
-        menuKey();
 
         loginText1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,16 +86,6 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
     public void onNothingSelected(AdapterView<?> parent) {
 
     }*/
-        public void menuKey(){
-             menuKey.setOnClickListener(v -> {
-                 Intent intent2=new Intent(this, Menu.class);
-             startActivity(intent2);
-             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-
-
-    });
-
-}
 
 }
 

@@ -39,12 +39,12 @@ public class ObandeKitchen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.obande_restaurant_homepage);
 
-        homeKey=(TextView) findViewById(R.id.homeKey);
+        homeKey= findViewById(R.id.homeKey);
         menuKey=findViewById(R.id.menuKey);
 
-        floater=(FloatingActionButton)findViewById(R.id.floatingActionButton);
+        floater=findViewById(R.id.floatingActionButton);
 
-        obandeItems=new ArrayList<ItemData>();
+        obandeItems=new ArrayList();
 
         makeAprokoRestaurantAdaptor();
 

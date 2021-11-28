@@ -12,6 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.digitalrestaurant.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -28,6 +29,9 @@ public final class OrderBinding implements ViewBinding {
 
   @NonNull
   public final ConstraintLayout constraintLayout2;
+
+  @NonNull
+  public final FloatingActionButton floatingActionButton;
 
   @NonNull
   public final TextView minusBtn;
@@ -70,16 +74,17 @@ public final class OrderBinding implements ViewBinding {
 
   private OrderBinding(@NonNull LinearLayout rootView, @NonNull ConstraintLayout adarestaurantcard,
       @NonNull TextView addToCartbtn, @NonNull ConstraintLayout constraintLayout2,
-      @NonNull TextView minusBtn, @NonNull TextView orderFoodName,
-      @NonNull TextView orderNationality, @NonNull TextView orderPrice,
-      @NonNull ConstraintLayout orderingContainer, @NonNull TextView plusBtn,
-      @NonNull TextView poundSign, @NonNull TextView poundSign2, @NonNull TextView priceOfItem,
-      @NonNull TextView quantityTxt, @NonNull TextView textView2, @NonNull TextView totalOrderPrice,
-      @NonNull TextView totalPrice) {
+      @NonNull FloatingActionButton floatingActionButton, @NonNull TextView minusBtn,
+      @NonNull TextView orderFoodName, @NonNull TextView orderNationality,
+      @NonNull TextView orderPrice, @NonNull ConstraintLayout orderingContainer,
+      @NonNull TextView plusBtn, @NonNull TextView poundSign, @NonNull TextView poundSign2,
+      @NonNull TextView priceOfItem, @NonNull TextView quantityTxt, @NonNull TextView textView2,
+      @NonNull TextView totalOrderPrice, @NonNull TextView totalPrice) {
     this.rootView = rootView;
     this.adarestaurantcard = adarestaurantcard;
     this.addToCartbtn = addToCartbtn;
     this.constraintLayout2 = constraintLayout2;
+    this.floatingActionButton = floatingActionButton;
     this.minusBtn = minusBtn;
     this.orderFoodName = orderFoodName;
     this.orderNationality = orderNationality;
@@ -137,6 +142,12 @@ public final class OrderBinding implements ViewBinding {
       id = R.id.constraintLayout2;
       ConstraintLayout constraintLayout2 = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout2 == null) {
+        break missingId;
+      }
+
+      id = R.id.floatingActionButton;
+      FloatingActionButton floatingActionButton = ViewBindings.findChildViewById(rootView, id);
+      if (floatingActionButton == null) {
         break missingId;
       }
 
@@ -219,9 +230,9 @@ public final class OrderBinding implements ViewBinding {
       }
 
       return new OrderBinding((LinearLayout) rootView, adarestaurantcard, addToCartbtn,
-          constraintLayout2, minusBtn, orderFoodName, orderNationality, orderPrice,
-          orderingContainer, plusBtn, poundSign, poundSign2, priceOfItem, quantityTxt, textView2,
-          totalOrderPrice, totalPrice);
+          constraintLayout2, floatingActionButton, minusBtn, orderFoodName, orderNationality,
+          orderPrice, orderingContainer, plusBtn, poundSign, poundSign2, priceOfItem, quantityTxt,
+          textView2, totalOrderPrice, totalPrice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

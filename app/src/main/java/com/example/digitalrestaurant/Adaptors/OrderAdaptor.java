@@ -19,13 +19,13 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
 
     private OderListener orderListener;
 
-    List<OrderDetails> myOder;
+    ArrayList<OrderDetails> myOder;
     Context context;
 
-    public OrderAdaptor(OderListener orderListener,List<OrderDetails> myOder,Context context) {
+    public OrderAdaptor(OderListener orderListener,ArrayList<OrderDetails> myOder) {
         this.orderListener = orderListener;
         this.myOder=myOder;
-        this.context=context;
+
     }
 
     public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{

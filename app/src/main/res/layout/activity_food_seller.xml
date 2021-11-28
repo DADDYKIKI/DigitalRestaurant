@@ -12,7 +12,6 @@
         android:id="@+id/foodsellerSignupBut"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
         android:layout_marginEnd="28dp"
         android:editable="false"
         android:ems="10"
@@ -25,14 +24,13 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/areYouNewSell"
-        app:layout_constraintTop_toBottomOf="@+id/menuKey" />
+        tools:layout_editor_absoluteY="192dp" />
 
     <TextView
         android:id="@+id/foodSellerloginBut"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
-        android:layout_marginTop="32dp"
         android:drawablePadding="50dp"
         android:editable="false"
         android:ems="10"
@@ -46,7 +44,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/customersignupBut"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuKey" />
+        tools:layout_editor_absoluteY="104dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -67,21 +65,6 @@
         app:layout_constraintTop_toBottomOf="@+id/customersignupBut"
         tools:ignore="UnknownIdInLayout" />
 
-
-    <TextView
-        android:id="@+id/menuKey"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/homekeyback"
-        android:text="Menu"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/areYouNewSell"

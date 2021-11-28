@@ -21,13 +21,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/selleruploadbtn">
+                android:background="@drawable/homekeyback">
 
                 <TextView
                     android:id="@+id/itemName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/itemQuantity"
@@ -42,6 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="60dp"
                     android:text="10"
+                    android:textColor="@color/orange"
                     android:textSize="28dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -55,6 +57,7 @@
                     android:layout_marginEnd="28dp"
                     android:text="10"
                     android:textAlignment="center"
+                    android:textColor="@color/purple_500"
                     android:textSize="28dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -68,6 +71,7 @@
                     android:layout_marginEnd="8dp"
                     android:text="£"
                     android:textAlignment="center"
+                    android:textColor="@color/purple_500"
                     android:textSize="28dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"

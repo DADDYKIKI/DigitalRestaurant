@@ -28,28 +28,24 @@ public final class ActivityCustomerPageBinding implements ViewBinding {
   public final EditText enterLoginPaswd;
 
   @NonNull
-  public final Button loginSubBtn;
-
-  @NonNull
   public final TextView loginWarningText;
-
-  @NonNull
-  public final TextView menuKey;
 
   @NonNull
   public final TextView signInLabelText;
 
+  @NonNull
+  public final Button signSubBtn;
+
   private ActivityCustomerPageBinding(@NonNull ConstraintLayout rootView,
       @NonNull EditText enterLoginEmail, @NonNull EditText enterLoginPaswd,
-      @NonNull Button loginSubBtn, @NonNull TextView loginWarningText, @NonNull TextView menuKey,
-      @NonNull TextView signInLabelText) {
+      @NonNull TextView loginWarningText, @NonNull TextView signInLabelText,
+      @NonNull Button signSubBtn) {
     this.rootView = rootView;
     this.enterLoginEmail = enterLoginEmail;
     this.enterLoginPaswd = enterLoginPaswd;
-    this.loginSubBtn = loginSubBtn;
     this.loginWarningText = loginWarningText;
-    this.menuKey = menuKey;
     this.signInLabelText = signInLabelText;
+    this.signSubBtn = signSubBtn;
   }
 
   @Override
@@ -91,21 +87,9 @@ public final class ActivityCustomerPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.loginSubBtn;
-      Button loginSubBtn = ViewBindings.findChildViewById(rootView, id);
-      if (loginSubBtn == null) {
-        break missingId;
-      }
-
       id = R.id.loginWarningText;
       TextView loginWarningText = ViewBindings.findChildViewById(rootView, id);
       if (loginWarningText == null) {
-        break missingId;
-      }
-
-      id = R.id.menuKey;
-      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
-      if (menuKey == null) {
         break missingId;
       }
 
@@ -115,8 +99,14 @@ public final class ActivityCustomerPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.signSubBtn;
+      Button signSubBtn = ViewBindings.findChildViewById(rootView, id);
+      if (signSubBtn == null) {
+        break missingId;
+      }
+
       return new ActivityCustomerPageBinding((ConstraintLayout) rootView, enterLoginEmail,
-          enterLoginPaswd, loginSubBtn, loginWarningText, menuKey, signInLabelText);
+          enterLoginPaswd, loginWarningText, signInLabelText, signSubBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

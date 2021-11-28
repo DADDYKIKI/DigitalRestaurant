@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopularDishAdaptor;
 import com.example.digitalrestaurant.Cart;
+import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
@@ -39,7 +40,7 @@ public class AdaKitchen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ada_restaurant_homepage);
 
-        homeKey=(TextView) findViewById(R.id.homeKey);
+        homeKey=findViewById(R.id.homeKey);
         menuKey=findViewById(R.id.menuKey);
 
         adaItems= new ArrayList<>();

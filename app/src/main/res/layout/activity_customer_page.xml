@@ -7,23 +7,8 @@
     android:background="@drawable/maneatingfriedrice"
     tools:context=".Authentications.LoginPage">
 
-    <TextView
-        android:id="@+id/menuKey"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/restaurantbackground"
-        android:text="Menu"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
-        android:id="@+id/loginSubBtn"
+        android:id="@+id/signSubBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="132dp"
@@ -76,7 +61,7 @@
         android:textColor="@color/Red"
         android:textStyle="bold"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/loginSubBtn"
+        app:layout_constraintBottom_toTopOf="@+id/signSubBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"

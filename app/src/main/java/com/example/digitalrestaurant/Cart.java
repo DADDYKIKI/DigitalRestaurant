@@ -11,9 +11,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.digitalrestaurant.Adaptors.MyCursorAdaptor;
-import com.example.digitalrestaurant.Adaptors.MyCursorAdaptor;
 import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.OrderDetails;
@@ -22,6 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart extends AppCompatActivity {
+
+    private OrderAdaptor.OderListener orderListener;
 
 
 
@@ -45,6 +44,8 @@ public class Cart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cart);
 
+
+
        myOrder=new ArrayList<>();
 
         homeKey=findViewById(R.id.homeKey);
@@ -54,7 +55,10 @@ public class Cart extends AppCompatActivity {
         homeKey();
         menuKey();
 
-    //   setMyAdaptor();
+
+        //addItems();
+       setMyAdaptor();
+
 
     }
 
@@ -76,6 +80,29 @@ public class Cart extends AppCompatActivity {
 
 
         });
+
+    }
+
+    public ArrayList<OrderDetails> addItems() {
+
+        Cursor cur = new DatabaseHelper(this).viewMyData();
+        while (cur.moveToNext()) {
+
+
+
+            myOrder.add(new OrderDetails(cur.getString(2), cur.getInt(3), cur.getInt(4)));
+
+        }
+        return myOrder;
+    }
+
+
+    public void setMyAdaptor(){
+        cartRecycler=findViewById(R.id.orderRecyclerview);
+        cartRecycler.setLayoutManager(new LinearLayoutManager(this));
+        orderAdaptor=new OrderAdaptor(orderListener,addItems());
+        cartRecycler.setAdapter(orderAdaptor);
+
 
     }
 

@@ -83,24 +83,12 @@ public class Cart extends AppCompatActivity {
 
     }
 
-    public ArrayList<OrderDetails> addItems() {
-
-        Cursor cur = new DatabaseHelper(this).viewMyData();
-        while (cur.moveToNext()) {
-
-
-
-            myOrder.add(new OrderDetails(cur.getString(2), cur.getInt(3), cur.getInt(4)));
-
-        }
-        return myOrder;
-    }
 
 
     public void setMyAdaptor(){
         cartRecycler=findViewById(R.id.orderRecyclerview);
         cartRecycler.setLayoutManager(new LinearLayoutManager(this));
-        orderAdaptor=new OrderAdaptor(orderListener,addItems());
+        orderAdaptor=new OrderAdaptor(orderListener,new DatabaseHelper(this).viewMyItemsData());
         cartRecycler.setAdapter(orderAdaptor);
 
 

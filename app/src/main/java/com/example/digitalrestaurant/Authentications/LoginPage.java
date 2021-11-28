@@ -47,20 +47,26 @@ public class LoginPage extends AppCompatActivity {
         public void login(){
             loginBut.setOnClickListener(v -> {
 
-                 if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals(""))
+                click2(HomePage.class);
 
-                LoginPage.this.setTextVisible(v);
+               /*  if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
+
+                LoginPage.this.setTextVisible(v);}
 
                   else {
                       Boolean insert=dbHelper.checkUserNameAndPassword(loginEmail.getText().toString(),
                               loginPass.getText().toString());
 
-                      if(insert==true)
+                      if(insert==true){
 
                           LoginPage.this.setTextInvisible(v);
 
                       click2(HomePage.class);
+
                   }
+                      else LoginPage.this.setTextVisible(v);
+
+                  } */
 
             });
         }

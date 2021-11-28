@@ -9,13 +9,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 import com.example.digitalrestaurant.Details.OrderDetails;
+import com.example.digitalrestaurant.Details.UserDetails;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String MY_DATABASE_NAME="Godwin.db";
+    public static final String MY_DATABASE_NAME="Godwin";
     public static final String MY_TABLE_NAME="GodwinTable";
     public static final String MY_USER_AND_PASS_TABLE="GodwinUserTable";
     public static final String COLUMNNAME1="ID";
@@ -113,9 +114,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean checkUserNameAndPassword(String email,String Password){
+    public boolean checkUserNameAndPassword(String email,String password){
         SQLiteDatabase myDatabase=this.getWritableDatabase();
-        Cursor cur3=myDatabase.rawQuery("select * from "+MY_TABLE_NAME+" where email=? and password=?", new String[]{email});
+        Cursor cur3=myDatabase.rawQuery("select * from "+MY_TABLE_NAME+" where email=? and password=?",
+                new String[]{email});
 
         if(cur3.getCount()>0)return true;
         else return false;
@@ -123,11 +125,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public Cursor viewMyData(){
+    public ArrayList viewMyItemsData(){
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
+
+        ArrayList<OrderDetails> myItems=new ArrayList<>();
         Cursor cur=myDatabase.rawQuery("select * from "+MY_TABLE_NAME,null);
-     /*   if (cur.moveToFirst()){
+      /* if (cur.moveToFirst()){
 
             do{
                 int foodID=cur.getInt(0);
@@ -138,11 +142,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 order.add(new OrderDetails(foodTotal,foodQuantity,foodName));
 
 
-        }while(cur.moveToNext());
+        }*/
+        while(!cur.isAfterLast()) {
+
+            myItems.add(new OrderDetails(cur.getString(cur.getColumnIndexOrThrow(COLUMNNAME2)),
+                    Integer.parseInt( cur.getString(cur.getColumnIndexOrThrow(COLUMNNAME3))),
+                            Integer.parseInt(cur.getString(cur.getColumnIndexOrThrow(COLUMNNAME3)))));
+            cur.moveToNext();
+        }
 
 
 
-}*/     return  cur;
+           return  myItems;
+
+
+    }
+
+    public ArrayList viewMyLoginDetails(){
+
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+
+        ArrayList<UserDetails> user=new ArrayList<>();
+        Cursor cur=myDatabase.rawQuery("select * from "+MY_USER_AND_PASS_TABLE ,null);
+
+        while(!cur.isAfterLast()) {
+
+            user.add(new UserDetails(cur.getString(cur.getColumnIndexOrThrow(COLUMNUSER2)),
+                    cur.getString(cur.getColumnIndexOrThrow(COLUMNUSER3)),
+                    Integer.parseInt(cur.getString(cur.getColumnIndexOrThrow(COLUMNUSER4))),
+                   cur.getString(cur.getColumnIndexOrThrow(COLUMNUSER5))));
+            cur.moveToNext();
+        }
+
+
+
+        return  user;
 
 
     }

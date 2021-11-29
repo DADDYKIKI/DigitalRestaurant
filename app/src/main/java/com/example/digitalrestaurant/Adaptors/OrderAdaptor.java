@@ -1,4 +1,4 @@
-package com.example.digitalrestaurant.Adaptors;
+/*package com.example.digitalrestaurant.Adaptors;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -87,3 +87,4 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
 
 }
 
+*/

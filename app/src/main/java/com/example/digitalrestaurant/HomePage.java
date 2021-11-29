@@ -60,9 +60,9 @@ public class HomePage extends AppCompatActivity {
 
         menuKey=findViewById(R.id.menuKey);
 
-        myItems=new ArrayList<ItemData>();
-        restaurantslist=new ArrayList<RestaurantsDetails>();
-        locationLists=new ArrayList<LocationDetails>();
+        myItems=new ArrayList<>();
+        restaurantslist=new ArrayList<>();
+        locationLists=new ArrayList<>();
 
         //TextView restaurantName= (TextView) findViewById(R.id.enterLoginEmail);
 
@@ -76,7 +76,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void menuKey(){
-        menuKey.setOnClickListener(v -> {
+            menuKey.setOnClickListener(v -> {
             Intent intent2=new Intent(this, Menu.class);
             startActivity(intent2);
             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
@@ -157,14 +157,14 @@ public class HomePage extends AppCompatActivity {
     public ArrayList<ItemData> populateAdaPage(){
 
 
-        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
-        myItems.add(new ItemData(8,"Rice/Plantain","African" ,R.drawable.jelofplantrain));
-        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
-        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
-        myItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone));
-        myItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic));
-        myItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel));
-        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats,""));
+        myItems.add(new ItemData(8,"Rice/Plantain","African" ,R.drawable.jelofplantrain,""));
+        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo,""));
+        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture,""));
+        myItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone,""));
+        myItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic,""));
+        myItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel,""));
+        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo,""));
 
         return myItems;
     }
@@ -172,14 +172,14 @@ public class HomePage extends AppCompatActivity {
     public ArrayList<ItemData> populateObandePage(){
 
 
-        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
-        myItems.add(new ItemData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain));
-        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
-        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
-        myItems.add(new ItemData(21,"Fried Rice","European" ,R.drawable.friedriceone));
-        myItems.add(new ItemData(7,"Assorted meats","European" ,R.drawable.tablefoodpic));
-        myItems.add(new ItemData(10,"Pounded Yam","European" ,R.drawable.towel));
-        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats,""));
+        myItems.add(new ItemData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain,""));
+        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo,""));
+        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture,""));
+        myItems.add(new ItemData(21,"Fried Rice","European" ,R.drawable.friedriceone,""));
+        myItems.add(new ItemData(7,"Assorted meats","European" ,R.drawable.tablefoodpic,""));
+        myItems.add(new ItemData(10,"Pounded Yam","European" ,R.drawable.towel,""));
+        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo,""));
 
         return myItems;
     }
@@ -187,14 +187,14 @@ public class HomePage extends AppCompatActivity {
     public ArrayList<ItemData> populateAprokoPage(){
 
 
-        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
-        myItems.add(new ItemData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain));
-        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
-        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
-        myItems.add(new ItemData(21,"Fried Rice","European" ,R.drawable.friedriceone));
-        myItems.add(new ItemData(7,"Assorted meats","European" ,R.drawable.tablefoodpic));
-        myItems.add(new ItemData(10,"Pounded Yam","European" ,R.drawable.towel));
-        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats,""));
+        myItems.add(new ItemData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain,""));
+        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo,""));
+        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture,""));
+        myItems.add(new ItemData(21,"Fried Rice","European" ,R.drawable.friedriceone,""));
+        myItems.add(new ItemData(7,"Assorted meats","European" ,R.drawable.tablefoodpic,""));
+        myItems.add(new ItemData(10,"Pounded Yam","European" ,R.drawable.towel,""));
+        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo,""));
 
         return myItems;
     }
@@ -202,14 +202,14 @@ public class HomePage extends AppCompatActivity {
     public ArrayList<ItemData> populateStainlessPage(){
 
 
-        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
-        myItems.add(new ItemData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain));
-        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
-        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture));
-        myItems.add(new ItemData(21,"Fried Rice","European" ,R.drawable.friedriceone));
-        myItems.add(new ItemData(7,"Assorted meats","European" ,R.drawable.tablefoodpic));
-        myItems.add(new ItemData(10,"Pounded Yam","European" ,R.drawable.towel));
-        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
+        myItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats,""));
+        myItems.add(new ItemData(8,"Rice/Plantain","European" ,R.drawable.jelofplantrain,""));
+        myItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo,""));
+        myItems.add(new ItemData(15,"Sauce","European" ,R.drawable.mixture,""));
+        myItems.add(new ItemData(21,"Fried Rice","European" ,R.drawable.friedriceone,""));
+        myItems.add(new ItemData(7,"Assorted meats","European" ,R.drawable.tablefoodpic,""));
+        myItems.add(new ItemData(10,"Pounded Yam","European" ,R.drawable.towel,""));
+        myItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo,""));
 
         return myItems;
     }

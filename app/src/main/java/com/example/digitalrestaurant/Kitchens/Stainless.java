@@ -118,16 +118,16 @@ public class Stainless extends AppCompatActivity {
 
     public ArrayList<ItemData> populateStainlessPage(){
 
-        stainlessItems.add(new ItemData(12,"Catfish peppered soup","African" ,R.drawable.adacatfish));
-        stainlessItems.add(new ItemData(9,"MoiMoi","African" ,R.drawable.obandemoimoi));
-        stainlessItems.add(new ItemData(18,"Egusi soup","African" ,R.drawable.obandeegusisoup));
-        stainlessItems.add(new ItemData(3,"Chin-Chin","African" ,R.drawable.obandechinchin));
-        stainlessItems.add(new ItemData(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone));
-        stainlessItems.add(new ItemData(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans));
-        stainlessItems.add(new ItemData(3,"Soft drinks","" ,R.drawable.adasoftdrinks));
-        stainlessItems.add(new ItemData(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup));
-        stainlessItems.add(new ItemData(5,"Heineken Pride","" ,R.drawable.adachilledheineken));
-        stainlessItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer));
+        stainlessItems.add(new ItemData(12,"Catfish peppered soup","African" ,R.drawable.adacatfish,""));
+        stainlessItems.add(new ItemData(9,"MoiMoi","African" ,R.drawable.obandemoimoi,""));
+        stainlessItems.add(new ItemData(18,"Egusi soup","African" ,R.drawable.obandeegusisoup,""));
+        stainlessItems.add(new ItemData(3,"Chin-Chin","African" ,R.drawable.obandechinchin,""));
+        stainlessItems.add(new ItemData(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone,""));
+        stainlessItems.add(new ItemData(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,""));
+        stainlessItems.add(new ItemData(3,"Soft drinks","" ,R.drawable.adasoftdrinks,""));
+        stainlessItems.add(new ItemData(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup,""));
+        stainlessItems.add(new ItemData(5,"Heineken Pride","" ,R.drawable.adachilledheineken,""));
+        stainlessItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer,""));
 
         return stainlessItems;
     }}

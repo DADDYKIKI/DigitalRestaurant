@@ -63,9 +63,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/signSubBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterLoginPaswd" />
+        app:layout_constraintTop_toBottomOf="@+id/enterLoginPaswd"
+        app:layout_constraintVertical_bias="0.07" />
 
     <TextView
         android:id="@+id/signInLabelText"

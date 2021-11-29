@@ -50,7 +50,7 @@
         tools:layout_editor_absoluteY="76dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/welcomeMessage"
         android:layout_width="450dp"
         android:layout_height="500dp"
         android:editable="false"

@@ -8,6 +8,21 @@
     tools:context=".Authentications.SellerUploadPage">
 
 
+    <EditText
+        android:id="@+id/alcoholic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/homekeyback"
+        android:ems="10"
+        android:hint="write alcoholic if alcoholic?"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pictureOfItem" />
 
     <TextView
         android:id="@+id/menuKey"
@@ -43,42 +58,42 @@
 
 
     <EditText
-        android:id="@+id/nameOfItem"
+        android:id="@+id/priceOfFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="112dp"
         android:background="@drawable/homekeyback"
         android:ems="10"
-        android:hint="Name of Item"
+        android:hint="Price"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/priceOfItem"
+        android:id="@+id/nameOfFoodItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/homekeyback"
         android:ems="10"
-        android:hint="Price of Item"
+        android:hint="Food Name"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameOfItem" />
+        app:layout_constraintTop_toBottomOf="@+id/priceOfFood" />
 
     <EditText
         android:id="@+id/nationalityOfItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/homekeyback"
         android:ems="10"
         android:hint="Nationality"
@@ -86,15 +101,15 @@
         android:textAlignment="center"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceOfItem" />
+        app:layout_constraintTop_toBottomOf="@+id/nameOfFoodItem" />
 
     <EditText
         android:id="@+id/pictureOfItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/homekeyback"
         android:ems="10"
         android:hint="Picture of Item"
@@ -102,7 +117,7 @@
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nationalityOfItem" />
 
@@ -110,14 +125,14 @@
         android:id="@+id/selleruploadBtn"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
         android:background="@drawable/selleruploadbtn"
         android:text="Upload"
         android:textAlignment="center"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pictureOfItem"
-        app:layout_constraintVertical_bias="0.449" />
+        app:layout_constraintTop_toBottomOf="@+id/alcoholic" />
 </androidx.constraintlayout.widget.ConstraintLayout>

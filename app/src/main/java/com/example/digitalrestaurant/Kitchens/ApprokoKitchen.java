@@ -126,15 +126,15 @@ public class ApprokoKitchen extends AppCompatActivity {
     public  ArrayList<ItemData> populateAprokoPage(){
 
 
-        aprokoItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats));
-        aprokoItems.add(new ItemData(8,"Rice/Plantain","Asian" ,R.drawable.jelofplantrain));
-        aprokoItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo));
-        aprokoItems.add(new ItemData(15,"Sauce","Asain" ,R.drawable.mixture));
-        aprokoItems.add(new ItemData(15,"Sauce","Asain" ,R.drawable.mixture));
-        aprokoItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone));
-        aprokoItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic));
-        aprokoItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel));
-        aprokoItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo));
+        aprokoItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats,""));
+        aprokoItems.add(new ItemData(8,"Rice/Plantain","Asian" ,R.drawable.jelofplantrain,""));
+        aprokoItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo,""));
+        aprokoItems.add(new ItemData(15,"Sauce","Asain" ,R.drawable.mixture,""));
+        aprokoItems.add(new ItemData(15,"Sauce","Asain" ,R.drawable.mixture,""));
+        aprokoItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone,""));
+        aprokoItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic,""));
+        aprokoItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel,""));
+        aprokoItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo,""));
 
         return aprokoItems;
     }

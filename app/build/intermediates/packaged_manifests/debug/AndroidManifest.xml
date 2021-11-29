@@ -52,7 +52,16 @@
             android:name="com.example.digitalrestaurant.Authentications.SignupPage"
             android:exported="false" />
         <activity
+            android:name="com.example.digitalrestaurant.Authentications.SignupPageForFoodSeller2"
+            android:exported="false" />
+        <activity
             android:name="com.example.digitalrestaurant.Authentications.LoginPage"
+            android:exported="false" />
+        <activity
+            android:name="com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2"
+            android:exported="false" />
+        <activity
+            android:name="com.example.digitalrestaurant.Authentications.FoodSeller"
             android:exported="false" />
         <activity
             android:name="com.example.digitalrestaurant.Authentications.IntroPage"

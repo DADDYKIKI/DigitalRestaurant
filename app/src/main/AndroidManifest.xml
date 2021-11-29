@@ -45,7 +45,16 @@
             android:name=".Authentications.SignupPage"
             android:exported="false" />
         <activity
+            android:name=".Authentications.SignupPageForFoodSeller2"
+            android:exported="false" />
+        <activity
             android:name=".Authentications.LoginPage"
+            android:exported="false" />
+        <activity
+            android:name=".Authentications.LoginPageForFoodSeller2"
+            android:exported="false" />
+        <activity
+            android:name=".Authentications.FoodSeller"
             android:exported="false" />
         <activity
             android:name=".Authentications.IntroPage"

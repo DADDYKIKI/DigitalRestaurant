@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
+//import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.OrderDetails;
 
@@ -20,7 +20,7 @@ import java.util.List;
 
 public class Cart extends AppCompatActivity {
 
-    private OrderAdaptor.OderListener orderListener;
+    //private OrderAdaptor.OderListener orderListener;
 
 
 
@@ -57,7 +57,7 @@ public class Cart extends AppCompatActivity {
 
 
         //addItems();
-       setMyAdaptor();
+      // setMyAdaptor();
 
 
     }
@@ -85,14 +85,14 @@ public class Cart extends AppCompatActivity {
 
 
 
-    public void setMyAdaptor(){
+   /* public void setMyAdaptor(){
         cartRecycler=findViewById(R.id.orderRecyclerview);
         cartRecycler.setLayoutManager(new LinearLayoutManager(this));
         orderAdaptor=new OrderAdaptor(orderListener,new DatabaseHelper(this).viewMyItemsData());
         cartRecycler.setAdapter(orderAdaptor);
 
 
-    }
+    }*/
 
 
 

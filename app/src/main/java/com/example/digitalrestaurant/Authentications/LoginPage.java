@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -34,6 +35,7 @@ public class LoginPage extends AppCompatActivity {
         loginWarningText = findViewById(R.id.loginWarningText);
         loginBut = (findViewById(R.id.signSubBtn));
 
+
         dbHelper=new DatabaseHelper(this);
 
 
@@ -47,11 +49,13 @@ public class LoginPage extends AppCompatActivity {
         public void login(){
             loginBut.setOnClickListener(v -> {
 
-                click2(HomePage.class);
+                //click2(HomePage.class);
 
-               /*  if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
+                if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
 
-                LoginPage.this.setTextVisible(v);}
+                     Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
+
+                         }
 
                   else {
                       Boolean insert=dbHelper.checkUserNameAndPassword(loginEmail.getText().toString(),
@@ -61,12 +65,15 @@ public class LoginPage extends AppCompatActivity {
 
                           LoginPage.this.setTextInvisible(v);
 
-                      click2(HomePage.class);
+                            click2(HomePage.class);
+
+                            loginEmail.setText("");
+                            loginPass.setText("");
 
                   }
                       else LoginPage.this.setTextVisible(v);
 
-                  } */
+                  }
 
             });
         }

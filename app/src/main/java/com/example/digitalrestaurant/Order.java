@@ -12,7 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
+
+import com.example.digitalrestaurant.Adaptors.CartAdaptor;
+//import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.OrderDetails;
 import com.example.digitalrestaurant.Kitchens.AdaKitchen;
@@ -32,24 +34,28 @@ public class Order extends AppCompatActivity {
     private int foodImage=0;
     FloatingActionButton basket;
 
-    DatabaseHelper myDatabaseHelper;
 
     private RecyclerView.Adapter orderAdaptor;
 
-    private OrderAdaptor.OderListener orderListener;
+    //private OrderAdaptor.OderListener orderListener;
 
     private RecyclerView cartRecycler;
 
+    ArrayList<OrderDetails> orderList;
+
+
+    DatabaseHelper myCartDatabaseHelper;
 
 
 
 
-    List<OrderDetails> orderList;
+
+
 
 
     //...................Database .........................
 
-    private DatabaseHelper myCartDatabaseHelper;
+
 
     //................................................
 
@@ -72,6 +78,10 @@ public class Order extends AppCompatActivity {
 
         orderList=new ArrayList<>();
 
+        myCartDatabaseHelper=new DatabaseHelper(this);
+
+
+
 
         Bundle extras=getIntent().getExtras();
 
@@ -91,11 +101,15 @@ public class Order extends AppCompatActivity {
 
 
 
-        openMyBasket();
 
 
+        setOrderQuantity();
 
         AddToCartBtnListener();
+
+       viewMyItems();
+
+        openMyBasket();
 
 
        // setMyAdaptor();
@@ -103,6 +117,26 @@ public class Order extends AppCompatActivity {
 
 
 }
+
+        public void viewMyItems(){
+
+            DatabaseHelper myCartDatabaseHelper=new DatabaseHelper(this);
+
+            orderList=myCartDatabaseHelper.viewCartItems();
+
+
+            cartRecycler=findViewById(R.id.orderRecyclerview);
+
+            orderAdaptor=new CartAdaptor(orderList,this);
+            cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,
+                    false));
+           cartRecycler.setAdapter(orderAdaptor);
+
+
+
+
+
+        }
 
 
 
@@ -156,16 +190,12 @@ public class Order extends AppCompatActivity {
     public void AddToCartBtnListener(){//................Add to Database...................
 
 
-        setOrderQuantity();
+
 
         addToCartBtn.setOnClickListener(v -> {
 
-         myDatabaseHelper=new DatabaseHelper(this);
-
-
-
             boolean addToCart=
-                    myDatabaseHelper.addData(foodName,String.valueOf(quantityNumber),String.valueOf(foodPrice*quantityNumber));
+                    myCartDatabaseHelper.addData(foodName,String.valueOf(quantityNumber),String.valueOf(foodPrice*quantityNumber));
 
            if(addToCart==true)
             Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();

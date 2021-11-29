@@ -1811,6 +1811,7 @@ int id adarestaurantcard 0x7f090047
 int id add 0x7f090048
 int id addToCartbtn 0x7f090049
 int id addTocar 0x7f09004a
+int id alcoholic 0x7f090208
 int id alertTitle 0x7f09004b
 int id aligned 0x7f09004c
 int id all 0x7f09004d
@@ -2039,7 +2040,7 @@ int id mtrl_picker_text_input_range_start 0x7f09012e
 int id mtrl_picker_title_text 0x7f09012f
 int id mtrl_view_tag_bottom_padding 0x7f090130
 int id multiply 0x7f090131
-int id nameOfItem 0x7f090132
+int id nameOfFoodItem 0x7f090209
 int id nationalityOfItem 0x7f090133
 int id navigation_header_container 0x7f090134
 int id never 0x7f090135
@@ -2083,6 +2084,7 @@ int id position 0x7f09015a
 int id postLayout 0x7f09015b
 int id poundSign 0x7f09015c
 int id poundSign2 0x7f09015d
+int id priceOfFood 0x7f09020a
 int id priceOfItem 0x7f09015e
 int id progress_circular 0x7f09015f
 int id progress_horizontal 0x7f090160
@@ -2191,7 +2193,6 @@ int id textSpacerNoButtons 0x7f0901c5
 int id textSpacerNoTitle 0x7f0901c6
 int id textStart 0x7f0901c7
 int id textTop 0x7f0901c8
-int id textView 0x7f0901c9
 int id textView10 0x7f090206
 int id textView2 0x7f0901ca
 int id textView3 0x7f0901cb
@@ -2237,6 +2238,7 @@ int id view_offset_helper 0x7f0901f0
 int id view_tree_view_model_store_owner 0x7f0901f1
 int id visible 0x7f0901f2
 int id welcome 0x7f0901f3
+int id welcomeMessage 0x7f09020b
 int id welcometxt 0x7f0901f4
 int id withText 0x7f0901f5
 int id withinBounds 0x7f0901f6
@@ -2309,6 +2311,7 @@ int layout activity_intro_page 0x7f0c001e
 int layout activity_main 0x7f0c0020
 int layout activity_seller_upload_page 0x7f0c0021
 int layout activity_signup_page 0x7f0c0022
+int layout activity_signup_page_for_vendor 0x7f0c0084
 int layout ada_restaurant_homepage 0x7f0c0023
 int layout aproko_resataurant_homepage 0x7f0c0024
 int layout cart 0x7f0c0025

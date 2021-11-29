@@ -1812,6 +1812,7 @@ id adarestaurantcard
 id add
 id addToCartbtn
 id addTocar
+id alcoholic
 id alertTitle
 id aligned
 id all
@@ -2040,7 +2041,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
-id nameOfItem
+id nameOfFoodItem
 id nationalityOfItem
 id navigation_header_container
 id never
@@ -2084,6 +2085,7 @@ id position
 id postLayout
 id poundSign
 id poundSign2
+id priceOfFood
 id priceOfItem
 id progress_circular
 id progress_horizontal
@@ -2192,7 +2194,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView10
 id textView2
 id textView3
@@ -2238,6 +2239,7 @@ id view_offset_helper
 id view_tree_view_model_store_owner
 id visible
 id welcome
+id welcomeMessage
 id welcometxt
 id withText
 id withinBounds
@@ -2310,6 +2312,7 @@ layout activity_intro_page
 layout activity_main
 layout activity_seller_upload_page
 layout activity_signup_page
+layout activity_signup_page_for_vendor
 layout ada_restaurant_homepage
 layout aproko_resataurant_homepage
 layout cart

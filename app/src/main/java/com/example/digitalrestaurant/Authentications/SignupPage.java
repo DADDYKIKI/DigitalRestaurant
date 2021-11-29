@@ -2,6 +2,7 @@ package com.example.digitalrestaurant.Authentications;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,15 +48,31 @@ public class SignupPage extends AppCompatActivity {
             String age= signupAge.getText().toString();
             String password= signupPaswd.getText().toString();
 
+            if (name.equals("") || email.equals("")|| age.equals("")|| password.equals("")){
+
+                Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
+
+            }
 
 
-            boolean signup=
-                    helper.addDataUserAndPAss(name,email,age,password);
+        else {
 
-            if(signup==true)
-                Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
-            else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
+                boolean signup =
+                        helper.addCustomerUserAndPAss(name, email, age, password);
 
+                if (signup == true) {
+                    Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
+                    signupName.setText("");
+                    signupEmail.setText("");
+                    signupAge.setText("");
+                    signupPaswd.setText("");
+
+                    Intent i = new Intent(this, LoginPage.class);
+                    startActivity(i);
+                } else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
+
+
+            }
 
         });
         }

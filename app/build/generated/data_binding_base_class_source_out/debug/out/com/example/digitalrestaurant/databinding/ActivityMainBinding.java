@@ -29,16 +29,16 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView customersignupBut;
 
   @NonNull
-  public final TextView textView;
+  public final TextView welcomeMessage;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView areYouNewSell,
       @NonNull TextView customerloginBut, @NonNull TextView customersignupBut,
-      @NonNull TextView textView) {
+      @NonNull TextView welcomeMessage) {
     this.rootView = rootView;
     this.areYouNewSell = areYouNewSell;
     this.customerloginBut = customerloginBut;
     this.customersignupBut = customersignupBut;
-    this.textView = textView;
+    this.welcomeMessage = welcomeMessage;
   }
 
   @Override
@@ -86,14 +86,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
+      id = R.id.welcomeMessage;
+      TextView welcomeMessage = ViewBindings.findChildViewById(rootView, id);
+      if (welcomeMessage == null) {
         break missingId;
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, areYouNewSell, customerloginBut,
-          customersignupBut, textView);
+          customersignupBut, welcomeMessage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

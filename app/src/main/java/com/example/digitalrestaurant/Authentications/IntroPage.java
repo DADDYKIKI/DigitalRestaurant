@@ -22,7 +22,7 @@ public class IntroPage extends AppCompatActivity {
 
         customerTxt.setOnClickListener(v -> clickIntro(Customer.class));
 
-        foodSellerTxt.setOnClickListener(v -> clickIntro(FoodSeller.class));
+       foodSellerTxt.setOnClickListener(v -> clickIntro(FoodSeller.class));
     }
 
 

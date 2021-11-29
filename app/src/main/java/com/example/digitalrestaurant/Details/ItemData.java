@@ -8,11 +8,11 @@ public class ItemData implements Serializable {
     private int price, imageURL;
     private String name, nationality,alcoholic;
 
-    public ItemData(int price,  String name, String nationality,int imageURL) {
+    public ItemData(int price,  String name, String nationality,int imageURL,String alcoholic) {
         this.price = price;
         this.name = name;
         this.nationality = nationality;
-      //  this.alcoholic=alcoholic;
+        this.alcoholic=alcoholic;
         this.imageURL= imageURL;
 
     }

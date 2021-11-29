@@ -18,26 +18,12 @@ public class FoodSeller extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_seller);
 
-        sellerLoginTxt= (TextView) findViewById(R.id.foodSellerloginBut);
-        sellerSignUpTxt= (TextView) findViewById(R.id.foodsellerSignupBut);
+        sellerLoginTxt= findViewById(R.id.foodSellerloginBut);
+        sellerSignUpTxt= findViewById(R.id.foodsellerSignupBut);
 
-        sellerLoginTxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                click1(LoginPage.class);
+        sellerLoginTxt.setOnClickListener(v -> click1(LoginPageForFoodSeller2.class));
 
-            }
-        });
-
-        sellerSignUpTxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                click1(SignupPage.class);
-            }
-
-
-
-        });
+        sellerSignUpTxt.setOnClickListener(v -> click1(SignupPageForFoodSeller2.class));
     }
 
     public void click1(Object x){

@@ -32,6 +32,10 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/restaurant_page_container.xml"
     },
     {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_signup_page_for_vendor.xml",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_signup_page_for_vendor.xml"
+    },
+    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_customer_page.xml",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_customer_page.xml"
     },

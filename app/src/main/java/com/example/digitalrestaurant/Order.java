@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
@@ -38,6 +39,9 @@ public class Order extends AppCompatActivity {
     private String NameOfRestaurant="";
     private String foodNationality = "";
     private int foodImage=0;
+    private int phone=0;
+    private String address;
+    private String customerName;
     FloatingActionButton basket;
 
 
@@ -92,6 +96,10 @@ public class Order extends AppCompatActivity {
             foodPrice=extras.getInt("price");
             foodImage=extras.getInt("imageUrl");
             NameOfRestaurant=extras.getString("RestaurantName");
+            phone=extras.getInt("phone");
+            address=extras.getString("address");
+            customerName=extras.getString("customerName");
+
 
         }
         orderPrice.setText(String.valueOf(foodPrice));
@@ -112,9 +120,10 @@ public class Order extends AppCompatActivity {
 
         //viewMyItems();
 
-        openMyBasket();
+
 
         AddToCart();
+       // openMyBasket();
 
 
        // setMyAdaptor();
@@ -187,7 +196,7 @@ public class Order extends AppCompatActivity {
 
             });
 
-
+            openMyBasket();
 
 
         }
@@ -197,15 +206,27 @@ public class Order extends AppCompatActivity {
         basket.setOnClickListener(v -> {
 
             Cursor cur1=myCartDatabaseHelper.getOrders();
-            Cursor cur2=myCartDatabaseHelper.getCustomerLoginDetails();
+            Cursor cur2=myCartDatabaseHelper.getCustomerContactDetails(phone,address);
 
             if(cur1.getCount()==0){ Toast.makeText(this, "Basket Empty", Toast.LENGTH_SHORT).show();return;}
 
             StringBuffer bufferedItems=new StringBuffer();
             while(cur1.moveToNext()){
-                bufferedItems.append()
+                //bufferedItems.append("Name of customer: "+cur2.getString(0)+"\n");
+                //bufferedItems.append("Phone: "+cur2.getString(3)+"\n");
+               // bufferedItems.append("Address: "+cur2.getString(4)+"\n");
+                bufferedItems.append("Food Item: "+cur1.getString(0)+"\n");
+                bufferedItems.append("Quantity: "+cur2.getString(1)+"\n");
 
             }
+            AlertDialog.Builder build=new AlertDialog.Builder(this);
+
+            build.setCancelable(true);
+            build.setTitle("Oders");
+            build.setMessage(bufferedItems);
+            build.show();
+
+
 
 
 

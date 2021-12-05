@@ -54,7 +54,7 @@ public class ApprokoKitchen extends AppCompatActivity {
 
         makeApprokoRestaurantAdaptor();
 
-        gotoBasket();
+       // gotoBasket();
 
         homeKey();
         menuKey();

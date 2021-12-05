@@ -29,7 +29,8 @@
             android:exported="false" />
         <activity
             android:name="com.example.digitalrestaurant.Order"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName="com.example.digitalrestaurant.HomePage" />
         <activity
             android:name="com.example.digitalrestaurant.Menu"
             android:exported="false" />

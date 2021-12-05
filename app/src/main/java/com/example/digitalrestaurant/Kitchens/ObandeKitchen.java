@@ -54,7 +54,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
         makeObandeRestaurantAdaptor();
 
-        gotoBasket();
+       // gotoBasket();
 
         homeKey();
         menuKey();

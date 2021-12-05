@@ -54,7 +54,7 @@ public class AdaKitchen extends AppCompatActivity {
 
 
 
-        openMyBasket();
+        //openMyBasket();
 
         makeAdaRestaurantAdaptor();
 

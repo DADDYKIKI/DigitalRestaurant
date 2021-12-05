@@ -304,7 +304,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getOrders(){
 
-        SQLiteDatabase myDatabase=this.getWritableDatabase();
+        SQLiteDatabase myDatabase=this.getReadableDatabase();
 
         Cursor cur=myDatabase.rawQuery("select * from "+MY_TABLE_NAME,null);
 
@@ -397,6 +397,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase myDatabase4 = this.getReadableDatabase();
 
         Cursor cur = myDatabase4.rawQuery("select * from " + MY_USER_AND_PASS_TABLE, null);
+
+
+      /*  while (cur4.moveToNext()) {
+
+
+            customer.add(new UserDetails(cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER2)),
+                    cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER3)),
+                    (cur4.getInt(cur4.getColumnIndexOrThrow(COLUMNUSER4))),
+                    cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER5))));
+
+        }*/
+        return cur;
+
+
+    }
+
+    public Cursor getCustomerContactDetails(int phone,String address) {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select * from " + MY_USER_AND_PASS_TABLE+
+                        " where "+COLUMNUSER5+"="+phone+" and "+COLUMNUSER6+"="+address,
+                null);
 
 
       /*  while (cur4.moveToNext()) {

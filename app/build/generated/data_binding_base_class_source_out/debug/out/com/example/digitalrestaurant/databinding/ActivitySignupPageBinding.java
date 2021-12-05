@@ -22,13 +22,19 @@ public final class ActivitySignupPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final EditText enterhomeaddress;
+
+  @NonNull
   public final TextView menuKey;
+
+  @NonNull
+  public final EditText phone;
 
   @NonNull
   public final Button signSubBtnV;
 
   @NonNull
-  public final EditText signUpPassV;
+  public final EditText signUpPassV3;
 
   @NonNull
   public final EditText signupAge;
@@ -42,14 +48,17 @@ public final class ActivitySignupPageBinding implements ViewBinding {
   @NonNull
   public final ConstraintLayout signupSubmtBtn;
 
-  private ActivitySignupPageBinding(@NonNull ConstraintLayout rootView, @NonNull TextView menuKey,
-      @NonNull Button signSubBtnV, @NonNull EditText signUpPassV, @NonNull EditText signupAge,
+  private ActivitySignupPageBinding(@NonNull ConstraintLayout rootView,
+      @NonNull EditText enterhomeaddress, @NonNull TextView menuKey, @NonNull EditText phone,
+      @NonNull Button signSubBtnV, @NonNull EditText signUpPassV3, @NonNull EditText signupAge,
       @NonNull EditText signupEmailV, @NonNull EditText signupNameV,
       @NonNull ConstraintLayout signupSubmtBtn) {
     this.rootView = rootView;
+    this.enterhomeaddress = enterhomeaddress;
     this.menuKey = menuKey;
+    this.phone = phone;
     this.signSubBtnV = signSubBtnV;
-    this.signUpPassV = signUpPassV;
+    this.signUpPassV3 = signUpPassV3;
     this.signupAge = signupAge;
     this.signupEmailV = signupEmailV;
     this.signupNameV = signupNameV;
@@ -83,9 +92,21 @@ public final class ActivitySignupPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.enterhomeaddress;
+      EditText enterhomeaddress = ViewBindings.findChildViewById(rootView, id);
+      if (enterhomeaddress == null) {
+        break missingId;
+      }
+
       id = R.id.menuKey;
       TextView menuKey = ViewBindings.findChildViewById(rootView, id);
       if (menuKey == null) {
+        break missingId;
+      }
+
+      id = R.id.phone;
+      EditText phone = ViewBindings.findChildViewById(rootView, id);
+      if (phone == null) {
         break missingId;
       }
 
@@ -95,9 +116,9 @@ public final class ActivitySignupPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.signUpPassV;
-      EditText signUpPassV = ViewBindings.findChildViewById(rootView, id);
-      if (signUpPassV == null) {
+      id = R.id.signUpPassV3;
+      EditText signUpPassV3 = ViewBindings.findChildViewById(rootView, id);
+      if (signUpPassV3 == null) {
         break missingId;
       }
 
@@ -121,8 +142,8 @@ public final class ActivitySignupPageBinding implements ViewBinding {
 
       ConstraintLayout signupSubmtBtn = (ConstraintLayout) rootView;
 
-      return new ActivitySignupPageBinding((ConstraintLayout) rootView, menuKey, signSubBtnV,
-          signUpPassV, signupAge, signupEmailV, signupNameV, signupSubmtBtn);
+      return new ActivitySignupPageBinding((ConstraintLayout) rootView, enterhomeaddress, menuKey,
+          phone, signSubBtnV, signUpPassV3, signupAge, signupEmailV, signupNameV, signupSubmtBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

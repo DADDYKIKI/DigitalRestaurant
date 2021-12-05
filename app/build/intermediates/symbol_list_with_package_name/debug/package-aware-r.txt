@@ -1916,6 +1916,7 @@ id enterAlways
 id enterAlwaysCollapsed
 id enterLoginEmail
 id enterLoginPaswd
+id enterhomeaddress
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2083,6 +2084,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id phone
 id pic1
 id pin
 id plusBtn
@@ -2143,7 +2145,7 @@ id showTitle
 id signInLabelText
 id signSubBtn
 id signSubBtnV
-id signUpPassV
+id signUpPassV3
 id signupAge
 id signupEmailV
 id signupNameV

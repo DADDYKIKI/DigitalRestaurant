@@ -1,9 +1,11 @@
 package com.example.digitalrestaurant.Kitchens;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ObandeKitchen extends AppCompatActivity {
 
@@ -29,7 +32,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
     private RecyclerView obandeRecycler;
 
-    private ArrayList<ItemData> obandeItems;
+    private List<ItemData> obandeItems;
 
     private FloatingActionButton floater;
 
@@ -38,6 +41,7 @@ public class ObandeKitchen extends AppCompatActivity {
     private DatabaseHelper helper;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +85,7 @@ public class ObandeKitchen extends AppCompatActivity {
         });
 
     }
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void makeObandeRestaurantAdaptor(){
 
         setObandeOnclickListener();
@@ -89,7 +94,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
         obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        obandeAdaptor=new PopularDishAdaptor(populateObandePage(),obandelistener2);
+        obandeAdaptor=new PopularDishAdaptor(populateObandePage(10),obandelistener2);
 
         obandeRecycler.setAdapter(obandeAdaptor);
 
@@ -125,7 +130,8 @@ public class ObandeKitchen extends AppCompatActivity {
 
     }
 
-    public ArrayList<ItemData> populateObandePage(){
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public List<ItemData> populateObandePage(int age){
 
 
         obandeItems.add(new ItemData(7,"MoiMoi","African" ,R.drawable.obandemoimoi,""));
@@ -136,6 +142,11 @@ public class ObandeKitchen extends AppCompatActivity {
         obandeItems.add(new ItemData(7,"Pouridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,""));
         obandeItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel,""));
         obandeItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo,""));
+
+        List<ItemData> allMatch=obandeItems.stream().filter(p->p.getAlcoholic().equals(""))
+                .collect(Collectors.toList());
+
+        if(age<18)return allMatch;
 
         return obandeItems;
     }

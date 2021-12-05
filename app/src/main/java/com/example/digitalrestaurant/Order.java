@@ -54,10 +54,11 @@ public class Order extends AppCompatActivity {
     private RecyclerView cartRecycler;
     RecyclerView.LayoutManager layoutManager;
 
-    ArrayList<OrderDetails> orderList;
+
 
 
     DatabaseHelper myCartDatabaseHelper;
+    ArrayList<OrderDetails> orderList;
 
 
     @Override
@@ -211,14 +212,17 @@ public class Order extends AppCompatActivity {
             if(cur1.getCount()==0){ Toast.makeText(this, "Basket Empty", Toast.LENGTH_SHORT).show();return;}
 
             StringBuffer bufferedItems=new StringBuffer();
+
+            if(cur1!=null&&cur1.getCount()>0){
             while(cur1.moveToNext()){
                 //bufferedItems.append("Name of customer: "+cur2.getString(0)+"\n");
                 //bufferedItems.append("Phone: "+cur2.getString(3)+"\n");
                // bufferedItems.append("Address: "+cur2.getString(4)+"\n");
-                bufferedItems.append("Food Item: "+cur1.getString(0)+"\n");
-                bufferedItems.append("Quantity: "+cur2.getString(1)+"\n");
+                bufferedItems.append("Food Item: "+cur1.getString(1)+"\n");
+                bufferedItems.append("Quantity: "+cur2.getString(2)+"\n");
 
-            }
+            }}
+            cur1.close();
             AlertDialog.Builder build=new AlertDialog.Builder(this);
 
             build.setCancelable(true);

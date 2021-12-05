@@ -23,9 +23,9 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
 
 
 
-    ArrayList<ItemData> itemDatalist;
+    List<ItemData> itemDatalist;
 
-    public PopularDishAdaptor(ArrayList<ItemData> itemDatalist,RestaurantsRecyclerViewListener restaurantListener) {
+    public PopularDishAdaptor(List<ItemData> itemDatalist,RestaurantsRecyclerViewListener restaurantListener) {
         this.itemDatalist = itemDatalist;
         this.restaurantListener=restaurantListener;
 

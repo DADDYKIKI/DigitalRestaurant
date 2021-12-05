@@ -1,9 +1,11 @@
 package com.example.digitalrestaurant.Kitchens;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ApprokoKitchen extends AppCompatActivity {
 
@@ -29,7 +32,7 @@ public class ApprokoKitchen extends AppCompatActivity {
 
     private RecyclerView aprokoRecycler;
 
-    private ArrayList<ItemData> aprokoItems;
+    private List<ItemData> aprokoItems;
 
     private FloatingActionButton floater;
 
@@ -38,6 +41,7 @@ public class ApprokoKitchen extends AppCompatActivity {
     private DatabaseHelper helper;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +87,7 @@ public class ApprokoKitchen extends AppCompatActivity {
 
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void makeApprokoRestaurantAdaptor(){
 
         setAprokoOnclickListener();
@@ -91,7 +96,7 @@ public class ApprokoKitchen extends AppCompatActivity {
 
         aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        aprokoAdaptor=new PopularDishAdaptor(populateAprokoPage(),approkolistener2);
+        aprokoAdaptor=new PopularDishAdaptor(populateAprokoPage(20),approkolistener2);
 
         aprokoRecycler.setAdapter(aprokoAdaptor);
 
@@ -128,7 +133,8 @@ public class ApprokoKitchen extends AppCompatActivity {
 
     }
 
-    public  ArrayList<ItemData> populateAprokoPage(){
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public  List<ItemData> populateAprokoPage(int age){
 
 
         aprokoItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats,""));
@@ -140,6 +146,11 @@ public class ApprokoKitchen extends AppCompatActivity {
         aprokoItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic,""));
         aprokoItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel,""));
         aprokoItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo,""));
+
+        List<ItemData> allMatch=aprokoItems.stream().filter(p->p.getAlcoholic().equals(""))
+                .collect(Collectors.toList());
+
+        if(age<18)return allMatch;
 
         return aprokoItems;
     }

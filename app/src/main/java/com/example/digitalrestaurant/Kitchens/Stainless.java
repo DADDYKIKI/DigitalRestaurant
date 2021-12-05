@@ -1,10 +1,12 @@
 package com.example.digitalrestaurant.Kitchens;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +23,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Stainless extends AppCompatActivity {
 
@@ -31,13 +34,14 @@ public class Stainless extends AppCompatActivity {
 
     private RecyclerView stainlessRecycler;
 
-    private ArrayList<ItemData> stainlessItems;
+    private List<ItemData> stainlessItems;
     FloatingActionButton floater;
 
     TextView homeKey,menuKey;
 
     private DatabaseHelper helper;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +95,7 @@ public class Stainless extends AppCompatActivity {
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void makeAdaRestaurantAdaptor(){
 
         setStainlessOnclickListener();
@@ -99,7 +104,7 @@ public class Stainless extends AppCompatActivity {
 
         stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        stainlessAdaptor=new PopularDishAdaptor(populateStainlessPage(),adalistener2);
+        stainlessAdaptor=new PopularDishAdaptor(populateStainlessPage(34),adalistener2);
 
         stainlessRecycler.setAdapter(stainlessAdaptor);
 
@@ -123,7 +128,8 @@ public class Stainless extends AppCompatActivity {
 
     }
 
-    public ArrayList<ItemData> populateStainlessPage(){
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public List<ItemData> populateStainlessPage(int age){
 
         stainlessItems.add(new ItemData(12,"Catfish peppered soup","African" ,R.drawable.adacatfish,""));
         stainlessItems.add(new ItemData(9,"MoiMoi","African" ,R.drawable.obandemoimoi,""));
@@ -135,6 +141,12 @@ public class Stainless extends AppCompatActivity {
         stainlessItems.add(new ItemData(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup,""));
         stainlessItems.add(new ItemData(5,"Heineken Pride","" ,R.drawable.adachilledheineken,""));
         stainlessItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer,""));
+
+
+        List<ItemData> allMatch=stainlessItems.stream().filter(p->p.getAlcoholic().equals(""))
+                .collect(Collectors.toList());
+
+        if(age<18)return allMatch;
 
         return stainlessItems;
     }

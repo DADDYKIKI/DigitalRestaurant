@@ -175,6 +175,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentV.put(COLUMNNAME5,restaurantName);
 
         long output=myDatabase.insert(MY_TABLE_NAME,null,contentV);
+        myDatabase.close();
 
         if(output==-1) return false;
         else return  true;
@@ -194,6 +195,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentV.put(COLUMNVEN4,password);
 
         long output=myDatabase.insert(VENDOR_DETAILS,null,contentV);
+        myDatabase.close();
 
         if(output==-1) return false;
         else return  true;
@@ -217,6 +219,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         long output=myDatabase.insert(MY_USER_AND_PASS_TABLE,null,contentV);
+
+        myDatabase.close();
 
         if(output==-1) return false;
         else return  true;
@@ -308,6 +312,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Cursor cur=myDatabase.rawQuery("select * from "+MY_TABLE_NAME,null);
 
+        //Cursor cur=myDatabase.query(MY_TABLE_NAME,null,null,null,null,null,null);
+
       /*  if(cur2.moveToFirst()){
         do{
             Bitmap InBitmapBitmap= BitmapFactory.decodeByteArray(cur2.getBlob(5),0,
@@ -321,10 +327,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     cur2.getString(cur2.getColumnIndexOrThrow(COLUMNFOOD7))));
     }while (cur2.moveToNext());
 
-        }
-        cur2.close();
-        myDatabase2.close();*/
+        }*/
 
+        //myDatabase2.close();
+        cur.close();
         return cur;
     }
 

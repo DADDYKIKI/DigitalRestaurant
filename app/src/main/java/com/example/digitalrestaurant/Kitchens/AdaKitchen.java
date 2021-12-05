@@ -1,9 +1,11 @@
 package com.example.digitalrestaurant.Kitchens;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AdaKitchen extends AppCompatActivity {
 
@@ -29,7 +32,7 @@ public class AdaKitchen extends AppCompatActivity {
 
     private RecyclerView adaRecycler;
 
-    private ArrayList<ItemData> adaItems;
+    private List<ItemData> adaItems;
 
     private FloatingActionButton basket;
 
@@ -38,6 +41,7 @@ public class AdaKitchen extends AppCompatActivity {
     private DatabaseHelper helper;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +102,9 @@ public class AdaKitchen extends AppCompatActivity {
 
 
     }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void makeAdaRestaurantAdaptor(){
 
 
@@ -107,7 +114,7 @@ public class AdaKitchen extends AppCompatActivity {
 
         adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        adaAdaptor=new PopularDishAdaptor(populateAdaPage(),adalistener2);
+        adaAdaptor=new PopularDishAdaptor(populateAdaPage(17),adalistener2);
 
         adaRecycler.setAdapter(adaAdaptor);
 
@@ -138,22 +145,28 @@ public class AdaKitchen extends AppCompatActivity {
 
 
 
-    public ArrayList<ItemData> populateAdaPage(){
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public List<ItemData> populateAdaPage(int age ){
 
 
 
         adaItems.add(new ItemData(12,"Catfish peppered soup","African" ,R.drawable.adacatfish,""));
         adaItems.add(new ItemData(9,"MoiMoi","African" ,R.drawable.obandemoimoi,""));
         adaItems.add(new ItemData(18,"Egusi soup","African" ,R.drawable.obandeegusisoup,""));
-        adaItems.add(new ItemData(6,"Alcoholic drinks","" ,R.drawable.adaassortedbear,""));
+        adaItems.add(new ItemData(6,"Alcoholic drinks","" ,R.drawable.adaassortedbear,"alcoholic"));
         adaItems.add(new ItemData(3,"Chin-Chin","African" ,R.drawable.obandechinchin,""));
         adaItems.add(new ItemData(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone,""));
         adaItems.add(new ItemData(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,""));
         adaItems.add(new ItemData(3,"Soft drinks","" ,R.drawable.adasoftdrinks,""));
         adaItems.add(new ItemData(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup,""));
-        adaItems.add(new ItemData(5,"Heineken Pride","" ,R.drawable.adachilledheineken,""));
-        adaItems.add(new ItemData(5,"Hero bear","" ,R.drawable.adaherobear,""));
-        adaItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer,""));
+        adaItems.add(new ItemData(5,"Heineken Pride","" ,R.drawable.adachilledheineken,"alcoholic"));
+        adaItems.add(new ItemData(5,"Hero bear","" ,R.drawable.adaherobear,"alcoholic"));
+        adaItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer,"alcoholic"));
+        List<ItemData> allMatch=adaItems.stream().filter(p->p.getAlcoholic().equals(""))
+                .collect(Collectors.toList());
+
+        if(age<18)return allMatch;
 
         return adaItems;
     }

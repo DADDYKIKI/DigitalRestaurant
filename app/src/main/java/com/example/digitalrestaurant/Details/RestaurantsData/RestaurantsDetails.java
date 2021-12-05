@@ -4,18 +4,19 @@ import com.example.digitalrestaurant.Details.ItemData;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class RestaurantsDetails implements Serializable {
 
     private String restaurantsName, restaurantsLocation,restaurantNationality;
-    ArrayList<ItemData> itemDatalist;
+
 
     private int restaurantImage;
 
 
 
     public RestaurantsDetails(String restaurantsName, String restaurantsLocation, String restaurantNationality,
-                              int restaurantImage, ArrayList<ItemData> itemData){
+                              int restaurantImage){
 
         this.restaurantsName=restaurantsName;
         this.restaurantsLocation=restaurantsLocation;

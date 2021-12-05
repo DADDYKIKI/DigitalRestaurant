@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.example.digitalrestaurant.Adaptors.PopularDishAdaptor;
 import com.example.digitalrestaurant.Cart;
+import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
@@ -19,22 +19,23 @@ import com.example.digitalrestaurant.Details.ItemData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ApprokoKitchen extends AppCompatActivity {
 
-    private PopularDishAdaptor.RestaurantsRecyclerViewListener adalistener2;
+    private PopularDishAdaptor.RestaurantsRecyclerViewListener approkolistener2;
 
+    private RecyclerView.Adapter aprokoAdaptor;
 
-    RecyclerView.Adapter aprokoAdaptor;
+    private RecyclerView aprokoRecycler;
 
-    RecyclerView aprokoRecycler;
+    private ArrayList<ItemData> aprokoItems;
 
-    ArrayList<ItemData> aprokoItems;
+    private FloatingActionButton floater;
 
-    FloatingActionButton floater;
+    private TextView homeKey,menuKey;
 
-    TextView homeKey,menuKey;
-
+    private DatabaseHelper helper;
 
 
     @Override
@@ -42,13 +43,17 @@ public class ApprokoKitchen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aproko_resataurant_homepage);
 
-        homeKey=(TextView) findViewById(R.id.homeKey);
+        homeKey=findViewById(R.id.homeKey);
         menuKey=findViewById(R.id.menuKey);
 
-        floater=(FloatingActionButton)findViewById(R.id.floatingActionButton);
+        floater=findViewById(R.id.floatingActionButton);
 
-        aprokoItems=new ArrayList<ItemData>();
-        makAllRestaurantAdaptor();
+        aprokoItems=new ArrayList<>();
+
+        helper=new DatabaseHelper(this);
+
+        makeApprokoRestaurantAdaptor();
+
         gotoBasket();
 
         homeKey();
@@ -72,9 +77,25 @@ public class ApprokoKitchen extends AppCompatActivity {
             Intent intent2=new Intent(this, Menu.class);
             startActivity(intent2);
             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-
-
         });
+
+    }
+
+
+
+    public void makeApprokoRestaurantAdaptor(){
+
+        setAprokoOnclickListener();
+
+        aprokoRecycler =findViewById(R.id.aprokoKitchen);
+
+        aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+
+        aprokoAdaptor=new PopularDishAdaptor(populateAprokoPage(),approkolistener2);
+
+        aprokoRecycler.setAdapter(aprokoAdaptor);
+
+
 
     }
 
@@ -90,27 +111,9 @@ public class ApprokoKitchen extends AppCompatActivity {
 
     }
 
-    public void makAllRestaurantAdaptor(){
-
-
-
-        setAprokoOnclickListener();
-
-        aprokoRecycler =findViewById(R.id.aprokoKitchen);
-
-        aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-
-        aprokoAdaptor=new PopularDishAdaptor(populateAprokoPage(),adalistener2);
-
-        aprokoRecycler.setAdapter(aprokoAdaptor);
-
-
-
-    }
-
     public void setAprokoOnclickListener(){
 
-        adalistener2= (v, position) -> {
+            approkolistener2= (v, position) -> {
 
             Intent intent5 =new Intent(getApplicationContext(), Order.class);
 
@@ -118,8 +121,10 @@ public class ApprokoKitchen extends AppCompatActivity {
             intent5.putExtra("imageUrl",aprokoItems.get(position).getImageURL());
             intent5.putExtra("nationality",aprokoItems.get(position).getNationality());
             intent5.putExtra("price",aprokoItems.get(position).getPrice());
+                intent5.putExtra("RestaurantName","Approko Kitchen");
 
-            startActivity(intent5);};
+            startActivity(intent5);
+        };
 
     }
 
@@ -138,6 +143,5 @@ public class ApprokoKitchen extends AppCompatActivity {
 
         return aprokoItems;
     }
-
 
 }

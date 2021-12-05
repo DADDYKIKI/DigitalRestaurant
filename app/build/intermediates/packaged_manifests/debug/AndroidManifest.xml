@@ -28,26 +28,27 @@
             android:name="com.example.digitalrestaurant.HomePage"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.Kitchens.ApprokoKitchen"
-            android:exported="false" />
-        <activity
             android:name="com.example.digitalrestaurant.Order"
             android:exported="false" />
         <activity
             android:name="com.example.digitalrestaurant.Menu"
             android:exported="false" />
         <activity
+            android:name="com.example.digitalrestaurant.Kitchens.ApprokoKitchen"
+            android:exported="false" />
+        <activity
             android:name="com.example.digitalrestaurant.Kitchens.AdaKitchen"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.Cart"
+            android:name="com.example.digitalrestaurant.Kitchens.ObandeKitchen"
             android:exported="false" />
         <activity
             android:name="com.example.digitalrestaurant.Kitchens.Stainless"
             android:exported="false" />
         <activity
-            android:name="com.example.digitalrestaurant.Kitchens.ObandeKitchen"
-            android:exported="false" />
+            android:name="com.example.digitalrestaurant.Cart"
+            android:exported="false"
+            android:parentActivityName="com.example.digitalrestaurant.HomePage" />
         <activity
             android:name="com.example.digitalrestaurant.Authentications.SignupPage"
             android:exported="false" />

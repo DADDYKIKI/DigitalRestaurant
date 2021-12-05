@@ -2,12 +2,13 @@ package com.example.digitalrestaurant.Details;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class AllInOneKitchenData implements Serializable {
 
     private int foodPrice, foodImage;
     private String foodName, foodNationality, kichenName, kitchenLocation;
-    ArrayList<ItemData> itemDatalist;
+    List<ItemData> itemDatalist;
 
 
     public AllInOneKitchenData(int foodPrice,  String foodName, String foodNationality,int foodImage) {
@@ -78,7 +79,7 @@ public class AllInOneKitchenData implements Serializable {
         this.kitchenLocation = kitchenLocation;
     }
 
-    public ArrayList<ItemData> getItemDatalist() {
+    public List<ItemData> getItemDatalist() {
         return itemDatalist;
     }
 

@@ -17,7 +17,7 @@ import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
-public final class ActivityCustomerPageBinding implements ViewBinding {
+public final class LoginBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
@@ -36,10 +36,9 @@ public final class ActivityCustomerPageBinding implements ViewBinding {
   @NonNull
   public final Button signSubBtn;
 
-  private ActivityCustomerPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull EditText enterLoginEmail, @NonNull EditText enterLoginPaswd,
-      @NonNull TextView loginWarningText, @NonNull TextView signInLabelText,
-      @NonNull Button signSubBtn) {
+  private LoginBinding(@NonNull ConstraintLayout rootView, @NonNull EditText enterLoginEmail,
+      @NonNull EditText enterLoginPaswd, @NonNull TextView loginWarningText,
+      @NonNull TextView signInLabelText, @NonNull Button signSubBtn) {
     this.rootView = rootView;
     this.enterLoginEmail = enterLoginEmail;
     this.enterLoginPaswd = enterLoginPaswd;
@@ -55,14 +54,14 @@ public final class ActivityCustomerPageBinding implements ViewBinding {
   }
 
   @NonNull
-  public static ActivityCustomerPageBinding inflate(@NonNull LayoutInflater inflater) {
+  public static LoginBinding inflate(@NonNull LayoutInflater inflater) {
     return inflate(inflater, null, false);
   }
 
   @NonNull
-  public static ActivityCustomerPageBinding inflate(@NonNull LayoutInflater inflater,
-      @Nullable ViewGroup parent, boolean attachToParent) {
-    View root = inflater.inflate(R.layout.activity_customer_page, parent, false);
+  public static LoginBinding inflate(@NonNull LayoutInflater inflater, @Nullable ViewGroup parent,
+      boolean attachToParent) {
+    View root = inflater.inflate(R.layout.login, parent, false);
     if (attachToParent) {
       parent.addView(root);
     }
@@ -70,7 +69,7 @@ public final class ActivityCustomerPageBinding implements ViewBinding {
   }
 
   @NonNull
-  public static ActivityCustomerPageBinding bind(@NonNull View rootView) {
+  public static LoginBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
@@ -105,8 +104,8 @@ public final class ActivityCustomerPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCustomerPageBinding((ConstraintLayout) rootView, enterLoginEmail,
-          enterLoginPaswd, loginWarningText, signInLabelText, signSubBtn);
+      return new LoginBinding((ConstraintLayout) rootView, enterLoginEmail, enterLoginPaswd,
+          loginWarningText, signInLabelText, signSubBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

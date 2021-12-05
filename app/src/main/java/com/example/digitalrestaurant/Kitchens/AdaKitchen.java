@@ -19,6 +19,7 @@ import com.example.digitalrestaurant.Details.ItemData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdaKitchen extends AppCompatActivity {
 
@@ -30,9 +31,11 @@ public class AdaKitchen extends AppCompatActivity {
 
     private ArrayList<ItemData> adaItems;
 
-    FloatingActionButton basket;
+    private FloatingActionButton basket;
 
-    TextView homeKey,menuKey;
+    private TextView homeKey,menuKey;
+
+    private DatabaseHelper helper;
 
 
     @Override
@@ -46,6 +49,8 @@ public class AdaKitchen extends AppCompatActivity {
         adaItems= new ArrayList<>();
 
         basket=findViewById(R.id.floatingActionButton);
+
+        helper=new DatabaseHelper(this);
 
 
 
@@ -120,6 +125,7 @@ public class AdaKitchen extends AppCompatActivity {
             intent5.putExtra("imageUrl",adaItems.get(position).getImageURL());
             intent5.putExtra("nationality",adaItems.get(position).getNationality());
             intent5.putExtra("price",adaItems.get(position).getPrice());
+            intent5.putExtra("RestaurantName","Ada Kitchen");
 
             startActivity(intent5);};
 
@@ -133,6 +139,8 @@ public class AdaKitchen extends AppCompatActivity {
 
 
     public ArrayList<ItemData> populateAdaPage(){
+
+
 
         adaItems.add(new ItemData(12,"Catfish peppered soup","African" ,R.drawable.adacatfish,""));
         adaItems.add(new ItemData(9,"MoiMoi","African" ,R.drawable.obandemoimoi,""));
@@ -148,4 +156,8 @@ public class AdaKitchen extends AppCompatActivity {
         adaItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer,""));
 
         return adaItems;
-    }}
+    }
+
+
+
+}

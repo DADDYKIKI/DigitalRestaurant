@@ -26,16 +26,25 @@ public final class MenuBinding implements ViewBinding {
   public final TextView logout;
 
   @NonNull
+  public final TextView logout2;
+
+  @NonNull
+  public final TextView logout3;
+
+  @NonNull
   public final TextView textView3;
 
   @NonNull
   public final TextView textView5;
 
   private MenuBinding(@NonNull LinearLayout rootView, @NonNull TextView basket,
-      @NonNull TextView logout, @NonNull TextView textView3, @NonNull TextView textView5) {
+      @NonNull TextView logout, @NonNull TextView logout2, @NonNull TextView logout3,
+      @NonNull TextView textView3, @NonNull TextView textView5) {
     this.rootView = rootView;
     this.basket = basket;
     this.logout = logout;
+    this.logout2 = logout2;
+    this.logout3 = logout3;
     this.textView3 = textView3;
     this.textView5 = textView5;
   }
@@ -79,6 +88,18 @@ public final class MenuBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.logout2;
+      TextView logout2 = ViewBindings.findChildViewById(rootView, id);
+      if (logout2 == null) {
+        break missingId;
+      }
+
+      id = R.id.logout3;
+      TextView logout3 = ViewBindings.findChildViewById(rootView, id);
+      if (logout3 == null) {
+        break missingId;
+      }
+
       id = R.id.textView3;
       TextView textView3 = ViewBindings.findChildViewById(rootView, id);
       if (textView3 == null) {
@@ -91,7 +112,8 @@ public final class MenuBinding implements ViewBinding {
         break missingId;
       }
 
-      return new MenuBinding((LinearLayout) rootView, basket, logout, textView3, textView5);
+      return new MenuBinding((LinearLayout) rootView, basket, logout, logout2, logout3, textView3,
+          textView5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

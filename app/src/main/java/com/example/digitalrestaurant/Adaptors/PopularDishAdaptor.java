@@ -14,14 +14,12 @@ import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.Details.ItemData;
 
 import java.util.ArrayList;
-
+import java.util.List;
 
 
 public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.GodwinViewHolder> {
 
     private RestaurantsRecyclerViewListener restaurantListener;
-
-    //Context context;
 
 
 
@@ -31,13 +29,11 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
         this.itemDatalist = itemDatalist;
         this.restaurantListener=restaurantListener;
 
-       // this.context = context;
-
     }
 
     public class GodwinViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView price,name,nationality;
-        ImageView foodImages,verticalImages;
+        ImageView foodImages;
 
 
         public GodwinViewHolder(@NonNull View itemView) {
@@ -73,8 +69,6 @@ public class PopularDishAdaptor extends RecyclerView.Adapter<PopularDishAdaptor.
         holder.name.setText(itemDatalist.get(position).getName());
         holder.nationality.setText(itemDatalist.get(position).getNationality());
         Glide.with(holder.itemView.getContext()).load(itemDatalist.get(position).getImageURL()).into(holder.foodImages);
-        //holder.images.setImageResource(itemDatalist.get(position).getImageURL());
-
 
     }
 

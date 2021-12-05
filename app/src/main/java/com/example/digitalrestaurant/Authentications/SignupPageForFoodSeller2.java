@@ -13,11 +13,11 @@ import com.example.digitalrestaurant.R;
 
 public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
-    EditText signupName,signupEmail,signupPaswd;
+    private EditText signupName,signupEmail,signupPaswd;
 
-    Button signSubBtn;
+    private Button signSubBtnV;
 
-    DatabaseHelper helper;
+    private DatabaseHelper helper;
 
 
 
@@ -26,25 +26,31 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_page_for_vendor);
 
-        signupName = findViewById(R.id.signupName);
-        signupEmail = findViewById(R.id.signupEmail);
-        signupPaswd = (findViewById(R.id.signupPaswd));
-
-        signSubBtn = (findViewById(R.id.signSubBtn));
 
 
-        signup();
+        signupName = findViewById(R.id.signupNameV);
+        signupEmail = findViewById(R.id.signupEmailV);
+        signupPaswd = (findViewById(R.id.phone));
+
+        signSubBtnV = (findViewById(R.id.signSubBtnV));
+
+
+
+
+        signupV();
 
     }
 
-    public void signup(){
-        signSubBtn.setOnClickListener(v -> {
+    public void signupV(){
+        signSubBtnV.setOnClickListener(v -> {
 
             helper=new DatabaseHelper(this);
+
 
             String name= signupName.getText().toString();
             String email= signupEmail.getText().toString();
             String password= signupPaswd.getText().toString();
+
 
             if (name.equals("") || email.equals("")|| password.equals("")){
 

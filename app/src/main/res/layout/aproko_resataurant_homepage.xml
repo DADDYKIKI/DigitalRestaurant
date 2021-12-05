@@ -28,10 +28,10 @@
                     <TextView
                         android:id="@+id/menuKey"
                         android:layout_width="55dp"
-                        android:layout_height="30dp"
+                        android:layout_height="24dp"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="28dp"
-                        android:background="@drawable/bordera"
+                        android:background="@drawable/homekeyback"
                         android:text="Menu"
                         android:textAlignment="center"
                         android:textColor="@color/design_default_color_on_secondary"
@@ -41,10 +41,10 @@
 
                     <TextView
                         android:id="@+id/homeKey"
-                        android:layout_width="55dp"
-                        android:layout_height="30dp"
+                        android:layout_width="62dp"
+                        android:layout_height="22dp"
                         android:layout_marginStart="16dp"
-                        android:background="@drawable/bordera"
+                        android:background="@drawable/homekeyback"
                         android:text="Home"
                         android:textAlignment="center"
                         android:textColor="@color/design_default_color_on_secondary"
@@ -90,6 +90,7 @@
                         android:layout_marginStart="308dp"
                         android:layout_marginBottom="20dp"
                         android:text="Location"
+                        android:textColor="@color/black"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -100,6 +101,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:text="G1"
+                        android:textColor="@color/black"
                         android:textSize="20dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"

@@ -37,9 +37,6 @@ public final class HomepageBinding implements ViewBinding {
   public final RecyclerView obandeKitchen;
 
   @NonNull
-  public final TextView ourExistence;
-
-  @NonNull
   public final RecyclerView restaurantsRecycler;
 
   @NonNull
@@ -48,26 +45,20 @@ public final class HomepageBinding implements ViewBinding {
   @NonNull
   public final TextView textView6;
 
-  @NonNull
-  public final TextView welcome;
-
   private HomepageBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout constraintLayout, @NonNull ConstraintLayout constraintLayout3,
       @NonNull RecyclerView locationRecycler, @NonNull TextView menuKey,
-      @NonNull RecyclerView obandeKitchen, @NonNull TextView ourExistence,
-      @NonNull RecyclerView restaurantsRecycler, @NonNull ScrollView scrollView2,
-      @NonNull TextView textView6, @NonNull TextView welcome) {
+      @NonNull RecyclerView obandeKitchen, @NonNull RecyclerView restaurantsRecycler,
+      @NonNull ScrollView scrollView2, @NonNull TextView textView6) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
     this.constraintLayout3 = constraintLayout3;
     this.locationRecycler = locationRecycler;
     this.menuKey = menuKey;
     this.obandeKitchen = obandeKitchen;
-    this.ourExistence = ourExistence;
     this.restaurantsRecycler = restaurantsRecycler;
     this.scrollView2 = scrollView2;
     this.textView6 = textView6;
-    this.welcome = welcome;
   }
 
   @Override
@@ -127,12 +118,6 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.ourExistence;
-      TextView ourExistence = ViewBindings.findChildViewById(rootView, id);
-      if (ourExistence == null) {
-        break missingId;
-      }
-
       id = R.id.restaurantsRecycler;
       RecyclerView restaurantsRecycler = ViewBindings.findChildViewById(rootView, id);
       if (restaurantsRecycler == null) {
@@ -151,15 +136,8 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.welcome;
-      TextView welcome = ViewBindings.findChildViewById(rootView, id);
-      if (welcome == null) {
-        break missingId;
-      }
-
       return new HomepageBinding((ConstraintLayout) rootView, constraintLayout, constraintLayout3,
-          locationRecycler, menuKey, obandeKitchen, ourExistence, restaurantsRecycler, scrollView2,
-          textView6, welcome);
+          locationRecycler, menuKey, obandeKitchen, restaurantsRecycler, scrollView2, textView6);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

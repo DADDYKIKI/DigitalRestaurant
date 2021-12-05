@@ -14,6 +14,7 @@ import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.RestaurantsViewHolder>{
 
@@ -24,7 +25,7 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
     public RestaurantsAdaptor(ArrayList<RestaurantsDetails> restaurantslist, AllInOneRecyclerViewListener allInOneListener) {
         this.restaurantslist = restaurantslist;
         this.allInOneListener=allInOneListener;
-        // this.context = context;
+
 
     }
 
@@ -69,6 +70,7 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
         holder.restaurantName.setText(restaurantslist.get(position).getRestaurantsName());
         holder.restaurantLocation.setText(restaurantslist.get(position).getRestaurantsLocation());
         holder.restaurantNationality.setText(restaurantslist.get(position).getRestaurantNationality());
+
         holder.restaurantImage.setBackground(ContextCompat.getDrawable(holder.itemView.
                 getContext(),restaurantslist.get(position).getRestaurantImage()));
 

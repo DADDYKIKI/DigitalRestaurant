@@ -50,21 +50,6 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
             }
         });
 
-
-
-
-
-
-     /*   //SignupPage Spinner code
-        Spinner spinner1= (Spinner)findViewById(R.id.signupSpinner);
-
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.locator,
-                android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter);
-        spinner1.setOnItemSelectedListener(this);
-
-*/
     }
 
     public void click1(Object x){
@@ -73,19 +58,7 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
         startActivity(intent);
 
     }
-/*
 
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String string= parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(),string,Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }*/
 
 }
 

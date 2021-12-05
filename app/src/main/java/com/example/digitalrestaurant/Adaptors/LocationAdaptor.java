@@ -12,6 +12,7 @@ import com.example.digitalrestaurant.Details.LocationDetails.LocationDetails;
 import com.example.digitalrestaurant.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.LocationViewHolder>{
 

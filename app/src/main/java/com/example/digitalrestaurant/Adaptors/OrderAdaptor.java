@@ -1,10 +1,11 @@
-/*package com.example.digitalrestaurant.Adaptors;
+package com.example.digitalrestaurant.Adaptors;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,56 +18,61 @@ import java.util.List;
 
 public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHolder>{
 
-    private OderListener orderListener;
+  //  private OderListener orderListener;
 
-    ArrayList<OrderDetails> myOder;
+   List<OrderDetails> myOder;
     Context context;
+    RecyclerView orderRecycler;
+    final View.OnClickListener click=new OrderListener();
 
-    public OrderAdaptor(OderListener orderListener,ArrayList<OrderDetails> myOder) {
-        this.orderListener = orderListener;
-        this.myOder=myOder;
-
+    public OrderAdaptor(List<OrderDetails> myOder, Context context, RecyclerView orderRecycler) {
+        this.myOder = myOder;
+        this.context = context;
+        this.orderRecycler = orderRecycler;
     }
 
-    public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+    public static class OrderViewHolder extends RecyclerView.ViewHolder {
 
 
-        TextView foodName,foodTotalPrice,quantity;
-
+        TextView foodName, foodTotalPrice, quantity;
 
 
         public OrderViewHolder(@NonNull View itemView) {
             super(itemView);
-            itemView.setOnClickListener(this);
 
-            foodName= itemView.findViewById(R.id.itemName);
-            foodTotalPrice= itemView.findViewById(R.id.itemPrice);
-            quantity= itemView.findViewById(R.id.itemQuantity);
+
+            foodName = itemView.findViewById(R.id.itemName);
+            foodTotalPrice = itemView.findViewById(R.id.itemPrice);
+            quantity = itemView.findViewById(R.id.itemQuantity);
 
 
         }
 
-        @Override
-        public void onClick(View v) {
 
-            orderListener.onClickOrder(itemView,getAdapterPosition());
-        }
     }
 
     @NonNull
     @Override
-    public OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public OrderAdaptor.OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View cartView= LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_container,parent,false );
-        return new OrderViewHolder(cartView);
+        cartView.setOnClickListener(click);
+        OrderViewHolder myHolder=new OrderViewHolder(cartView);
+        return  myHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull OrderAdaptor.OrderViewHolder myHolder, int position) {
+        OrderDetails details= myOder.get(position);
+        myHolder.foodName.setText(details.getFoodName());
+        myHolder.quantity.setText(details.getQuantity());
+        myHolder.foodTotalPrice.setText(details.getTotalFoodPrice());
 
-        holder.foodName.setText(myOder.get(position).getFoodName());
-        holder.foodTotalPrice.setText(String.valueOf(myOder.get(position).getTotalFoodPrice()));
-        holder.quantity.setText(String.valueOf(myOder.get(position).getQuantity()));
+
+
+       // holder.foodTotalPrice.setText(String.valueOf(myOder.get(position).getTotalFoodPrice()));
+        //holder.quantity.setText(String.valueOf(myOder.get(position).getQuantity()));
 
     }
 
@@ -77,14 +83,14 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
     }
 
 
-    public interface OderListener{
-
-        void onClickOrder(View v, int position);
-
-    }
+    public class OrderListener implements View.OnClickListener {
 
 
+        @Override
+        public void onClick(View v) {
+            int itemPos=orderRecycler.getChildLayoutPosition(v);
+            String item=myOder.get(itemPos).getFoodName();
+            //Toast.makeText(this, item, Toast.LENGTH_SHORT).show();
+        }
+    }}
 
-}
-
-*/

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -16,9 +15,9 @@ import com.example.digitalrestaurant.R;
 
 public class LoginPage extends AppCompatActivity {
 
-    Button loginBut;
-    EditText loginEmail,loginPass;
-    TextView loginWarningText;
+    private Button loginBut;
+    private EditText loginEmail,loginPass;
+    private     TextView loginWarningText;
 
     //String email="abc@gmail.com";
     //String password="aba1";
@@ -28,7 +27,7 @@ public class LoginPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer_page);
+        setContentView(R.layout.login);
 
         loginEmail = findViewById(R.id.enterLoginEmail);
         loginPass = findViewById(R.id.enterLoginPaswd);
@@ -40,7 +39,6 @@ public class LoginPage extends AppCompatActivity {
 
 
 
-
         login();
 
     }
@@ -49,31 +47,37 @@ public class LoginPage extends AppCompatActivity {
         public void login(){
             loginBut.setOnClickListener(v -> {
 
-                //click2(HomePage.class);
+                click2(HomePage.class);
 
-                if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
+     /*          if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
 
                      Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
 
                          }
 
                   else {
-                      Boolean insert=dbHelper.checkUserNameAndPassword(loginEmail.getText().toString(),
-                              loginPass.getText().toString());
+                   if(dbHelper.getCustomerLoginDetails().contains(loginEmail.getText().toString()
 
-                      if(insert==true){
 
-                          LoginPage.this.setTextInvisible(v);
+                   )) Toast.makeText(this, "hurrayy", Toast.LENGTH_SHORT).show();
 
-                            click2(HomePage.class);
+                           //  Boolean insert=dbHelper.getCustomerLoginDetails(loginEmail.getText().toString(),
+                           // loginPass.getText().toString());
 
-                            loginEmail.setText("");
-                            loginPass.setText("");
+                           //Boolean insert = dbHelper.checkUserNameAndPassword(loginEmail.getText().toString(), loginPass.getText().toString());
 
-                  }
-                      else LoginPage.this.setTextVisible(v);
+                           // if (insert == true) {
 
-                  }
+                           LoginPage.this.setTextInvisible(v);
+
+                   click2(HomePage.class);
+
+                   loginEmail.setText("");
+                   loginPass.setText("");
+
+                   LoginPage.this.setTextVisible(v);
+
+               }*/
 
             });
         }

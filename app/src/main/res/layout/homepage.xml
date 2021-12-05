@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="202dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -21,42 +22,15 @@
             android:layout_width="55dp"
             android:layout_height="20dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/bordera"
+            android:background="@color/black"
             android:text="Menu"
             android:textAlignment="center"
-            android:textColor="@color/design_default_color_on_secondary"
+            android:textColor="@color/design_default_color_background"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/welcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:text="Welcome to Obande Collections"
-            android:textAlignment="center"
-            android:textColor="@color/purple_700"
-            android:textSize="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/ourExistence"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Our existence is to serve people like you "
-            android:textColor="@color/purple_200"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

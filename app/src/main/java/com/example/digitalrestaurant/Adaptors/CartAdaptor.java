@@ -1,4 +1,4 @@
-package com.example.digitalrestaurant.Adaptors;
+/*package com.example.digitalrestaurant.Adaptors;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -20,10 +20,10 @@ public class CartAdaptor extends RecyclerView.Adapter<CartAdaptor.CartViewHolder
     private ArrayList<OrderDetails> myOder;
     private Context context;
 
-    public CartAdaptor(ArrayList<OrderDetails> myOder, Context context) {
+    public CartAdaptor(ArrayList<OrderDetails> myOder) {
 
         this.myOder = myOder;
-        this.context=context;
+       // this.context=context;
     }
 
     public class CartViewHolder extends RecyclerView.ViewHolder{
@@ -45,7 +45,7 @@ public class CartAdaptor extends RecyclerView.Adapter<CartAdaptor.CartViewHolder
     @Override
     public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View cartView= LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_container,parent,false );
-        return new CartAdaptor.CartViewHolder(cartView);
+        return new CartViewHolder(cartView);
 
     }
 
@@ -67,3 +67,4 @@ public class CartAdaptor extends RecyclerView.Adapter<CartAdaptor.CartViewHolder
 
 
 }
+*/

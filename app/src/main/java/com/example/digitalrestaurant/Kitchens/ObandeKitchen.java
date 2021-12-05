@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopularDishAdaptor;
 import com.example.digitalrestaurant.Cart;
+import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
@@ -18,20 +19,23 @@ import com.example.digitalrestaurant.Details.ItemData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ObandeKitchen extends AppCompatActivity {
 
-    private PopularDishAdaptor.RestaurantsRecyclerViewListener adalistener2;
+    private PopularDishAdaptor.RestaurantsRecyclerViewListener obandelistener2;
 
-    RecyclerView.Adapter obandeAdaptor;
+    private RecyclerView.Adapter obandeAdaptor;
 
-    RecyclerView obandeRecycler;
+    private RecyclerView obandeRecycler;
 
-    ArrayList<ItemData> obandeItems;
+    private ArrayList<ItemData> obandeItems;
 
-    FloatingActionButton floater;
+    private FloatingActionButton floater;
 
-    TextView homeKey,menuKey;
+    private TextView homeKey,menuKey;
+
+    private DatabaseHelper helper;
 
 
     @Override
@@ -39,14 +43,16 @@ public class ObandeKitchen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.obande_restaurant_homepage);
 
-        homeKey= findViewById(R.id.homeKey);
+        homeKey=findViewById(R.id.homeKey);
         menuKey=findViewById(R.id.menuKey);
 
         floater=findViewById(R.id.floatingActionButton);
 
-        obandeItems=new ArrayList();
+        obandeItems=new ArrayList<>();
 
-        makeAprokoRestaurantAdaptor();
+        helper=new DatabaseHelper(this);
+
+        makeObandeRestaurantAdaptor();
 
         gotoBasket();
 
@@ -56,7 +62,7 @@ public class ObandeKitchen extends AppCompatActivity {
 }
 
     public void homeKey(){
-        homeKey.setOnClickListener(v -> {
+            homeKey.setOnClickListener(v -> {
             Intent intent=new Intent(this, HomePage.class);
             startActivity(intent);
             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.fade_out);
@@ -75,7 +81,7 @@ public class ObandeKitchen extends AppCompatActivity {
         });
 
     }
-    public void makeAprokoRestaurantAdaptor(){
+    public void makeObandeRestaurantAdaptor(){
 
         setObandeOnclickListener();
 
@@ -83,7 +89,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
         obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        obandeAdaptor=new PopularDishAdaptor(populateObandePage(),adalistener2);
+        obandeAdaptor=new PopularDishAdaptor(populateObandePage(),obandelistener2);
 
         obandeRecycler.setAdapter(obandeAdaptor);
 
@@ -104,7 +110,7 @@ public class ObandeKitchen extends AppCompatActivity {
     }
             public void setObandeOnclickListener(){
 
-        adalistener2= (v, position) -> {
+           obandelistener2= (v, position) -> {
 
             Intent intent5 =new Intent(getApplicationContext(), Order.class);
 
@@ -112,8 +118,10 @@ public class ObandeKitchen extends AppCompatActivity {
             intent5.putExtra("imageUrl",obandeItems.get(position).getImageURL());
             intent5.putExtra("nationality",obandeItems.get(position).getNationality());
             intent5.putExtra("price",obandeItems.get(position).getPrice());
+               intent5.putExtra("RestaurantName","Obande Kitchen");
 
-            startActivity(intent5);};
+            startActivity(intent5);
+        };
 
     }
 

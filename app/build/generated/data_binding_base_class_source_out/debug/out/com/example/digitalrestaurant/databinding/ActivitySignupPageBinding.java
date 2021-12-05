@@ -25,34 +25,34 @@ public final class ActivitySignupPageBinding implements ViewBinding {
   public final TextView menuKey;
 
   @NonNull
-  public final Button signSubBtn;
+  public final Button signSubBtnV;
+
+  @NonNull
+  public final EditText signUpPassV;
 
   @NonNull
   public final EditText signupAge;
 
   @NonNull
-  public final EditText signupEmail;
+  public final EditText signupEmailV;
 
   @NonNull
-  public final EditText signupName;
-
-  @NonNull
-  public final EditText signupPaswd;
+  public final EditText signupNameV;
 
   @NonNull
   public final ConstraintLayout signupSubmtBtn;
 
   private ActivitySignupPageBinding(@NonNull ConstraintLayout rootView, @NonNull TextView menuKey,
-      @NonNull Button signSubBtn, @NonNull EditText signupAge, @NonNull EditText signupEmail,
-      @NonNull EditText signupName, @NonNull EditText signupPaswd,
+      @NonNull Button signSubBtnV, @NonNull EditText signUpPassV, @NonNull EditText signupAge,
+      @NonNull EditText signupEmailV, @NonNull EditText signupNameV,
       @NonNull ConstraintLayout signupSubmtBtn) {
     this.rootView = rootView;
     this.menuKey = menuKey;
-    this.signSubBtn = signSubBtn;
+    this.signSubBtnV = signSubBtnV;
+    this.signUpPassV = signUpPassV;
     this.signupAge = signupAge;
-    this.signupEmail = signupEmail;
-    this.signupName = signupName;
-    this.signupPaswd = signupPaswd;
+    this.signupEmailV = signupEmailV;
+    this.signupNameV = signupNameV;
     this.signupSubmtBtn = signupSubmtBtn;
   }
 
@@ -89,9 +89,15 @@ public final class ActivitySignupPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.signSubBtn;
-      Button signSubBtn = ViewBindings.findChildViewById(rootView, id);
-      if (signSubBtn == null) {
+      id = R.id.signSubBtnV;
+      Button signSubBtnV = ViewBindings.findChildViewById(rootView, id);
+      if (signSubBtnV == null) {
+        break missingId;
+      }
+
+      id = R.id.signUpPassV;
+      EditText signUpPassV = ViewBindings.findChildViewById(rootView, id);
+      if (signUpPassV == null) {
         break missingId;
       }
 
@@ -101,28 +107,22 @@ public final class ActivitySignupPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.signupEmail;
-      EditText signupEmail = ViewBindings.findChildViewById(rootView, id);
-      if (signupEmail == null) {
+      id = R.id.signupEmailV;
+      EditText signupEmailV = ViewBindings.findChildViewById(rootView, id);
+      if (signupEmailV == null) {
         break missingId;
       }
 
-      id = R.id.signupName;
-      EditText signupName = ViewBindings.findChildViewById(rootView, id);
-      if (signupName == null) {
-        break missingId;
-      }
-
-      id = R.id.signupPaswd;
-      EditText signupPaswd = ViewBindings.findChildViewById(rootView, id);
-      if (signupPaswd == null) {
+      id = R.id.signupNameV;
+      EditText signupNameV = ViewBindings.findChildViewById(rootView, id);
+      if (signupNameV == null) {
         break missingId;
       }
 
       ConstraintLayout signupSubmtBtn = (ConstraintLayout) rootView;
 
-      return new ActivitySignupPageBinding((ConstraintLayout) rootView, menuKey, signSubBtn,
-          signupAge, signupEmail, signupName, signupPaswd, signupSubmtBtn);
+      return new ActivitySignupPageBinding((ConstraintLayout) rootView, menuKey, signSubBtnV,
+          signUpPassV, signupAge, signupEmailV, signupNameV, signupSubmtBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

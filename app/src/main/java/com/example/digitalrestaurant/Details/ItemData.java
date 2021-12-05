@@ -1,12 +1,14 @@
 package com.example.digitalrestaurant.Details;
 
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 
 public class ItemData implements Serializable {
 
-    private int price, imageURL;
-    private String name, nationality,alcoholic;
+    private int price,imageURL;
+    private String name, nationality,alcoholic,pictureLabel;
 
     public ItemData(int price,  String name, String nationality,int imageURL,String alcoholic) {
         this.price = price;
@@ -14,8 +16,17 @@ public class ItemData implements Serializable {
         this.nationality = nationality;
         this.alcoholic=alcoholic;
         this.imageURL= imageURL;
+        this.pictureLabel=pictureLabel;
 
     }
+
+   /* public String getPictureLabel() {
+        return pictureLabel;
+    }
+
+    public void setPictureLabel(String pictureLabel) {
+        this.pictureLabel = pictureLabel;
+    }*/
 
     public String getAlcoholic() {
         return alcoholic;
@@ -51,7 +62,7 @@ public class ItemData implements Serializable {
         this.nationality = nationality;
     }
 
-    public Integer getImageURL() {
+    public int getImageURL() {
         return imageURL;
     }
 

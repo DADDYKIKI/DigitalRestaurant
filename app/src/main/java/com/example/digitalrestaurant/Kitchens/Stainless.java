@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopularDishAdaptor;
 import com.example.digitalrestaurant.Cart;
+import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
@@ -19,6 +20,7 @@ import com.example.digitalrestaurant.Details.ItemData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Stainless extends AppCompatActivity {
 
@@ -34,6 +36,8 @@ public class Stainless extends AppCompatActivity {
 
     TextView homeKey,menuKey;
 
+    private DatabaseHelper helper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,8 @@ public class Stainless extends AppCompatActivity {
         floater=findViewById(R.id.floatingActionButton);
         homeKey=(TextView) findViewById(R.id.homeKey);
         menuKey=findViewById(R.id.menuKey);
+
+        helper=new DatabaseHelper(this);
 
         makeAdaRestaurantAdaptor();
         gotoBasket();
@@ -111,6 +117,7 @@ public class Stainless extends AppCompatActivity {
             intent5.putExtra("imageUrl",stainlessItems.get(position).getImageURL());
             intent5.putExtra("nationality",stainlessItems.get(position).getNationality());
             intent5.putExtra("price",stainlessItems.get(position).getPrice());
+            intent5.putExtra("RestaurantName","Stainless");
 
             startActivity(intent5);};
 
@@ -130,5 +137,10 @@ public class Stainless extends AppCompatActivity {
         stainlessItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer,""));
 
         return stainlessItems;
-    }}
+    }
+
+
+
+
+    }
 

@@ -10,14 +10,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
-import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.R;
 
 public class LoginPageForFoodSeller2 extends AppCompatActivity {
 
-    Button loginBut;
-    EditText loginEmail,loginPass;
-    TextView loginWarningText;
+    private Button loginBut;
+    private EditText loginName,loginPass;
+    private TextView loginWarningText;
 
     //String email="abc@gmail.com";
     //String password="aba1";
@@ -27,12 +26,12 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer_page);
+        setContentView(R.layout.login);
 
-        loginEmail = findViewById(R.id.enterLoginEmail);
+        loginName = findViewById(R.id.enterLoginEmail);
         loginPass = findViewById(R.id.enterLoginPaswd);
         loginWarningText = findViewById(R.id.loginWarningText);
-        loginBut = (findViewById(R.id.signSubBtn));
+        loginBut = (findViewById(R.id.signSubBtnV));
 
 
         dbHelper=new DatabaseHelper(this);
@@ -48,9 +47,9 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
         public void login(){
             loginBut.setOnClickListener(v -> {
 
-                click2(SellerUploadPage.class);
+                click3(SellerUploadPage.class);
 
-              /*   if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
+              /*   if (loginName.getText().toString().equals("") || loginPass.getText().toString().equals("")){
 
                      Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
 
@@ -81,9 +80,9 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
 
 
 
-    public void click2(Object x){
+    public void click3(Object x){
 
-        Intent intent=new Intent(LoginPageForFoodSeller2.this, (Class<?>) x);
+        Intent intent=new Intent(this, (Class<?>) x);
 
         startActivity(intent);
 

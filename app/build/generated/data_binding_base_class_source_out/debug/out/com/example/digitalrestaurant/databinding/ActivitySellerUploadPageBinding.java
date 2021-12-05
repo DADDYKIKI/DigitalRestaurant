@@ -21,7 +21,16 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final EditText Imagelabel;
+
+  @NonNull
+  public final TextView Welcome;
+
+  @NonNull
   public final EditText alcoholic;
+
+  @NonNull
+  public final TextView imageDesc;
 
   @NonNull
   public final TextView menuKey;
@@ -36,28 +45,32 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
   public final TextView pageOneomekey;
 
   @NonNull
-  public final EditText pictureOfItem;
-
-  @NonNull
   public final EditText priceOfFood;
 
   @NonNull
   public final TextView selleruploadBtn;
 
+  @NonNull
+  public final TextView vendorName;
+
   private ActivitySellerUploadPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull EditText alcoholic, @NonNull TextView menuKey, @NonNull EditText nameOfFoodItem,
+      @NonNull EditText Imagelabel, @NonNull TextView Welcome, @NonNull EditText alcoholic,
+      @NonNull TextView imageDesc, @NonNull TextView menuKey, @NonNull EditText nameOfFoodItem,
       @NonNull EditText nationalityOfItem, @NonNull TextView pageOneomekey,
-      @NonNull EditText pictureOfItem, @NonNull EditText priceOfFood,
-      @NonNull TextView selleruploadBtn) {
+      @NonNull EditText priceOfFood, @NonNull TextView selleruploadBtn,
+      @NonNull TextView vendorName) {
     this.rootView = rootView;
+    this.Imagelabel = Imagelabel;
+    this.Welcome = Welcome;
     this.alcoholic = alcoholic;
+    this.imageDesc = imageDesc;
     this.menuKey = menuKey;
     this.nameOfFoodItem = nameOfFoodItem;
     this.nationalityOfItem = nationalityOfItem;
     this.pageOneomekey = pageOneomekey;
-    this.pictureOfItem = pictureOfItem;
     this.priceOfFood = priceOfFood;
     this.selleruploadBtn = selleruploadBtn;
+    this.vendorName = vendorName;
   }
 
   @Override
@@ -87,9 +100,27 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.Imagelabel;
+      EditText Imagelabel = ViewBindings.findChildViewById(rootView, id);
+      if (Imagelabel == null) {
+        break missingId;
+      }
+
+      id = R.id.Welcome;
+      TextView Welcome = ViewBindings.findChildViewById(rootView, id);
+      if (Welcome == null) {
+        break missingId;
+      }
+
       id = R.id.alcoholic;
       EditText alcoholic = ViewBindings.findChildViewById(rootView, id);
       if (alcoholic == null) {
+        break missingId;
+      }
+
+      id = R.id.imageDesc;
+      TextView imageDesc = ViewBindings.findChildViewById(rootView, id);
+      if (imageDesc == null) {
         break missingId;
       }
 
@@ -117,12 +148,6 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.pictureOfItem;
-      EditText pictureOfItem = ViewBindings.findChildViewById(rootView, id);
-      if (pictureOfItem == null) {
-        break missingId;
-      }
-
       id = R.id.priceOfFood;
       EditText priceOfFood = ViewBindings.findChildViewById(rootView, id);
       if (priceOfFood == null) {
@@ -135,9 +160,15 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySellerUploadPageBinding((ConstraintLayout) rootView, alcoholic, menuKey,
-          nameOfFoodItem, nationalityOfItem, pageOneomekey, pictureOfItem, priceOfFood,
-          selleruploadBtn);
+      id = R.id.vendorName;
+      TextView vendorName = ViewBindings.findChildViewById(rootView, id);
+      if (vendorName == null) {
+        break missingId;
+      }
+
+      return new ActivitySellerUploadPageBinding((ConstraintLayout) rootView, Imagelabel, Welcome,
+          alcoholic, imageDesc, menuKey, nameOfFoodItem, nationalityOfItem, pageOneomekey,
+          priceOfFood, selleruploadBtn, vendorName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

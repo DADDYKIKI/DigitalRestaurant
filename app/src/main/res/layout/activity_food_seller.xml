@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/towel"
+    android:background="@drawable/obandemeat"
     tools:context=".Authentications.FoodSeller">
 
 
@@ -79,7 +79,7 @@
         android:layout_marginTop="32dp"
         android:text="Are you a new user?"
         android:textAlignment="center"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/white"
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

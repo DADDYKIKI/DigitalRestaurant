@@ -19,16 +19,12 @@ import java.util.ArrayList;
 
 public class LoginPage extends AppCompatActivity {
 
-    private Button loginBut;
+    private Button loginBut,signUpBut;
     private EditText loginEmail,loginPass;
     private     TextView loginWarningText;
 
     private int attempts=6;
 
-
-
-    //String email="abc@gmail.com";
-    //String password="aba1";
 
     DatabaseHelper data;
 
@@ -40,17 +36,23 @@ public class LoginPage extends AppCompatActivity {
         loginEmail = findViewById(R.id.enterLoginEmail);
         loginPass = findViewById(R.id.enterLoginPaswd);
         loginWarningText = findViewById(R.id.loginWarningText);
-        loginBut = (findViewById(R.id.signSubBtn));
-
-
-       // data=new DatabaseHelper(this);
-
+        loginBut = findViewById(R.id.signSubBtn);
+        signUpBut = findViewById(R.id.signup);
 
 
         login();
-
+        toSignUp();
     }
 
+    public void toSignUp() {
+
+        signUpBut.setOnClickListener(v -> {
+
+            Intent intent=new Intent(this, SignupPage.class);
+            startActivity(intent);
+
+        });
+    }
 
         public void login(){
 
@@ -58,9 +60,6 @@ public class LoginPage extends AppCompatActivity {
 
                 data=new DatabaseHelper(this);
 
-                //DatabaseHelper data=new DatabaseHelper(this);
-
-               // click2(HomePage.class);
 
               if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
 
@@ -69,14 +68,8 @@ public class LoginPage extends AppCompatActivity {
                          }
 
                   else {
-                  //  if(dbHelper.getCustomerLoginDetails().contains(loginEmail.getText().toString()
+
                   Boolean insert=data.getCustomerLoginDetails(loginEmail.getText().toString(),loginPass.getText().toString());
-
-                  // )) Toast.makeText(this, "hurrayy", Toast.LENGTH_SHORT).show();
-                  // Boolean insert=dbHelper.getCustomerLoginDetails(loginEmail.getText().toString(),
-                  // loginPass.getText().toString());
-
-                 // Boolean insert = dbHelper.checkUserNameAndPassword(loginEmail.getText().toString(), loginPass.getText().toString());
 
                   if (insert==true) {
 
@@ -94,18 +87,42 @@ public class LoginPage extends AppCompatActivity {
 
                       attempts--;
 
-                      Toast.makeText( this, "Not added\nYou have "+attempts+"chances left", Toast.LENGTH_SHORT).show();
+                      Toast.makeText( this, "Not Successful\nYou have "+attempts+" attempt left", Toast.LENGTH_SHORT).show();
 
-                      if(attempts==0)
+                      if(attempts==2){
+                          Toast.makeText(this, "You might Just be playing with this app\nWho Know!!!",
+                                  Toast.LENGTH_SHORT).show();
+                          Toast.makeText(this, "Giving you two chances",
+                                  Toast.LENGTH_SHORT).show();
 
-                          loginBut.setEnabled(false);
+                      }
+                      if(attempts==0){
+
+                          loginEmail.setEnabled(false);
+                          loginPass.setEnabled(false);
+
+                          Toast.makeText(this, "Sorry!!\n\nYou have usedup all your chances",
+                                  Toast.LENGTH_SHORT).show();
+
+                          setButtonInvisible(v);
+
+                          Toast.makeText(this, "You might want to signup",
+                                  Toast.LENGTH_SHORT).show();
+
+                          this.setButtonVisible(v);
 
 
-                      Toast.makeText(this, "Sorry!!\n\nYou have usedup all your chances",
-                              Toast.LENGTH_SHORT).show();
 
-                      Toast.makeText(this, "Try signing Up if you haven't done so",
-                              Toast.LENGTH_SHORT).show();
+
+                          Toast.makeText(this, "Try signing Up if you haven't done so",
+                                  Toast.LENGTH_SHORT).show();
+
+                          Toast.makeText(this, "Close your app and re-run it Again",
+                                  Toast.LENGTH_SHORT).show();
+                          Toast.makeText(this, "Or I will advice you to \nsign up if you haven't done so",
+                                  Toast.LENGTH_SHORT).show();
+                      }
+
                   }
               }
 
@@ -131,8 +148,18 @@ public class LoginPage extends AppCompatActivity {
 
     }
 
+    void setButtonVisible(View view){
+
+        signUpBut.setVisibility(View.VISIBLE);}
+
     void setTextInvisible(View view){
         loginWarningText.setVisibility(View.INVISIBLE);
+
+    }
+
+    void setButtonInvisible(View view){
+        loginBut.setVisibility(View.INVISIBLE);
+
 
     }
 

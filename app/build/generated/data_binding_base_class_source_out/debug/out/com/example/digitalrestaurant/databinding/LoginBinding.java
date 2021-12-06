@@ -36,15 +36,19 @@ public final class LoginBinding implements ViewBinding {
   @NonNull
   public final Button signSubBtn;
 
+  @NonNull
+  public final Button signup;
+
   private LoginBinding(@NonNull ConstraintLayout rootView, @NonNull EditText enterLoginEmail,
       @NonNull EditText enterLoginPaswd, @NonNull TextView loginWarningText,
-      @NonNull TextView signInLabelText, @NonNull Button signSubBtn) {
+      @NonNull TextView signInLabelText, @NonNull Button signSubBtn, @NonNull Button signup) {
     this.rootView = rootView;
     this.enterLoginEmail = enterLoginEmail;
     this.enterLoginPaswd = enterLoginPaswd;
     this.loginWarningText = loginWarningText;
     this.signInLabelText = signInLabelText;
     this.signSubBtn = signSubBtn;
+    this.signup = signup;
   }
 
   @Override
@@ -104,8 +108,14 @@ public final class LoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.signup;
+      Button signup = ViewBindings.findChildViewById(rootView, id);
+      if (signup == null) {
+        break missingId;
+      }
+
       return new LoginBinding((ConstraintLayout) rootView, enterLoginEmail, enterLoginPaswd,
-          loginWarningText, signInLabelText, signSubBtn);
+          loginWarningText, signInLabelText, signSubBtn, signup);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

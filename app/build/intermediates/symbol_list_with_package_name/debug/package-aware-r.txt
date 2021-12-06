@@ -1178,6 +1178,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color orange
 color primary_dark_material_dark
 color primary_dark_material_light
@@ -1610,6 +1611,10 @@ dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
 dimen progress_circle_radius
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 dimen test_mtrl_calendar_day_cornerSize
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -1789,6 +1794,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable oba
 drawable obandechinchin
 drawable obandeegusisoup
 drawable obandefriedrice
@@ -1796,6 +1802,9 @@ drawable obandekitchen
 drawable obandemeat
 drawable obandemoimoi
 drawable obandepouridgebeans
+drawable obc
+drawable obd
+drawable obf
 drawable poundedyam
 drawable red_button_background
 drawable restaurantbackground
@@ -1868,6 +1877,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id action0
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1921,6 +1931,7 @@ id bounce
 id buttonPanel
 id buttons_container
 id cache_measures
+id cancel_action
 id cancel_button
 id cartConstraint
 id cartTitle
@@ -1997,6 +2008,7 @@ id edit_query
 id elastic
 id end
 id endToStart
+id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id enterLoginEmail
@@ -2102,6 +2114,7 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id media_actions
 id menuKey
 id message
 id middle
@@ -2242,12 +2255,15 @@ id signSubBtnV
 id signUpPassV3
 id signUpPassword
 id signUpPhone
+id signup
 id signupAge
 id signupEmailV
 id signupNameV
 id signupSubmtBtn
 id sin
 id skipCollapsed
+id slidable_content
+id slidable_panel
 id slide
 id smallLabel
 id snackbar_action
@@ -2275,6 +2291,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
@@ -2496,8 +2513,17 @@ layout mtrl_picker_text_input_date_range
 layout my_locations_container
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout obande_restaurant_homepage
@@ -2655,6 +2681,8 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
+style AppTheme
+style AppTheme_slide
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -3000,9 +3028,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow
@@ -3056,7 +3089,6 @@ style Theme_AppCompat_Light_Dialog_MinWidth
 style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
-style Theme_AppCompat_Transparent
 style Theme_Design
 style Theme_Design_BottomSheetDialog
 style Theme_Design_Light

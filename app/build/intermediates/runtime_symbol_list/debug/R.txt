@@ -1177,6 +1177,7 @@ int color mtrl_textinput_focused_box_stroke_color 0x7f0600d1
 int color mtrl_textinput_hovered_box_stroke_color 0x7f0600d2
 int color notification_action_color_filter 0x7f0600d3
 int color notification_icon_bg_color 0x7f0600d4
+int color notification_material_background_media_default_color 0x7f060101
 int color orange 0x7f0600d5
 int color primary_dark_material_dark 0x7f0600d6
 int color primary_dark_material_light 0x7f0600d7
@@ -1609,6 +1610,10 @@ int dimen notification_subtext_size 0x7f070180
 int dimen notification_top_pad 0x7f070181
 int dimen notification_top_pad_large_text 0x7f070182
 int dimen progress_circle_radius 0x7f070183
+int dimen subtitle_corner_radius 0x7f07018d
+int dimen subtitle_outline_width 0x7f07018e
+int dimen subtitle_shadow_offset 0x7f07018f
+int dimen subtitle_shadow_radius 0x7f070190
 int dimen test_mtrl_calendar_day_cornerSize 0x7f070184
 int dimen tooltip_corner_radius 0x7f070185
 int dimen tooltip_horizontal_padding 0x7f070186
@@ -1788,6 +1793,7 @@ int drawable notification_template_icon_bg 0x7f0800ad
 int drawable notification_template_icon_low_bg 0x7f0800ae
 int drawable notification_tile_bg 0x7f0800af
 int drawable notify_panel_notification_icon_bg 0x7f0800b0
+int drawable oba 0x7f0800c8
 int drawable obandechinchin 0x7f0800b1
 int drawable obandeegusisoup 0x7f0800b2
 int drawable obandefriedrice 0x7f0800b3
@@ -1795,6 +1801,9 @@ int drawable obandekitchen 0x7f0800b4
 int drawable obandemeat 0x7f0800b5
 int drawable obandemoimoi 0x7f0800b6
 int drawable obandepouridgebeans 0x7f0800b7
+int drawable obc 0x7f0800c9
+int drawable obd 0x7f0800ca
+int drawable obf 0x7f0800cb
 int drawable poundedyam 0x7f0800b8
 int drawable red_button_background 0x7f0800b9
 int drawable restaurantbackground 0x7f0800ba
@@ -1867,6 +1876,7 @@ int id accessibility_custom_action_6 0x7f0a0031
 int id accessibility_custom_action_7 0x7f0a0032
 int id accessibility_custom_action_8 0x7f0a0033
 int id accessibility_custom_action_9 0x7f0a0034
+int id action0 0x7f0a021f
 int id action_bar 0x7f0a0035
 int id action_bar_activity_content 0x7f0a0036
 int id action_bar_container 0x7f0a0037
@@ -1920,6 +1930,7 @@ int id bounce 0x7f0a0066
 int id buttonPanel 0x7f0a0067
 int id buttons_container 0x7f0a0068
 int id cache_measures 0x7f0a0069
+int id cancel_action 0x7f0a0220
 int id cancel_button 0x7f0a006a
 int id cartConstraint 0x7f0a006b
 int id cartTitle 0x7f0a006c
@@ -1996,6 +2007,7 @@ int id edit_query 0x7f0a00b2
 int id elastic 0x7f0a00b3
 int id end 0x7f0a00b4
 int id endToStart 0x7f0a00b5
+int id end_padder 0x7f0a0221
 int id enterAlways 0x7f0a00b6
 int id enterAlwaysCollapsed 0x7f0a00b7
 int id enterLoginEmail 0x7f0a00b8
@@ -2101,6 +2113,7 @@ int id material_timepicker_mode_button 0x7f0a011b
 int id material_timepicker_ok_button 0x7f0a011c
 int id material_timepicker_view 0x7f0a011d
 int id material_value_index 0x7f0a011e
+int id media_actions 0x7f0a0222
 int id menuKey 0x7f0a011f
 int id message 0x7f0a0120
 int id middle 0x7f0a0121
@@ -2241,12 +2254,15 @@ int id signSubBtnV 0x7f0a01a7
 int id signUpPassV3 0x7f0a01a8
 int id signUpPassword 0x7f0a01a9
 int id signUpPhone 0x7f0a021d
+int id signup 0x7f0a021e
 int id signupAge 0x7f0a01aa
 int id signupEmailV 0x7f0a01ab
 int id signupNameV 0x7f0a01ac
 int id signupSubmtBtn 0x7f0a01ad
 int id sin 0x7f0a01ae
 int id skipCollapsed 0x7f0a01af
+int id slidable_content 0x7f0a0223
+int id slidable_panel 0x7f0a0224
 int id slide 0x7f0a01b0
 int id smallLabel 0x7f0a01b1
 int id snackbar_action 0x7f0a01b2
@@ -2274,6 +2290,7 @@ int id startToEnd 0x7f0a01c7
 int id startVertical 0x7f0a01c8
 int id staticLayout 0x7f0a01c9
 int id staticPostLayout 0x7f0a01ca
+int id status_bar_latest_event_content 0x7f0a0225
 int id stop 0x7f0a01cb
 int id stretch 0x7f0a01cc
 int id submenuarrow 0x7f0a01cd
@@ -2495,8 +2512,17 @@ int layout mtrl_picker_text_input_date_range 0x7f0d0067
 int layout my_locations_container 0x7f0d0068
 int layout notification_action 0x7f0d0069
 int layout notification_action_tombstone 0x7f0d006a
+int layout notification_media_action 0x7f0d0086
+int layout notification_media_cancel_action 0x7f0d0087
+int layout notification_template_big_media 0x7f0d0088
+int layout notification_template_big_media_custom 0x7f0d0089
+int layout notification_template_big_media_narrow 0x7f0d008a
+int layout notification_template_big_media_narrow_custom 0x7f0d008b
 int layout notification_template_custom_big 0x7f0d006b
 int layout notification_template_icon_group 0x7f0d006c
+int layout notification_template_lines_media 0x7f0d008c
+int layout notification_template_media 0x7f0d008d
+int layout notification_template_media_custom 0x7f0d008e
 int layout notification_template_part_chronometer 0x7f0d006d
 int layout notification_template_part_time 0x7f0d006e
 int layout obande_restaurant_homepage 0x7f0d006f
@@ -2654,6 +2680,8 @@ int style Animation_AppCompat_DropDownUp 0x7f110004
 int style Animation_AppCompat_Tooltip 0x7f110005
 int style Animation_Design_BottomSheetDialog 0x7f110006
 int style Animation_MaterialComponents_BottomSheetDialog 0x7f110007
+int style AppTheme 0x7f1102d1
+int style AppTheme_slide 0x7f1102d2
 int style Base_AlertDialog_AppCompat 0x7f110008
 int style Base_AlertDialog_AppCompat_Light 0x7f110009
 int style Base_Animation_AppCompat_Dialog 0x7f11000a
@@ -2999,9 +3027,14 @@ int style TextAppearance_AppCompat_Widget_Switch 0x7f11015d
 int style TextAppearance_AppCompat_Widget_TextView_SpinnerItem 0x7f11015e
 int style TextAppearance_Compat_Notification 0x7f11015f
 int style TextAppearance_Compat_Notification_Info 0x7f110160
+int style TextAppearance_Compat_Notification_Info_Media 0x7f1102d3
 int style TextAppearance_Compat_Notification_Line2 0x7f110161
+int style TextAppearance_Compat_Notification_Line2_Media 0x7f1102d4
+int style TextAppearance_Compat_Notification_Media 0x7f1102d5
 int style TextAppearance_Compat_Notification_Time 0x7f110162
+int style TextAppearance_Compat_Notification_Time_Media 0x7f1102d6
 int style TextAppearance_Compat_Notification_Title 0x7f110163
+int style TextAppearance_Compat_Notification_Title_Media 0x7f1102d7
 int style TextAppearance_Design_CollapsingToolbar_Expanded 0x7f110164
 int style TextAppearance_Design_Counter 0x7f110165
 int style TextAppearance_Design_Counter_Overflow 0x7f110166
@@ -3055,7 +3088,6 @@ int style Theme_AppCompat_Light_Dialog_MinWidth 0x7f110195
 int style Theme_AppCompat_Light_DialogWhenLarge 0x7f110196
 int style Theme_AppCompat_Light_NoActionBar 0x7f110197
 int style Theme_AppCompat_NoActionBar 0x7f110198
-int style Theme_AppCompat_Transparent 0x7f110199
 int style Theme_Design 0x7f11019a
 int style Theme_Design_BottomSheetDialog 0x7f11019b
 int style Theme_Design_Light 0x7f11019c

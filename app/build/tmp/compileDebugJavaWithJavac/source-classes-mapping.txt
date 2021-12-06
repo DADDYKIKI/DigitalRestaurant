@@ -2,14 +2,16 @@ com/example/digitalrestaurant/databinding/ContactsBinding.java
  com.example.digitalrestaurant.databinding.ContactsBinding
 com/example/digitalrestaurant/databinding/LocatedRestaurantsContainerBinding.java
  com.example.digitalrestaurant.databinding.LocatedRestaurantsContainerBinding
-com/example/digitalrestaurant/databinding/ActivitySignupPageForVendorBinding.java
- com.example.digitalrestaurant.databinding.ActivitySignupPageForVendorBinding
+com/example/digitalrestaurant/Authentications/Customer.java
+ com.example.digitalrestaurant.Authentications.Customer
+ com.example.digitalrestaurant.Authentications.Customer$1
+ com.example.digitalrestaurant.Authentications.Customer$2
 com/example/digitalrestaurant/databinding/LoginBinding.java
  com.example.digitalrestaurant.databinding.LoginBinding
 com/example/digitalrestaurant/databinding/StainlessRestaurantHomepage2Binding.java
  com.example.digitalrestaurant.databinding.StainlessRestaurantHomepage2Binding
-com/example/digitalrestaurant/databinding/ObandeRestaurantHomepageBinding.java
- com.example.digitalrestaurant.databinding.ObandeRestaurantHomepageBinding
+com/example/digitalrestaurant/Authentications/SignupPage.java
+ com.example.digitalrestaurant.Authentications.SignupPage
 com/example/digitalrestaurant/Details/AdvertItems.java
  com.example.digitalrestaurant.Details.AdvertItems
 com/example/digitalrestaurant/databinding/ActivityFoodSellerBinding.java
@@ -67,16 +69,16 @@ com/example/digitalrestaurant/databinding/ActivityIntroPageBinding.java
  com.example.digitalrestaurant.databinding.ActivityIntroPageBinding
 com/example/digitalrestaurant/Details/RestaurantsData/RestaurantLogDetails.java
  com.example.digitalrestaurant.Details.RestaurantsData.RestaurantLogDetails
-com/example/digitalrestaurant/Database/DatabaseHelper.java
- com.example.digitalrestaurant.Database.DatabaseHelper
+com/example/digitalrestaurant/Menu.java
+ com.example.digitalrestaurant.Menu
 com/example/digitalrestaurant/databinding/RestaurantPageContainerBinding.java
  com.example.digitalrestaurant.databinding.RestaurantPageContainerBinding
 com/example/digitalrestaurant/BuildConfig.java
  com.example.digitalrestaurant.BuildConfig
 com/example/digitalrestaurant/Authentications/SignupPageForFoodSeller2.java
  com.example.digitalrestaurant.Authentications.SignupPageForFoodSeller2
-com/example/digitalrestaurant/Authentications/LoginPageForFoodSeller2.java
- com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2
+com/example/digitalrestaurant/Authentications/LoginPage.java
+ com.example.digitalrestaurant.Authentications.LoginPage
 com/example/digitalrestaurant/Kitchens/Stainless.java
  com.example.digitalrestaurant.Kitchens.Stainless
 com/example/digitalrestaurant/VendorDetails.java
@@ -123,13 +125,11 @@ com/example/digitalrestaurant/databinding/AdaRestaurantHomepageBinding.java
  com.example.digitalrestaurant.databinding.AdaRestaurantHomepageBinding
 com/example/digitalrestaurant/Details/RestaurantsData/RestaurantsDetails.java
  com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails
-com/example/digitalrestaurant/Menu.java
- com.example.digitalrestaurant.Menu
-com/example/digitalrestaurant/Authentications/Customer.java
- com.example.digitalrestaurant.Authentications.Customer
- com.example.digitalrestaurant.Authentications.Customer$1
- com.example.digitalrestaurant.Authentications.Customer$2
-com/example/digitalrestaurant/Authentications/SignupPage.java
- com.example.digitalrestaurant.Authentications.SignupPage
-com/example/digitalrestaurant/Authentications/LoginPage.java
- com.example.digitalrestaurant.Authentications.LoginPage
+com/example/digitalrestaurant/Authentications/LoginPageForFoodSeller2.java
+ com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2
+com/example/digitalrestaurant/databinding/ObandeRestaurantHomepageBinding.java
+ com.example.digitalrestaurant.databinding.ObandeRestaurantHomepageBinding
+com/example/digitalrestaurant/databinding/ActivitySignupPageForVendorBinding.java
+ com.example.digitalrestaurant.databinding.ActivitySignupPageForVendorBinding
+com/example/digitalrestaurant/Database/DatabaseHelper.java
+ com.example.digitalrestaurant.Database.DatabaseHelper

@@ -9,7 +9,8 @@
         android:id="@+id/ordering_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/restaurantbackground">
+        android:background="@drawable/obandefriedrice"
+        android:backgroundTint="@color/Whiteblue">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -71,7 +72,7 @@
             android:id="@+id/quantityTxt"
             android:layout_width="58dp"
             android:layout_height="49dp"
-            android:layout_marginTop="108dp"
+            android:layout_marginTop="104dp"
             android:background="@drawable/restaurantbackground"
             android:padding="5dp"
             android:text="1"
@@ -80,7 +81,7 @@
             android:textSize="35dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintHorizontal_bias="0.484"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
@@ -107,7 +108,7 @@
             android:id="@+id/plusBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="112dp"
             android:background="@drawable/selleruploadbtn"
             android:text="  +"
             android:textColor="@color/purple_700"
@@ -123,7 +124,7 @@
             android:id="@+id/minusBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="112dp"
             android:background="@drawable/selleruploadbtn"
             android:text="  -"
             android:textColor="@color/purple_700"
@@ -131,7 +132,7 @@
             android:textStyle="bold"
             app:autoSizeTextType="uniform"
             app:layout_constraintEnd_toStartOf="@+id/quantityTxt"
-            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintHorizontal_bias="0.916"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 

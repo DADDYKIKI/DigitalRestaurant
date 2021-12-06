@@ -30,7 +30,7 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
         signupName = findViewById(R.id.signupNameV);
         signupEmail = findViewById(R.id.signupEmailV);
-        signupPaswd = (findViewById(R.id.phone));
+        signupPaswd = (findViewById(R.id.signUpPassword));
 
         signSubBtnV = (findViewById(R.id.signSubBtnV));
 

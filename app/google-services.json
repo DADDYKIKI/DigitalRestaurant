@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "677902133198",
+    "project_id": "digital-restaurant-f1210",
+    "storage_bucket": "digital-restaurant-f1210.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677902133198:android:fbe64a1695f1a39b436d9f",
+        "android_client_info": {
+          "package_name": "com.example.digitalrestaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677902133198-artgafjm13pnsf1r162si4j24i5ga8c4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD9xoQTA5vezmIK_PYrK2b7cDF8m_cg0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677902133198-artgafjm13pnsf1r162si4j24i5ga8c4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

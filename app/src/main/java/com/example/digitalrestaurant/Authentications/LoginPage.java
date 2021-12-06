@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -47,37 +48,38 @@ public class LoginPage extends AppCompatActivity {
         public void login(){
             loginBut.setOnClickListener(v -> {
 
-                click2(HomePage.class);
+               // click2(HomePage.class);
 
-     /*          if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
+              if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
 
                      Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
 
                          }
 
                   else {
-                   if(dbHelper.getCustomerLoginDetails().contains(loginEmail.getText().toString()
+                  //  if(dbHelper.getCustomerLoginDetails().contains(loginEmail.getText().toString()
 
 
-                   )) Toast.makeText(this, "hurrayy", Toast.LENGTH_SHORT).show();
+                  // )) Toast.makeText(this, "hurrayy", Toast.LENGTH_SHORT).show();
 
-                           //  Boolean insert=dbHelper.getCustomerLoginDetails(loginEmail.getText().toString(),
-                           // loginPass.getText().toString());
+                    Boolean insert=dbHelper.getCustomerLoginDetails(loginEmail.getText().toString(),
+                   loginPass.getText().toString());
 
-                           //Boolean insert = dbHelper.checkUserNameAndPassword(loginEmail.getText().toString(), loginPass.getText().toString());
+                 // Boolean insert = dbHelper.checkUserNameAndPassword(loginEmail.getText().toString(), loginPass.getText().toString());
 
-                           // if (insert == true) {
+                  if (insert == true) {
 
-                           LoginPage.this.setTextInvisible(v);
+                      LoginPage.this.setTextInvisible(v);
 
-                   click2(HomePage.class);
+                      click2(HomePage.class);
 
-                   loginEmail.setText("");
-                   loginPass.setText("");
+                      loginEmail.setText("");
+                      loginPass.setText("");
+                  }
 
-                   LoginPage.this.setTextVisible(v);
+                  LoginPage.this.setTextVisible(v);
 
-               }*/
+              }
 
             });
         }

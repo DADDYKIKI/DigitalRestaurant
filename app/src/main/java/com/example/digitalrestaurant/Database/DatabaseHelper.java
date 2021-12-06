@@ -398,7 +398,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }*/
 
 
-   public Cursor getCustomerLoginDetails() {
+   /*public Cursor getCustomerLoginDetails() {
 
         SQLiteDatabase myDatabase4 = this.getReadableDatabase();
 
@@ -413,31 +413,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     (cur4.getInt(cur4.getColumnIndexOrThrow(COLUMNUSER4))),
                     cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER5))));
 
-        }*/
+        }
         return cur;
 
 
-    }
+    } */
 
-    public Cursor getCustomerContactDetails(int phone,String address) {
+    public boolean getCustomerLoginDetails(String email,String password) {
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
 
         Cursor cur = myDatabase.rawQuery("select * from " + MY_USER_AND_PASS_TABLE+
-                        " where "+COLUMNUSER5+"="+phone+" and "+COLUMNUSER6+"="+address,
+                        " where "+COLUMNUSER3+"="+email+" and "+COLUMNUSER7+"="+password,
                 null);
 
 
-      /*  while (cur4.moveToNext()) {
+      while (cur.moveToNext()) {
 
+          if (cur.getString(3).equals(email) && cur.getString(7).equals(password))
+              return true;
 
-            customer.add(new UserDetails(cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER2)),
+      }
+
+           /* customer.add(new UserDetails(cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER2)),
                     cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER3)),
                     (cur4.getInt(cur4.getColumnIndexOrThrow(COLUMNUSER4))),
                     cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER5))));
 
         }*/
-        return cur;
+         return false;
 
 
     }

@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,13 +44,10 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
   @NonNull
   public final TextView quantityTxt;
 
-  @NonNull
-  public final RatingBar ratingBar1;
-
   private PopularFoodDisplayContainerBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout addTocar, @NonNull TextView jelof, @NonNull TextView nigerian1,
       @NonNull TextView orderPrice, @NonNull ConstraintLayout pageHolder, @NonNull ImageView pic1,
-      @NonNull TextView poundSign, @NonNull TextView quantityTxt, @NonNull RatingBar ratingBar1) {
+      @NonNull TextView poundSign, @NonNull TextView quantityTxt) {
     this.rootView = rootView;
     this.addTocar = addTocar;
     this.jelof = jelof;
@@ -61,7 +57,6 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
     this.pic1 = pic1;
     this.poundSign = poundSign;
     this.quantityTxt = quantityTxt;
-    this.ratingBar1 = ratingBar1;
   }
 
   @Override
@@ -135,14 +130,8 @@ public final class PopularFoodDisplayContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.ratingBar1;
-      RatingBar ratingBar1 = ViewBindings.findChildViewById(rootView, id);
-      if (ratingBar1 == null) {
-        break missingId;
-      }
-
       return new PopularFoodDisplayContainerBinding((ConstraintLayout) rootView, addTocar, jelof,
-          nigerian1, orderPrice, pageHolder, pic1, poundSign, quantityTxt, ratingBar1);
+          nigerian1, orderPrice, pageHolder, pic1, poundSign, quantityTxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

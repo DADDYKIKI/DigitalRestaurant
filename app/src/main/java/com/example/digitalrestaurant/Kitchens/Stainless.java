@@ -3,7 +3,6 @@ package com.example.digitalrestaurant.Kitchens;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -11,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.digitalrestaurant.Adaptors.PopularDishAdaptor;
+import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -28,7 +27,7 @@ import java.util.stream.Collectors;
 public class Stainless extends AppCompatActivity {
 
 
-    private PopularDishAdaptor.RestaurantsRecyclerViewListener adalistener2;
+    private PopulateKitchensWithItemsAdaptor.RestaurantsRecyclerViewListener adalistener2;
 
     private RecyclerView.Adapter stainlessAdaptor;
 
@@ -102,9 +101,9 @@ public class Stainless extends AppCompatActivity {
 
         stainlessRecycler =findViewById(R.id.stainlessKitchen);
 
-        stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        stainlessAdaptor=new PopularDishAdaptor(populateStainlessPage(34),adalistener2);
+        stainlessAdaptor=new PopulateKitchensWithItemsAdaptor(populateStainlessPage(34),adalistener2);
 
         stainlessRecycler.setAdapter(stainlessAdaptor);
 

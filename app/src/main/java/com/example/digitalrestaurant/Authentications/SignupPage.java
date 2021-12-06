@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Order;
 import com.example.digitalrestaurant.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SignupPage extends AppCompatActivity {
 
@@ -19,6 +20,7 @@ public class SignupPage extends AppCompatActivity {
    private  Button signSubBtn;
 
     private DatabaseHelper helper;
+    private FirebaseAuth firebase;
 
 
 
@@ -26,6 +28,8 @@ public class SignupPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_page);
+
+        firebase=FirebaseAuth.getInstance();
 
         signupName = findViewById(R.id.signupNameV);
         signupEmail = findViewById(R.id.signupEmailV);
@@ -44,7 +48,9 @@ public class SignupPage extends AppCompatActivity {
     public void signUpC(){
         signSubBtn.setOnClickListener(v -> {
 
-            helper=new DatabaseHelper(this);
+           // helper=new DatabaseHelper(this);
+
+            if(validate())
 
             String name= signupName.getText().toString();
             String email= signupEmail.getText().toString();
@@ -58,7 +64,8 @@ public class SignupPage extends AppCompatActivity {
                 Toast.makeText(this, "All fields must be entered", Toast.LENGTH_SHORT).show();
 
             }
-
+            else if(!isEmailValid(email))Toast.makeText(this, "Invalid email address", Toast.LENGTH_SHORT).show();
+            else if(!isPaswordValid(password))Toast.makeText(this, "Password must be greater than 3", Toast.LENGTH_SHORT).show();
 
         else {
 
@@ -72,7 +79,7 @@ public class SignupPage extends AppCompatActivity {
                     i.putExtra("phone",phone);
                     i.putExtra("address",address);
 
-                    Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Entry saved", Toast.LENGTH_SHORT).show();
 
                     signupName.setText("");
                     signupEmail.setText("");
@@ -83,7 +90,7 @@ public class SignupPage extends AppCompatActivity {
 
                     Intent intent = new Intent(this, LoginPage.class);
                     startActivity(intent);
-                } else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
+                } else Toast.makeText(this, "Not saved", Toast.LENGTH_SHORT).show();
 
 
             }
@@ -91,7 +98,15 @@ public class SignupPage extends AppCompatActivity {
         });
         }
 
+        public boolean isEmailValid(String email){
 
+        return email.contains("@");
+        }
+
+        public boolean isPaswordValid(String password){
+
+        return password.length()>3;
+        }
 
 
 }

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.digitalrestaurant.Adaptors.PopularDishAdaptor;
+import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 
 public class ApprokoKitchen extends AppCompatActivity {
 
-    private PopularDishAdaptor.RestaurantsRecyclerViewListener approkolistener2;
+    private PopulateKitchensWithItemsAdaptor.RestaurantsRecyclerViewListener approkolistener2;
 
     private RecyclerView.Adapter aprokoAdaptor;
 
@@ -94,9 +94,9 @@ public class ApprokoKitchen extends AppCompatActivity {
 
         aprokoRecycler =findViewById(R.id.aprokoKitchen);
 
-        aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        aprokoAdaptor=new PopularDishAdaptor(populateAprokoPage(20),approkolistener2);
+        aprokoAdaptor=new PopulateKitchensWithItemsAdaptor(populateAprokoPage(20),approkolistener2);
 
         aprokoRecycler.setAdapter(aprokoAdaptor);
 

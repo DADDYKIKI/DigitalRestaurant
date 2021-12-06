@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.digitalrestaurant.Adaptors.PopularDishAdaptor;
+import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 
 public class ObandeKitchen extends AppCompatActivity {
 
-    private PopularDishAdaptor.RestaurantsRecyclerViewListener obandelistener2;
+    private PopulateKitchensWithItemsAdaptor.RestaurantsRecyclerViewListener obandelistener2;
 
     private RecyclerView.Adapter obandeAdaptor;
 
@@ -92,9 +92,9 @@ public class ObandeKitchen extends AppCompatActivity {
 
         obandeRecycler =findViewById(R.id.obandeKitchen);
 
-        obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        obandeAdaptor=new PopularDishAdaptor(populateObandePage(10),obandelistener2);
+        obandeAdaptor=new PopulateKitchensWithItemsAdaptor(populateObandePage(10),obandelistener2);
 
         obandeRecycler.setAdapter(obandeAdaptor);
 

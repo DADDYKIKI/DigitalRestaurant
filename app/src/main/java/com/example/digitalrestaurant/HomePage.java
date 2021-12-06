@@ -1,5 +1,6 @@
 package com.example.digitalrestaurant;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,13 +10,16 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 
 
-import com.example.digitalrestaurant.Adaptors.PopularDishAdaptor;
+import com.example.digitalrestaurant.Adaptors.PopulateAdvertismentAdaptor;
+import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Adaptors.LocationAdaptor;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
+import com.example.digitalrestaurant.Details.AdvertItems;
 import com.example.digitalrestaurant.Kitchens.AdaKitchen;
 import com.example.digitalrestaurant.Kitchens.ApprokoKitchen;
 import com.example.digitalrestaurant.Kitchens.ObandeKitchen;
@@ -35,12 +39,12 @@ public class HomePage extends AppCompatActivity {
 
     private RestaurantsAdaptor.AllInOneRecyclerViewListener AllInOneListener2;
 
-    private PopularDishAdaptor.RestaurantsRecyclerViewListener restaurantslistener2;
+    private PopulateKitchensWithItemsAdaptor.RestaurantsRecyclerViewListener restaurantslistener2;
 
     private RecyclerView recyclerView,recyclerView2,recyclerView3;
 
 
-    private ArrayList<ItemData> myItems;
+    private List<AdvertItems> myItems;
     Context context;
 
 
@@ -60,6 +64,7 @@ public class HomePage extends AppCompatActivity {
     DatabaseHelper helper;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +103,7 @@ public class HomePage extends AppCompatActivity {
 
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void makeAdaptor(){
 
 
@@ -112,7 +118,7 @@ public class HomePage extends AppCompatActivity {
         recyclerView2.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView3.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        godwinAdaptor=new PopularDishAdaptor(populateAdaPage(), restaurantslistener2);
+        godwinAdaptor=new PopulateAdvertismentAdaptor(populateAdaPage(),this);
         godwinAdaptor2=new RestaurantsAdaptor(populateItemInfo2(),AllInOneListener2);
         godwinAdaptor3=new LocationAdaptor(populateItemInfo3());
 
@@ -157,17 +163,23 @@ public class HomePage extends AppCompatActivity {
     }
 
 
-    public ArrayList<ItemData> populateAdaPage() {
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public List<AdvertItems> populateAdaPage() {
 
 
-        myItems.add(new ItemData(12, "Meat", "European", R.drawable.justmeats, ""));
-        myItems.add(new ItemData(8, "Rice/Plantain", "African", R.drawable.jelofplantrain, ""));
-        myItems.add(new ItemData(4, "Hot Dog", "European", R.drawable.uktwo, ""));
-        myItems.add(new ItemData(15, "Sauce", "European", R.drawable.mixture, ""));
-        myItems.add(new ItemData(21, "Fried Rice", "African", R.drawable.friedriceone, ""));
-        myItems.add(new ItemData(7, "Assorted meats", "Asian", R.drawable.tablefoodpic, ""));
-        myItems.add(new ItemData(10, "Pounded Yam", "African", R.drawable.towel, ""));
-        myItems.add(new ItemData(12, "Hot Dog++", "European", R.drawable.uktwo, ""));
+        myItems.add(new AdvertItems(12,"Catfish peppered soup","African" ,R.drawable.adacatfish,"","Ada Kitchen"));
+        myItems.add(new AdvertItems(9,"MoiMoi","African" ,R.drawable.obandemoimoi,"","Stainless"));
+        myItems.add(new AdvertItems(18,"Egusi soup","African" ,R.drawable.obandeegusisoup,"","Approko Kitchen"));
+        myItems.add(new AdvertItems(6,"Alcoholic drinks","" ,R.drawable.adaassortedbear,"alcoholic",""));
+        myItems.add(new AdvertItems(3,"Chin-Chin","African" ,R.drawable.obandechinchin,"",""));
+        myItems.add(new AdvertItems(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone,"",""));
+        myItems.add(new AdvertItems(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,"Stainless",""));
+        myItems.add(new AdvertItems(3,"Soft drinks","" ,R.drawable.adasoftdrinks,"",""));
+        myItems.add(new AdvertItems(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup,"",""));
+        myItems.add(new AdvertItems(5,"Heineken Pride","" ,R.drawable.adachilledheineken,"alcoholic",""));
+        myItems.add(new AdvertItems(5,"Hero bear","" ,R.drawable.adaherobear,"alcoholic","Stainless"));
+        myItems.add(new AdvertItems(7,"Extra Stout","" ,R.drawable.adaguinessbeer,"alcoholic","Ada Kitchen"));
+
 
         return myItems;
     }

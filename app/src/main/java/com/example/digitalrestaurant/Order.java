@@ -207,7 +207,7 @@ public class Order extends AppCompatActivity {
         basket.setOnClickListener(v -> {
 
             Cursor cur1=myCartDatabaseHelper.getOrders();
-            Cursor cur2=myCartDatabaseHelper.getCustomerContactDetails(phone,address);
+            //Cursor cur2=myCartDatabaseHelper.getCustomerContactDetails(phone,address);
 
             if(cur1.getCount()==0){ Toast.makeText(this, "Basket Empty", Toast.LENGTH_SHORT).show();return;}
 
@@ -219,7 +219,7 @@ public class Order extends AppCompatActivity {
                 //bufferedItems.append("Phone: "+cur2.getString(3)+"\n");
                // bufferedItems.append("Address: "+cur2.getString(4)+"\n");
                 bufferedItems.append("Food Item: "+cur1.getString(1)+"\n");
-                bufferedItems.append("Quantity: "+cur2.getString(2)+"\n");
+                //bufferedItems.append("Quantity: "+cur2.getString(2)+"\n");
 
             }}
             cur1.close();

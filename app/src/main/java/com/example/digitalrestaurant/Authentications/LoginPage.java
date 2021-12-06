@@ -23,6 +23,8 @@ public class LoginPage extends AppCompatActivity {
     private EditText loginEmail,loginPass;
     private     TextView loginWarningText;
 
+    private int attempts=6;
+
 
 
     //String email="abc@gmail.com";
@@ -51,6 +53,7 @@ public class LoginPage extends AppCompatActivity {
 
 
         public void login(){
+
             loginBut.setOnClickListener(v -> {
 
                 data=new DatabaseHelper(this);
@@ -78,25 +81,32 @@ public class LoginPage extends AppCompatActivity {
                   if (insert==true) {
 
                       LoginPage.this.setTextInvisible(v);
+                      Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
 
                       click2(HomePage.class);
 
                       loginEmail.setText("");
                       loginPass.setText("");
                   }
-/*
-                  attempts--;
-                  Toast.makeText(SignupPage.this, "Not added\nYou have "+attempts+"chances left", Toast.LENGTH_SHORT).show();
-                  if(attempts==0)signSubBtn.setEnabled(false);
-                  Toast.makeText(SignupPage.this, "Sorry!!\n\nYou have usedup all your chances",
-                          Toast.LENGTH_SHORT).show();
-                  Toast.makeText(SignupPage.this, "Try signing Up if you haven't done so",
-                          Toast.LENGTH_SHORT).show();
+
+                  else {
+                        LoginPage.this.setTextVisible(v);
+
+                      attempts--;
+
+                      Toast.makeText( this, "Not added\nYou have "+attempts+"chances left", Toast.LENGTH_SHORT).show();
+
+                      if(attempts==0)
+
+                          loginBut.setEnabled(false);
 
 
+                      Toast.makeText(this, "Sorry!!\n\nYou have usedup all your chances",
+                              Toast.LENGTH_SHORT).show();
 
-
-*/           else LoginPage.this.setTextVisible(v);
+                      Toast.makeText(this, "Try signing Up if you haven't done so",
+                              Toast.LENGTH_SHORT).show();
+                  }
               }
 
             });

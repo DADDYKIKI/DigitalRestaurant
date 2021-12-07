@@ -26,6 +26,7 @@ import java.io.ByteArrayOutputStream;
 import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -56,7 +57,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMNUSER4="age";
     public static final String COLUMNUSER5="phone";
     public static final String COLUMNUSER6="address";
-    public static final String COLUMNUSER7="Customer_Passwords";
+    public static final String COLUMNUSER7="country";
+    public static final String COLUMNUSER8="Customer_Passwords";
 
 
    /* //Items details
@@ -118,7 +120,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                    + COLUMNUSER4 + " INTEGER, "
                    + COLUMNUSER5 + " INTEGER, "
                    + COLUMNUSER6 + " TEXT, "
-                   + COLUMNUSER7 + " TEXT)");
+                   + COLUMNUSER7 + " TEXT, "
+                   + COLUMNUSER8 + " TEXT)");
 
            //Items details
        /*   db.execSQL("CREATE TABLE " + FOODS_FOR_SALE + "("
@@ -205,7 +208,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public boolean addCustomerUserAndPAss(String name, String  email, int age, int phone,String address,String password){
+    public boolean addCustomerUserAndPAss(String name, String  email, int age, int phone,
+                                          String address,String country,String password){
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
 
@@ -215,7 +219,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentV.put(COLUMNUSER4,age);
         contentV.put(COLUMNUSER5,phone);
         contentV.put(COLUMNUSER6,address);
-        contentV.put(COLUMNUSER7,password);
+        contentV.put(COLUMNUSER7,country);
+        contentV.put(COLUMNUSER8,password);
 
 
         long output=myDatabase.insert(MY_USER_AND_PASS_TABLE,null,contentV);
@@ -357,7 +362,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 while (cur.moveToNext()) {
 
                     if (cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email) &&
-                            cur.getString(cur.getColumnIndex(COLUMNUSER7)).equals(password))
+                            cur.getString(cur.getColumnIndex(COLUMNUSER8)).equals(password))
 
                         return true;
 
@@ -455,6 +460,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email) &&
                         Integer.parseInt(cur.getString(cur.getColumnIndex(COLUMNUSER4)))<18)
+
+
+
+                    return true;
+                myDatabase.close();
+
+            }
+
+        }return false;
+
+    }
+
+    @SuppressLint("Range")
+    public boolean checkCountry(String email) {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select * from " +MY_USER_AND_PASS_TABLE,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email) &&
+                        cur.getString(cur.getColumnIndex(COLUMNUSER7)).equalsIgnoreCase("nigeria"))
 
 
 

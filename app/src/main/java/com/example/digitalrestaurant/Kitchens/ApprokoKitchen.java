@@ -137,25 +137,29 @@ public class ApprokoKitchen extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public  List<ItemData> populateAprokoPage(int age){
+    public  List<ItemData> populateAprokoPage(int age) {
 
 
-        aprokoItems.add(new ItemData(12,"Meat","European" ,R.drawable.justmeats,""));
-        aprokoItems.add(new ItemData(8,"Rice/Plantain","Asian" ,R.drawable.jelofplantrain,""));
-        aprokoItems.add(new ItemData(4,"Hot Dog","European" ,R.drawable.uktwo,""));
-        aprokoItems.add(new ItemData(15,"Sauce","Asain" ,R.drawable.mixture,""));
-        aprokoItems.add(new ItemData(15,"Sauce","Asain" ,R.drawable.mixture,""));
-        aprokoItems.add(new ItemData(21,"Fried Rice","African" ,R.drawable.friedriceone,""));
-        aprokoItems.add(new ItemData(7,"Assorted meats","Asian" ,R.drawable.tablefoodpic,""));
-        aprokoItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel,""));
-        aprokoItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo,""));
+        aprokoItems.add(new ItemData(12, "Meat", "European", R.drawable.justmeats, ""));
+        aprokoItems.add(new ItemData(8, "Rice/Plantain", "Asian", R.drawable.jelofplantrain, ""));
+        aprokoItems.add(new ItemData(4, "Hot Dog", "European", R.drawable.uktwo, ""));
+        aprokoItems.add(new ItemData(15, "Sauce", "Asain", R.drawable.mixture, ""));
+        aprokoItems.add(new ItemData(15, "Sauce", "Asain", R.drawable.mixture, ""));
+        aprokoItems.add(new ItemData(21, "Fried Rice", "African", R.drawable.friedriceone, ""));
+        aprokoItems.add(new ItemData(7, "Assorted meats", "Asian", R.drawable.tablefoodpic, ""));
+        aprokoItems.add(new ItemData(10, "Pounded Yam", "African", R.drawable.towel, ""));
+        aprokoItems.add(new ItemData(12, "Hot Dog++", "European", R.drawable.uktwo, ""));
 
-        List<ItemData> allMatch=aprokoItems.stream().filter(p->p.getAlcoholic().equals(""))
+        List<ItemData> allMatch = aprokoItems.stream().filter(p -> p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
 
-        if(age>=18)return aprokoItems;
+        if (!LoginPage.getCountry().equals("Nigeria")) return aprokoItems;
 
-        else return allMatch;
+        else {
+
+            if (age >= 18) return aprokoItems;
+
+            else return allMatch;
+        }
     }
-
 }

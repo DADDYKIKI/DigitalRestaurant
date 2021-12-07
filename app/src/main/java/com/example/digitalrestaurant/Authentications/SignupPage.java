@@ -16,7 +16,7 @@ import com.example.digitalrestaurant.R;
 
 public class SignupPage extends AppCompatActivity {
 
-    private EditText signupName,signupEmail,signupAge,signupPhone,signupAddress,signupPaswd;
+    private EditText signupName,signupEmail,signupAge,signupPhone,signupAddress,signupPaswd,signupCountry;
 
    private  Button signSubBtn;
 
@@ -40,7 +40,8 @@ public class SignupPage extends AppCompatActivity {
         signupAge = findViewById(R.id.signupAge);
         signupPhone = findViewById(R.id.signUpPhone);
         signupAddress= findViewById(R.id.enterhomeaddress);
-        signupPaswd = (findViewById(R.id.signUpPassV3));
+        signupPaswd = findViewById(R.id.signUpPassV3);
+        signupCountry = findViewById(R.id.enterCountry);
 
         signSubBtn = (findViewById(R.id.signSubBtnV));
 
@@ -59,8 +60,10 @@ public class SignupPage extends AppCompatActivity {
             String phone = signupPhone.getText().toString();
             String address = signupAddress.getText().toString();
             String password = signupPaswd.getText().toString();
+            String country= signupCountry.getText().toString();
 
-            if (name.equals("") || email.equals("") || age.equals("") || phone.equals("") || password.equals("") || address.equals("")) {
+            if (name.equals("") || email.equals("") || age.equals("") || phone.equals("") ||
+                    password.equals("") || address.equals("")|| country.equals("")) {
 
                 Toast.makeText(this, "All fields must be entered", Toast.LENGTH_SHORT).show();
 
@@ -78,12 +81,14 @@ public class SignupPage extends AppCompatActivity {
             else {
                              boolean check=helper.checkforUniqueEmailAddress(email);
 
-                         if(check==true)Toast.makeText(this, "Email address already in use.\nTry another", Toast.LENGTH_SHORT).show();
+                         if(check==true)Toast.makeText(this, "Email address already in use.\nTry another",
+                                 Toast.LENGTH_SHORT).show();
 
                           else{
                              try {
                                    boolean signup =
-                                        helper.addCustomerUserAndPAss(name, email, Integer.parseInt(age), Integer.parseInt(phone), address, password);
+                                        helper.addCustomerUserAndPAss(name, email, Integer.parseInt(age),
+                                                Integer.parseInt(phone), address,country, password);
 
 
                         if (signup == true) {

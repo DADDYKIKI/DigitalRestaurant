@@ -142,25 +142,29 @@ public class ObandeKitchen extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<ItemData> populateObandePage(int age){
+    public List<ItemData> populateObandePage(int age) {
 
 
-        obandeItems.add(new ItemData(7,"MoiMoi","African" ,R.drawable.obandemoimoi,""));
-        obandeItems.add(new ItemData(15,"Egusi soup","African" ,R.drawable.obandeegusisoup,""));
-        obandeItems.add(new ItemData(10,"Fried Rice","African" ,R.drawable.obandefriedrice,""));
-        obandeItems.add(new ItemData(4,"Chin-Chin","African" ,R.drawable.obandechinchin,""));
-        obandeItems.add(new ItemData(21,"Fried Rice with goat meat","African" ,R.drawable.friedriceone,""));
-        obandeItems.add(new ItemData(7,"Pouridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,""));
-        obandeItems.add(new ItemData(10,"Pounded Yam","African" ,R.drawable.towel,""));
-        obandeItems.add(new ItemData(12,"Hot Dog++","European" ,R.drawable.uktwo,""));
+        obandeItems.add(new ItemData(7, "MoiMoi", "African", R.drawable.obandemoimoi, ""));
+        obandeItems.add(new ItemData(15, "Egusi soup", "African", R.drawable.obandeegusisoup, ""));
+        obandeItems.add(new ItemData(10, "Fried Rice", "African", R.drawable.obandefriedrice, ""));
+        obandeItems.add(new ItemData(4, "Chin-Chin", "African", R.drawable.obandechinchin, ""));
+        obandeItems.add(new ItemData(21, "Fried Rice with goat meat", "African", R.drawable.friedriceone, ""));
+        obandeItems.add(new ItemData(7, "Pouridge bean and Plantain ", "African", R.drawable.obandepouridgebeans, ""));
+        obandeItems.add(new ItemData(10, "Pounded Yam", "African", R.drawable.towel, ""));
+        obandeItems.add(new ItemData(12, "Hot Dog++", "European", R.drawable.uktwo, ""));
 
-        List<ItemData> allMatch=obandeItems.stream().filter(p->p.getAlcoholic().equals(""))
+        List<ItemData> allMatch = obandeItems.stream().filter(p -> p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
 
-        if(age>=18)return obandeItems;
+        if (!LoginPage.getCountry().equals("Nigeria")) return obandeItems;
 
-        else return allMatch;
+        else {
+
+            if (age >= 18) return obandeItems;
+
+            else return allMatch;
+        }
     }
-
 
 }

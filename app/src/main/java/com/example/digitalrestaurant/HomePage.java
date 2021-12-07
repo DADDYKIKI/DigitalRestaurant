@@ -215,10 +215,16 @@ public class HomePage extends AppCompatActivity {
         List<AdvertItems> allMatch=myItems.stream().filter(p->p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
 
-        if(age>=18)return myItems;
+
+        if (!LoginPage.getCountry().equals("Nigeria")) return myItems;
+
+        else {
+
+
+            if(age>=18)return myItems;
 
        else return allMatch;
-    }
+    }}
 
 
     public ArrayList<RestaurantsDetails> populateItemInfo2(){

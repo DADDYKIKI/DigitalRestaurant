@@ -130,30 +130,35 @@ public class Stainless extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<ItemData> populateStainlessPage(int age){
+    public List<ItemData> populateStainlessPage(int age) {
 
-        stainlessItems.add(new ItemData(12,"Catfish peppered soup","African" ,R.drawable.adacatfish,""));
-        stainlessItems.add(new ItemData(9,"MoiMoi","African" ,R.drawable.obandemoimoi,""));
-        stainlessItems.add(new ItemData(18,"Egusi soup","African" ,R.drawable.obandeegusisoup,""));
-        stainlessItems.add(new ItemData(3,"Chin-Chin","African" ,R.drawable.obandechinchin,""));
-        stainlessItems.add(new ItemData(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone,""));
-        stainlessItems.add(new ItemData(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,""));
-        stainlessItems.add(new ItemData(3,"Soft drinks","" ,R.drawable.adasoftdrinks,""));
-        stainlessItems.add(new ItemData(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup,""));
-        stainlessItems.add(new ItemData(5,"Heineken Pride","" ,R.drawable.adachilledheineken,"alcoholic"));
-        stainlessItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer,"alcoholic"));
+        stainlessItems.add(new ItemData(12, "Catfish peppered soup", "African", R.drawable.adacatfish, ""));
+        stainlessItems.add(new ItemData(9, "MoiMoi", "African", R.drawable.obandemoimoi, ""));
+        stainlessItems.add(new ItemData(18, "Egusi soup", "African", R.drawable.obandeegusisoup, ""));
+        stainlessItems.add(new ItemData(3, "Chin-Chin", "African", R.drawable.obandechinchin, ""));
+        stainlessItems.add(new ItemData(11, "Fried Rice with goat meat", "African", R.drawable.friedriceone, ""));
+        stainlessItems.add(new ItemData(7, "Porridge bean and Plantain ", "African", R.drawable.obandepouridgebeans, ""));
+        stainlessItems.add(new ItemData(3, "Soft drinks", "", R.drawable.adasoftdrinks, ""));
+        stainlessItems.add(new ItemData(20, "Goat Peppered soup", "African", R.drawable.adapepersoup, ""));
+        stainlessItems.add(new ItemData(5, "Heineken Pride", "", R.drawable.adachilledheineken, "alcoholic"));
+        stainlessItems.add(new ItemData(7, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
 
 
-        List<ItemData> allMatch=stainlessItems.stream().filter(p->p.getAlcoholic().equals(""))
+        List<ItemData> allMatch = stainlessItems.stream().filter(p -> p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
 
-        if(age>=18)return stainlessItems;
+        if (!LoginPage.getCountry().equals("Nigeria")) return stainlessItems;
 
-        else return allMatch;
+        else {
+
+
+            if (age >= 18) return stainlessItems;
+
+            else return allMatch;
+        }
+
+
     }
-
-
-
 
     }
 

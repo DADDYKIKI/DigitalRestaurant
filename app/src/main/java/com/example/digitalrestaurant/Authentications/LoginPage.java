@@ -17,6 +17,8 @@ import com.example.digitalrestaurant.R;
 
 public class LoginPage extends AppCompatActivity {
 
+    private static String COUNTRY="";
+
     private static  int AGE=0;
 
 
@@ -53,6 +55,21 @@ public class LoginPage extends AppCompatActivity {
 
         AGE=age;
     }
+
+
+    public static String getCountry() {
+        return COUNTRY;
+    }
+
+
+
+    public static void setCountry(String name) {
+
+        COUNTRY=name;
+    }
+
+
+
 
     public void toSignUpV() {
 
@@ -109,12 +126,15 @@ public class LoginPage extends AppCompatActivity {
 
                       Boolean yes=data.checkforAge(loginEmail.getText().toString());
 
-
+                      Boolean correct=data.checkCountry(loginEmail.getText().toString());
                       Intent intent=new Intent(this,HomePage.class);
 
                       if(yes==true)setAge(17);
 
                       else setAge(18);
+
+                      if(correct==true)setCountry("Nigeria");
+                      else setCountry("United Kingdom");
 
                      startActivity(intent);
 

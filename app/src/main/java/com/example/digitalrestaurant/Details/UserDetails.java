@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class UserDetails implements Serializable {
 
-    String nameOfUser,email,password,location;
+    String nameOfUser,email,password,location,country;
     int age,phone;
 
     public String getLocation() {
@@ -15,14 +15,22 @@ public class UserDetails implements Serializable {
         this.location = location;
     }
 
-    public UserDetails(String nameOfUser, String email, int age,int phone, String location, String password) {
+    public UserDetails(String nameOfUser, String email, int age,int phone, String location, String country, String password) {
         this.nameOfUser = nameOfUser;
         this.email = email;
         this.password = password;
         this.age = age;
-
+        this.country=country;
         this.phone=phone;
         this.location=location;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public int getPhone() {

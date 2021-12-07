@@ -2011,6 +2011,7 @@ int id endToStart 0x7f0a00b5
 int id end_padder 0x7f0a0221
 int id enterAlways 0x7f0a00b6
 int id enterAlwaysCollapsed 0x7f0a00b7
+int id enterCountry 0x7f0a0231
 int id enterLoginEmail 0x7f0a00b8
 int id enterLoginEmailV 0x7f0a0226
 int id enterLoginPaswd 0x7f0a00b9

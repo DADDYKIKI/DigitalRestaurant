@@ -446,15 +446,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
 
-        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+" from " + MY_USER_AND_PASS_TABLE,
-                // " where "+COLUMNUSER3+" = "+email,
+        Cursor cur = myDatabase.rawQuery("select * from " +MY_USER_AND_PASS_TABLE,
 
                 null);
 
         if(cur.getCount()>0) {
             while (cur.moveToNext()) {
 
-                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
+                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email) &&
+                        Integer.parseInt(cur.getString(cur.getColumnIndex(COLUMNUSER4)))<18)
+
+
 
                     return true;
                 myDatabase.close();

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -61,6 +62,8 @@ public class AdaKitchen extends AppCompatActivity {
         //openMyBasket();
 
         makeAdaRestaurantAdaptor();
+
+        Toast.makeText(this, String.valueOf(LoginPage.getAge()), Toast.LENGTH_SHORT).show();
 
         homeKey();
         menuKey();
@@ -168,9 +171,9 @@ public class AdaKitchen extends AppCompatActivity {
         List<ItemData> allMatch=adaItems.stream().filter(p->p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
 
-        if(age<18)return allMatch;
+        if(age>=18)return adaItems;
 
-        return adaItems;
+        else return allMatch;
     }
 
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -61,6 +62,8 @@ public class ObandeKitchen extends AppCompatActivity {
 
 
         makeObandeRestaurantAdaptor();
+
+        Toast.makeText(this, String.valueOf(LoginPage.getAge()), Toast.LENGTH_SHORT).show();
 
        // gotoBasket();
 
@@ -154,9 +157,9 @@ public class ObandeKitchen extends AppCompatActivity {
         List<ItemData> allMatch=obandeItems.stream().filter(p->p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
 
-        if(age<18)return allMatch;
+        if(age>=18)return obandeItems;
 
-        return obandeItems;
+        else return allMatch;
     }
 
 

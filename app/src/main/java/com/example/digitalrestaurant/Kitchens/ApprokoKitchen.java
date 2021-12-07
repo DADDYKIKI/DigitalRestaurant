@@ -153,9 +153,9 @@ public class ApprokoKitchen extends AppCompatActivity {
         List<ItemData> allMatch=aprokoItems.stream().filter(p->p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
 
-        if(age<18)return allMatch;
+        if(age>=18)return aprokoItems;
 
-        return aprokoItems;
+        else return allMatch;
     }
 
 }

@@ -21,6 +21,7 @@ import com.example.digitalrestaurant.Adaptors.LocationAdaptor;
 import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.AdvertItems;
+import com.example.digitalrestaurant.Details.ItemData;
 import com.example.digitalrestaurant.Kitchens.AdaKitchen;
 import com.example.digitalrestaurant.Kitchens.ApprokoKitchen;
 import com.example.digitalrestaurant.Kitchens.ObandeKitchen;
@@ -31,6 +32,7 @@ import com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class HomePage extends AppCompatActivity {
 
@@ -137,7 +139,7 @@ public class HomePage extends AppCompatActivity {
         recyclerView2.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView3.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        godwinAdaptor=new PopulateAdvertismentAdaptor(populateAdaPage(),this);
+        godwinAdaptor=new PopulateAdvertismentAdaptor(populateAdaPage(LoginPage.getAge()),this);
         godwinAdaptor2=new RestaurantsAdaptor(populateItemInfo2(),AllInOneListener2);
         godwinAdaptor3=new LocationAdaptor(populateItemInfo3());
 
@@ -193,7 +195,7 @@ public class HomePage extends AppCompatActivity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<AdvertItems> populateAdaPage() {
+    public List<AdvertItems> populateAdaPage(int age) {
 
 
         myItems.add(new AdvertItems(12,"Catfish peppered soup","African" ,R.drawable.adacatfish,"","Ada Kitchen"));
@@ -210,7 +212,12 @@ public class HomePage extends AppCompatActivity {
         myItems.add(new AdvertItems(7,"Extra Stout","" ,R.drawable.adaguinessbeer,"alcoholic","Ada Kitchen"));
 
 
-        return myItems;
+        List<AdvertItems> allMatch=myItems.stream().filter(p->p.getAlcoholic().equals(""))
+                .collect(Collectors.toList());
+
+        if(age>=18)return myItems;
+
+       else return allMatch;
     }
 
 

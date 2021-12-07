@@ -147,9 +147,9 @@ public class Stainless extends AppCompatActivity {
         List<ItemData> allMatch=stainlessItems.stream().filter(p->p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
 
-        if(age<18)return allMatch;
+        if(age>=18)return stainlessItems;
 
-        return stainlessItems;
+        else return allMatch;
     }
 
 

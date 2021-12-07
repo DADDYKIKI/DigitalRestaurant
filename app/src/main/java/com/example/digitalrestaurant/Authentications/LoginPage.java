@@ -83,10 +83,6 @@ public class LoginPage extends AppCompatActivity {
 
                 data=new DatabaseHelper(this);
 
-                setAge(33);
-
-
-
 
               if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
 
@@ -113,13 +109,12 @@ public class LoginPage extends AppCompatActivity {
 
                       Boolean yes=data.checkforAge(loginEmail.getText().toString());
 
-                      if(yes==true)setAge(17);
-
-                      else setAge(18);
-
 
                       Intent intent=new Intent(this,HomePage.class);
 
+                      if(yes==true)setAge(17);
+
+                      else setAge(18);
 
                      startActivity(intent);
 

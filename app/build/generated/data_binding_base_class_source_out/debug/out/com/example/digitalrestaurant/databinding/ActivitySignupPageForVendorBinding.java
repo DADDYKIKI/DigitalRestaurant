@@ -22,7 +22,7 @@ public final class ActivitySignupPageForVendorBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView menuKey;
+  public final TextView menuKeyS;
 
   @NonNull
   public final Button signSubBtnV;
@@ -40,11 +40,11 @@ public final class ActivitySignupPageForVendorBinding implements ViewBinding {
   public final ConstraintLayout signupSubmtBtn;
 
   private ActivitySignupPageForVendorBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView menuKey, @NonNull Button signSubBtnV, @NonNull EditText signUpPassword,
+      @NonNull TextView menuKeyS, @NonNull Button signSubBtnV, @NonNull EditText signUpPassword,
       @NonNull EditText signupEmailV, @NonNull EditText signupNameV,
       @NonNull ConstraintLayout signupSubmtBtn) {
     this.rootView = rootView;
-    this.menuKey = menuKey;
+    this.menuKeyS = menuKeyS;
     this.signSubBtnV = signSubBtnV;
     this.signUpPassword = signUpPassword;
     this.signupEmailV = signupEmailV;
@@ -79,9 +79,9 @@ public final class ActivitySignupPageForVendorBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.menuKey;
-      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
-      if (menuKey == null) {
+      id = R.id.menuKeyS;
+      TextView menuKeyS = ViewBindings.findChildViewById(rootView, id);
+      if (menuKeyS == null) {
         break missingId;
       }
 
@@ -111,7 +111,7 @@ public final class ActivitySignupPageForVendorBinding implements ViewBinding {
 
       ConstraintLayout signupSubmtBtn = (ConstraintLayout) rootView;
 
-      return new ActivitySignupPageForVendorBinding((ConstraintLayout) rootView, menuKey,
+      return new ActivitySignupPageForVendorBinding((ConstraintLayout) rootView, menuKeyS,
           signSubBtnV, signUpPassword, signupEmailV, signupNameV, signupSubmtBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);

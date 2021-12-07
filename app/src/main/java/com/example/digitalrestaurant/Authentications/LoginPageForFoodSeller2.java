@@ -16,46 +16,51 @@ import com.example.digitalrestaurant.R;
 
 public class LoginPageForFoodSeller2 extends AppCompatActivity {
 
-    private Button loginBut;
-    private EditText loginName,loginPass;
-    private TextView loginWarningText;
+    private Button loginButV,signUpButV ;
+    private EditText loginNameV,loginPassV;
+    private TextView loginWarningTextV;
 
     private int attempts=6;
-    DatabaseHelper dbHelper;
 
     DatabaseHelper data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.vendor_login);
 
-        loginName = findViewById(R.id.enterLoginEmail);
-        loginPass = findViewById(R.id.enterLoginPaswd);
-        loginWarningText = findViewById(R.id.loginWarningText);
-        loginBut = (findViewById(R.id.signSubBtnV));
+        loginNameV = findViewById(R.id.enterLoginEmailV);
+        loginPassV = findViewById(R.id.enterLoginPaswdV);
+        loginWarningTextV = findViewById(R.id.loginWarningTextV);
+        loginButV = (findViewById(R.id.signSubBtnV));
 
         signUpButV = findViewById(R.id.signupV);
 
 
-        dbHelper=new DatabaseHelper(this);
-
-
-
-
-        login();
+        loginV();
+        toSignUp();
 
     }
 
 
-        public void login(){
-            loginBut.setOnClickListener(v -> {
+    public void toSignUp() {
 
-                click3(SellerUploadPage.class);
+        signUpButV.setOnClickListener(v -> {
+
+            Intent intent=new Intent(this, SignupPageForFoodSeller2.class);
+            startActivity(intent);
+
+        });
+    }
+
+
+        public void loginV(){
+            loginButV.setOnClickListener(v -> {
+
                 data=new DatabaseHelper(this);
 
 
-                if (loginName.getText().toString().equals("") || loginPass.getText().toString().equals("")){
+                if (loginNameV.getText().toString().equals("") || loginPassV.getText().toString().equals("")){
 
                     Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
 
@@ -63,21 +68,23 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
 
                 else {
 
-                    Boolean insert=data.getCustomerLoginDetails(loginName.getText().toString(),loginPass.getText().toString());
+                    Boolean insert=data.getVendorLoginDetails(loginNameV.getText().toString(),loginPassV.getText().toString());
 
                     if (insert==true) {
 
-                        LoginPage.this.setTextInvisible(v);
+                        this.setTextInvisible(v);
+
                         Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
 
-                        click3(HomePage.class);
+                        click3(SellerUploadPage.class);
 
-                        loginName.setText("");
-                        loginPass.setText("");
+                        loginNameV.setText("");
+
+                        loginPassV.setText("");
                     }
 
                     else {
-                        LoginPage.this.setTextVisible(v);
+                        this.setTextVisible(v);
 
                         attempts--;
 
@@ -92,8 +99,8 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
                         }
                         if(attempts==0){
 
-                            loginName.setEnabled(false);
-                            loginPass.setEnabled(false);
+                            loginNameV.setEnabled(false);
+                            loginPassV.setEnabled(false);
 
                             Toast.makeText(this, "Sorry!!\n\nYou have usedup all your chances",
                                     Toast.LENGTH_SHORT).show();
@@ -136,23 +143,23 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
 
 
     void setTextVisible(View view){
-        loginWarningText.setVisibility(View.VISIBLE);
+        loginWarningTextV.setVisibility(View.VISIBLE);
 
     }
 
     void setButtonInvisible(View view){
-        loginBut.setVisibility(View.INVISIBLE);
+        loginButV.setVisibility(View.INVISIBLE);
 
 
     }
 
     void setTextInvisible(View view){
-        loginWarningText.setVisibility(View.INVISIBLE);
+        loginWarningTextV.setVisibility(View.INVISIBLE);
 
     }
 
     void setButtonVisible(View view){
 
-        signUpBut.setVisibility(View.VISIBLE);}
+        signUpButV.setVisibility(View.VISIBLE);}
 
 }

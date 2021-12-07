@@ -26,7 +26,7 @@
                     android:background="@drawable/aprokokitchen">
 
                     <TextView
-                        android:id="@+id/menuKey"
+                        android:id="@+id/menuKeyS"
                         android:layout_width="55dp"
                         android:layout_height="24dp"
                         android:layout_marginStart="24dp"
@@ -50,7 +50,7 @@
                         android:textColor="@color/design_default_color_on_secondary"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/menuKey"
+                        app:layout_constraintStart_toEndOf="@+id/menuKeyS"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.135" />
 

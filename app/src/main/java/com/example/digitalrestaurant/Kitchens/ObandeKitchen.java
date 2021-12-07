@@ -48,7 +48,7 @@ public class ObandeKitchen extends AppCompatActivity {
         setContentView(R.layout.obande_restaurant_homepage);
 
         homeKey=findViewById(R.id.homeKey);
-        menuKey=findViewById(R.id.menuKey);
+        menuKey=findViewById(R.id.menuKeyS);
 
         floater=findViewById(R.id.floatingActionButton);
 

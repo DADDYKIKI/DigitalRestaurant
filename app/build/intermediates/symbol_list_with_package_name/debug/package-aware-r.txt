@@ -1972,6 +1972,7 @@ id custom
 id customPanel
 id custom_image
 id custom_view_container
+id customerWelcomeName
 id customerloginBut
 id customersignupBut
 id cut
@@ -2012,7 +2013,9 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id enterLoginEmail
+id enterLoginEmailV
 id enterLoginPaswd
+id enterLoginPaswdV
 id enterhomeaddress
 id error_frame
 id error_x
@@ -2089,6 +2092,7 @@ id locatedrestaurantname
 id locationName
 id locationRecycler
 id loginWarningText
+id loginWarningTextV
 id logout
 id logout2
 id logout3
@@ -2115,7 +2119,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id media_actions
-id menuKey
+id menuKeyS
 id message
 id middle
 id mini
@@ -2260,6 +2264,7 @@ id signupAge
 id signupEmailV
 id signupNameV
 id signupSubmtBtn
+id signupV
 id sin
 id skipCollapsed
 id slidable_content
@@ -2318,6 +2323,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textView10
 id textView2
 id textView3
@@ -2549,6 +2555,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout vendor_login
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

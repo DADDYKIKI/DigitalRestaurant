@@ -49,7 +49,7 @@ public class Stainless extends AppCompatActivity {
         stainlessItems=new ArrayList<ItemData>();
         floater=findViewById(R.id.floatingActionButton);
         homeKey=(TextView) findViewById(R.id.homeKey);
-        menuKey=findViewById(R.id.menuKey);
+        menuKey=findViewById(R.id.menuKeyS);
 
         helper=new DatabaseHelper(this);
 

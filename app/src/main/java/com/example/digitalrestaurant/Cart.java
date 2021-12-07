@@ -1,22 +1,15 @@
 package com.example.digitalrestaurant;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Adapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 //import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
-import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.OrderDetails;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Cart extends AppCompatActivity {
 
@@ -49,7 +42,7 @@ public class Cart extends AppCompatActivity {
        myOrder=new ArrayList<>();
 
         homeKey=findViewById(R.id.homeKey);
-        menuKey=findViewById(R.id.menuKey);
+        menuKey=findViewById(R.id.menuKeyS);
 
 
         homeKey();

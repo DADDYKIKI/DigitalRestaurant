@@ -39,7 +39,7 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
   public final TextView homeKey;
 
   @NonNull
-  public final TextView menuKey;
+  public final TextView menuKeyS;
 
   @NonNull
   public final TextView obandelocate;
@@ -57,7 +57,7 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
       @NonNull TextView ObandeRestLocationAdd, @NonNull RecyclerView aprokoKitchen,
       @NonNull ConstraintLayout constraintLayout3,
       @NonNull FloatingActionButton floatingActionButton, @NonNull TextView homeKey,
-      @NonNull TextView menuKey, @NonNull TextView obandelocate, @NonNull ScrollView scrollView2,
+      @NonNull TextView menuKeyS, @NonNull TextView obandelocate, @NonNull ScrollView scrollView2,
       @NonNull TextView stainlesslabel, @NonNull TextView welcometxt) {
     this.rootView = rootView;
     this.ObandeRestLocationAdd = ObandeRestLocationAdd;
@@ -65,7 +65,7 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
     this.constraintLayout3 = constraintLayout3;
     this.floatingActionButton = floatingActionButton;
     this.homeKey = homeKey;
-    this.menuKey = menuKey;
+    this.menuKeyS = menuKeyS;
     this.obandelocate = obandelocate;
     this.scrollView2 = scrollView2;
     this.stainlesslabel = stainlesslabel;
@@ -129,9 +129,9 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.menuKey;
-      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
-      if (menuKey == null) {
+      id = R.id.menuKeyS;
+      TextView menuKeyS = ViewBindings.findChildViewById(rootView, id);
+      if (menuKeyS == null) {
         break missingId;
       }
 
@@ -160,7 +160,7 @@ public final class AprokoResataurantHomepageBinding implements ViewBinding {
       }
 
       return new AprokoResataurantHomepageBinding((LinearLayout) rootView, ObandeRestLocationAdd,
-          aprokoKitchen, constraintLayout3, floatingActionButton, homeKey, menuKey, obandelocate,
+          aprokoKitchen, constraintLayout3, floatingActionButton, homeKey, menuKeyS, obandelocate,
           scrollView2, stainlesslabel, welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);

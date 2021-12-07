@@ -131,5 +131,7 @@ com/example/digitalrestaurant/databinding/ObandeRestaurantHomepageBinding.java
  com.example.digitalrestaurant.databinding.ObandeRestaurantHomepageBinding
 com/example/digitalrestaurant/databinding/ActivitySignupPageForVendorBinding.java
  com.example.digitalrestaurant.databinding.ActivitySignupPageForVendorBinding
+com/example/digitalrestaurant/databinding/VendorLoginBinding.java
+ com.example.digitalrestaurant.databinding.VendorLoginBinding
 com/example/digitalrestaurant/Database/DatabaseHelper.java
  com.example.digitalrestaurant.Database.DatabaseHelper

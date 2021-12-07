@@ -33,7 +33,7 @@ public final class StainlessRestaurantHomepage2Binding implements ViewBinding {
   public final TextView homeKey;
 
   @NonNull
-  public final TextView menuKey;
+  public final TextView menuKeyS;
 
   @NonNull
   public final ScrollView scrollView2;
@@ -56,7 +56,7 @@ public final class StainlessRestaurantHomepage2Binding implements ViewBinding {
   private StainlessRestaurantHomepage2Binding(@NonNull LinearLayout rootView,
       @NonNull ConstraintLayout constraintLayout3,
       @NonNull FloatingActionButton floatingActionButton, @NonNull TextView homeKey,
-      @NonNull TextView menuKey, @NonNull ScrollView scrollView2,
+      @NonNull TextView menuKeyS, @NonNull ScrollView scrollView2,
       @NonNull RecyclerView stainlessKitchen, @NonNull TextView stainlessRestLocationAdd,
       @NonNull TextView stainlesslabel, @NonNull TextView stainlesslocate,
       @NonNull TextView welcometxt) {
@@ -64,7 +64,7 @@ public final class StainlessRestaurantHomepage2Binding implements ViewBinding {
     this.constraintLayout3 = constraintLayout3;
     this.floatingActionButton = floatingActionButton;
     this.homeKey = homeKey;
-    this.menuKey = menuKey;
+    this.menuKeyS = menuKeyS;
     this.scrollView2 = scrollView2;
     this.stainlessKitchen = stainlessKitchen;
     this.stainlessRestLocationAdd = stainlessRestLocationAdd;
@@ -118,9 +118,9 @@ public final class StainlessRestaurantHomepage2Binding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.menuKey;
-      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
-      if (menuKey == null) {
+      id = R.id.menuKeyS;
+      TextView menuKeyS = ViewBindings.findChildViewById(rootView, id);
+      if (menuKeyS == null) {
         break missingId;
       }
 
@@ -161,7 +161,7 @@ public final class StainlessRestaurantHomepage2Binding implements ViewBinding {
       }
 
       return new StainlessRestaurantHomepage2Binding((LinearLayout) rootView, constraintLayout3,
-          floatingActionButton, homeKey, menuKey, scrollView2, stainlessKitchen,
+          floatingActionButton, homeKey, menuKeyS, scrollView2, stainlessKitchen,
           stainlessRestLocationAdd, stainlesslabel, stainlesslocate, welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);

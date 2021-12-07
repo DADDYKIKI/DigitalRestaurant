@@ -11,11 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
-import com.example.digitalrestaurant.Details.UserDetails;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.R;
-
-import java.util.ArrayList;
 
 public class LoginPage extends AppCompatActivity {
 
@@ -26,7 +23,7 @@ public class LoginPage extends AppCompatActivity {
     private int attempts=6;
 
 
-    DatabaseHelper data;
+    DatabaseHelper data, helperL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +38,10 @@ public class LoginPage extends AppCompatActivity {
 
 
         login();
-        toSignUp();
+        toSignUpV();
     }
 
-    public void toSignUp() {
+    public void toSignUpV() {
 
         signUpBut.setOnClickListener(v -> {
 
@@ -52,6 +49,17 @@ public class LoginPage extends AppCompatActivity {
             startActivity(intent);
 
         });
+    }
+
+
+    public String setCustomerWelcomeTextF(){
+
+         helperL=new DatabaseHelper(this);
+
+        String welcome=helperL.setCustomerWelcomeName(loginEmail.getText().toString());
+
+        return welcome;
+
     }
 
         public void login(){

@@ -115,8 +115,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                    + COLUMNUSER1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                    + COLUMNUSER2 + " TEXT, "
                    + COLUMNUSER3 + " TEXT, "
-                   + COLUMNUSER4 + " TEXT, "
-                   + COLUMNUSER5 + " TEXT, "
+                   + COLUMNUSER4 + " INTEGER, "
+                   + COLUMNUSER5 + " INTEGER, "
                    + COLUMNUSER6 + " TEXT, "
                    + COLUMNUSER7 + " TEXT)");
 
@@ -251,28 +251,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }*/
 
-
-
-    public boolean checkUserName(String email){
-        SQLiteDatabase myDatabase20=this.getWritableDatabase();
-        Cursor cur20=myDatabase20.rawQuery("select * from "+MY_TABLE_NAME+" where email=?", new String[]{email});
-
-        if(cur20.getCount()>0)return true;
-        else return false;
-    }
-
-
-
-
-    public boolean checkUserNameAndPassword(String email,String password){
-        SQLiteDatabase myDatabase21=this.getWritableDatabase();
-
-        Cursor cur21=myDatabase21.rawQuery("select * from GodwinItemsTable where email=? and password=?",
-                new String[]{email,password});
-
-        if(cur21.getCount()>0)return true;
-        else return false;
-    }
 
 
 
@@ -424,8 +402,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
 
-        ArrayList<UserDetails> myUser=new ArrayList<>();
-
         Cursor cur = myDatabase.rawQuery("select * from " + MY_USER_AND_PASS_TABLE,
 
                 null);
@@ -433,16 +409,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             if(cur.getCount()>0) {
                 while (cur.moveToNext()) {
 
-                    if (cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email) && cur.getString(cur.getColumnIndex(COLUMNUSER7)).equals(password))
-
-            /*  myUser.add(new UserDetails(cur.getString(cur.getColumnIndex(COLUMNUSER2)),
-                      ,
-                      cur.getInt(cur.getColumnIndex(COLUMNUSER4)),
-                      cur.getInt(cur.getColumnIndex(COLUMNUSER5)),
-                      cur.getString(cur.getColumnIndex(COLUMNUSER6)),
-                      cur.getString(cur.getColumnIndex(COLUMNUSER7))));*/
-
-
+                    if (cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email) &&
+                            cur.getString(cur.getColumnIndex(COLUMNUSER7)).equals(password))
 
                         return true;
 
@@ -455,27 +423,85 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-        public Cursor getVendorLoginDetails() {
+        @SuppressLint("Range")
+        public boolean getVendorLoginDetails(String restaurantName, String Password) {
 
-        SQLiteDatabase myDatabase5 = this.getWritableDatabase();
+            SQLiteDatabase myDatabase = this.getReadableDatabase();
 
-        Cursor cur = myDatabase5.rawQuery("select * from " + VENDOR_DETAILS, null);
+            Cursor cur = myDatabase.rawQuery("select * from " + VENDOR_DETAILS,
+
+                    null);
+
+            if(cur.getCount()>0) {
+                while (cur.moveToNext()) {
+
+                    if (cur.getString(cur.getColumnIndex(COLUMNVEN2)).equals(restaurantName) &&
+                            cur.getString(cur.getColumnIndex(COLUMNVEN4)).equals(Password))
+
+                        return true;
+
+                    myDatabase.close();
+                }
 
 
-      /*  while (cur5.moveToNext()) {
-
-            vendor.add(new VendorDetails(cur5.getString(cur5.getColumnIndexOrThrow(COLUMNVEN2)),
-                    cur5.getString(cur5.getColumnIndexOrThrow(COLUMNVEN3)),
-                    cur5.getString(cur5.getColumnIndexOrThrow(COLUMNVEN4))));
-
-        }
-        cur5.close();
-        myDatabase5.close();*/
-
-        return cur;
-
+            }return false;
 
     }
+
+    @SuppressLint("Range")
+    public String setCustomerWelcomeName(String email) {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+" from " + MY_USER_AND_PASS_TABLE,
+                        //" where "+COLUMNUSER3+" = "+email,//+" //and "+COLUMNUSER7+" = "+password,
+
+                null);
+
+
+
+            while (cur.moveToNext()) {
+                //cur.getString(cur.getColumnIndex(COLUMNUSER7)).equals(password));
+                            if(cur.getCount()>0&&cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
+
+                myDatabase.close();
+
+    }return cur.getString(cur.getColumnIndex(COLUMNUSER2));
+
+    }
+
+    @SuppressLint("Range")
+    public boolean checkforUniqueEmailAddress(String email) {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+" from " + MY_USER_AND_PASS_TABLE,
+                 // " where "+COLUMNUSER3+" = "+email,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
+
+                    return true;
+              myDatabase.close();
+
+            }
+
+        }return false;
+
+    }}
+
+
+
+
+
+
+
+
+
 
   /*  public boolean uploadToAdaRestaurant(String price, String name, String nationality, byte[] image, String image_label,String alcoholic) {//................Add to Database...................
 
@@ -527,13 +553,3 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return  items;
     }*/
-
-}
-
-
-
-
-
-
-
-

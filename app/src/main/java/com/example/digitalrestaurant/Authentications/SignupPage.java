@@ -76,9 +76,14 @@ public class SignupPage extends AppCompatActivity {
 
 
             else {
-                    try {
-                        boolean signup =
-                                helper.addCustomerUserAndPAss(name, email, Integer.parseInt(age), Integer.parseInt(phone), address, password);
+                             boolean check=helper.checkforUniqueEmailAddress(email);
+
+                         if(check==true)Toast.makeText(this, "Email address already in use.\nTry another", Toast.LENGTH_SHORT).show();
+
+                          else{
+                             try {
+                                   boolean signup =
+                                        helper.addCustomerUserAndPAss(name, email, Integer.parseInt(age), Integer.parseInt(phone), address, password);
 
 
                         if (signup == true) {
@@ -104,7 +109,7 @@ public class SignupPage extends AppCompatActivity {
 
                     }catch (Exception e){Toast.makeText(this, "Your age or phone number\n must be in number format", Toast.LENGTH_SHORT).show();}
 
-            }
+            }}
 
         });
     }

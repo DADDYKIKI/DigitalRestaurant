@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.ItemData;
+import com.example.digitalrestaurant.HomePage;
+import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.R;
 
 import java.io.ByteArrayOutputStream;
@@ -33,7 +36,7 @@ public class SellerUploadPage extends AppCompatActivity {
 
     private DatabaseHelper helper;
 
-
+    private TextView homeKey,menuKey;
    // String foodPrice="";
  //  // String foodName="";
    // String foodNationality="";
@@ -60,23 +63,6 @@ public class SellerUploadPage extends AppCompatActivity {
 
         helper=new DatabaseHelper(this);
 
-        //..........DataBase Stuff...........................................................
-
-
-
-
-
-     /*   db.execSQL("CREATE TABLE " + DatabaseHelper.FOODS_FOR_SALE + "("
-                + DatabaseHelper.COLUMNFOOD1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + DatabaseHelper.COLUMNFOOD2 + " INTEGER, "
-                + DatabaseHelper.COLUMNFOOD3 + " TEXT, "
-                + DatabaseHelper.COLUMNFOOD4 + " TEXT, "
-                + DatabaseHelper.COLUMNFOOD5 + " BLOB, "
-                + DatabaseHelper.COLUMNFOOD6 + " TEXT, "
-                + DatabaseHelper.COLUMNFOOD7 + " TEXT)");
-        //..................................................................................
-
-*/
 
         price=findViewById(R.id.priceOfFood);
         name=findViewById(R.id.nameOfFoodItem);
@@ -86,18 +72,37 @@ public class SellerUploadPage extends AppCompatActivity {
 
         pictureLabel=findViewById(R.id.Imagelabel);
         vendorName=findViewById(R.id.vendorName);
+        homeKey=findViewById(R.id.pageOneomekey);
+        menuKey=findViewById(R.id.menuKeyS);
 
 
-
-
-
-
-      //  populateOurDatabase();
-
-
+        homeKey2();
+        menuKey2();
 
 
 }
+
+
+    public void homeKey2(){
+        homeKey.setOnClickListener(v -> {
+            Intent intent=new Intent(this, HomePage.class);
+            startActivity(intent);
+            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.fade_out);
+
+        });
+
+    }
+
+    public void menuKey2(){
+        menuKey.setOnClickListener(v -> {
+            Intent intent2=new Intent(this, Menu.class);
+            startActivity(intent2);
+            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+
+
+        });
+
+    }
 
    /* public void populateOurDatabase(){
         upload.setOnClickListener(v -> {

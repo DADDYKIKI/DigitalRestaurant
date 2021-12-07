@@ -48,7 +48,7 @@ public class ApprokoKitchen extends AppCompatActivity {
         setContentView(R.layout.aproko_resataurant_homepage);
 
         homeKey=findViewById(R.id.homeKey);
-        menuKey=findViewById(R.id.menuKey);
+        menuKey=findViewById(R.id.menuKeyS);
 
         floater=findViewById(R.id.floatingActionButton);
 

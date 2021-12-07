@@ -33,7 +33,7 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
   public final TextView imageDesc;
 
   @NonNull
-  public final TextView menuKey;
+  public final TextView menuKeyS;
 
   @NonNull
   public final EditText nameOfFoodItem;
@@ -55,7 +55,7 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
 
   private ActivitySellerUploadPageBinding(@NonNull ConstraintLayout rootView,
       @NonNull EditText Imagelabel, @NonNull TextView Welcome, @NonNull EditText alcoholic,
-      @NonNull TextView imageDesc, @NonNull TextView menuKey, @NonNull EditText nameOfFoodItem,
+      @NonNull TextView imageDesc, @NonNull TextView menuKeyS, @NonNull EditText nameOfFoodItem,
       @NonNull EditText nationalityOfItem, @NonNull TextView pageOneomekey,
       @NonNull EditText priceOfFood, @NonNull TextView selleruploadBtn,
       @NonNull TextView vendorName) {
@@ -64,7 +64,7 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
     this.Welcome = Welcome;
     this.alcoholic = alcoholic;
     this.imageDesc = imageDesc;
-    this.menuKey = menuKey;
+    this.menuKeyS = menuKeyS;
     this.nameOfFoodItem = nameOfFoodItem;
     this.nationalityOfItem = nationalityOfItem;
     this.pageOneomekey = pageOneomekey;
@@ -124,9 +124,9 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.menuKey;
-      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
-      if (menuKey == null) {
+      id = R.id.menuKeyS;
+      TextView menuKeyS = ViewBindings.findChildViewById(rootView, id);
+      if (menuKeyS == null) {
         break missingId;
       }
 
@@ -167,7 +167,7 @@ public final class ActivitySellerUploadPageBinding implements ViewBinding {
       }
 
       return new ActivitySellerUploadPageBinding((ConstraintLayout) rootView, Imagelabel, Welcome,
-          alcoholic, imageDesc, menuKey, nameOfFoodItem, nationalityOfItem, pageOneomekey,
+          alcoholic, imageDesc, menuKeyS, nameOfFoodItem, nationalityOfItem, pageOneomekey,
           priceOfFood, selleruploadBtn, vendorName);
     }
     String missingId = rootView.getResources().getResourceName(id);

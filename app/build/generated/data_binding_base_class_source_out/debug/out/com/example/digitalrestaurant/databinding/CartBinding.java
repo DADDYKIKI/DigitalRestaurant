@@ -27,7 +27,7 @@ public final class CartBinding implements ViewBinding {
   public final TextView homeKey;
 
   @NonNull
-  public final TextView menuKey;
+  public final TextView menuKeyS;
 
   @NonNull
   public final RecyclerView orderRecyclerview;
@@ -42,12 +42,13 @@ public final class CartBinding implements ViewBinding {
   public final TextView textView8;
 
   private CartBinding(@NonNull LinearLayout rootView, @NonNull TextView cartTitle,
-      @NonNull TextView homeKey, @NonNull TextView menuKey, @NonNull RecyclerView orderRecyclerview,
-      @NonNull TextView textView10, @NonNull TextView textView7, @NonNull TextView textView8) {
+      @NonNull TextView homeKey, @NonNull TextView menuKeyS,
+      @NonNull RecyclerView orderRecyclerview, @NonNull TextView textView10,
+      @NonNull TextView textView7, @NonNull TextView textView8) {
     this.rootView = rootView;
     this.cartTitle = cartTitle;
     this.homeKey = homeKey;
-    this.menuKey = menuKey;
+    this.menuKeyS = menuKeyS;
     this.orderRecyclerview = orderRecyclerview;
     this.textView10 = textView10;
     this.textView7 = textView7;
@@ -93,9 +94,9 @@ public final class CartBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.menuKey;
-      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
-      if (menuKey == null) {
+      id = R.id.menuKeyS;
+      TextView menuKeyS = ViewBindings.findChildViewById(rootView, id);
+      if (menuKeyS == null) {
         break missingId;
       }
 
@@ -123,7 +124,7 @@ public final class CartBinding implements ViewBinding {
         break missingId;
       }
 
-      return new CartBinding((LinearLayout) rootView, cartTitle, homeKey, menuKey,
+      return new CartBinding((LinearLayout) rootView, cartTitle, homeKey, menuKeyS,
           orderRecyclerview, textView10, textView7, textView8);
     }
     String missingId = rootView.getResources().getResourceName(id);

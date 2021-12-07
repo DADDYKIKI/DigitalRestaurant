@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
+import com.example.digitalrestaurant.HomePage;
+import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.R;
 
 public class SignupPageForFoodSeller2 extends AppCompatActivity {
@@ -19,6 +22,8 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
     private DatabaseHelper helper;
 
+    private TextView homeKey,menuKey;
+
 
 
     @Override
@@ -26,7 +31,8 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_page_for_vendor);
 
-
+        homeKey=findViewById(R.id.pageOneomekey);
+        menuKey=findViewById(R.id.menuKeyS);
 
         signupName = findViewById(R.id.signupNameV);
         signupEmail = findViewById(R.id.signupEmailV);
@@ -34,10 +40,22 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
         signSubBtnV = (findViewById(R.id.signSubBtnV));
 
-
+        menuKey2();
 
 
         signupV();
+
+    }
+
+
+    public void menuKey2(){
+        menuKey.setOnClickListener(v -> {
+            Intent intent2=new Intent(this, Menu.class);
+            startActivity(intent2);
+            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+
+
+        });
 
     }
 
@@ -57,6 +75,16 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
                 Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
 
             }
+
+
+            else if (!isEmailValid(email))
+                Toast.makeText(this, "Invalid email address", Toast.LENGTH_SHORT).show();
+
+            else if (!isPaswordValid(password))
+                Toast.makeText(this, "Password must be greater than 3", Toast.LENGTH_SHORT).show();
+
+
+
 
 
             else {
@@ -80,6 +108,19 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
         });
         }
+
+
+    public boolean isEmailValid(String email){
+
+        return email.contains("@");
+    }
+
+    public boolean isPaswordValid(String password){
+
+        return password.length()>3;
+    }
+
+
 
 
 

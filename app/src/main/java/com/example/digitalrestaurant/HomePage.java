@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.example.digitalrestaurant.Adaptors.PopulateAdvertismentAdaptor;
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Adaptors.LocationAdaptor;
+import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.AdvertItems;
 import com.example.digitalrestaurant.Kitchens.AdaKitchen;
@@ -27,7 +28,6 @@ import com.example.digitalrestaurant.Kitchens.Stainless;
 import com.example.digitalrestaurant.Details.LocationDetails.LocationDetails;
 import com.example.digitalrestaurant.Adaptors.RestaurantsAdaptor;
 import com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails;
-import com.example.digitalrestaurant.Details.ItemData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,9 +59,11 @@ public class HomePage extends AppCompatActivity {
 
     private RestaurantsAdaptor.AllInOneRecyclerViewListener listener2;
 
-    TextView menuKey;
+    TextView menuKey,customerWelcomeName;
 
     DatabaseHelper helper;
+
+    LoginPage login;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -75,17 +77,29 @@ public class HomePage extends AppCompatActivity {
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
 
-        menuKey=findViewById(R.id.menuKey);
+        menuKey=findViewById(R.id.menuKeyS);
+        customerWelcomeName=findViewById(R.id.customerWelcomeName);
 
         myItems=new ArrayList<>();
         restaurantslist=new ArrayList<>();
         locationLists=new ArrayList<>();
 
+        login=new LoginPage();
+
         helper=new DatabaseHelper(this);
 
         makeAdaptor();
         menuKey();
+        setWelcomeText();
 
+
+    }
+
+    public void setWelcomeText(){
+
+
+
+        customerWelcomeName.setText(login.setCustomerWelcomeTextF());
 
 
     }

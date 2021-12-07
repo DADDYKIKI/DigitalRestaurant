@@ -48,7 +48,7 @@ public class AdaKitchen extends AppCompatActivity {
         setContentView(R.layout.ada_restaurant_homepage);
 
         homeKey=findViewById(R.id.homeKey);
-        menuKey=findViewById(R.id.menuKey);
+        menuKey=findViewById(R.id.menuKeyS);
 
         adaItems= new ArrayList<>();
 

@@ -25,7 +25,7 @@ public final class ActivitySignupPageBinding implements ViewBinding {
   public final EditText enterhomeaddress;
 
   @NonNull
-  public final TextView menuKey;
+  public final TextView menuKeyS;
 
   @NonNull
   public final Button signSubBtnV;
@@ -49,13 +49,13 @@ public final class ActivitySignupPageBinding implements ViewBinding {
   public final ConstraintLayout signupSubmtBtn;
 
   private ActivitySignupPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull EditText enterhomeaddress, @NonNull TextView menuKey, @NonNull Button signSubBtnV,
+      @NonNull EditText enterhomeaddress, @NonNull TextView menuKeyS, @NonNull Button signSubBtnV,
       @NonNull EditText signUpPassV3, @NonNull EditText signUpPhone, @NonNull EditText signupAge,
       @NonNull EditText signupEmailV, @NonNull EditText signupNameV,
       @NonNull ConstraintLayout signupSubmtBtn) {
     this.rootView = rootView;
     this.enterhomeaddress = enterhomeaddress;
-    this.menuKey = menuKey;
+    this.menuKeyS = menuKeyS;
     this.signSubBtnV = signSubBtnV;
     this.signUpPassV3 = signUpPassV3;
     this.signUpPhone = signUpPhone;
@@ -98,9 +98,9 @@ public final class ActivitySignupPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.menuKey;
-      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
-      if (menuKey == null) {
+      id = R.id.menuKeyS;
+      TextView menuKeyS = ViewBindings.findChildViewById(rootView, id);
+      if (menuKeyS == null) {
         break missingId;
       }
 
@@ -142,7 +142,7 @@ public final class ActivitySignupPageBinding implements ViewBinding {
 
       ConstraintLayout signupSubmtBtn = (ConstraintLayout) rootView;
 
-      return new ActivitySignupPageBinding((ConstraintLayout) rootView, enterhomeaddress, menuKey,
+      return new ActivitySignupPageBinding((ConstraintLayout) rootView, enterhomeaddress, menuKeyS,
           signSubBtnV, signUpPassV3, signUpPhone, signupAge, signupEmailV, signupNameV,
           signupSubmtBtn);
     }

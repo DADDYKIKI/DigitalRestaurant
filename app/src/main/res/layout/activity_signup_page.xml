@@ -9,7 +9,7 @@
     tools:context=".Authentications.SignupPage">
 
     <TextView
-        android:id="@+id/menuKey"
+        android:id="@+id/menuKeyS"
         android:layout_width="55dp"
         android:layout_height="20dp"
         android:layout_marginTop="28dp"
@@ -31,7 +31,7 @@
         android:layout_marginTop="108dp"
         android:background="@drawable/homekeyback"
         android:ems="10"
-        android:hint="Enter Name"
+        android:hint="Choose a username"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"

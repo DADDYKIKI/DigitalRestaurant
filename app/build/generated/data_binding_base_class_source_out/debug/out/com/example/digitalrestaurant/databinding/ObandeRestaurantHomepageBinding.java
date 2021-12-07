@@ -36,7 +36,7 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
   public final TextView homeKey;
 
   @NonNull
-  public final TextView menuKey;
+  public final TextView menuKeyS;
 
   @NonNull
   public final RecyclerView obandeKitchen;
@@ -56,7 +56,7 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
   private ObandeRestaurantHomepageBinding(@NonNull LinearLayout rootView,
       @NonNull TextView ObandeRestLocationAdd, @NonNull ConstraintLayout constraintLayout3,
       @NonNull FloatingActionButton floatingActionButton, @NonNull TextView homeKey,
-      @NonNull TextView menuKey, @NonNull RecyclerView obandeKitchen,
+      @NonNull TextView menuKeyS, @NonNull RecyclerView obandeKitchen,
       @NonNull TextView obandelocate, @NonNull ScrollView scrollView2,
       @NonNull TextView stainlesslabel, @NonNull TextView welcometxt) {
     this.rootView = rootView;
@@ -64,7 +64,7 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
     this.constraintLayout3 = constraintLayout3;
     this.floatingActionButton = floatingActionButton;
     this.homeKey = homeKey;
-    this.menuKey = menuKey;
+    this.menuKeyS = menuKeyS;
     this.obandeKitchen = obandeKitchen;
     this.obandelocate = obandelocate;
     this.scrollView2 = scrollView2;
@@ -123,9 +123,9 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.menuKey;
-      TextView menuKey = ViewBindings.findChildViewById(rootView, id);
-      if (menuKey == null) {
+      id = R.id.menuKeyS;
+      TextView menuKeyS = ViewBindings.findChildViewById(rootView, id);
+      if (menuKeyS == null) {
         break missingId;
       }
 
@@ -160,7 +160,7 @@ public final class ObandeRestaurantHomepageBinding implements ViewBinding {
       }
 
       return new ObandeRestaurantHomepageBinding((LinearLayout) rootView, ObandeRestLocationAdd,
-          constraintLayout3, floatingActionButton, homeKey, menuKey, obandeKitchen, obandelocate,
+          constraintLayout3, floatingActionButton, homeKey, menuKeyS, obandeKitchen, obandelocate,
           scrollView2, stainlesslabel, welcometxt);
     }
     String missingId = rootView.getResources().getResourceName(id);

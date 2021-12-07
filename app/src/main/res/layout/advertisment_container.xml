@@ -34,7 +34,7 @@
                 <TextView
                     android:id="@+id/orderPrice"
                     android:layout_width="wrap_content"
-                    android:layout_height="45dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="40dp"
                     android:text="10"
                     android:textColor="@color/black"
@@ -43,12 +43,12 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.77" />
+                    app:layout_constraintVertical_bias="0.755" />
 
                 <ImageView
                     android:id="@+id/pic1"
-                    android:layout_width="297dp"
-                    android:layout_height="149dp"
+                    android:layout_width="386dp"
+                    android:layout_height="187dp"
                     android:layout_marginTop="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.516"
@@ -59,24 +59,24 @@
                 <TextView
                     android:id="@+id/jelof"
                     android:layout_width="wrap_content"
-                    android:layout_height="45dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="Jelof Rice"
                     android:textAlignment="center"
-                    android:textColor="@color/design_default_color_error"
-                    android:textSize="25dp"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.144"
+                    app:layout_constraintHorizontal_bias="0.1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.705" />
+                    app:layout_constraintVertical_bias="0.692" />
 
                 <TextView
                     android:id="@+id/poundSign"
                     android:layout_width="wrap_content"
-                    android:layout_height="45dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:height="40dp"
                     android:text="£"
@@ -92,13 +92,13 @@
                     android:id="@+id/nigerian1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="160dp"
+                    android:layout_marginTop="172dp"
                     android:text="African"
-                    android:textColor="@color/design_default_color_error"
-                    android:textSize="25dp"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.167"
+                    app:layout_constraintHorizontal_bias="0.151"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,7 +110,7 @@
                     android:layout_marginBottom="36dp"
                     android:text="TextView"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/purple_700"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -124,7 +124,7 @@
                     android:layout_marginBottom="36dp"
                     android:text="Check"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/purple_700"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"

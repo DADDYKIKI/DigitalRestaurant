@@ -1,11 +1,9 @@
 package com.example.digitalrestaurant.Adaptors;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,38 +16,42 @@ import java.util.List;
 
 public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHolder>{
 
-  //  private OderListener orderListener;
+   private OrderListener orderListener;
 
-   List<OrderDetails> myOder;
-    Context context;
+   ArrayList<OrderDetails> myOder;
     RecyclerView orderRecycler;
-    final View.OnClickListener click=new OrderListener();
 
-    public OrderAdaptor(List<OrderDetails> myOder, Context context, RecyclerView orderRecycler) {
+
+    public OrderAdaptor(ArrayList<OrderDetails> myOder, OrderListener orderListener) {
         this.myOder = myOder;
-        this.context = context;
-        this.orderRecycler = orderRecycler;
+        this. orderListener =  orderListener;
     }
 
 
-    public static class OrderViewHolder extends RecyclerView.ViewHolder {
+    public  class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
 
-        TextView foodName, foodTotalPrice, quantity;
+        TextView foodName, foodTotalPrice, quantity,restaurant;
 
 
         public OrderViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            itemView.setOnClickListener(this);
 
             foodName = itemView.findViewById(R.id.itemName);
             foodTotalPrice = itemView.findViewById(R.id.itemPrice);
             quantity = itemView.findViewById(R.id.itemQuantity);
+            restaurant = itemView.findViewById(R.id.resaurantNameB);
 
 
         }
 
 
+        @Override
+        public void onClick(View v) {
+            orderListener.onClick(itemView,getAdapterPosition());
+        }
     }
 
     @NonNull
@@ -57,22 +59,18 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
     public OrderAdaptor.OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View cartView= LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_container,parent,false );
-        cartView.setOnClickListener(click);
-        OrderViewHolder myHolder=new OrderViewHolder(cartView);
-        return  myHolder;
+
+
+        return  new OrderViewHolder(cartView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull OrderAdaptor.OrderViewHolder myHolder, int position) {
-        OrderDetails details= myOder.get(position);
-        myHolder.foodName.setText(details.getFoodName());
-        myHolder.quantity.setText(details.getQuantity());
-        myHolder.foodTotalPrice.setText(details.getTotalFoodPrice());
 
-
-
-       // holder.foodTotalPrice.setText(String.valueOf(myOder.get(position).getTotalFoodPrice()));
-        //holder.quantity.setText(String.valueOf(myOder.get(position).getQuantity()));
+        myHolder.foodName.setText(myOder.get(position).getFoodName());
+        myHolder.quantity.setText(myOder.get(position).getQuantity());
+        myHolder.foodTotalPrice.setText(myOder.get(position).getTotalFoodPrice());
+        myHolder.restaurant.setText(myOder.get(position).getFoodName());
 
     }
 
@@ -83,14 +81,11 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
     }
 
 
-    public class OrderListener implements View.OnClickListener {
+    public interface OrderListener {
 
+        void onClick(View v, int position);
 
-        @Override
-        public void onClick(View v) {
-            int itemPos=orderRecycler.getChildLayoutPosition(v);
-            String item=myOder.get(itemPos).getFoodName();
-            //Toast.makeText(this, item, Toast.LENGTH_SHORT).show();
-        }
-    }}
+    }
+
+}
 

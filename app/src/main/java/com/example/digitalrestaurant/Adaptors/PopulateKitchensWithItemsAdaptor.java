@@ -73,8 +73,12 @@ public class PopulateKitchensWithItemsAdaptor extends RecyclerView.Adapter<Popul
 
     @Override
     public int getItemCount() {
+
+
         return itemDatalist.size();
     }
+
+
 
     public interface RestaurantsRecyclerViewListener{
 

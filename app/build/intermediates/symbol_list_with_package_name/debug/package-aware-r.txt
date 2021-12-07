@@ -2212,6 +2212,8 @@ id quantityTxt
 id radio
 id ratio
 id rectangles
+id resaurantNameB
+id restN
 id restaurantImage
 id restaurantLocation
 id restaurantName
@@ -2256,6 +2258,7 @@ id showTitle
 id signInLabelText
 id signSubBtn
 id signSubBtnV
+id signUp
 id signUpPassV3
 id signUpPassword
 id signUpPhone
@@ -2265,6 +2268,7 @@ id signupEmailV
 id signupNameV
 id signupSubmtBtn
 id signupV
+id signupas
 id sin
 id skipCollapsed
 id slidable_content

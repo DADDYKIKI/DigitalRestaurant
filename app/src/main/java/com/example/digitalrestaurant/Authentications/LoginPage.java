@@ -10,11 +10,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.R;
 
 public class LoginPage extends AppCompatActivity {
+
+    private static  int AGE=0;
+
 
     private Button loginBut,signUpBut;
     private EditText loginEmail,loginPass;
@@ -41,6 +45,15 @@ public class LoginPage extends AppCompatActivity {
         toSignUpV();
     }
 
+    public static int getAge() {
+        return AGE;
+    }
+
+    public static void setAge(int age) {
+
+        AGE=age;
+    }
+
     public void toSignUpV() {
 
         signUpBut.setOnClickListener(v -> {
@@ -62,11 +75,17 @@ public class LoginPage extends AppCompatActivity {
 
     }
 
+
+
         public void login(){
 
             loginBut.setOnClickListener(v -> {
 
                 data=new DatabaseHelper(this);
+
+                setAge(33);
+
+
 
 
               if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
@@ -81,10 +100,30 @@ public class LoginPage extends AppCompatActivity {
 
                   if (insert==true) {
 
+                      Toast.makeText(this, String.valueOf(LoginPage.getAge()), Toast.LENGTH_SHORT).show();
+
                       LoginPage.this.setTextInvisible(v);
+
+
+
+                      Toast.makeText(this, String.valueOf(AGE), Toast.LENGTH_SHORT).show();
+
+
                       Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
 
-                      click2(HomePage.class);
+                      Boolean yes=data.checkforAge(loginEmail.getText().toString());
+
+                      if(yes==true)setAge(17);
+
+                      else setAge(18);
+
+
+                      Intent intent=new Intent(this,HomePage.class);
+
+
+                     startActivity(intent);
+
+
 
                       loginEmail.setText("");
                       loginPass.setText("");
@@ -141,14 +180,6 @@ public class LoginPage extends AppCompatActivity {
 
 
 
-
-    public void click2(Object x){
-
-        Intent intent=new Intent(LoginPage.this, (Class<?>) x);
-
-        startActivity(intent);
-
-        }
 
 
     void setTextVisible(View view){

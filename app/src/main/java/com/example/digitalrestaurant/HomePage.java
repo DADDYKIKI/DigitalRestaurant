@@ -66,6 +66,8 @@ public class HomePage extends AppCompatActivity {
     LoginPage login;
 
 
+
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,9 +90,12 @@ public class HomePage extends AppCompatActivity {
 
         helper=new DatabaseHelper(this);
 
+
+
+
         makeAdaptor();
         menuKey();
-        setWelcomeText();
+        //setWelcomeText();
 
 
     }
@@ -141,6 +146,10 @@ public class HomePage extends AppCompatActivity {
         recyclerView3.setAdapter(godwinAdaptor3);
 
 
+
+
+
+
     }
 
 
@@ -156,15 +165,21 @@ public class HomePage extends AppCompatActivity {
 
             if(restaurantslist.get(position).getRestaurantsName().equals("Approko Kitchen")){
 
+
+
                 startActivity(intent);
             }
 
             else if(restaurantslist.get(position).getRestaurantsName().equals("Obande Kitchen")){
 
+
+
                 startActivity(intent2);
             }
 
             else if (restaurantslist.get(position).getRestaurantsName().equals("Ada Restaurant and Bar")){
+
+
 
                 startActivity(intent3);
             }

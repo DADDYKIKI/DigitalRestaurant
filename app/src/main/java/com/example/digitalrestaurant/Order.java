@@ -31,7 +31,7 @@ import java.util.List;
 public class Order extends AppCompatActivity {
 
     private TextView plusBtn,minusBtn,addToCartBtn,quantityText,orderFoodName,
-            orderNationality,orderPrice,totalOrderPrice,restaurantName;
+            orderNationality,orderPrice,totalOrderPrice,restaurantNameA;
     private ConstraintLayout adaFoodImages;
     private int quantityNumber=1;
     private int foodPrice=0;
@@ -47,18 +47,19 @@ public class Order extends AppCompatActivity {
 
     RecyclerView.Adapter orderAdaptor;
 
-    //private OrderAdaptor.OderListener orderListener;
+    private OrderAdaptor.OrderListener orderListener;
 
     OrderAdaptor myOrderAdaptor;
 
     private RecyclerView cartRecycler;
-    RecyclerView.LayoutManager layoutManager;
 
 
 
 
-    DatabaseHelper myCartDatabaseHelper;
-    ArrayList<OrderDetails> orderList;
+
+    DatabaseHelper myCartDataUpload,myCartDataViewed;
+
+    ArrayList<OrderDetails> orderList,orders;
 
 
     @Override
@@ -74,7 +75,7 @@ public class Order extends AppCompatActivity {
         orderNationality=findViewById(R.id.orderNationality);
         orderFoodName=findViewById(R.id.orderFoodName);
         adaFoodImages=findViewById(R.id.adarestaurantcard);
-        restaurantName=findViewById(R.id.orderRestaurant);
+        restaurantNameA=findViewById(R.id.orderRestaurant);
         quantityText=findViewById(R.id.quantityTxt);
         addToCartBtn=findViewById(R.id.addToCartbtn);
         plusBtn=findViewById(R.id.plusBtn);
@@ -82,9 +83,15 @@ public class Order extends AppCompatActivity {
         totalOrderPrice=findViewById(R.id.totalOrderPrice);
         basket=findViewById(R.id.floatingActionButton);
 
-        orderList=new ArrayList<>();
+        myCartDataUpload=new DatabaseHelper(this);
+        myCartDataViewed=new DatabaseHelper(this);
 
-        myCartDatabaseHelper=new DatabaseHelper(this);
+        orderList=new ArrayList<>();
+        orders=new ArrayList<>();
+
+
+
+
 
 
 
@@ -92,14 +99,18 @@ public class Order extends AppCompatActivity {
         Bundle extras=getIntent().getExtras();
 
         if(extras!=null){
+
+            //Orders from restaurants
             foodName= extras.getString("name");
             foodNationality= extras.getString("nationality");
             foodPrice=extras.getInt("price");
             foodImage=extras.getInt("imageUrl");
             NameOfRestaurant=extras.getString("RestaurantName");
-            phone=extras.getInt("phone");
-            address=extras.getString("address");
-            customerName=extras.getString("customerName");
+
+            //Orders from
+            //phone=extras.getInt("phone");
+           // address=extras.getString("address");
+            //customerName=extras.getString("customerName");
 
 
         }
@@ -108,7 +119,7 @@ public class Order extends AppCompatActivity {
         orderNationality.setText(foodNationality);
         adaFoodImages.setBackgroundResource(foodImage);
         totalOrderPrice.setText(String.valueOf(foodPrice));
-        restaurantName.setText(NameOfRestaurant);
+        restaurantNameA.setText(NameOfRestaurant);
 
 
 
@@ -119,7 +130,6 @@ public class Order extends AppCompatActivity {
 
 
 
-        //viewMyItems();
 
 
 
@@ -128,7 +138,7 @@ public class Order extends AppCompatActivity {
 
 
        // setMyAdaptor();
-
+        viewMyItems();
 
 
 }
@@ -137,19 +147,23 @@ public class Order extends AppCompatActivity {
 
 
 
-
-              cartRecycler= this.findViewById(R.id.orderRecyclerview);
-              myCartDatabaseHelper=new DatabaseHelper(this);
+            // orders=myCartDataViewed.viewCartItems();
 
 
-              orderList.add(new OrderDetails(foodName,quantityNumber,foodPrice*quantityNumber));
+
+         cartRecycler= this.findViewById(R.id.orderRecyclerview);
+
+             //OrderDetails(foodName,quantityNumber,foodPrice*quantityNumber,NameOfRestaurant));
 
            // orderList=myCartDatabaseHelper.viewCartItems();
-              cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+             // cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+           // cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
 
-            //orderAdaptor=new OrderAdaptor(orderList);
-              cartRecycler.setAdapter(orderAdaptor);
+
+            orderAdaptor=new OrderAdaptor(orders,orderListener);
+
+              //cartRecycler.setAdapter(orderAdaptor);
 
 
         }
@@ -187,7 +201,7 @@ public class Order extends AppCompatActivity {
             addToCartBtn.setOnClickListener(v -> {
 
                 boolean addToCart=
-                        myCartDatabaseHelper.addData(foodName,String.valueOf(quantityNumber),
+                        myCartDataUpload.addData(foodName,String.valueOf(quantityNumber),
                                 String.valueOf(foodPrice*quantityNumber),NameOfRestaurant);
 
                 if(addToCart==true)
@@ -197,16 +211,16 @@ public class Order extends AppCompatActivity {
 
             });
 
-            openMyBasket();
+
 
 
         }
 
-    public void openMyBasket(){
+  /*  public void openMyBasket(){
 
         basket.setOnClickListener(v -> {
 
-            Cursor cur1=myCartDatabaseHelper.getOrders();
+           // Cursor cur1=myCartDatabaseHelper.getOrders();
             //Cursor cur2=myCartDatabaseHelper.getCustomerContactDetails(phone,address);
 
             if(cur1.getCount()==0){ Toast.makeText(this, "Basket Empty", Toast.LENGTH_SHORT).show();return;}
@@ -243,7 +257,7 @@ public class Order extends AppCompatActivity {
 
         });
 
-    }
+    }*/
 }
 
 

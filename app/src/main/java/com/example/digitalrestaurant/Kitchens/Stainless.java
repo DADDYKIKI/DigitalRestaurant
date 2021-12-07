@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
+import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -39,6 +40,7 @@ public class Stainless extends AppCompatActivity {
     TextView homeKey,menuKey;
 
     private DatabaseHelper helper;
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -103,7 +105,7 @@ public class Stainless extends AppCompatActivity {
 
         stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        stainlessAdaptor=new PopulateKitchensWithItemsAdaptor(populateStainlessPage(34),adalistener2);
+        stainlessAdaptor=new PopulateKitchensWithItemsAdaptor(populateStainlessPage(LoginPage.getAge()),adalistener2);
 
         stainlessRecycler.setAdapter(stainlessAdaptor);
 
@@ -138,8 +140,8 @@ public class Stainless extends AppCompatActivity {
         stainlessItems.add(new ItemData(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,""));
         stainlessItems.add(new ItemData(3,"Soft drinks","" ,R.drawable.adasoftdrinks,""));
         stainlessItems.add(new ItemData(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup,""));
-        stainlessItems.add(new ItemData(5,"Heineken Pride","" ,R.drawable.adachilledheineken,""));
-        stainlessItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer,""));
+        stainlessItems.add(new ItemData(5,"Heineken Pride","" ,R.drawable.adachilledheineken,"alcoholic"));
+        stainlessItems.add(new ItemData(7,"Extra Stout","" ,R.drawable.adaguinessbeer,"alcoholic"));
 
 
         List<ItemData> allMatch=stainlessItems.stream().filter(p->p.getAlcoholic().equals(""))

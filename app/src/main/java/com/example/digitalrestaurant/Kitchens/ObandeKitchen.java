@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
+import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -41,6 +42,7 @@ public class ObandeKitchen extends AppCompatActivity {
     private DatabaseHelper helper;
 
 
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,8 @@ public class ObandeKitchen extends AppCompatActivity {
         obandeItems=new ArrayList<>();
 
         helper=new DatabaseHelper(this);
+
+
 
         makeObandeRestaurantAdaptor();
 
@@ -94,13 +98,17 @@ public class ObandeKitchen extends AppCompatActivity {
 
         obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        obandeAdaptor=new PopulateKitchensWithItemsAdaptor(populateObandePage(10),obandelistener2);
+        obandeAdaptor=new PopulateKitchensWithItemsAdaptor(populateObandePage(LoginPage.getAge()),obandelistener2);
 
         obandeRecycler.setAdapter(obandeAdaptor);
 
 
 
     }
+
+
+
+
 
     public void gotoBasket(){//................Add to Database...................
 

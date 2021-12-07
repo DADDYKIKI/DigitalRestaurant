@@ -31,7 +31,7 @@
                     android:background="@drawable/restaurantbackground"
                     android:text="My Basket"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/purple_500"
                     android:textSize="50dp"
                     app:layout_constraintEnd_toStartOf="@+id/homeKey"
                     app:layout_constraintStart_toStartOf="parent"
@@ -69,11 +69,12 @@
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
+                    android:layout_marginTop="44dp"
                     android:text="Item"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/textView8"
-                    app:layout_constraintHorizontal_bias="0.284"
+                    app:layout_constraintHorizontal_bias="0.271"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cartTitle" />
 
@@ -81,9 +82,10 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:layout_marginEnd="96dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginEnd="112dp"
                     android:text="Quantity"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/textView10"
                     app:layout_constraintTop_toBottomOf="@+id/cartTitle" />
@@ -93,11 +95,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
-                    android:layout_marginEnd="48dp"
                     android:text="Price"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/menuKeyS"
+                    tools:layout_editor_absoluteX="333dp" />
+
+                <TextView
+                    android:id="@+id/restN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="184dp"
+                    android:text="Restaurant"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/menuKeyS" />
+                    tools:layout_editor_absoluteY="88dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

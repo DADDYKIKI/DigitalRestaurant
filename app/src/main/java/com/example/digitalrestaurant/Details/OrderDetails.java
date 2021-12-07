@@ -5,12 +5,20 @@ import java.io.Serializable;
 public class OrderDetails implements Serializable {
 
     private int totalFoodPrice,quantity;
-    private String foodName;
+    private String foodName,restaurantName;
 
-    public OrderDetails(String foodName, int quantity, int totalFoodPrice) {
+    public OrderDetails(String foodName, int quantity, int totalFoodPrice,String restaurantName) {
         this.totalFoodPrice = totalFoodPrice;
         this.quantity = quantity;
-        this.foodName = foodName;
+        this.foodName = restaurantName;
+    }
+
+    public String getRestaurantName() {
+        return restaurantName;
+    }
+
+    public void setRestaurantName(String restaurantName) {
+        this.restaurantName = restaurantName;
     }
 
     public int getTotalFoodPrice() {

@@ -317,7 +317,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public Cursor viewCartItems(){
+    @SuppressLint("Range")
+    public ArrayList<OrderDetails> viewCartItems(){
 
         SQLiteDatabase myDatabase3=this.getReadableDatabase();
 
@@ -325,77 +326,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Cursor cur=myDatabase3.rawQuery("select * from "+MY_TABLE_NAME,null);
 
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
 
-      /*    while (cur3.moveToNext()){
+                order.add(new OrderDetails(cur.getString(cur.getColumnIndex(COLUMNNAME2)),
+                        Integer.parseInt(cur.getString(cur.getColumnIndex(COLUMNNAME3))),
+                        Integer.parseInt(cur.getString(cur.getColumnIndex(COLUMNNAME4))),
+                        cur.getString(cur.getColumnIndex(COLUMNNAME5))));
 
-                  order.add(new OrderDetails(cur3.getString(cur3.getColumnIndexOrThrow(COLUMNNAME2)),
-                           cur3.getInt(cur3.getColumnIndexOrThrow(COLUMNNAME3)),
-                           cur3.getInt(cur3.getColumnIndexOrThrow(COLUMNNAME4))));
-           }
-               cur3.close();
-               myDatabase3.close();*/
+                cur.close();
+                myDatabase3.close();
+            }
 
-       return  cur;
+        }
+       return  order;
 
     }
 
-
-
-
-   // public Cursor getCustomerLoginDetails() {
-
-      /*  String[] columns={COLUMNUSER1,COLUMNUSER2,COLUMNUSER3,COLUMNUSER4,COLUMNUSER5};
-
-        String sort=COLUMNUSER1+"ASC";
-
-        List<UserDetails> myuser=new ArrayList<>();
-
-        SQLiteDatabase myDatabase4 = this.getReadableDatabase();
-
-        Cursor cur = myDatabase4.rawQuery(MY_USER_AND_PASS_TABLE, null);
-
-        if(cur4.moveToFirst()) {
-
-            do{
-                UserDetails user=new UserDetails(0,"","",0,"");
-                user.setId(Integer.parseInt(cur4.getString(cur4.getColumnIndex(COLUMNUSER1))));
-                user.setNameOfUser(cur4.getString(cur4.getColumnIndex(COLUMNUSER2)));
-                        user.setEmail(  cur4.getString(cur4.getColumnIndex(COLUMNUSER3)));
-                        user.setAge(Integer.parseInt(cur4.getString(cur4.getColumnIndex(COLUMNUSER4))));
-                        user.setPassword( cur4.getString(cur4.getColumnIndex(COLUMNUSER5)));
-
-                        customer.add(user);
-
-        }while (cur4.moveToNext());
-
-        }
-        cur4.close();
-        myDatabase4.close();
-        return cur;
-
-    }*/
-
-
-   /*public Cursor getCustomerLoginDetails() {
-
-        SQLiteDatabase myDatabase4 = this.getReadableDatabase();
-
-        Cursor cur = myDatabase4.rawQuery("select * from " + MY_USER_AND_PASS_TABLE, null);
-
-
-      /*  while (cur4.moveToNext()) {
-
-
-            customer.add(new UserDetails(cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER2)),
-                    cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER3)),
-                    (cur4.getInt(cur4.getColumnIndexOrThrow(COLUMNUSER4))),
-                    cur4.getString(cur4.getColumnIndexOrThrow(COLUMNUSER5))));
-
-        }
-        return cur;
-
-
-    } */
 
     @SuppressLint("Range")
     public boolean getCustomerLoginDetails(String email, String password) {
@@ -492,7 +439,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         }return false;
 
-    }}
+    }
+
+    @SuppressLint("Range")
+    public boolean checkforAge(String email) {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+" from " + MY_USER_AND_PASS_TABLE,
+                // " where "+COLUMNUSER3+" = "+email,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
+
+                    return true;
+                myDatabase.close();
+
+            }
+
+        }return false;
+
+    }
+
+
+
+}
 
 
 

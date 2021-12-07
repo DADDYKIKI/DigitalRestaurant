@@ -10,7 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
+import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -96,13 +98,14 @@ public class ApprokoKitchen extends AppCompatActivity {
 
         aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        aprokoAdaptor=new PopulateKitchensWithItemsAdaptor(populateAprokoPage(20),approkolistener2);
+        aprokoAdaptor=new PopulateKitchensWithItemsAdaptor(populateAprokoPage(LoginPage.getAge()),approkolistener2);
 
         aprokoRecycler.setAdapter(aprokoAdaptor);
 
 
 
     }
+
 
     public void gotoBasket(){//................Add to Database...................
 

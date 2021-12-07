@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
+import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
@@ -55,7 +56,6 @@ public class AdaKitchen extends AppCompatActivity {
         basket=findViewById(R.id.floatingActionButton);
 
         helper=new DatabaseHelper(this);
-
 
 
         //openMyBasket();
@@ -114,13 +114,15 @@ public class AdaKitchen extends AppCompatActivity {
 
         adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        adaAdaptor=new PopulateKitchensWithItemsAdaptor(populateAdaPage(17),adalistener2);
+        adaAdaptor=new PopulateKitchensWithItemsAdaptor(populateAdaPage(LoginPage.getAge()),adalistener2);
 
         adaRecycler.setAdapter(adaAdaptor);
 
 
 
     }
+
+
 
     public void setAdaOnclickListener(){
 

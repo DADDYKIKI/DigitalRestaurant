@@ -2211,6 +2211,8 @@ int id quantityTxt 0x7f0a0178
 int id radio 0x7f0a0179
 int id ratio 0x7f0a017a
 int id rectangles 0x7f0a017b
+int id resaurantNameB 0x7f0a022d
+int id restN 0x7f0a022e
 int id restaurantImage 0x7f0a017c
 int id restaurantLocation 0x7f0a017d
 int id restaurantName 0x7f0a017e
@@ -2255,6 +2257,7 @@ int id showTitle 0x7f0a01a4
 int id signInLabelText 0x7f0a01a5
 int id signSubBtn 0x7f0a01a6
 int id signSubBtnV 0x7f0a01a7
+int id signUp 0x7f0a022f
 int id signUpPassV3 0x7f0a01a8
 int id signUpPassword 0x7f0a01a9
 int id signUpPhone 0x7f0a021d
@@ -2264,6 +2267,7 @@ int id signupEmailV 0x7f0a01ab
 int id signupNameV 0x7f0a01ac
 int id signupSubmtBtn 0x7f0a01ad
 int id signupV 0x7f0a0229
+int id signupas 0x7f0a0230
 int id sin 0x7f0a01ae
 int id skipCollapsed 0x7f0a01af
 int id slidable_content 0x7f0a0223

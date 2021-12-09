@@ -16,17 +16,20 @@
         android:theme="@style/Theme.DigitalRestaurant">
         <activity
             android:name=".NewPassword"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Authentications.LoginPage"/>
         <activity
             android:name=".ForgotPassword"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Authentications.LoginPage"/>
         <activity
             android:name=".Contacts"
             android:exported="false"
             android:parentActivityName=".Menu" />
         <activity
             android:name=".Authentications.SellerUploadPage"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Authentications.LoginPageForFoodSeller2"/>
         <activity
             android:name=".Authentications.Customer"
             android:exported="false" />
@@ -58,16 +61,20 @@
             android:parentActivityName=".HomePage" />
         <activity
             android:name=".Authentications.SignupPage"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Authentications.IntroPage"/>
         <activity
             android:name=".Authentications.SignupPageForFoodSeller2"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Authentications.IntroPage"/>
         <activity
             android:name=".Authentications.LoginPage"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Authentications.IntroPage"/>
         <activity
             android:name=".Authentications.LoginPageForFoodSeller2"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Authentications.IntroPage"/>
         <activity
             android:name=".Authentications.FoodSeller"
             android:exported="false" />

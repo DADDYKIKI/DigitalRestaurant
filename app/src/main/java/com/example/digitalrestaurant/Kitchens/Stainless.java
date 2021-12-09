@@ -137,8 +137,7 @@ public class Stainless extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public List<ItemData> populateStainlessPage(int age) {
 
-        stainlessItems.add(new ItemData(5, "Heineken Pride", "", R.drawable.adachilledheineken, "alcoholic"));
-        stainlessItems.add(new ItemData(7, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
+         stainlessItems.add(new ItemData(7, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
 
 
         List<ItemData> allMatch = stainlessItems.stream().filter(p -> p.getAlcoholic().equals(""))

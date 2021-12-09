@@ -345,10 +345,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @SuppressLint("Range")
     public ArrayList<OrderDetails> viewCartItems() {
 
-        SQLiteDatabase myDatabase3 = this.getReadableDatabase();
+        SQLiteDatabase myDatabase3 = this.getWritableDatabase();
         ArrayList<OrderDetails> mylist = new ArrayList<>();
 
+
+
         Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);
+
 
         if (cur.getCount()>0) {
             if (cur.moveToFirst())

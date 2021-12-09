@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
-import com.example.digitalrestaurant.ForgotPassword;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.R;
 

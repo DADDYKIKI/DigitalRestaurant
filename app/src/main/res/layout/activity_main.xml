@@ -9,6 +9,11 @@
     tools:context=".Authentications.Customer">
 
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/westafri" />
+
     <TextView
         android:id="@+id/customersignupBut"
         android:layout_width="100dp"
@@ -34,7 +39,7 @@
         android:id="@+id/customerloginBut"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="76dp"
         android:background="@color/orange"
         android:drawablePadding="50dp"
         android:editable="false"
@@ -48,7 +53,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

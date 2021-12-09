@@ -25,11 +25,15 @@ public final class MyLocationsContainerBinding implements ViewBinding {
   @NonNull
   public final TextView restaurant;
 
+  @NonNull
+  public final TextView textView5;
+
   private MyLocationsContainerBinding(@NonNull LinearLayout rootView,
-      @NonNull TextView locationName, @NonNull TextView restaurant) {
+      @NonNull TextView locationName, @NonNull TextView restaurant, @NonNull TextView textView5) {
     this.rootView = rootView;
     this.locationName = locationName;
     this.restaurant = restaurant;
+    this.textView5 = textView5;
   }
 
   @Override
@@ -71,7 +75,14 @@ public final class MyLocationsContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new MyLocationsContainerBinding((LinearLayout) rootView, locationName, restaurant);
+      id = R.id.textView5;
+      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
+      if (textView5 == null) {
+        break missingId;
+      }
+
+      return new MyLocationsContainerBinding((LinearLayout) rootView, locationName, restaurant,
+          textView5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

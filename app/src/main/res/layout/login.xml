@@ -7,6 +7,12 @@
     android:background="@drawable/maneatingfriedrice"
     tools:context=".Authentications.LoginPage">
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tea"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/signSubBtn"
         android:layout_width="wrap_content"

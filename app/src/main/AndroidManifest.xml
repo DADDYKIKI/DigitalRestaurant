@@ -15,11 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalRestaurant">
         <activity
-            android:name=".NewPassword"
+            android:name=".Authentications.NewPassword"
             android:exported="false"
             android:parentActivityName=".Authentications.LoginPage"/>
         <activity
-            android:name=".ForgotPassword"
+            android:name=".Authentications.ForgotPassword"
             android:exported="false"
             android:parentActivityName=".Authentications.LoginPage"/>
         <activity

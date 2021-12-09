@@ -101,7 +101,7 @@ public class Order extends AppCompatActivity {
         myCartDataUpload=new DatabaseHelper(this);
         myCartDataViewed=new DatabaseHelper(this);
 
-        Toast.makeText(this, "Thank you for selecting this item", Toast.LENGTH_SHORT).show();
+
         Toast.makeText(this, "Add quantity by\nclicking the + or -\nbutton", Toast.LENGTH_SHORT).show();
         Toast.makeText(this, "Your total price,\nchanges as well", Toast.LENGTH_SHORT).show();
 
@@ -234,18 +234,6 @@ public class Order extends AppCompatActivity {
             build.setTitle("Oders");
             build.setMessage(bufferedItems);
             build.show();
-
-
-
-
-
-
-
-
-           // Intent intent =new Intent(this, Cart.class);
-           // startActivity(intent);
-
-
         });
 
     }*/
@@ -258,30 +246,6 @@ public class Order extends AppCompatActivity {
         myOrder=myCart.viewCartItems();
 
         oderAdaptor=new OrderAdaptor(myOrder,this);
-
-        //
-
-
-
-        // Toast.makeText(this, myCartDataViewed.viewCartItems().toString(), Toast.LENGTH_SHORT).show();
-        /*OrderDetails myt=new OrderDetails("rice",4,5,"Ada");
-            OrderDetails mTT=new OrderDetails("rice",4,5,"obande");
-
-            ArrayList<OrderDetails>    orders=new ArrayList<>();
-
-                    orders.add(myt);
-            orders.add(mTT);*/
-
-
-
-        //OrderDetails(foodName,quantityNumber,foodPrice*quantityNumber,NameOfRestaurant));
-
-        // orderList=myCartDatabaseHelper.viewCartItems();
-
-
-
-
-        // orderAdaptor=new OrderAdaptor(orders,orderListener);
 
         cartRecycler.setAdapter(orderAdaptor);
 

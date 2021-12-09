@@ -21,11 +21,11 @@
         android:testOnly="true"
         android:theme="@style/Theme.DigitalRestaurant" >
         <activity
-            android:name="com.example.digitalrestaurant.NewPassword"
+            android:name="com.example.digitalrestaurant.Authentications.NewPassword"
             android:exported="false"
             android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPage" />
         <activity
-            android:name="com.example.digitalrestaurant.ForgotPassword"
+            android:name="com.example.digitalrestaurant.Authentications.ForgotPassword"
             android:exported="false"
             android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPage" />
         <activity

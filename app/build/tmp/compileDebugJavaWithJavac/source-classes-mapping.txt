@@ -8,16 +8,18 @@ com/example/digitalrestaurant/Authentications/Customer.java
  com.example.digitalrestaurant.Authentications.Customer$2
 com/example/digitalrestaurant/databinding/LoginBinding.java
  com.example.digitalrestaurant.databinding.LoginBinding
+com/example/digitalrestaurant/Authentications/ForgotPassword.java
+ com.example.digitalrestaurant.Authentications.ForgotPassword
 com/example/digitalrestaurant/databinding/StainlessRestaurantHomepage2Binding.java
  com.example.digitalrestaurant.databinding.StainlessRestaurantHomepage2Binding
-com/example/digitalrestaurant/NewPassword.java
- com.example.digitalrestaurant.NewPassword
 com/example/digitalrestaurant/Authentications/SignupPage.java
  com.example.digitalrestaurant.Authentications.SignupPage
 com/example/digitalrestaurant/Details/AdvertItems.java
  com.example.digitalrestaurant.Details.AdvertItems
 com/example/digitalrestaurant/databinding/ActivityFoodSellerBinding.java
  com.example.digitalrestaurant.databinding.ActivityFoodSellerBinding
+com/example/digitalrestaurant/Authentications/NewPassword.java
+ com.example.digitalrestaurant.Authentications.NewPassword
 com/example/digitalrestaurant/HomePage.java
  com.example.digitalrestaurant.HomePage
 com/example/digitalrestaurant/Details/OrderDetails.java
@@ -28,8 +30,6 @@ com/example/digitalrestaurant/Cart.java
  com.example.digitalrestaurant.Cart
 com/example/digitalrestaurant/databinding/MenuBinding.java
  com.example.digitalrestaurant.databinding.MenuBinding
-com/example/digitalrestaurant/ForgotPassword.java
- com.example.digitalrestaurant.ForgotPassword
 com/example/digitalrestaurant/Adaptors/OrderAdaptor.java
  com.example.digitalrestaurant.Adaptors.OrderAdaptor
  com.example.digitalrestaurant.Adaptors.OrderAdaptor$OrderListener

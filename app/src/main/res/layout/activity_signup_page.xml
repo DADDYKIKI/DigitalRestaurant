@@ -8,20 +8,11 @@
     android:background="@drawable/uktwo"
     tools:context=".Authentications.SignupPage">
 
-    <TextView
-        android:id="@+id/menuKeyS"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/homekeyback"
-        android:text="Menu"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/terminator"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <EditText

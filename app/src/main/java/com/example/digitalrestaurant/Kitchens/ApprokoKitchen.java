@@ -59,7 +59,7 @@ public class ApprokoKitchen extends AppCompatActivity {
 
         helper=new DatabaseHelper(this);
 
-        Toast.makeText(this, "Welcome to Approko Kitchen", Toast.LENGTH_SHORT).show();
+
         Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
 
 

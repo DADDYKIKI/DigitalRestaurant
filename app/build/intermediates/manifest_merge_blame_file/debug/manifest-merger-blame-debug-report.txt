@@ -34,16 +34,16 @@
 22-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:16:9-55
 23        <activity
 23-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:17:9-20:70
-24            android:name="com.example.digitalrestaurant.NewPassword"
-24-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:18:13-40
+24            android:name="com.example.digitalrestaurant.Authentications.NewPassword"
+24-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:18:13-56
 25            android:exported="false"
 25-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:19:13-37
 26            android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPage" />
 26-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:20:13-68
 27        <activity
 27-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:21:9-24:70
-28            android:name="com.example.digitalrestaurant.ForgotPassword"
-28-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:22:13-43
+28            android:name="com.example.digitalrestaurant.Authentications.ForgotPassword"
+28-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:22:13-59
 29            android:exported="false"
 29-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:23:13-37
 30            android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPage" />

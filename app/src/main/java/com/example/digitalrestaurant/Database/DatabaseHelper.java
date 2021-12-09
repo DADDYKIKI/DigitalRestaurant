@@ -233,7 +233,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean updateUserPassword( String password){
+    public boolean updateUserPassword(String email,String password){
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
 
@@ -243,7 +243,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         long output=myDatabase.update(MY_USER_AND_PASS_TABLE,contentV,COLUMNUSER3+"=?",
-                new String[]{COLUMNUSER3});
+                new String[]{email});
 
         myDatabase.close();
 

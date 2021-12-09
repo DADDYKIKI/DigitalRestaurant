@@ -49,6 +49,7 @@ public class ForgotPassword extends AppCompatActivity {
             if(yes==true){
 
                 Intent intent=new Intent(this,NewPassword.class);
+                intent.putExtra("emailSentForPass",enterEmail.getText().toString());
                 startActivity(intent);
             }
 

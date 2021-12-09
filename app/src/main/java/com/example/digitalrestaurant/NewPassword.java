@@ -16,6 +16,8 @@ public class NewPassword extends AppCompatActivity {
     Button submitButton;
     EditText newPassword,confrimNewPassword;
 
+    String email="";
+
     DatabaseHelper data;
 
     @Override
@@ -31,6 +33,15 @@ public class NewPassword extends AppCompatActivity {
         data=new DatabaseHelper(this);
 
         updateUser();
+
+
+        Bundle extras=getIntent().getExtras();
+
+        if(extras!=null){
+
+
+            email= extras.getString("emailSentForPass");
+        }
     }
 
     public void updateUser() {
@@ -41,7 +52,7 @@ public class NewPassword extends AppCompatActivity {
                Toast.makeText(this, "Make sure your chosen \npasswords are similar", Toast.LENGTH_SHORT).show();}
            else{
 
-               Boolean success=data.updateUserPassword(newPassword.getText().toString());
+               Boolean success=data.updateUserPassword(email,newPassword.getText().toString());
            if(success==true)
 
                Toast.makeText(this, "Password Updated successfuly", Toast.LENGTH_SHORT).show();

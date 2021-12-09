@@ -61,7 +61,7 @@ public class ForgotPassword extends AppCompatActivity {
 
     public void signupAgain() {
 
-        checkUser.setOnClickListener(v -> {
+        signup.setOnClickListener(v -> {
             Intent intent=new Intent(this,SignupPage.class);
             startActivity(intent);
 

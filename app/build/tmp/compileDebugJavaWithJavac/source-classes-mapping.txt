@@ -16,8 +16,8 @@ com/example/digitalrestaurant/Details/AdvertItems.java
  com.example.digitalrestaurant.Details.AdvertItems
 com/example/digitalrestaurant/databinding/ActivityFoodSellerBinding.java
  com.example.digitalrestaurant.databinding.ActivityFoodSellerBinding
-com/example/digitalrestaurant/ForgotPassword.java
- com.example.digitalrestaurant.ForgotPassword
+com/example/digitalrestaurant/Authentications/SignupPage.java
+ com.example.digitalrestaurant.Authentications.SignupPage
 com/example/digitalrestaurant/Details/OrderDetails.java
  com.example.digitalrestaurant.Details.OrderDetails
 com/example/digitalrestaurant/Details/LocationDetails/LocationDetails.java
@@ -136,7 +136,7 @@ com/example/digitalrestaurant/Kitchens/ObandeKitchen.java
  com.example.digitalrestaurant.Kitchens.ObandeKitchen
 com/example/digitalrestaurant/NewPassword.java
  com.example.digitalrestaurant.NewPassword
-com/example/digitalrestaurant/Authentications/SignupPage.java
- com.example.digitalrestaurant.Authentications.SignupPage
+com/example/digitalrestaurant/ForgotPassword.java
+ com.example.digitalrestaurant.ForgotPassword
 com/example/digitalrestaurant/Authentications/LoginPage.java
  com.example.digitalrestaurant.Authentications.LoginPage

@@ -44,7 +44,7 @@ public class LoginPage extends AppCompatActivity {
         forgotPass=findViewById(R.id.forgotPass);
 
 
-
+        forgotPass();
         login();
         toSignUpV();
     }
@@ -220,12 +220,13 @@ public class LoginPage extends AppCompatActivity {
 
     void setTextInvisible(View view){
         loginWarningText.setVisibility(View.INVISIBLE);
+        forgotPass.setVisibility(View.INVISIBLE);
 
     }
 
     void setButtonInvisible(View view){
         loginBut.setVisibility(View.INVISIBLE);
-        forgotPass.setVisibility(View.INVISIBLE);
+
 
     }
 

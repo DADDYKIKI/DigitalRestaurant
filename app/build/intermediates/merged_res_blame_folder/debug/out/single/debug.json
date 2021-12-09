@@ -44,12 +44,12 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/uktwo.jpeg"
     },
     {
-        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_justmeats.jpeg.flat",
-        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/justmeats.jpeg"
-    },
-    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_eatingchicken.jpeg.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/eatingchicken.jpeg"
+    },
+    {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_justmeats.jpeg.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/justmeats.jpeg"
     },
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",

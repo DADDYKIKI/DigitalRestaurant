@@ -58,7 +58,8 @@
         <activity
             android:name=".Cart"
             android:exported="false"
-            android:parentActivityName=".HomePage" />
+            android:parentActivityName=".HomePage"
+            />
         <activity
             android:name=".Authentications.SignupPage"
             android:exported="false"

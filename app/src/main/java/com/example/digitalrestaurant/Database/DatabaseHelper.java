@@ -350,7 +350,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);
 
-        if (cur.move(2)) {
+        if (cur.getCount()>0) {
             if (cur.moveToFirst())
 
                 do {

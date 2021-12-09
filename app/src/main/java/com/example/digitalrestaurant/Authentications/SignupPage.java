@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
-import com.example.digitalrestaurant.Details.UserDetails;
 import com.example.digitalrestaurant.Order;
 import com.example.digitalrestaurant.R;
 
@@ -39,11 +38,12 @@ public class SignupPage extends AppCompatActivity {
         signupEmail = findViewById(R.id.signupEmailV);
         signupAge = findViewById(R.id.signupAge);
         signupPhone = findViewById(R.id.signUpPhone);
-        signupAddress= findViewById(R.id.enterhomeaddress);
+        signupAddress= findViewById(R.id.enterMaidenName);
         signupPaswd = findViewById(R.id.signUpPassV3);
         signupCountry = findViewById(R.id.enterCountry);
 
         signSubBtn = (findViewById(R.id.signSubBtnV));
+
 
 
         signUpC();
@@ -87,8 +87,8 @@ public class SignupPage extends AppCompatActivity {
                           else{
                              try {
                                    boolean signup =
-                                        helper.addCustomerUserAndPAss(name, email, Integer.parseInt(age),
-                                                Integer.parseInt(phone), address,country, password);
+                                        helper.addCustomerUserAndPAss(name, email, age,
+                                               phone, address,country, password);
 
 
                         if (signup == true) {
@@ -109,6 +109,7 @@ public class SignupPage extends AppCompatActivity {
 
                             Intent intent = new Intent(this, LoginPage.class);
                             startActivity(intent);
+                            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 
                         } else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
 

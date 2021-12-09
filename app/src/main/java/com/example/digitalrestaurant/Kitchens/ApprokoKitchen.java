@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -57,6 +58,10 @@ public class ApprokoKitchen extends AppCompatActivity {
         aprokoItems=new ArrayList<>();
 
         helper=new DatabaseHelper(this);
+
+        Toast.makeText(this, "Welcome to Approko Kitchen", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
+
 
         makeApprokoRestaurantAdaptor();
 

@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.digitalrestaurant">
-    <uses-permission android:name="android.permission.INTERNET"
-        tools:ignore="WrongManifestParent" />
 
+    <uses-permission
+        android:name="android.permission.INTERNET"
+        tools:ignore="WrongManifestParent" />
 
     <application
         android:allowBackup="true"
@@ -13,14 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalRestaurant">
-
+        <activity
+            android:name=".NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
         <activity
             android:name=".Contacts"
             android:exported="false"
-            android:parentActivityName=".Menu"/>
+            android:parentActivityName=".Menu" />
         <activity
             android:name=".Authentications.SellerUploadPage"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Authentications.Customer"
             android:exported="false" />

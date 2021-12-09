@@ -1,5 +1,6 @@
 package com.example.digitalrestaurant.Adaptors;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,15 +17,15 @@ import java.util.List;
 
 public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHolder>{
 
-   private OrderListener orderListener;
+    private OrderListener orderListener;
 
-   ArrayList<OrderDetails> myOder;
+    ArrayList<OrderDetails> myOder;
     RecyclerView orderRecycler;
+    Context context;
 
-
-    public OrderAdaptor(ArrayList<OrderDetails> myOder, OrderListener orderListener) {
+    public OrderAdaptor(ArrayList<OrderDetails> myOder, Context context ) {
         this.myOder = myOder;
-        this. orderListener =  orderListener;
+        this. context =  context;
     }
 
 
@@ -56,7 +57,7 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
 
     @NonNull
     @Override
-    public OrderAdaptor.OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View cartView= LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_container,parent,false );
 
@@ -88,4 +89,3 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
     }
 
 }
-

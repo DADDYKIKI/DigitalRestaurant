@@ -56,7 +56,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMNUSER3="Customer_email";
     public static final String COLUMNUSER4="age";
     public static final String COLUMNUSER5="phone";
-    public static final String COLUMNUSER6="address";
+    public static final String COLUMNUSER6="maidenName";
     public static final String COLUMNUSER7="country";
     public static final String COLUMNUSER8="Customer_Passwords";
 
@@ -87,7 +87,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    ArrayList<OrderDetails> order=new ArrayList<>();
+    private static ArrayList<OrderDetails> order=new ArrayList<>();
     ArrayList<ItemData> items=new ArrayList<>();
     ArrayList<UserDetails> customer=new ArrayList<>();
     ArrayList<VendorDetails> vendor=new ArrayList<>();
@@ -208,8 +208,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public boolean addCustomerUserAndPAss(String name, String  email, int age, int phone,
-                                          String address,String country,String password){
+    public boolean addCustomerUserAndPAss(String name, String  email, String age, String phone,
+                                          String maidenName,String country,String password){
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
 
@@ -218,12 +218,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentV.put(COLUMNUSER3,email);
         contentV.put(COLUMNUSER4,age);
         contentV.put(COLUMNUSER5,phone);
-        contentV.put(COLUMNUSER6,address);
+        contentV.put(COLUMNUSER6,maidenName);
         contentV.put(COLUMNUSER7,country);
         contentV.put(COLUMNUSER8,password);
 
 
         long output=myDatabase.insert(MY_USER_AND_PASS_TABLE,null,contentV);
+
+        myDatabase.close();
+
+        if(output==-1) return false;
+        else return  true;
+
+
+    }
+
+    public boolean updateUserPassword( String password){
+
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+
+        ContentValues contentV=new ContentValues();
+
+        contentV.put(COLUMNUSER8,password);
+
+
+        long output=myDatabase.update(MY_USER_AND_PASS_TABLE,contentV,COLUMNUSER3+"=?",
+                new String[]{COLUMNUSER3});
 
         myDatabase.close();
 
@@ -323,30 +343,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     @SuppressLint("Range")
-    public ArrayList<OrderDetails> viewCartItems(){
+    public ArrayList<OrderDetails> viewCartItems() {
 
-        SQLiteDatabase myDatabase3=this.getReadableDatabase();
+        SQLiteDatabase myDatabase3 = this.getReadableDatabase();
+        ArrayList<OrderDetails> mylist = new ArrayList<>();
+
+        Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);
+
+        if (cur.move(2)) {
+            if (cur.moveToFirst())
+
+                do {
+
+                    String name = cur.getString(cur.getColumnIndex(COLUMNNAME2));
+                    String quantity = cur.getString(cur.getColumnIndex(COLUMNNAME3));
+                    String totalPrice = cur.getString(cur.getColumnIndex(COLUMNNAME4));
+                    String restaurant = cur.getString(cur.getColumnIndex(COLUMNNAME5));
+
+
+                    OrderDetails myoder = new OrderDetails(name, quantity, totalPrice, restaurant);
+
+                    mylist.add(myoder);
+
+
+                } while (cur.moveToNext());
+
+            cur.close();
+            myDatabase3.close();
 
 
 
-        Cursor cur=myDatabase3.rawQuery("select * from "+MY_TABLE_NAME,null);
 
-        if(cur.getCount()>0) {
-            while (cur.moveToNext()) {
-
-                order.add(new OrderDetails(cur.getString(cur.getColumnIndex(COLUMNNAME2)),
-                        Integer.parseInt(cur.getString(cur.getColumnIndex(COLUMNNAME3))),
-                        Integer.parseInt(cur.getString(cur.getColumnIndex(COLUMNNAME4))),
-                        cur.getString(cur.getColumnIndex(COLUMNNAME5))));
-
-                cur.close();
-                myDatabase3.close();
-            }
-
-        }
-       return  order;
-
+        }return mylist;
     }
+
+
 
 
     @SuppressLint("Range")
@@ -405,20 +436,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
 
-        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+" from " + MY_USER_AND_PASS_TABLE,
-                        //" where "+COLUMNUSER3+" = "+email,//+" //and "+COLUMNUSER7+" = "+password,
-
+        Cursor cur = myDatabase.rawQuery("select * from " +MY_USER_AND_PASS_TABLE,
                 null);
 
-
-
+        if(cur.getCount()>0) {
             while (cur.moveToNext()) {
-                //cur.getString(cur.getColumnIndex(COLUMNUSER7)).equals(password));
-                            if(cur.getCount()>0&&cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
 
+                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
+
+                  return cur.getString(cur.getColumnIndex(COLUMNUSER2));
                 myDatabase.close();
 
-    }return cur.getString(cur.getColumnIndex(COLUMNUSER2));
+            }
+
+
+        }return null;
 
     }
 
@@ -439,6 +471,55 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     return true;
               myDatabase.close();
+
+            }
+
+        }return false;
+
+    }
+
+    @SuppressLint("Range")
+    public boolean forgotPassordChecker(String email,String maidenName) {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+","+COLUMNUSER6+" from " + MY_USER_AND_PASS_TABLE,
+                // " where "+COLUMNUSER3+" = "+email,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email)&&
+                        cur.getString(cur.getColumnIndex(COLUMNUSER6)).equals(maidenName))
+
+                    return true;
+                myDatabase.close();
+
+            }
+
+        }return false;
+
+    }
+
+    @SuppressLint("Range")
+    public boolean updatePassword(String email, String password) {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+" from " + MY_USER_AND_PASS_TABLE,
+                // " where "+COLUMNUSER3+" = "+email,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
+
+                    return true;
+                myDatabase.close();
 
             }
 
@@ -497,6 +578,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }return false;
 
     }
+
+
 
 
 

@@ -40,6 +40,7 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
         signSubBtnV = (findViewById(R.id.signSubBtnV));
 
+
         menuKey2();
 
 
@@ -100,6 +101,7 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
                     signupPaswd.setText("");
                     Intent i = new Intent(this, LoginPageForFoodSeller2.class);
                     startActivity(i);
+                    overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 
                 } else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
 

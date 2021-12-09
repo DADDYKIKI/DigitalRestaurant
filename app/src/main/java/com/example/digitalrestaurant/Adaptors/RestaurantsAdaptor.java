@@ -18,11 +18,11 @@ import java.util.List;
 
 public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.RestaurantsViewHolder>{
 
-    private ArrayList<RestaurantsDetails> restaurantslist;
+    private List<RestaurantsDetails> restaurantslist;
 
     private AllInOneRecyclerViewListener allInOneListener;
 
-    public RestaurantsAdaptor(ArrayList<RestaurantsDetails> restaurantslist, AllInOneRecyclerViewListener allInOneListener) {
+    public RestaurantsAdaptor(List<RestaurantsDetails> restaurantslist, AllInOneRecyclerViewListener allInOneListener) {
         this.restaurantslist = restaurantslist;
         this.allInOneListener=allInOneListener;
 

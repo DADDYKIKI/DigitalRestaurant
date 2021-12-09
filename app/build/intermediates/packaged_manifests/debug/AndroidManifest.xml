@@ -21,6 +21,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.DigitalRestaurant" >
         <activity
+            android:name="com.example.digitalrestaurant.NewPassword"
+            android:exported="false" />
+        <activity
+            android:name="com.example.digitalrestaurant.ForgotPassword"
+            android:exported="false" />
+        <activity
             android:name="com.example.digitalrestaurant.Contacts"
             android:exported="false"
             android:parentActivityName="com.example.digitalrestaurant.Menu" />

@@ -42,7 +42,7 @@ public class Menu extends AppCompatActivity {
         contacts.setOnClickListener(v -> {
             Intent intent=new Intent(this, Contacts.class);
             startActivity(intent);
-            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+
 
 
         });
@@ -62,7 +62,7 @@ public class Menu extends AppCompatActivity {
 
     public void basket(){
         basket.setOnClickListener(v -> {
-            Intent intent=new Intent(this, Cart.class);
+            Intent intent=new Intent(this, Order.class);
             startActivity(intent);
             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 

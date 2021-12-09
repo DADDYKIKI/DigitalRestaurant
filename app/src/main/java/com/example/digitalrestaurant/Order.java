@@ -1,16 +1,15 @@
 package com.example.digitalrestaurant;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
@@ -22,13 +21,34 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.OrderDetails;
-import com.example.digitalrestaurant.Kitchens.AdaKitchen;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Order extends AppCompatActivity {
+
+    private OrderAdaptor.OrderListener orderListener;
+
+    private RecyclerView.Adapter orderAdaptor;
+
+    private OrderAdaptor oderAdaptor;
+
+    private RecyclerView recycler;
+
+    DatabaseHelper myCart;
+
+    private RecyclerView cartRecycler;
+
+    ArrayList<OrderDetails> myOrder;
+
+    FloatingActionButton basket;
+
+    TextView homeKey,menuKey;
+
+
+
+
+
 
     private TextView plusBtn,minusBtn,addToCartBtn,quantityText,orderFoodName,
             orderNationality,orderPrice,totalOrderPrice,restaurantNameA;
@@ -42,20 +62,6 @@ public class Order extends AppCompatActivity {
     private int phone=0;
     private String address;
     private String customerName;
-    FloatingActionButton basket;
-
-
-    RecyclerView.Adapter orderAdaptor;
-
-    private OrderAdaptor.OrderListener orderListener;
-
-    OrderAdaptor myOrderAdaptor;
-
-    private RecyclerView cartRecycler;
-
-
-
-
 
     DatabaseHelper myCartDataUpload,myCartDataViewed;
 
@@ -65,7 +71,7 @@ public class Order extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.order);
+        setContentView(R.layout.cart);
 
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE},PackageManager.PERMISSION_GRANTED);
@@ -83,17 +89,25 @@ public class Order extends AppCompatActivity {
         totalOrderPrice=findViewById(R.id.totalOrderPrice);
         basket=findViewById(R.id.floatingActionButton);
 
+        myCart=new DatabaseHelper(this);
+
+        myOrder=new ArrayList<>();
+
+        homeKey=findViewById(R.id.homeKey);
+        menuKey=findViewById(R.id.menuKeyS);
+
+
+
         myCartDataUpload=new DatabaseHelper(this);
         myCartDataViewed=new DatabaseHelper(this);
 
+        Toast.makeText(this, "Thank you for selecting this item", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Add quantity by\nclicking the + or -\nbutton", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Your total price,\nchanges as well", Toast.LENGTH_SHORT).show();
+
+
         orderList=new ArrayList<>();
         orders=new ArrayList<>();
-
-
-
-
-
-
 
 
         Bundle extras=getIntent().getExtras();
@@ -125,48 +139,25 @@ public class Order extends AppCompatActivity {
 
 
 
+ Toast.makeText(this, orders.toString(), Toast.LENGTH_SHORT).show();
 
 
 
 
+        homeKey();
+        menuKey();
 
 
 
 
         AddToCart();
-       // openMyBasket();
+        openMyBasket();
 
 
        // setMyAdaptor();
-        viewMyItems();
 
 
 }
-
-        public void viewMyItems(){
-
-
-
-            // orders=myCartDataViewed.viewCartItems();
-
-
-
-         cartRecycler= this.findViewById(R.id.orderRecyclerview);
-
-             //OrderDetails(foodName,quantityNumber,foodPrice*quantityNumber,NameOfRestaurant));
-
-           // orderList=myCartDatabaseHelper.viewCartItems();
-             // cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-           // cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-
-
-
-            orderAdaptor=new OrderAdaptor(orders,orderListener);
-
-              //cartRecycler.setAdapter(orderAdaptor);
-
-
-        }
 
 
 
@@ -216,11 +207,11 @@ public class Order extends AppCompatActivity {
 
         }
 
-  /*  public void openMyBasket(){
+    public void openMyBasket(){
 
-        basket.setOnClickListener(v -> {
 
-           // Cursor cur1=myCartDatabaseHelper.getOrders();
+
+       /*    // Cursor cur1=myCartDatabaseHelper.getOrders();
             //Cursor cur2=myCartDatabaseHelper.getCustomerContactDetails(phone,address);
 
             if(cur1.getCount()==0){ Toast.makeText(this, "Basket Empty", Toast.LENGTH_SHORT).show();return;}
@@ -258,6 +249,67 @@ public class Order extends AppCompatActivity {
         });
 
     }*/
+
+
+
+
+        cartRecycler=findViewById(R.id.myRecycler);
+        cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        myOrder=myCart.viewCartItems();
+
+        oderAdaptor=new OrderAdaptor(myOrder,this);
+
+        //
+
+
+
+        // Toast.makeText(this, myCartDataViewed.viewCartItems().toString(), Toast.LENGTH_SHORT).show();
+        /*OrderDetails myt=new OrderDetails("rice",4,5,"Ada");
+            OrderDetails mTT=new OrderDetails("rice",4,5,"obande");
+
+            ArrayList<OrderDetails>    orders=new ArrayList<>();
+
+                    orders.add(myt);
+            orders.add(mTT);*/
+
+
+
+        //OrderDetails(foodName,quantityNumber,foodPrice*quantityNumber,NameOfRestaurant));
+
+        // orderList=myCartDatabaseHelper.viewCartItems();
+
+
+
+
+        // orderAdaptor=new OrderAdaptor(orders,orderListener);
+
+        cartRecycler.setAdapter(orderAdaptor);
+
+
+    }
+
+
+    public void homeKey(){
+        homeKey.setOnClickListener(v -> {
+            Intent intent=new Intent(this, HomePage.class);
+            startActivity(intent);
+            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.fade_out);
+
+        });
+
+    }
+
+    public void menuKey(){
+        menuKey.setOnClickListener(v -> {
+            Intent intent2=new Intent(this, Menu.class);
+            startActivity(intent2);
+            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+
+
+        });
+
+    }
+
 }
 
 

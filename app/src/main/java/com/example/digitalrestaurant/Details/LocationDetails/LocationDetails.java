@@ -4,17 +4,27 @@ import java.io.Serializable;
 
 public class LocationDetails implements Serializable {
 
-    private String name;
+    private String location, restaurants;
 
-    public LocationDetails(String name) {
-        this.name = name;
+
+    public LocationDetails(String location,String restaurants) {
+        this.location = location;
+        this.restaurants = restaurants;
     }
 
-    public String getName() {
-        return name;
+    public String getLocation() {
+        return location;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.location = location;
+    }
+
+    public String getRsetaurants() {
+        return restaurants;
+    }
+
+    public void setRsetaurants(String rsetaurants) {
+        this.restaurants = rsetaurants;
     }
 }

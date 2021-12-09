@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Authentications.SignupPage;
@@ -34,7 +35,6 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
        // signupBut= (Button) findViewById(R.id.loginSubBtn);
 
 
-
         loginText1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,8 +56,10 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
         Intent intent=new Intent(this, (Class<?>) x);
 
         startActivity(intent);
+        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 
     }
+
 
 
 }

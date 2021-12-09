@@ -1,7 +1,7 @@
+com/example/digitalrestaurant/databinding/ActivityNewPasswordBinding.java
+ com.example.digitalrestaurant.databinding.ActivityNewPasswordBinding
 com/example/digitalrestaurant/databinding/ContactsBinding.java
  com.example.digitalrestaurant.databinding.ContactsBinding
-com/example/digitalrestaurant/databinding/LocatedRestaurantsContainerBinding.java
- com.example.digitalrestaurant.databinding.LocatedRestaurantsContainerBinding
 com/example/digitalrestaurant/Authentications/Customer.java
  com.example.digitalrestaurant.Authentications.Customer
  com.example.digitalrestaurant.Authentications.Customer$1
@@ -10,6 +10,8 @@ com/example/digitalrestaurant/databinding/LoginBinding.java
  com.example.digitalrestaurant.databinding.LoginBinding
 com/example/digitalrestaurant/databinding/StainlessRestaurantHomepage2Binding.java
  com.example.digitalrestaurant.databinding.StainlessRestaurantHomepage2Binding
+com/example/digitalrestaurant/NewPassword.java
+ com.example.digitalrestaurant.NewPassword
 com/example/digitalrestaurant/Authentications/SignupPage.java
  com.example.digitalrestaurant.Authentications.SignupPage
 com/example/digitalrestaurant/Details/AdvertItems.java
@@ -26,6 +28,8 @@ com/example/digitalrestaurant/Cart.java
  com.example.digitalrestaurant.Cart
 com/example/digitalrestaurant/databinding/MenuBinding.java
  com.example.digitalrestaurant.databinding.MenuBinding
+com/example/digitalrestaurant/ForgotPassword.java
+ com.example.digitalrestaurant.ForgotPassword
 com/example/digitalrestaurant/Adaptors/OrderAdaptor.java
  com.example.digitalrestaurant.Adaptors.OrderAdaptor
  com.example.digitalrestaurant.Adaptors.OrderAdaptor$OrderListener
@@ -38,8 +42,6 @@ com/example/digitalrestaurant/Details/UserDetails.java
  com.example.digitalrestaurant.Details.UserDetails
 com/example/digitalrestaurant/databinding/MyLocationsContainerBinding.java
  com.example.digitalrestaurant.databinding.MyLocationsContainerBinding
-com/example/digitalrestaurant/databinding/LocatedRestaurantsBinding.java
- com.example.digitalrestaurant.databinding.LocatedRestaurantsBinding
 com/example/digitalrestaurant/databinding/ActivitySignupPageBinding.java
  com.example.digitalrestaurant.databinding.ActivitySignupPageBinding
 com/example/digitalrestaurant/Details/AllInOneKitchenData.java
@@ -85,6 +87,7 @@ com/example/digitalrestaurant/VendorDetails.java
  com.example.digitalrestaurant.VendorDetails
 com/example/digitalrestaurant/Adaptors/LocationAdaptor.java
  com.example.digitalrestaurant.Adaptors.LocationAdaptor
+ com.example.digitalrestaurant.Adaptors.LocationAdaptor$LocationListener
  com.example.digitalrestaurant.Adaptors.LocationAdaptor$LocationViewHolder
 com/example/digitalrestaurant/databinding/ActivitySellerUploadPageBinding.java
  com.example.digitalrestaurant.databinding.ActivitySellerUploadPageBinding
@@ -92,6 +95,8 @@ com/example/digitalrestaurant/Order.java
  com.example.digitalrestaurant.Order
  com.example.digitalrestaurant.Order$1
  com.example.digitalrestaurant.Order$2
+com/example/digitalrestaurant/databinding/ActivityForgotPasswordBinding.java
+ com.example.digitalrestaurant.databinding.ActivityForgotPasswordBinding
 com/example/digitalrestaurant/data/model/LoggedInUser.java
  com.example.digitalrestaurant.data.model.LoggedInUser
 com/example/digitalrestaurant/Authentications/IntroPage.java

@@ -16,12 +16,15 @@ import java.util.List;
 
 public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.LocationViewHolder>{
 
+    LocationListener listener;
+
     private ArrayList<LocationDetails>  locationLists;
 
 
 
-    public LocationAdaptor(ArrayList<LocationDetails> locationLists) {
+    public LocationAdaptor(ArrayList<LocationDetails> locationLists, LocationListener listener) {
         this.locationLists= locationLists;
+        this.listener= listener;
         // this.context = context;
 
     }
@@ -29,22 +32,27 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
 
 
 
-    public class LocationViewHolder extends RecyclerView.ViewHolder {
+    public class LocationViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView LocationName;
+        TextView locationName,restaurants;
 
 
         public LocationViewHolder(@NonNull View itemView) {
 
             super(itemView);
 
+            itemView.setOnClickListener(this);
 
-
-            LocationName = itemView.findViewById(R.id.locationName);
+            locationName = itemView.findViewById(R.id.locationName);
+            restaurants = itemView.findViewById(R.id.restaurant);
 
 
         }
 
+        @Override
+        public void onClick(View v) {
+            listener.onClick(itemView,getAdapterPosition());
+        }
     }
 
 
@@ -59,7 +67,8 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
     @Override
     public void onBindViewHolder(@NonNull LocationViewHolder holder, int position) {
 
-        holder.LocationName.setText(locationLists.get(position).getName());
+        holder.locationName.setText(locationLists.get(position).getLocation());
+        holder.restaurants.setText(locationLists.get(position).getRsetaurants());
 
     }
 
@@ -71,7 +80,11 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
     }
 
 
+    public interface LocationListener {
 
+        void onClick(View v, int position);
+
+    }
 
 
 

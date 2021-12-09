@@ -50,6 +50,7 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
             Intent intent=new Intent(this, SignupPageForFoodSeller2.class);
             startActivity(intent);
 
+
         });
     }
 

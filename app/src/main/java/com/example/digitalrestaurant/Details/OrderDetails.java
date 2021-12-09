@@ -4,13 +4,14 @@ import java.io.Serializable;
 
 public class OrderDetails implements Serializable {
 
-    private int totalFoodPrice,quantity;
-    private String foodName,restaurantName;
 
-    public OrderDetails(String foodName, int quantity, int totalFoodPrice,String restaurantName) {
+    private String foodName,restaurantName,totalFoodPrice,quantity;
+
+    public OrderDetails(String foodName, String quantity, String totalFoodPrice,String restaurantName) {
         this.totalFoodPrice = totalFoodPrice;
         this.quantity = quantity;
         this.foodName = restaurantName;
+
     }
 
     public String getRestaurantName() {
@@ -21,19 +22,19 @@ public class OrderDetails implements Serializable {
         this.restaurantName = restaurantName;
     }
 
-    public int getTotalFoodPrice() {
+    public String getTotalFoodPrice() {
         return totalFoodPrice;
     }
 
-    public void setTotalFoodPrice(int totalFoodPrice) {
+    public void setTotalFoodPrice(String totalFoodPrice) {
         this.totalFoodPrice = totalFoodPrice;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 

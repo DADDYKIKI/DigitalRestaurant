@@ -10,9 +10,11 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.LocationListener;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.digitalrestaurant.Adaptors.PopulateAdvertismentAdaptor;
@@ -36,10 +38,14 @@ import java.util.stream.Collectors;
 
 public class HomePage extends AppCompatActivity {
 
+
+
     //Parameters for horizontal dish display
     RecyclerView.Adapter godwinAdaptor,godwinAdaptor2,godwinAdaptor3;
 
     private RestaurantsAdaptor.AllInOneRecyclerViewListener AllInOneListener2;
+
+     private LocationAdaptor.LocationListener locationListener;
 
     private PopulateKitchensWithItemsAdaptor.RestaurantsRecyclerViewListener restaurantslistener2;
 
@@ -59,15 +65,9 @@ public class HomePage extends AppCompatActivity {
 
     private ArrayList<LocationDetails> locationLists;
 
-    private RestaurantsAdaptor.AllInOneRecyclerViewListener listener2;
-
     TextView menuKey,customerWelcomeName;
 
     DatabaseHelper helper;
-
-    LoginPage login;
-
-
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -78,8 +78,7 @@ public class HomePage extends AppCompatActivity {
 
         getSupportActionBar().setTitle("WELCOME TO OBANDE FOOD");
 
-        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.READ_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
+
 
         menuKey=findViewById(R.id.menuKeyS);
         customerWelcomeName=findViewById(R.id.customerWelcomeName);
@@ -88,28 +87,43 @@ public class HomePage extends AppCompatActivity {
         restaurantslist=new ArrayList<>();
         locationLists=new ArrayList<>();
 
-        login=new LoginPage();
+
+
 
         helper=new DatabaseHelper(this);
+
+        customerWelcomeName.setText(LoginPage.getCusName().toUpperCase());
+
+        Toast.makeText(this, LoginPage.getCusName().toUpperCase()+
+                ", If this is your first time\nof using this app, ", Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this,
+                "I want you to read this.", Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this,
+                "You can scroll up or down\n ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,
+                "and right or left\n to make your choice ", Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this,
+                "The First row, is strickly\nfor advertisment.\n", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,
+                "Play your order form\nnone of our restaurants\n"+
+                                               "below the adverts", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,
+                "Thank you for your patronage", Toast.LENGTH_SHORT).show();
 
 
 
 
         makeAdaptor();
         menuKey();
-        //setWelcomeText();
 
 
     }
 
-    public void setWelcomeText(){
 
 
-
-        customerWelcomeName.setText(login.setCustomerWelcomeTextF());
-
-
-    }
 
     public void menuKey(){
             menuKey.setOnClickListener(v -> {
@@ -129,6 +143,7 @@ public class HomePage extends AppCompatActivity {
 
 
         setMyOnclickListener();
+        setLocationListener();
 
 
         recyclerView=findViewById(R.id.obandeKitchen);
@@ -141,7 +156,7 @@ public class HomePage extends AppCompatActivity {
 
         godwinAdaptor=new PopulateAdvertismentAdaptor(populateAdaPage(LoginPage.getAge()),this);
         godwinAdaptor2=new RestaurantsAdaptor(populateItemInfo2(),AllInOneListener2);
-        godwinAdaptor3=new LocationAdaptor(populateItemInfo3());
+        godwinAdaptor3=new LocationAdaptor(populateItemInfo3(),locationListener);
 
         recyclerView.setAdapter(godwinAdaptor);
         recyclerView2.setAdapter(godwinAdaptor2);
@@ -153,6 +168,52 @@ public class HomePage extends AppCompatActivity {
 
 
     }
+
+
+    public  void setLocationListener(){
+
+        locationListener= (v, position) -> {
+
+
+            Intent intent =new Intent(getApplicationContext(), ApprokoKitchen.class);
+            Intent intent2 =new Intent(getApplicationContext(), ObandeKitchen.class);
+            Intent intent3 =new Intent(getApplicationContext(), AdaKitchen.class);
+            Intent intent4 =new Intent(getApplicationContext(), Stainless.class);
+
+
+
+            if(locationLists.get(position).getLocation().equals("G1")){
+
+
+                startActivity(intent);
+
+            }
+
+
+
+            if(locationLists.get(position).getLocation().equals("L2")){
+
+                startActivity(intent2);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+
+            }
+
+            if(locationLists.get(position).getLocation().equals("L1")){
+
+
+                startActivity(intent3);
+
+            }
+
+            if(locationLists.get(position).getLocation().equals("G2")){
+
+                startActivity(intent4);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
+
+            }
+
+        };
+        }
 
 
 
@@ -170,6 +231,7 @@ public class HomePage extends AppCompatActivity {
 
 
                 startActivity(intent);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
             }
 
             else if(restaurantslist.get(position).getRestaurantsName().equals("Obande Kitchen")){
@@ -177,6 +239,7 @@ public class HomePage extends AppCompatActivity {
 
 
                 startActivity(intent2);
+                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
             }
 
             else if (restaurantslist.get(position).getRestaurantsName().equals("Ada Restaurant and Bar")){
@@ -184,11 +247,13 @@ public class HomePage extends AppCompatActivity {
 
 
                 startActivity(intent3);
+
             }
 
             else if (restaurantslist.get(position).getRestaurantsName().equals("Stainless")){
 
                 startActivity(intent4);
+
             }
         };
     }
@@ -227,7 +292,9 @@ public class HomePage extends AppCompatActivity {
     }}
 
 
-    public ArrayList<RestaurantsDetails> populateItemInfo2(){
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public List<RestaurantsDetails> populateItemInfo2(){
+
 
         restaurantslist.add(new RestaurantsDetails("Approko Kitchen","G1",
                 "Nigerian",R.drawable.aprokokitchen));
@@ -236,34 +303,29 @@ public class HomePage extends AppCompatActivity {
         restaurantslist.add(new RestaurantsDetails("Ada Restaurant and Bar",
                 "L1","Nigerian",R.drawable.adakitchen));
         restaurantslist.add(new RestaurantsDetails("Stainless",
-                "G3","Nigerian",R.drawable.silver));
+                "G2","Nigerian",R.drawable.silver));
 
-        return restaurantslist;
+            return restaurantslist;
     }
 
 
 
     public ArrayList<LocationDetails> populateItemInfo3(){
 
-        locationLists.add(new LocationDetails("G1"));
-        locationLists.add(new LocationDetails("G2"));
-        locationLists.add(new LocationDetails("G3"));
-        locationLists.add(new LocationDetails("L1"));
-        locationLists.add(new LocationDetails("L2"));
-        locationLists.add(new LocationDetails("L3"));
-        locationLists.add(new LocationDetails("R1"));
-        locationLists.add(new LocationDetails("S5"));
+        locationLists.add(new LocationDetails("G1","Approko Kitchen"));
+        locationLists.add(new LocationDetails("G2","Stainless"));
+        locationLists.add(new LocationDetails("G3","No restaurants"));
+        locationLists.add(new LocationDetails("L1","Ada Restaurant and Bar"));
+        locationLists.add(new LocationDetails("L2","Obande Kitchen"));
+        locationLists.add(new LocationDetails("L3","No restaurants"));
+        locationLists.add(new LocationDetails("R1","No restaurants"));
+        locationLists.add(new LocationDetails("S5","No restaurants"));
+        locationLists.add(new LocationDetails("All","No restaurants"));
+
+
 
         return locationLists;
     }
 
 
-
-
-
-    public void click2(Object x){
-
-        startActivity(new Intent(this, (Class<?>) x));
-
-    }
 }

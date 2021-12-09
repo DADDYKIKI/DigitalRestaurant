@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,6 +53,10 @@ public class Stainless extends AppCompatActivity {
         floater=findViewById(R.id.floatingActionButton);
         homeKey=(TextView) findViewById(R.id.homeKey);
         menuKey=findViewById(R.id.menuKeyS);
+
+        Toast.makeText(this, "Welcome to Stainless", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
+
 
         helper=new DatabaseHelper(this);
 
@@ -132,14 +137,6 @@ public class Stainless extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public List<ItemData> populateStainlessPage(int age) {
 
-        stainlessItems.add(new ItemData(12, "Catfish peppered soup", "African", R.drawable.adacatfish, ""));
-        stainlessItems.add(new ItemData(9, "MoiMoi", "African", R.drawable.obandemoimoi, ""));
-        stainlessItems.add(new ItemData(18, "Egusi soup", "African", R.drawable.obandeegusisoup, ""));
-        stainlessItems.add(new ItemData(3, "Chin-Chin", "African", R.drawable.obandechinchin, ""));
-        stainlessItems.add(new ItemData(11, "Fried Rice with goat meat", "African", R.drawable.friedriceone, ""));
-        stainlessItems.add(new ItemData(7, "Porridge bean and Plantain ", "African", R.drawable.obandepouridgebeans, ""));
-        stainlessItems.add(new ItemData(3, "Soft drinks", "", R.drawable.adasoftdrinks, ""));
-        stainlessItems.add(new ItemData(20, "Goat Peppered soup", "African", R.drawable.adapepersoup, ""));
         stainlessItems.add(new ItemData(5, "Heineken Pride", "", R.drawable.adachilledheineken, "alcoholic"));
         stainlessItems.add(new ItemData(7, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
 

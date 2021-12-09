@@ -1933,6 +1933,7 @@ id buttons_container
 id cache_measures
 id cancel_action
 id cancel_button
+id cardView
 id cartConstraint
 id cartTitle
 id center
@@ -1940,6 +1941,7 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id checkUser
 id checkbox
 id checked
 id chip
@@ -2013,11 +2015,12 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id enterCountry
+id enterEmail
 id enterLoginEmail
 id enterLoginEmailV
 id enterLoginPaswd
 id enterLoginPaswdV
-id enterhomeaddress
+id enterMaidenName
 id error_frame
 id error_x
 id exitUntilCollapsed
@@ -2036,6 +2039,7 @@ id floatingActionButton
 id foodSellerloginBut
 id foodsellerSignupBut
 id forever
+id forgotPass
 id from
 id ghost_view
 id ghost_view_holder
@@ -2060,6 +2064,7 @@ id ignore
 id ignoreRequest
 id image
 id imageDesc
+id imageView
 id info
 id introCustmerText
 id introFoodsellerText
@@ -2083,13 +2088,9 @@ id leftToRight
 id line1
 id line3
 id linear
-id listLocation
 id listMode
 id list_item
-id listsOfRestNames
 id loading
-id locatedrestaurantback
-id locatedrestaurantname
 id locationName
 id locationRecycler
 id loginWarningText
@@ -2156,6 +2157,8 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id myOrderPotion
+id myRecycler
 id nameOfFoodItem
 id nationalityOfItem
 id navigation_header_container
@@ -2178,7 +2181,6 @@ id order
 id orderFoodName
 id orderNationality
 id orderPrice
-id orderRecyclerview
 id orderRestaurant
 id ordering_container
 id outline
@@ -2191,6 +2193,8 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password
+id password2
 id password_toggle
 id path
 id pathRelative
@@ -2215,6 +2219,7 @@ id ratio
 id rectangles
 id resaurantNameB
 id restN
+id restaurant
 id restaurantImage
 id restaurantLocation
 id restaurantName
@@ -2263,7 +2268,7 @@ id signUp
 id signUpPassV3
 id signUpPassword
 id signUpPhone
-id signup
+id signupAgain
 id signupAge
 id signupEmailV
 id signupNameV
@@ -2305,6 +2310,7 @@ id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
+id submitButton
 id submit_area
 id success_frame
 id success_tick
@@ -2370,6 +2376,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userExistText
 id vendorName
 id view_offset_helper
 id view_tree_view_model_store_owner
@@ -2446,8 +2453,10 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_food_seller
+layout activity_forgot_password
 layout activity_intro_page
 layout activity_main
+layout activity_new_password
 layout activity_seller_upload_page
 layout activity_signup_page
 layout activity_signup_page_for_vendor
@@ -2475,8 +2484,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout homepage
-layout located_restaurants
-layout located_restaurants_container
 layout login
 layout material_chip_input_combo
 layout material_clock_display

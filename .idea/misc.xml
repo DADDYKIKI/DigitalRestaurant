@@ -21,10 +21,12 @@
         <entry key="app/src/main/res/layout/activity_customer_loginpage.xml" value="0.13496376811594202" />
         <entry key="app/src/main/res/layout/activity_customer_page.xml" value="0.1821365024073806" />
         <entry key="app/src/main/res/layout/activity_food_seller.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.23645833333333333" />
         <entry key="app/src/main/res/layout/activity_intro_page.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2477355072463768" />
         <entry key="app/src/main/res/layout/activity_login_page.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_new_password.xml" value="0.23645833333333333" />
         <entry key="app/src/main/res/layout/activity_page1.xml" value="0.2504528985507246" />
         <entry key="app/src/main/res/layout/activity_page_one.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_seller_upload_page.xml" value="0.18614130434782608" />

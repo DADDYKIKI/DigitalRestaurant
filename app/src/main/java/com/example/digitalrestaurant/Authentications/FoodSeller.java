@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +22,7 @@ public class FoodSeller extends AppCompatActivity {
         sellerLoginTxt= findViewById(R.id.foodSellerloginBut);
         sellerSignUpTxt= findViewById(R.id.foodsellerSignupBut);
 
+
         sellerLoginTxt.setOnClickListener(v -> click1(LoginPageForFoodSeller2.class));
 
         sellerSignUpTxt.setOnClickListener(v -> click1(SignupPageForFoodSeller2.class));
@@ -30,5 +32,6 @@ public class FoodSeller extends AppCompatActivity {
         Intent intent=new Intent(this, (Class<?>) x);
 
         startActivity(intent);
+        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
     }
 }

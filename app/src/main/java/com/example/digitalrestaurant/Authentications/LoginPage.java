@@ -18,13 +18,13 @@ import com.example.digitalrestaurant.R;
 public class LoginPage extends AppCompatActivity {
 
     private static String COUNTRY="";
-
+    private static String CUSNAME="";
     private static  int AGE=0;
 
 
     private Button loginBut,signUpBut;
     private EditText loginEmail,loginPass;
-    private     TextView loginWarningText;
+    private     TextView loginWarningText,forgotPass;
 
     private int attempts=6;
 
@@ -40,7 +40,9 @@ public class LoginPage extends AppCompatActivity {
         loginPass = findViewById(R.id.enterLoginPaswd);
         loginWarningText = findViewById(R.id.loginWarningText);
         loginBut = findViewById(R.id.signSubBtn);
-        signUpBut = findViewById(R.id.signup);
+        signUpBut = findViewById(R.id.signupAgain);
+        forgotPass=findViewById(R.id.forgotPass);
+
 
 
         login();
@@ -62,10 +64,19 @@ public class LoginPage extends AppCompatActivity {
     }
 
 
-
     public static void setCountry(String name) {
 
         COUNTRY=name;
+    }
+
+    public static String getCusName() {
+        return CUSNAME;
+    }
+
+
+    public static void setCusName(String name) {
+
+        CUSNAME=name;
     }
 
 
@@ -74,6 +85,16 @@ public class LoginPage extends AppCompatActivity {
     public void toSignUpV() {
 
         signUpBut.setOnClickListener(v -> {
+
+            Intent intent=new Intent(this, SignupPage.class);
+            startActivity(intent);
+
+        });
+    }
+
+    public void forgotPass() {
+
+        forgotPass.setOnClickListener(v -> {
 
             Intent intent=new Intent(this, SignupPage.class);
             startActivity(intent);
@@ -113,13 +134,8 @@ public class LoginPage extends AppCompatActivity {
 
                   if (insert==true) {
 
-                      Toast.makeText(this, String.valueOf(LoginPage.getAge()), Toast.LENGTH_SHORT).show();
 
                       LoginPage.this.setTextInvisible(v);
-
-
-
-                      Toast.makeText(this, String.valueOf(AGE), Toast.LENGTH_SHORT).show();
 
 
                       Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
@@ -127,6 +143,11 @@ public class LoginPage extends AppCompatActivity {
                       Boolean yes=data.checkforAge(loginEmail.getText().toString());
 
                       Boolean correct=data.checkCountry(loginEmail.getText().toString());
+
+                      String name=data.setCustomerWelcomeName(loginEmail.getText().toString());
+
+                      setCusName(name);
+
                       Intent intent=new Intent(this,HomePage.class);
 
                       if(yes==true)setAge(17);
@@ -139,13 +160,10 @@ public class LoginPage extends AppCompatActivity {
                      startActivity(intent);
 
 
-
-                      loginEmail.setText("");
-                      loginPass.setText("");
                   }
 
                   else {
-                        LoginPage.this.setTextVisible(v);
+                        setTextVisible(v);
 
                       attempts--;
 
@@ -168,19 +186,13 @@ public class LoginPage extends AppCompatActivity {
 
                           setButtonInvisible(v);
 
-                          Toast.makeText(this, "You might want to signup",
+                          Toast.makeText(this, "Try forgot password or signup",
                                   Toast.LENGTH_SHORT).show();
 
                           this.setButtonVisible(v);
 
 
 
-
-                          Toast.makeText(this, "Try signing Up if you haven't done so",
-                                  Toast.LENGTH_SHORT).show();
-
-                          Toast.makeText(this, "Close your app and re-run it Again",
-                                  Toast.LENGTH_SHORT).show();
                           Toast.makeText(this, "Or I will advice you to \nsign up if you haven't done so",
                                   Toast.LENGTH_SHORT).show();
                       }
@@ -199,7 +211,7 @@ public class LoginPage extends AppCompatActivity {
 
     void setTextVisible(View view){
         loginWarningText.setVisibility(View.VISIBLE);
-
+        forgotPass.setVisibility(View.VISIBLE);
     }
 
     void setButtonVisible(View view){
@@ -213,8 +225,10 @@ public class LoginPage extends AppCompatActivity {
 
     void setButtonInvisible(View view){
         loginBut.setVisibility(View.INVISIBLE);
-
+        forgotPass.setVisibility(View.INVISIBLE);
 
     }
+
+
 
 }

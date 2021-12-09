@@ -4,6 +4,7 @@ package com.example.digitalrestaurant.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,9 @@ public final class ActivityIntroPageBinding implements ViewBinding {
   public final ConstraintLayout bac;
 
   @NonNull
+  public final ImageView imageView;
+
+  @NonNull
   public final TextView introCustmerText;
 
   @NonNull
@@ -32,10 +36,12 @@ public final class ActivityIntroPageBinding implements ViewBinding {
   public final TextView introWelcomeTxt;
 
   private ActivityIntroPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout bac, @NonNull TextView introCustmerText,
-      @NonNull TextView introFoodsellerText, @NonNull TextView introWelcomeTxt) {
+      @NonNull ConstraintLayout bac, @NonNull ImageView imageView,
+      @NonNull TextView introCustmerText, @NonNull TextView introFoodsellerText,
+      @NonNull TextView introWelcomeTxt) {
     this.rootView = rootView;
     this.bac = bac;
+    this.imageView = imageView;
     this.introCustmerText = introCustmerText;
     this.introFoodsellerText = introFoodsellerText;
     this.introWelcomeTxt = introWelcomeTxt;
@@ -70,6 +76,12 @@ public final class ActivityIntroPageBinding implements ViewBinding {
     missingId: {
       ConstraintLayout bac = (ConstraintLayout) rootView;
 
+      id = R.id.imageView;
+      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
+      if (imageView == null) {
+        break missingId;
+      }
+
       id = R.id.introCustmerText;
       TextView introCustmerText = ViewBindings.findChildViewById(rootView, id);
       if (introCustmerText == null) {
@@ -88,8 +100,8 @@ public final class ActivityIntroPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityIntroPageBinding((ConstraintLayout) rootView, bac, introCustmerText,
-          introFoodsellerText, introWelcomeTxt);
+      return new ActivityIntroPageBinding((ConstraintLayout) rootView, bac, imageView,
+          introCustmerText, introFoodsellerText, introWelcomeTxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

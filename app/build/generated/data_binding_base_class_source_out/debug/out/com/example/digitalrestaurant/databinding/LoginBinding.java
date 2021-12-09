@@ -28,6 +28,9 @@ public final class LoginBinding implements ViewBinding {
   public final EditText enterLoginPaswd;
 
   @NonNull
+  public final TextView forgotPass;
+
+  @NonNull
   public final TextView loginWarningText;
 
   @NonNull
@@ -37,18 +40,20 @@ public final class LoginBinding implements ViewBinding {
   public final Button signSubBtn;
 
   @NonNull
-  public final Button signup;
+  public final Button signupAgain;
 
   private LoginBinding(@NonNull ConstraintLayout rootView, @NonNull EditText enterLoginEmail,
-      @NonNull EditText enterLoginPaswd, @NonNull TextView loginWarningText,
-      @NonNull TextView signInLabelText, @NonNull Button signSubBtn, @NonNull Button signup) {
+      @NonNull EditText enterLoginPaswd, @NonNull TextView forgotPass,
+      @NonNull TextView loginWarningText, @NonNull TextView signInLabelText,
+      @NonNull Button signSubBtn, @NonNull Button signupAgain) {
     this.rootView = rootView;
     this.enterLoginEmail = enterLoginEmail;
     this.enterLoginPaswd = enterLoginPaswd;
+    this.forgotPass = forgotPass;
     this.loginWarningText = loginWarningText;
     this.signInLabelText = signInLabelText;
     this.signSubBtn = signSubBtn;
-    this.signup = signup;
+    this.signupAgain = signupAgain;
   }
 
   @Override
@@ -90,6 +95,12 @@ public final class LoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.forgotPass;
+      TextView forgotPass = ViewBindings.findChildViewById(rootView, id);
+      if (forgotPass == null) {
+        break missingId;
+      }
+
       id = R.id.loginWarningText;
       TextView loginWarningText = ViewBindings.findChildViewById(rootView, id);
       if (loginWarningText == null) {
@@ -108,14 +119,14 @@ public final class LoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.signup;
-      Button signup = ViewBindings.findChildViewById(rootView, id);
-      if (signup == null) {
+      id = R.id.signupAgain;
+      Button signupAgain = ViewBindings.findChildViewById(rootView, id);
+      if (signupAgain == null) {
         break missingId;
       }
 
       return new LoginBinding((ConstraintLayout) rootView, enterLoginEmail, enterLoginPaswd,
-          loginWarningText, signInLabelText, signSubBtn, signup);
+          forgotPass, loginWarningText, signInLabelText, signSubBtn, signupAgain);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

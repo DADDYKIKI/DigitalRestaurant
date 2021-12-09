@@ -1932,6 +1932,7 @@ int id buttons_container 0x7f0a0068
 int id cache_measures 0x7f0a0069
 int id cancel_action 0x7f0a0220
 int id cancel_button 0x7f0a006a
+int id cardView 0x7f0a0239
 int id cartConstraint 0x7f0a006b
 int id cartTitle 0x7f0a006c
 int id center 0x7f0a006d
@@ -1939,6 +1940,7 @@ int id center_horizontal 0x7f0a006e
 int id center_vertical 0x7f0a006f
 int id chain 0x7f0a0070
 int id chains 0x7f0a0071
+int id checkUser 0x7f0a023a
 int id checkbox 0x7f0a0072
 int id checked 0x7f0a0073
 int id chip 0x7f0a0074
@@ -2012,11 +2014,12 @@ int id end_padder 0x7f0a0221
 int id enterAlways 0x7f0a00b6
 int id enterAlwaysCollapsed 0x7f0a00b7
 int id enterCountry 0x7f0a0231
+int id enterEmail 0x7f0a023b
 int id enterLoginEmail 0x7f0a00b8
 int id enterLoginEmailV 0x7f0a0226
 int id enterLoginPaswd 0x7f0a00b9
 int id enterLoginPaswdV 0x7f0a0227
-int id enterhomeaddress 0x7f0a00ba
+int id enterMaidenName 0x7f0a023c
 int id error_frame 0x7f0a00bb
 int id error_x 0x7f0a00bc
 int id exitUntilCollapsed 0x7f0a00bd
@@ -2035,6 +2038,7 @@ int id floatingActionButton 0x7f0a00c9
 int id foodSellerloginBut 0x7f0a00ca
 int id foodsellerSignupBut 0x7f0a00cb
 int id forever 0x7f0a00cc
+int id forgotPass 0x7f0a023d
 int id from 0x7f0a00cd
 int id ghost_view 0x7f0a00ce
 int id ghost_view_holder 0x7f0a00cf
@@ -2059,6 +2063,7 @@ int id ignore 0x7f0a00e1
 int id ignoreRequest 0x7f0a00e2
 int id image 0x7f0a00e3
 int id imageDesc 0x7f0a00e4
+int id imageView 0x7f0a0234
 int id info 0x7f0a00e5
 int id introCustmerText 0x7f0a00e6
 int id introFoodsellerText 0x7f0a00e7
@@ -2082,13 +2087,9 @@ int id leftToRight 0x7f0a00f8
 int id line1 0x7f0a00f9
 int id line3 0x7f0a00fa
 int id linear 0x7f0a00fb
-int id listLocation 0x7f0a00fc
 int id listMode 0x7f0a00fd
 int id list_item 0x7f0a00fe
-int id listsOfRestNames 0x7f0a00ff
 int id loading 0x7f0a0100
-int id locatedrestaurantback 0x7f0a0101
-int id locatedrestaurantname 0x7f0a0102
 int id locationName 0x7f0a0103
 int id locationRecycler 0x7f0a0104
 int id loginWarningText 0x7f0a0105
@@ -2155,6 +2156,8 @@ int id mtrl_picker_text_input_range_start 0x7f0a013f
 int id mtrl_picker_title_text 0x7f0a0140
 int id mtrl_view_tag_bottom_padding 0x7f0a0141
 int id multiply 0x7f0a0142
+int id myOrderPotion 0x7f0a0238
+int id myRecycler 0x7f0a0237
 int id nameOfFoodItem 0x7f0a0143
 int id nationalityOfItem 0x7f0a0144
 int id navigation_header_container 0x7f0a0145
@@ -2177,7 +2180,6 @@ int id order 0x7f0a0155
 int id orderFoodName 0x7f0a0156
 int id orderNationality 0x7f0a0157
 int id orderPrice 0x7f0a0158
-int id orderRecyclerview 0x7f0a0159
 int id orderRestaurant 0x7f0a015a
 int id ordering_container 0x7f0a015b
 int id outline 0x7f0a015c
@@ -2190,6 +2192,8 @@ int id parent 0x7f0a0162
 int id parentPanel 0x7f0a0163
 int id parentRelative 0x7f0a0164
 int id parent_matrix 0x7f0a0165
+int id password 0x7f0a023e
+int id password2 0x7f0a023f
 int id password_toggle 0x7f0a0166
 int id path 0x7f0a0167
 int id pathRelative 0x7f0a0168
@@ -2214,6 +2218,7 @@ int id ratio 0x7f0a017a
 int id rectangles 0x7f0a017b
 int id resaurantNameB 0x7f0a022d
 int id restN 0x7f0a022e
+int id restaurant 0x7f0a0232
 int id restaurantImage 0x7f0a017c
 int id restaurantLocation 0x7f0a017d
 int id restaurantName 0x7f0a017e
@@ -2262,7 +2267,7 @@ int id signUp 0x7f0a022f
 int id signUpPassV3 0x7f0a01a8
 int id signUpPassword 0x7f0a01a9
 int id signUpPhone 0x7f0a021d
-int id signup 0x7f0a021e
+int id signupAgain 0x7f0a0240
 int id signupAge 0x7f0a01aa
 int id signupEmailV 0x7f0a01ab
 int id signupNameV 0x7f0a01ac
@@ -2304,6 +2309,7 @@ int id status_bar_latest_event_content 0x7f0a0225
 int id stop 0x7f0a01cb
 int id stretch 0x7f0a01cc
 int id submenuarrow 0x7f0a01cd
+int id submitButton 0x7f0a0241
 int id submit_area 0x7f0a01ce
 int id success_frame 0x7f0a01cf
 int id success_tick 0x7f0a01d0
@@ -2369,6 +2375,7 @@ int id uniform 0x7f0a020a
 int id unlabeled 0x7f0a020b
 int id up 0x7f0a020c
 int id useLogo 0x7f0a020d
+int id userExistText 0x7f0a0242
 int id vendorName 0x7f0a020e
 int id view_offset_helper 0x7f0a020f
 int id view_tree_view_model_store_owner 0x7f0a0210
@@ -2445,8 +2452,10 @@ int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
 int layout activity_food_seller 0x7f0d001c
+int layout activity_forgot_password 0x7f0d0090
 int layout activity_intro_page 0x7f0d001d
 int layout activity_main 0x7f0d001e
+int layout activity_new_password 0x7f0d0091
 int layout activity_seller_upload_page 0x7f0d001f
 int layout activity_signup_page 0x7f0d0020
 int layout activity_signup_page_for_vendor 0x7f0d0021
@@ -2474,8 +2483,6 @@ int layout design_navigation_menu_item 0x7f0d0036
 int layout design_text_input_end_icon 0x7f0d0037
 int layout design_text_input_start_icon 0x7f0d0038
 int layout homepage 0x7f0d0039
-int layout located_restaurants 0x7f0d003a
-int layout located_restaurants_container 0x7f0d003b
 int layout login 0x7f0d003c
 int layout material_chip_input_combo 0x7f0d003d
 int layout material_clock_display 0x7f0d003e

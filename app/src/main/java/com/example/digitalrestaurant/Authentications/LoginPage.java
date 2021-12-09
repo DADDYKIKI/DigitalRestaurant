@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
+import com.example.digitalrestaurant.ForgotPassword;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.R;
 
@@ -96,7 +97,7 @@ public class LoginPage extends AppCompatActivity {
 
         forgotPass.setOnClickListener(v -> {
 
-            Intent intent=new Intent(this, SignupPage.class);
+            Intent intent=new Intent(this, ForgotPassword.class);
             startActivity(intent);
 
         });

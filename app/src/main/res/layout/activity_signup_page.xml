@@ -8,13 +8,6 @@
     android:background="@drawable/uktwo"
     tools:context=".Authentications.SignupPage">
 
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/terminator"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
     <EditText
         android:id="@+id/signupNameV"
         android:layout_width="207dp"

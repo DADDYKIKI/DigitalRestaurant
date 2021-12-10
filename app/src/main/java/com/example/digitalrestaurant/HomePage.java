@@ -103,13 +103,12 @@ public class HomePage extends AppCompatActivity {
         Toast.makeText(this,
                 "You can scroll up or down\n ", Toast.LENGTH_SHORT).show();
         Toast.makeText(this,
-                "and right or left\n to make your choice ", Toast.LENGTH_SHORT).show();
+                ", right or left\n to make your choice ", Toast.LENGTH_SHORT).show();
 
         Toast.makeText(this,
                 "The First row, is strickly\nfor advertisment.\n", Toast.LENGTH_SHORT).show();
         Toast.makeText(this,
-                "Play your order form\nnone of our restaurants\n"+
-                                               "below the adverts", Toast.LENGTH_SHORT).show();
+                "Use the restaurant to selct and order food", Toast.LENGTH_SHORT).show();
         Toast.makeText(this,
                 "Thank you for your patronage", Toast.LENGTH_SHORT).show();
 

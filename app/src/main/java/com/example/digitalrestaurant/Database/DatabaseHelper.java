@@ -60,31 +60,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMNUSER7="country";
     public static final String COLUMNUSER8="Customer_Passwords";
 
-
-   /* //Items details
-    public static final String COLUMNFOOD1="ItemID";
-    public static final String COLUMNFOOD2="Item_food_price";
-    public static final String COLUMNFOOD3="Item_food_name";
-    public static final String COLUMNFOOD4="food_nationality";
-    public static final String COLUMNFOOD5="RestaurantName";
-    public static final String COLUMNFOOD6="alcoholic";*/
-
     //Vendor details
     public static final String COLUMNVEN1="VendorID";
     public static final String COLUMNVEN2="nameOfVendor";
     public static final String COLUMNVEN3="Vendor_email";
     public static final String COLUMNVEN4="Vendor_Passwords";
-
-   /* public static final String COLUMNADA1="AdaItemID";
-    public static final String COLUMNADA2="AdaFoodPrice";
-    public static final String COLUMNADA3="AdaFoodName";
-    public static final String COLUMNADA4="AdaFoodNAtionality";
-    public static final String COLUMNADA5="AdaFoodImage";
-    public static final String COLUMNADA6="AdaFoodLabel";
-    public static final String COLUMNADA7="alcoholic";*/
-
-
-
 
 
     private static ArrayList<OrderDetails> order=new ArrayList<>();
@@ -123,33 +103,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                    + COLUMNUSER7 + " TEXT, "
                    + COLUMNUSER8 + " TEXT)");
 
-           //Items details
-       /*   db.execSQL("CREATE TABLE " + FOODS_FOR_SALE + "("
-                   + COLUMNFOOD1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                   + COLUMNFOOD2 + " INTEGER, "
-                   + COLUMNFOOD3 + " TEXT, "
-                   + COLUMNFOOD4 + " TEXT, "
-                   + COLUMNFOOD4 + " TEXT, "
-                   + COLUMNFOOD5 + " TEXT)");*/
-
           //Vendor tables
            db.execSQL("CREATE TABLE " + VENDOR_DETAILS + "("
                    + COLUMNVEN1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                    + COLUMNVEN2 + " TEXT, "
                    + COLUMNVEN3 + " TEXT, "
                    + COLUMNVEN4 + " TEXT)");
-
-      /*  db.execSQL("CREATE TABLE " + ADATABLE + "("
-                + COLUMNADA1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + COLUMNADA2 + " TEXT, "
-                + COLUMNADA3 + " TEXT, "
-                + COLUMNADA4 + " TEXT, "
-                + COLUMNADA5 + " BLOB, "
-                + COLUMNADA6 + " TEXT, "
-                + COLUMNADA7 + " TEXT)");*/
-
-
-
 
     }
 
@@ -162,8 +121,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
            // db.execSQL("DROP TABLE IF EXISTS "+ADATABLE);
             onCreate(db);
     }
-
-
 
 
 
@@ -253,97 +210,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-   /* public boolean uploadStatement(String price, String name, String nationality, String alcoholic) {//................Add to Database...................
-
-
-        SQLiteDatabase db=this.getWritableDatabase();
-
-        ContentValues contentV = new ContentValues();
-
-            contentV.put(COLUMNFOOD2, price);
-            contentV.put(COLUMNFOOD3, name);
-            contentV.put(COLUMNFOOD4, nationality);
-            //contentV.put(COLUMNFOOD5, image);
-          //  contentV.put(COLUMNFOOD6, image_label);
-            contentV.put(COLUMNFOOD7, alcoholic);
-
-
-
-        long output = db.insert(DatabaseHelper.FOODS_FOR_SALE, null, contentV);
-
-        if (output == -1) return false;
-        else return true;
-
-    }*/
-
-
-
-
-   /* public Cursor getNoneAlcoholicFood(){
-
-       SQLiteDatabase myDatabase=this.getReadableDatabase();
-
-        //ArrayList<ItemData> myAlcoholicFoodItems=new ArrayList<>();
-
-        Cursor cur=myDatabase.rawQuery("select * from "+MY_TABLE_NAME+" where "+COLUMNFOOD6+" is null",null);
-
-     /*   while(cur1.moveToNext()){
-
-                    Bitmap InBitmapBitmap= BitmapFactory.decodeByteArray(cur1.getBlob(5),0,
-                            cur1.getBlob(5).length);
-
-                    myAlcoholicFoodItems.add(new ItemData(cur1.getString(cur1.getColumnIndexOrThrow(COLUMNFOOD2)),
-                    cur1.getString(cur1.getColumnIndexOrThrow(COLUMNFOOD3)), cur1.getString(cur1.getColumnIndexOrThrow(COLUMNFOOD4)),
-                            InBitmapBitmap, cur1.getString(cur1.getColumnIndexOrThrow(COLUMNFOOD6)),
-                    cur1.getString(cur1.getColumnIndexOrThrow(COLUMNFOOD7))));
-
-    }
-        cur1.close();
-        myDatabase1.close();
-
-        return  cur;
-
-
-    }*/
-
-
-
-
-    public Cursor getOrders(){
-
-        SQLiteDatabase myDatabase=this.getWritableDatabase();
-
-        Cursor cur=myDatabase.rawQuery("select * from "+MY_TABLE_NAME,null);
-
-        //Cursor cur=myDatabase.query(MY_TABLE_NAME,null,null,null,null,null,null);
-
-      /*  if(cur2.moveToFirst()){
-        do{
-            Bitmap InBitmapBitmap= BitmapFactory.decodeByteArray(cur2.getBlob(5),0,
-                    cur2.getBlob(5).length);
-
-           items.add(new ItemData(cur2.getString(cur2.getColumnIndexOrThrow(COLUMNFOOD2)),
-                    cur2.getString(cur2.getColumnIndexOrThrow(COLUMNFOOD3)),
-                    cur2.getString(cur2.getColumnIndexOrThrow(COLUMNFOOD4)),
-
-                    cur2.getString(cur2.getColumnIndexOrThrow(COLUMNFOOD6)),
-                    cur2.getString(cur2.getColumnIndexOrThrow(COLUMNFOOD7))));
-    }while (cur2.moveToNext());
-
-        }*/
-
-        //myDatabase2.close();
-        cur.close();
-        return cur;
-    }
-
-
-
-
 
 
     @SuppressLint("Range")
-    public List<OrderDetails> viewCartItems() {
+    public List<OrderDetails> getCartItems() {
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
         List<OrderDetails> mylist = new ArrayList<>();
@@ -352,7 +222,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);
 
-        //if (cur.getCount()<0) {cur.moveToNext();}
         if (cur.getCount()>0) {
             if (cur.moveToFirst())
 
@@ -408,8 +277,65 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    @SuppressLint("Range")
+    public boolean deleteItemsFromCart(String foodName, String restaurantName) {
 
-        @SuppressLint("Range")
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select * from " + MY_TABLE_NAME,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                if (cur.getString(cur.getColumnIndex(COLUMNNAME2)).equals(foodName) &&
+                        cur.getString(cur.getColumnIndex(COLUMNNAME5)).equals(restaurantName)) {
+
+                    long delete = myDatabase.delete(MY_TABLE_NAME, COLUMNNAME2 + " = " + foodName, null);
+
+                    if (delete == -1) return false;
+
+                    myDatabase.close();
+                }
+            }
+
+        }return true;
+
+    }
+
+
+
+    @SuppressLint("Range")
+    public boolean clearItemsFromCart() {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select * from " + MY_TABLE_NAME,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                     long delete=myDatabase.delete(MY_TABLE_NAME, COLUMNNAME1 + " = ?" , new String[]{COLUMNNAME1});
+
+                    if (delete == -1) return false;
+
+                    myDatabase.close();
+                }
+            }return true;
+
+        }
+
+
+
+
+
+
+
+
+    @SuppressLint("Range")
         public boolean getVendorLoginDetails(String restaurantName, String Password) {
 
             SQLiteDatabase myDatabase = this.getReadableDatabase();
@@ -487,8 +413,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase myDatabase = this.getReadableDatabase();
 
         Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+","+COLUMNUSER6+" from " + MY_USER_AND_PASS_TABLE,
-                // " where "+COLUMNUSER3+" = "+email,
-
                 null);
 
         if(cur.getCount()>0) {
@@ -506,29 +430,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    @SuppressLint("Range")
-    public boolean updatePassword(String email, String password) {
-
-        SQLiteDatabase myDatabase = this.getReadableDatabase();
-
-        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+" from " + MY_USER_AND_PASS_TABLE,
-                // " where "+COLUMNUSER3+" = "+email,
-
-                null);
-
-        if(cur.getCount()>0) {
-            while (cur.moveToNext()) {
-
-                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
-
-                    return true;
-                myDatabase.close();
-
-            }
-
-        }return false;
-
-    }
 
     @SuppressLint("Range")
     public boolean checkforAge(String email) {
@@ -555,6 +456,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }return false;
 
     }
+
 
     @SuppressLint("Range")
     public boolean checkCountry(String email) {
@@ -589,61 +491,3 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 }
 
 
-
-
-
-
-
-
-
-
-  /*  public boolean uploadToAdaRestaurant(String price, String name, String nationality, byte[] image, String image_label,String alcoholic) {//................Add to Database...................
-
-
-        SQLiteDatabase db=this.getWritableDatabase();
-
-        ContentValues contentV = new ContentValues();
-
-        contentV.put(COLUMNADA2, price);
-        contentV.put(COLUMNADA3, name);
-        contentV.put(COLUMNADA4, nationality);
-        contentV.put(COLUMNADA5, image);
-        contentV.put(COLUMNADA6, image_label);
-        contentV.put(COLUMNADA7, alcoholic);
-
-
-
-        long output = db.insert(DatabaseHelper.ADATABLE, null, contentV);
-
-        if (output == -1) return false;
-        else return true;
-
-    }
-
-
-    @SuppressLint("Range")
-    public List<RestaurantLogDetails> getAprokoRestaurantDetails(){
-
-        myRestaurantDetails=this.getWritableDatabase();
-
-        Cursor cur2=myRestaurantDetails.rawQuery("select * from "+ADATABLE,null);
-
-        if(cur2.moveToFirst()){
-            do{
-                Bitmap InBitmapBitmap= BitmapFactory.decodeByteArray(cur2.getBlob(5),0,
-                        cur2.getBlob(5).length);
-
-                items.add(new ItemData(cur2.getString(cur2.getColumnIndex(COLUMNADA2)),
-                        cur2.getString(cur2.getColumnIndex(COLUMNADA3)),
-                        cur2.getString(cur2.getColumnIndex(COLUMNADA4)),
-                        InBitmapBitmap,
-                        cur2.getString(cur2.getColumnIndex(COLUMNADA5)),
-                        cur2.getString(cur2.getColumnIndex(COLUMNADA6))));
-            }while (cur2.moveToNext());
-
-        }
-        cur2.close();
-        myDatabase2.close();
-
-        return  items;
-    }*/

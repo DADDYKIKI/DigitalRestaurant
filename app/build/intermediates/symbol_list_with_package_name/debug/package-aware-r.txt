@@ -2297,6 +2297,7 @@ id navigation_header_container
 id neutral_button
 id never
 id nigerian1
+id no
 id noScroll
 id none
 id normal
@@ -2470,6 +2471,8 @@ id textStart
 id textTop
 id textView
 id textView10
+id textView11
+id textView12
 id textView2
 id textView3
 id textView4
@@ -2527,6 +2530,7 @@ id wrap
 id wrap_content
 id x
 id y
+id yes
 id z
 id zero_corner_chip
 integer abc_config_activityDefaultDur
@@ -2591,6 +2595,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_delete_cart_item
 layout activity_food_seller
 layout activity_forgot_password
 layout activity_intro_page

@@ -17,15 +17,16 @@ import java.util.List;
 
 public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHolder>{
 
-    private OrderListener orderListener;
+    private myOrderListener orderListener;
 
     List<OrderDetails> myOder;
     RecyclerView orderRecycler;
-    Context context;
 
-    public OrderAdaptor(List<OrderDetails> myOder, Context context ) {
+
+    public OrderAdaptor(List<OrderDetails> myOder, myOrderListener orderListener) {
         this.myOder = myOder;
-        this. context =  context;
+        this.orderListener= orderListener;
+
     }
 
 
@@ -68,7 +69,7 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
     @Override
     public void onBindViewHolder(@NonNull OrderAdaptor.OrderViewHolder myHolder, int position) {
 
-        myHolder.foodName.setText(myOder.get(position).getFoodName());
+        myHolder.foodName.setText(myOder.get(position).getRestaurantName());
         myHolder.quantity.setText(myOder.get(position).getQuantity());
         myHolder.foodTotalPrice.setText(myOder.get(position).getTotalFoodPrice());
         myHolder.restaurant.setText(myOder.get(position).getFoodName());
@@ -83,6 +84,12 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
 
 
     public interface OrderListener {
+
+        void onClick(View v, int position);
+
+    }
+
+    public interface myOrderListener{
 
         void onClick(View v, int position);
 

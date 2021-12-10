@@ -36,18 +36,22 @@ public final class CartContainerBinding implements ViewBinding {
   public final TextView resaurantNameB;
 
   @NonNull
+  public final TextView textView11;
+
+  @NonNull
   public final TextView textView9;
 
   private CartContainerBinding(@NonNull LinearLayout rootView,
       @NonNull ConstraintLayout cartConstraint, @NonNull TextView itemName,
       @NonNull TextView itemPrice, @NonNull TextView itemQuantity, @NonNull TextView resaurantNameB,
-      @NonNull TextView textView9) {
+      @NonNull TextView textView11, @NonNull TextView textView9) {
     this.rootView = rootView;
     this.cartConstraint = cartConstraint;
     this.itemName = itemName;
     this.itemPrice = itemPrice;
     this.itemQuantity = itemQuantity;
     this.resaurantNameB = resaurantNameB;
+    this.textView11 = textView11;
     this.textView9 = textView9;
   }
 
@@ -108,6 +112,12 @@ public final class CartContainerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView11;
+      TextView textView11 = ViewBindings.findChildViewById(rootView, id);
+      if (textView11 == null) {
+        break missingId;
+      }
+
       id = R.id.textView9;
       TextView textView9 = ViewBindings.findChildViewById(rootView, id);
       if (textView9 == null) {
@@ -115,7 +125,7 @@ public final class CartContainerBinding implements ViewBinding {
       }
 
       return new CartContainerBinding((LinearLayout) rootView, cartConstraint, itemName, itemPrice,
-          itemQuantity, resaurantNameB, textView9);
+          itemQuantity, resaurantNameB, textView11, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

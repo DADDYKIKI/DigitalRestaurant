@@ -10,9 +10,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,7 +30,7 @@ import java.util.List;
 
 public class Order extends AppCompatActivity {
 
-    private OrderAdaptor.OrderListener orderListener;
+    private OrderAdaptor.myOrderListener orderListener;
 
     private RecyclerView.Adapter orderAdaptor;
 
@@ -36,11 +38,13 @@ public class Order extends AppCompatActivity {
 
     private RecyclerView recycler;
 
-    DatabaseHelper myCart;
+    private DatabaseHelper myCart;
 
     private RecyclerView cartRecycler;
 
-    List<OrderDetails> myOrder;
+    private  List<OrderDetails> myOrder;
+
+    private  static List<OrderDetails> myOrder2=new ArrayList<>();
 
     FloatingActionButton basket;
 
@@ -114,8 +118,8 @@ public class Order extends AppCompatActivity {
 
             //Orders from restaurants
             setFoodName(extras.getString("name"));
-            setFoodNationality(extras.getString("nationality"));
             setFoodPrice(extras.getInt("price"));
+            setFoodNationality(extras.getString("nationality"));
             setFoodImage(extras.getInt("imageUrl"));
             setNameOfRestaurant(extras.getString("RestaurantName"));
 
@@ -126,10 +130,11 @@ public class Order extends AppCompatActivity {
 
 
         }
-        orderPrice.setText(String.valueOf(getFoodPrice()));
+
         orderFoodName.setText(getFoodName());
+        orderPrice.setText(String.valueOf(getFoodPrice()));
         orderNationality.setText(getFoodNationality());
-        adaFoodImages.setBackgroundResource(foodImage);
+        adaFoodImages.setBackgroundResource(getFoodImage());
         totalOrderPrice.setText(String.valueOf(getFoodPrice()));
         restaurantNameA.setText(getNameOfRestaurant());
 
@@ -144,7 +149,7 @@ public class Order extends AppCompatActivity {
 
         homeKey();
         menuKey();
-
+        deleteCartItem();
 
 
 
@@ -155,6 +160,16 @@ public class Order extends AppCompatActivity {
         // setMyAdaptor();
 
 
+    }
+
+    public static List<OrderDetails> getMyOrder2() {
+        return myOrder2;
+    }
+
+
+    public static void setMyOrder2(List<OrderDetails> order) {
+
+       myOrder2=order;
     }
 
 
@@ -206,17 +221,33 @@ public class Order extends AppCompatActivity {
 
 
 
+
+    public void deleteCartItem() {
+        orderListener = (v, position) -> {
+            Intent intent5 =new Intent(getApplicationContext(), DeleteCartItem.class);
+
+            intent5.putExtra("name",myOrder.get(position).getFoodName());
+
+            intent5.putExtra("restaurantName",myOrder.get(position).getRestaurantName());
+
+            startActivity(intent5);
+
+        };
+
+    }
+
+
+
+
     public void AddToCart(){//............Calculating total quantity and total price..........
 
-        plusBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        plusBtn.setOnClickListener(v -> {
 
-                quantityNumber++;
-                quantityText.setText(String.valueOf(quantityNumber));
-                totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
+            quantityNumber++;
+            quantityText.setText(String.valueOf(quantityNumber));
+            totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
 
-            }});
+        });
 
         minusBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -264,14 +295,38 @@ public class Order extends AppCompatActivity {
 
     public void openMyBasket(){
 
-
         cartRecycler=findViewById(R.id.myRecycler);
         cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-        myOrder=myCart.viewCartItems();
+        myOrder=myCart.getCartItems();
 
-        orderAdaptor=new OrderAdaptor(myOrder,this);
 
+        ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
+                ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder,
+                                  @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                myOrder.remove(viewHolder.getAdapterPosition());
+
+                myOrder2=myOrder;
+
+                orderAdaptor.notifyDataSetChanged();
+            }
+        };
+
+
+
+
+        orderAdaptor=new OrderAdaptor(myOrder,orderListener);
+        new ItemTouchHelper(itemtouch).attachToRecyclerView(cartRecycler);
         cartRecycler.setAdapter(orderAdaptor);
+
+
+
 
 
     }

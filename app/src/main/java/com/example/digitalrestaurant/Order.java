@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,7 +31,6 @@ import java.util.List;
 
 public class Order extends AppCompatActivity {
 
-    private OrderAdaptor.myOrderListener orderListener;
 
     private RecyclerView.Adapter orderAdaptor;
 
@@ -50,6 +50,8 @@ public class Order extends AppCompatActivity {
 
     TextView homeKey,menuKey;
 
+    Button clear,order;
+
 
 
     private TextView plusBtn,minusBtn,addToCartBtn,quantityText,orderFoodName,
@@ -65,7 +67,7 @@ public class Order extends AppCompatActivity {
     private String address;
     private String customerName;
 
-    DatabaseHelper myCartDataUpload,myCartDataViewed;
+    DatabaseHelper myCartDataUpload,myCartUpdated;
 
     List<OrderDetails> orderList,orders;
 
@@ -90,6 +92,8 @@ public class Order extends AppCompatActivity {
         minusBtn=findViewById(R.id.minusBtn);
         totalOrderPrice=findViewById(R.id.totalOrderPrice);
         basket=findViewById(R.id.floatingActionButton);
+       clear=findViewById(R.id.clear);
+       order=findViewById(R.id.order);
 
         myCart=new DatabaseHelper(this);
 
@@ -101,7 +105,7 @@ public class Order extends AppCompatActivity {
 
 
         myCartDataUpload=new DatabaseHelper(this);
-        myCartDataViewed=new DatabaseHelper(this);
+        myCartUpdated=new DatabaseHelper(this);
 
 
         Toast.makeText(this, "Add quantity by\nclicking the + or -\nbutton", Toast.LENGTH_SHORT).show();
@@ -149,9 +153,8 @@ public class Order extends AppCompatActivity {
 
         homeKey();
         menuKey();
-        deleteCartItem();
 
-
+        clearCart();
 
         AddToCart();
         openMyBasket();
@@ -222,21 +225,21 @@ public class Order extends AppCompatActivity {
 
 
 
-    public void deleteCartItem() {
-        orderListener = (v, position) -> {
-            Intent intent5 =new Intent(getApplicationContext(), DeleteCartItem.class);
 
-            intent5.putExtra("name",myOrder.get(position).getFoodName());
 
-            intent5.putExtra("restaurantName",myOrder.get(position).getRestaurantName());
+    public void clearCart() {//............Calculating total quantity and total price..........
 
+        clear.setOnClickListener(v -> {
+
+          myCartUpdated.clearItemsFromCart();
+
+            Intent intent5 =new Intent(getApplicationContext(), Order.class);
             startActivity(intent5);
 
-        };
+
+    });
 
     }
-
-
 
 
     public void AddToCart(){//............Calculating total quantity and total price..........
@@ -280,18 +283,13 @@ public class Order extends AppCompatActivity {
                 startActivity(intent);
             }
 
-
-
-
             else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
-
 
         });
 
-
-
-
     }
+
+
 
     public void openMyBasket(){
 
@@ -311,25 +309,31 @@ public class Order extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 myOrder.remove(viewHolder.getAdapterPosition());
+                orderAdaptor.notifyDataSetChanged();
 
                 myOrder2=myOrder;
 
-                orderAdaptor.notifyDataSetChanged();
+                myCartUpdated.clearItemsFromCart();
+
+                for(OrderDetails x:myOrder2){
+
+                myCartUpdated.addData(x.getFoodName(),x.getQuantity(),x.getTotalFoodPrice(),x.getRestaurantName());}
+
+
+
+
             }
         };
 
-
-
-
-        orderAdaptor=new OrderAdaptor(myOrder,orderListener);
+        orderAdaptor=new OrderAdaptor(myOrder);
         new ItemTouchHelper(itemtouch).attachToRecyclerView(cartRecycler);
         cartRecycler.setAdapter(orderAdaptor);
 
-
-
-
-
     }
+
+
+
+
 
 
     public void homeKey(){

@@ -44,7 +44,7 @@
 28    </queries>
 29
 30    <application
-30-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:15:5-124:19
+30-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:15:5-121:19
 31        android:allowBackup="true"
 31-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:16:9-35
 32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -61,213 +61,208 @@
 38        android:testOnly="true"
 39        android:theme="@style/Theme.DigitalRestaurant" >
 39-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:21:9-55
-40        <activity
-40-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:22:9-24:40
-41            android:name="com.example.digitalrestaurant.DeleteCartItem"
-41-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:23:13-43
-42            android:exported="false" />
-42-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:24:13-37
-43        <!--
-44             The API key for Google Maps-based APIs is defined as a string resource.
-45             (See the file "res/values/google_maps_api.xml").
-46             Note that the API key is linked to the encryption key used to sign the APK.
-47             You need a different API key for each encryption key, including the release key that is used to
-48             sign the APK for publishing.
-49             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-50        -->
-51        <meta-data
-51-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:33:9-35:71
-52            android:name="com.google.android.geo.API_KEY"
-52-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:34:13-58
-53            android:value="AIzaSyDzYambZklaFQn6Gee97f_BufpS53XZiTI" />
-53-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:35:13-68
-54        <meta-data
-54-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:36:9-38:69
-55            android:name="com.google.android.gms.version"
-55-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:37:13-58
-56            android:value="@integer/google_play_services_version" />
-56-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:38:13-66
-57
-58        <uses-library
-58-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:40:9-42:40
-59            android:name="org.apache.http.legacy"
-59-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:41:13-50
-60            android:required="false" />
-60-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:42:13-37
-61
-62        <activity
-62-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:44:9-47:71
-63            android:name="com.example.digitalrestaurant.Authentications.NewPassword"
-63-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:45:13-56
-64            android:exported="false"
-64-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:46:13-37
-65            android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPage" />
-65-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:47:13-68
-66        <activity
-66-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:48:9-50:40
-67            android:name="com.example.digitalrestaurant.GetMyLocation"
-67-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:49:13-42
-68            android:exported="false" />
-68-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:50:13-37
-69        <activity
-69-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:51:9-54:71
-70            android:name="com.example.digitalrestaurant.Authentications.ForgotPassword"
-70-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:52:13-59
-71            android:exported="false"
-71-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:53:13-37
-72            android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPage" />
-72-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:54:13-68
-73        <activity
-73-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:55:9-58:50
-74            android:name="com.example.digitalrestaurant.Contacts"
-74-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:56:13-37
-75            android:exported="false"
-75-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:57:13-37
-76            android:parentActivityName="com.example.digitalrestaurant.Menu" />
-76-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:58:13-47
-77        <activity
-77-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:59:9-62:85
-78            android:name="com.example.digitalrestaurant.Authentications.SellerUploadPage"
-78-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:60:13-61
-79            android:exported="false"
-79-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:61:13-37
-80            android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2" />
-80-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:62:13-82
-81        <activity
-81-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:63:9-65:40
-82            android:name="com.example.digitalrestaurant.Authentications.Customer"
-82-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:64:13-53
-83            android:exported="false" />
-83-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:65:13-37
-84        <activity
-84-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:66:9-68:40
-85            android:name="com.example.digitalrestaurant.HomePage"
-85-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:67:13-37
-86            android:exported="false" />
-86-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:68:13-37
-87        <activity
-87-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:69:9-72:54
-88            android:name="com.example.digitalrestaurant.Order"
-88-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:70:13-34
-89            android:exported="false"
-89-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:71:13-37
-90            android:parentActivityName="com.example.digitalrestaurant.HomePage" />
-90-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:72:13-51
-91        <activity
-91-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:73:9-75:40
-92            android:name="com.example.digitalrestaurant.Menu"
-92-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:74:13-33
-93            android:exported="false" />
-93-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:75:13-37
-94        <activity
-94-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:76:9-78:40
-95            android:name="com.example.digitalrestaurant.Kitchens.ApprokoKitchen"
-95-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:77:13-52
-96            android:exported="false" />
-96-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:78:13-37
-97        <activity
-97-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:79:9-81:40
-98            android:name="com.example.digitalrestaurant.Kitchens.AdaKitchen"
-98-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:80:13-48
-99            android:exported="false" />
-99-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:81:13-37
-100        <activity
-100-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:82:9-84:40
-101            android:name="com.example.digitalrestaurant.Kitchens.ObandeKitchen"
-101-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:83:13-51
-102            android:exported="false" />
-102-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:84:13-37
-103        <activity
-103-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:85:9-87:40
-104            android:name="com.example.digitalrestaurant.Kitchens.Stainless"
-104-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:86:13-47
-105            android:exported="false" />
-105-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:87:13-37
-106        <activity
-106-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:88:9-91:54
-107            android:name="com.example.digitalrestaurant.Cart"
-107-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:89:13-33
-108            android:exported="false"
-108-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:90:13-37
-109            android:parentActivityName="com.example.digitalrestaurant.HomePage" />
-109-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:91:13-51
-110        <activity
-110-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:92:9-95:71
-111            android:name="com.example.digitalrestaurant.Authentications.SignupPage"
-111-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:93:13-55
-112            android:exported="false"
-112-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:94:13-37
-113            android:parentActivityName="com.example.digitalrestaurant.Authentications.IntroPage" />
-113-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:95:13-68
-114        <activity
-114-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:96:9-99:71
-115            android:name="com.example.digitalrestaurant.Authentications.SignupPageForFoodSeller2"
-115-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:97:13-69
-116            android:exported="false"
-116-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:98:13-37
-117            android:parentActivityName="com.example.digitalrestaurant.Authentications.IntroPage" />
-117-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:99:13-68
-118        <activity
-118-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:100:9-103:71
-119            android:name="com.example.digitalrestaurant.Authentications.LoginPage"
-119-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:101:13-54
-120            android:exported="false"
-120-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:102:13-37
-121            android:parentActivityName="com.example.digitalrestaurant.Authentications.IntroPage" />
-121-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:103:13-68
-122        <activity
-122-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:104:9-107:71
-123            android:name="com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2"
-123-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:105:13-68
-124            android:exported="false"
-124-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:106:13-37
-125            android:parentActivityName="com.example.digitalrestaurant.Authentications.IntroPage" />
-125-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:107:13-68
-126        <activity
-126-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:108:9-110:40
-127            android:name="com.example.digitalrestaurant.Authentications.FoodSeller"
-127-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:109:13-55
-128            android:exported="false" />
-128-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:110:13-37
-129        <activity
-129-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:111:9-119:20
-130            android:name="com.example.digitalrestaurant.Authentications.IntroPage"
-130-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:112:13-54
-131            android:exported="true" >
-131-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:113:13-36
-132            <intent-filter>
-132-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:114:13-118:29
-133                <action android:name="android.intent.action.MAIN" />
-133-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:115:17-69
-133-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:115:25-66
-134
-135                <category android:name="android.intent.category.LAUNCHER" />
-135-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:117:17-77
-135-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:117:27-74
-136            </intent-filter>
-137        </activity>
-138
-139        <meta-data
-139-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:121:9-123:57
-140            android:name="preloaded_fonts"
-140-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:122:13-43
-141            android:resource="@array/preloaded_fonts" />
-141-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:123:13-54
-142
-143        <activity
-143-->[com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:27:9-29:72
-144            android:name="com.karumi.dexter.DexterActivity"
-144-->[com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:28:13-60
-145            android:theme="@style/Dexter.Internal.Theme.Transparent" />
-145-->[com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:29:13-69
-146        <activity
-146-->[com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:20:9-22:45
-147            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-147-->[com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:20:19-85
-148            android:exported="false"
-148-->[com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:22:19-43
-149            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-149-->[com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:21:19-78
-150    </application>
-151
-152</manifest>
+40
+41        <!--
+42             The API key for Google Maps-based APIs is defined as a string resource.
+43             (See the file "res/values/google_maps_api.xml").
+44             Note that the API key is linked to the encryption key used to sign the APK.
+45             You need a different API key for each encryption key, including the release key that is used to
+46             sign the APK for publishing.
+47             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+48        -->
+49        <meta-data
+49-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:30:9-32:71
+50            android:name="com.google.android.geo.API_KEY"
+50-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:31:13-58
+51            android:value="AIzaSyDzYambZklaFQn6Gee97f_BufpS53XZiTI" />
+51-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:32:13-68
+52        <meta-data
+52-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:33:9-35:69
+53            android:name="com.google.android.gms.version"
+53-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:34:13-58
+54            android:value="@integer/google_play_services_version" />
+54-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:35:13-66
+55
+56        <uses-library
+56-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:37:9-39:40
+57            android:name="org.apache.http.legacy"
+57-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:38:13-50
+58            android:required="false" />
+58-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:39:13-37
+59
+60        <activity
+60-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:41:9-44:71
+61            android:name="com.example.digitalrestaurant.Authentications.NewPassword"
+61-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:42:13-56
+62            android:exported="false"
+62-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:43:13-37
+63            android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPage" />
+63-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:44:13-68
+64        <activity
+64-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:45:9-47:40
+65            android:name="com.example.digitalrestaurant.GetMyLocation"
+65-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:46:13-42
+66            android:exported="false" />
+66-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:47:13-37
+67        <activity
+67-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:48:9-51:71
+68            android:name="com.example.digitalrestaurant.Authentications.ForgotPassword"
+68-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:49:13-59
+69            android:exported="false"
+69-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:50:13-37
+70            android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPage" />
+70-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:51:13-68
+71        <activity
+71-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:52:9-55:50
+72            android:name="com.example.digitalrestaurant.Contacts"
+72-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:53:13-37
+73            android:exported="false"
+73-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:54:13-37
+74            android:parentActivityName="com.example.digitalrestaurant.Menu" />
+74-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:55:13-47
+75        <activity
+75-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:56:9-59:85
+76            android:name="com.example.digitalrestaurant.Authentications.SellerUploadPage"
+76-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:57:13-61
+77            android:exported="false"
+77-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:58:13-37
+78            android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2" />
+78-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:59:13-82
+79        <activity
+79-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:60:9-62:40
+80            android:name="com.example.digitalrestaurant.Authentications.Customer"
+80-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:61:13-53
+81            android:exported="false" />
+81-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:62:13-37
+82        <activity
+82-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:63:9-65:40
+83            android:name="com.example.digitalrestaurant.HomePage"
+83-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:64:13-37
+84            android:exported="false" />
+84-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:65:13-37
+85        <activity
+85-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:66:9-69:54
+86            android:name="com.example.digitalrestaurant.Order"
+86-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:67:13-34
+87            android:exported="false"
+87-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:68:13-37
+88            android:parentActivityName="com.example.digitalrestaurant.HomePage" />
+88-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:69:13-51
+89        <activity
+89-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:70:9-72:40
+90            android:name="com.example.digitalrestaurant.Menu"
+90-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:71:13-33
+91            android:exported="false" />
+91-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:72:13-37
+92        <activity
+92-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:73:9-75:40
+93            android:name="com.example.digitalrestaurant.Kitchens.ApprokoKitchen"
+93-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:74:13-52
+94            android:exported="false" />
+94-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:75:13-37
+95        <activity
+95-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:76:9-78:40
+96            android:name="com.example.digitalrestaurant.Kitchens.AdaKitchen"
+96-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:77:13-48
+97            android:exported="false" />
+97-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:78:13-37
+98        <activity
+98-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:79:9-81:40
+99            android:name="com.example.digitalrestaurant.Kitchens.ObandeKitchen"
+99-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:80:13-51
+100            android:exported="false" />
+100-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:81:13-37
+101        <activity
+101-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:82:9-84:40
+102            android:name="com.example.digitalrestaurant.Kitchens.Stainless"
+102-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:83:13-47
+103            android:exported="false" />
+103-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:84:13-37
+104        <activity
+104-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:85:9-88:54
+105            android:name="com.example.digitalrestaurant.Cart"
+105-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:86:13-33
+106            android:exported="false"
+106-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:87:13-37
+107            android:parentActivityName="com.example.digitalrestaurant.HomePage" />
+107-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:88:13-51
+108        <activity
+108-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:89:9-92:71
+109            android:name="com.example.digitalrestaurant.Authentications.SignupPage"
+109-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:90:13-55
+110            android:exported="false"
+110-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:91:13-37
+111            android:parentActivityName="com.example.digitalrestaurant.Authentications.IntroPage" />
+111-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:92:13-68
+112        <activity
+112-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:93:9-96:71
+113            android:name="com.example.digitalrestaurant.Authentications.SignupPageForFoodSeller2"
+113-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:94:13-69
+114            android:exported="false"
+114-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:95:13-37
+115            android:parentActivityName="com.example.digitalrestaurant.Authentications.IntroPage" />
+115-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:96:13-68
+116        <activity
+116-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:97:9-100:71
+117            android:name="com.example.digitalrestaurant.Authentications.LoginPage"
+117-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:98:13-54
+118            android:exported="false"
+118-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:99:13-37
+119            android:parentActivityName="com.example.digitalrestaurant.Authentications.IntroPage" />
+119-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:100:13-68
+120        <activity
+120-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:101:9-104:71
+121            android:name="com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2"
+121-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:102:13-68
+122            android:exported="false"
+122-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:103:13-37
+123            android:parentActivityName="com.example.digitalrestaurant.Authentications.IntroPage" />
+123-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:104:13-68
+124        <activity
+124-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:105:9-107:40
+125            android:name="com.example.digitalrestaurant.Authentications.FoodSeller"
+125-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:106:13-55
+126            android:exported="false" />
+126-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:107:13-37
+127        <activity
+127-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:108:9-116:20
+128            android:name="com.example.digitalrestaurant.Authentications.IntroPage"
+128-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:109:13-54
+129            android:exported="true" >
+129-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:110:13-36
+130            <intent-filter>
+130-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:111:13-115:29
+131                <action android:name="android.intent.action.MAIN" />
+131-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:112:17-69
+131-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:112:25-66
+132
+133                <category android:name="android.intent.category.LAUNCHER" />
+133-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:114:17-77
+133-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:114:27-74
+134            </intent-filter>
+135        </activity>
+136
+137        <meta-data
+137-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:118:9-120:57
+138            android:name="preloaded_fonts"
+138-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:119:13-43
+139            android:resource="@array/preloaded_fonts" />
+139-->/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:120:13-54
+140
+141        <activity
+141-->[com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:27:9-29:72
+142            android:name="com.karumi.dexter.DexterActivity"
+142-->[com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:28:13-60
+143            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+143-->[com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:29:13-69
+144        <activity
+144-->[com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:20:9-22:45
+145            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+145-->[com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:20:19-85
+146            android:exported="false"
+146-->[com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:22:19-43
+147            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+147-->[com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:21:19-78
+148    </application>
+149
+150</manifest>

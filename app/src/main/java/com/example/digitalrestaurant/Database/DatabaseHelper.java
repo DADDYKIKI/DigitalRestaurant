@@ -307,26 +307,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     @SuppressLint("Range")
-    public boolean clearItemsFromCart() {
+    public void clearItemsFromCart() {
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
+        myDatabase.execSQL("delete from "+ MY_TABLE_NAME);
 
-        Cursor cur = myDatabase.rawQuery("select * from " + MY_TABLE_NAME,
-
-                null);
-
-        if(cur.getCount()>0) {
-            while (cur.moveToNext()) {
-
-                     long delete=myDatabase.delete(MY_TABLE_NAME, COLUMNNAME1 + " = ?" , new String[]{COLUMNNAME1});
-
-                    if (delete == -1) return false;
-
-                    myDatabase.close();
-                }
-            }return true;
-
-        }
+    }
 
 
 

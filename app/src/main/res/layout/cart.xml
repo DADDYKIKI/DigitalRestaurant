@@ -12,18 +12,19 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout4"
-            android:layout_width="397dp"
-            android:layout_height="116dp"
+            android:layout_width="419dp"
+            android:layout_height="76dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="398dp"
-                android:layout_height="102dp"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="16dp">
+                android:layout_width="413dp"
+                android:layout_height="57dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/cartTitle"
@@ -67,57 +68,6 @@
                     app:layout_constraintStart_toEndOf="@+id/cartTitle"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
-                    android:text="Item"
-                    android:textColor="@color/Red"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/textView8"
-                    app:layout_constraintHorizontal_bias="0.271"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cartTitle" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
-                    android:layout_marginEnd="108dp"
-                    android:text="Quantity"
-                    android:textColor="@color/Red"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/textView10"
-                    app:layout_constraintTop_toBottomOf="@+id/cartTitle" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="36dp"
-                    android:layout_marginEnd="48dp"
-                    android:text="Price"
-                    android:textColor="@color/Red"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/menuKeyS"
-                    app:layout_constraintVertical_bias="0.571" />
-
-                <TextView
-                    android:id="@+id/restN"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginEnd="180dp"
-                    android:text="Restaurant"
-                    android:textAlignment="center"
-                    android:textColor="@color/purple_500"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -125,18 +75,23 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myRecycler"
-            android:layout_width="421dp"
-            android:layout_height="370dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="423dp"
+            android:layout_height="525dp"
+            android:layout_marginTop="4dp"
+            android:keepScreenOn="false"
+            android:scrollbarSize="7dp"
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.538"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+            app:layout_constraintVertical_bias="0.0" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/myOrderPotion"
-            android:layout_width="418dp"
-            android:layout_height="302dp"
+            android:layout_width="416dp"
+            android:layout_height="183dp"
             android:background="@drawable/adakitchen"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -144,46 +99,29 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ordering_container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="413dp"
+                android:layout_height="185dp"
                 android:background="@color/Whiteblue"
                 android:backgroundTint="@color/purple_700"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="-186dp">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout2"
-                    android:layout_width="418dp"
-                    android:layout_height="346dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="414dp"
+                    android:layout_height="178dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView"
-                        android:layout_width="196dp"
-                        android:layout_height="91dp"
-                        android:layout_margin="20dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/adarestaurantcard"
-                            android:layout_width="214dp"
-                            android:layout_height="102dp"
-                            android:background="@drawable/adachilledheineken">
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:id="@+id/orderNationality"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="16dp"
                         android:text="Nigerian"
                         android:textColor="@color/redishorang"
@@ -193,10 +131,10 @@
 
                     <TextView
                         android:id="@+id/addToCartbtn"
-                        android:layout_width="118dp"
-                        android:layout_height="39dp"
-                        android:layout_marginEnd="24dp"
-                        android:layout_marginBottom="164dp"
+                        android:layout_width="63dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="28dp"
+                        android:layout_marginBottom="16dp"
                         android:background="@drawable/addtocartbtn"
                         android:padding="5dp"
                         android:text="Add to cart"
@@ -212,23 +150,25 @@
                         android:layout_width="45dp"
                         android:layout_height="23dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="16dp"
-                        android:text="Price"
+                        android:layout_marginBottom="28dp"
+                        android:text="Price:-"
+                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="15dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toTopOf="@+id/totalPrice"
                         app:layout_constraintEnd_toStartOf="@+id/poundSign"
-                        app:layout_constraintHorizontal_bias="0.971"
+                        app:layout_constraintHorizontal_bias="0.526"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
                         android:id="@+id/totalPrice"
                         android:layout_width="118dp"
                         android:layout_height="23dp"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginBottom="40dp"
-                        android:text="Total Order Price:"
+                        android:text="Total Order Price:-"
+                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="15dp"
                         android:textStyle="bold"
@@ -241,8 +181,8 @@
                         android:id="@+id/quantityTxt"
                         android:layout_width="54dp"
                         android:layout_height="42dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="76dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="16dp"
                         android:background="@drawable/restaurantbackground"
                         android:padding="5dp"
                         android:text="1"
@@ -257,8 +197,8 @@
                         android:id="@+id/plusBtn"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginEnd="120dp"
-                        android:layout_marginBottom="76dp"
+                        android:layout_marginEnd="144dp"
+                        android:layout_marginBottom="16dp"
                         android:background="@drawable/bordera2"
                         android:text="  +"
                         android:textColor="@color/white"
@@ -272,8 +212,8 @@
                         android:id="@+id/minusBtn"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="64dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="16dp"
                         android:background="@drawable/bordera2"
                         android:text="  -"
                         android:textColor="@color/white"
@@ -281,64 +221,60 @@
                         android:textStyle="bold"
                         app:autoSizeTextType="uniform"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/quantityTxt"
-                        app:layout_constraintTop_toBottomOf="@+id/orderPrice"
-                        app:layout_constraintVertical_bias="0.842" />
+                        app:layout_constraintEnd_toStartOf="@+id/quantityTxt" />
 
                     <TextView
                         android:id="@+id/orderFoodName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginEnd="28dp"
                         android:text="Jelof"
                         android:textAlignment="center"
                         android:textColor="@color/redishorang"
                         android:textSize="15dp"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/orderNationality" />
+                        app:layout_constraintTop_toBottomOf="@+id/orderNationality"
+                        app:layout_constraintVertical_bias="0.1" />
 
                     <TextView
                         android:id="@+id/poundSign"
                         android:layout_width="20dp"
                         android:layout_height="35dp"
-                        android:layout_marginStart="88dp"
-                        android:layout_marginBottom="44dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginBottom="88dp"
                         android:text="£"
                         android:textColor="@color/purple_200"
-                        android:textSize="30dp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toTopOf="@+id/textView2"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/cardView"
-                        app:layout_constraintVertical_bias="0.413" />
+                        app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="82dp"
                         android:layout_height="23dp"
-                        android:layout_marginBottom="84dp"
+                        android:layout_marginBottom="16dp"
                         android:text="Quantity:"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="15dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/minusBtn"
-                        app:layout_constraintHorizontal_bias="0.634"
+                        app:layout_constraintHorizontal_bias="0.588"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
                         android:id="@+id/totalOrderPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="35dp"
-                        android:layout_marginEnd="68dp"
-                        android:layout_marginBottom="136dp"
+                        android:layout_width="29dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="144dp"
                         android:text="10"
                         android:textColor="@color/purple_200"
-                        android:textSize="30dp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/addToCartbtn"
                         app:layout_constraintTop_toBottomOf="@+id/orderPrice" />
 
@@ -346,59 +282,66 @@
                         android:id="@+id/poundSign2"
                         android:layout_width="20dp"
                         android:layout_height="35dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="136dp"
                         android:text="£"
                         android:textColor="@color/purple_200"
-                        android:textSize="30dp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/totalOrderPrice"
-                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/totalPrice"
-                        app:layout_constraintTop_toBottomOf="@+id/orderPrice"
-                        app:layout_constraintVertical_bias="0.444" />
-
-                    <TextView
-                        android:id="@+id/from"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="44dp"
-                        android:text="From"
-                        android:textAlignment="center"
-                        android:textColor="@color/teal_700"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/orderRestaurant"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="TextView"
-                        android:textAlignment="center"
-                        android:textColor="@color/teal_700"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.003"
-                        app:layout_constraintStart_toEndOf="@+id/from"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/orderPrice" />
 
                     <TextView
                         android:id="@+id/orderPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
-                        android:layout_marginTop="20dp"
                         android:text="10"
                         android:textColor="@color/purple_200"
-                        android:textSize="30dp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/poundSign"
                         app:layout_constraintEnd_toStartOf="@+id/orderFoodName"
-                        app:layout_constraintHorizontal_bias="0.122"
-                        app:layout_constraintStart_toEndOf="@+id/priceOfItem"
-                        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+                        app:layout_constraintHorizontal_bias="0.181"
+                        app:layout_constraintStart_toEndOf="@+id/priceOfItem" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/adarestaurantcard"
+                        android:layout_width="144dp"
+                        android:layout_height="81dp"
+                        android:background="@drawable/adachilledheineken"
+                        app:layout_constraintEnd_toStartOf="@+id/orderNationality"
+                        tools:layout_editor_absoluteY="-10dp">
+
+                        <TextView
+                            android:id="@+id/from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="From"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/orderRestaurant"
+                            app:layout_constraintHorizontal_bias="0.595"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0" />
+
+                        <TextView
+                            android:id="@+id/orderRestaurant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -408,30 +351,35 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/clear"
             android:layout_width="91dp"
             android:layout_height="34dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="352dp"
             android:backgroundTint="@color/Ash"
             android:text="Clear"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/myRecycler"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
-            app:layout_constraintHorizontal_bias="0.918"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/myOrderPotion"
+            app:layout_constraintEnd_toStartOf="@+id/order"
+            app:layout_constraintHorizontal_bias="0.935"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+            app:layout_constraintVertical_bias="0.842" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/order"
             android:layout_width="91dp"
             android:layout_height="34dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="352dp"
+            android:layout_marginEnd="16dp"
             android:backgroundTint="@color/redishorang"
             android:text="Order"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/myRecycler"
-            tools:layout_editor_absoluteX="311dp" />
+            app:layout_constraintBottom_toTopOf="@+id/myOrderPotion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+            app:layout_constraintVertical_bias="0.842" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

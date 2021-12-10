@@ -34,9 +34,7 @@ com/example/digitalrestaurant/databinding/MenuBinding.java
  com.example.digitalrestaurant.databinding.MenuBinding
 com/example/digitalrestaurant/Adaptors/OrderAdaptor.java
  com.example.digitalrestaurant.Adaptors.OrderAdaptor
- com.example.digitalrestaurant.Adaptors.OrderAdaptor$OrderListener
  com.example.digitalrestaurant.Adaptors.OrderAdaptor$OrderViewHolder
- com.example.digitalrestaurant.Adaptors.OrderAdaptor$myOrderListener
 com/example/digitalrestaurant/Authentications/SellerUploadPage.java
  com.example.digitalrestaurant.Authentications.SellerUploadPage
 com/example/digitalrestaurant/databinding/HomepageBinding.java
@@ -68,8 +66,6 @@ com/example/digitalrestaurant/databinding/CartBinding.java
 com/example/digitalrestaurant/Adaptors/PopulateAdvertismentAdaptor.java
  com.example.digitalrestaurant.Adaptors.PopulateAdvertismentAdaptor
  com.example.digitalrestaurant.Adaptors.PopulateAdvertismentAdaptor$PopulateAdvertismentViewHolder
-com/example/digitalrestaurant/DeleteCartItem.java
- com.example.digitalrestaurant.DeleteCartItem
 com/example/digitalrestaurant/Contacts.java
  com.example.digitalrestaurant.Contacts
 com/example/digitalrestaurant/databinding/AprokoResataurantHomepageBinding.java

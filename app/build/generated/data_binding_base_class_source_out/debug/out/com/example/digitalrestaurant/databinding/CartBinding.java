@@ -4,17 +4,16 @@ package com.example.digitalrestaurant.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.digitalrestaurant.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -30,19 +29,16 @@ public final class CartBinding implements ViewBinding {
   public final TextView addToCartbtn;
 
   @NonNull
-  public final CardView cardView;
+  public final TextView cartTitle;
 
   @NonNull
-  public final TextView cartTitle;
+  public final Button clear;
 
   @NonNull
   public final ConstraintLayout constraintLayout2;
 
   @NonNull
   public final ConstraintLayout constraintLayout4;
-
-  @NonNull
-  public final FloatingActionButton floatingActionButton;
 
   @NonNull
   public final TextView from;
@@ -61,6 +57,9 @@ public final class CartBinding implements ViewBinding {
 
   @NonNull
   public final RecyclerView myRecycler;
+
+  @NonNull
+  public final Button order;
 
   @NonNull
   public final TextView orderFoodName;
@@ -93,19 +92,7 @@ public final class CartBinding implements ViewBinding {
   public final TextView quantityTxt;
 
   @NonNull
-  public final TextView restN;
-
-  @NonNull
-  public final TextView textView10;
-
-  @NonNull
   public final TextView textView2;
-
-  @NonNull
-  public final TextView textView7;
-
-  @NonNull
-  public final TextView textView8;
 
   @NonNull
   public final TextView totalOrderPrice;
@@ -114,32 +101,30 @@ public final class CartBinding implements ViewBinding {
   public final TextView totalPrice;
 
   private CartBinding(@NonNull LinearLayout rootView, @NonNull ConstraintLayout adarestaurantcard,
-      @NonNull TextView addToCartbtn, @NonNull CardView cardView, @NonNull TextView cartTitle,
+      @NonNull TextView addToCartbtn, @NonNull TextView cartTitle, @NonNull Button clear,
       @NonNull ConstraintLayout constraintLayout2, @NonNull ConstraintLayout constraintLayout4,
-      @NonNull FloatingActionButton floatingActionButton, @NonNull TextView from,
-      @NonNull TextView homeKey, @NonNull TextView menuKeyS, @NonNull TextView minusBtn,
-      @NonNull ConstraintLayout myOrderPotion, @NonNull RecyclerView myRecycler,
-      @NonNull TextView orderFoodName, @NonNull TextView orderNationality,
-      @NonNull TextView orderPrice, @NonNull TextView orderRestaurant,
-      @NonNull ConstraintLayout orderingContainer, @NonNull TextView plusBtn,
-      @NonNull TextView poundSign, @NonNull TextView poundSign2, @NonNull TextView priceOfItem,
-      @NonNull TextView quantityTxt, @NonNull TextView restN, @NonNull TextView textView10,
-      @NonNull TextView textView2, @NonNull TextView textView7, @NonNull TextView textView8,
+      @NonNull TextView from, @NonNull TextView homeKey, @NonNull TextView menuKeyS,
+      @NonNull TextView minusBtn, @NonNull ConstraintLayout myOrderPotion,
+      @NonNull RecyclerView myRecycler, @NonNull Button order, @NonNull TextView orderFoodName,
+      @NonNull TextView orderNationality, @NonNull TextView orderPrice,
+      @NonNull TextView orderRestaurant, @NonNull ConstraintLayout orderingContainer,
+      @NonNull TextView plusBtn, @NonNull TextView poundSign, @NonNull TextView poundSign2,
+      @NonNull TextView priceOfItem, @NonNull TextView quantityTxt, @NonNull TextView textView2,
       @NonNull TextView totalOrderPrice, @NonNull TextView totalPrice) {
     this.rootView = rootView;
     this.adarestaurantcard = adarestaurantcard;
     this.addToCartbtn = addToCartbtn;
-    this.cardView = cardView;
     this.cartTitle = cartTitle;
+    this.clear = clear;
     this.constraintLayout2 = constraintLayout2;
     this.constraintLayout4 = constraintLayout4;
-    this.floatingActionButton = floatingActionButton;
     this.from = from;
     this.homeKey = homeKey;
     this.menuKeyS = menuKeyS;
     this.minusBtn = minusBtn;
     this.myOrderPotion = myOrderPotion;
     this.myRecycler = myRecycler;
+    this.order = order;
     this.orderFoodName = orderFoodName;
     this.orderNationality = orderNationality;
     this.orderPrice = orderPrice;
@@ -150,11 +135,7 @@ public final class CartBinding implements ViewBinding {
     this.poundSign2 = poundSign2;
     this.priceOfItem = priceOfItem;
     this.quantityTxt = quantityTxt;
-    this.restN = restN;
-    this.textView10 = textView10;
     this.textView2 = textView2;
-    this.textView7 = textView7;
-    this.textView8 = textView8;
     this.totalOrderPrice = totalOrderPrice;
     this.totalPrice = totalPrice;
   }
@@ -198,15 +179,15 @@ public final class CartBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.cardView;
-      CardView cardView = ViewBindings.findChildViewById(rootView, id);
-      if (cardView == null) {
-        break missingId;
-      }
-
       id = R.id.cartTitle;
       TextView cartTitle = ViewBindings.findChildViewById(rootView, id);
       if (cartTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.clear;
+      Button clear = ViewBindings.findChildViewById(rootView, id);
+      if (clear == null) {
         break missingId;
       }
 
@@ -219,12 +200,6 @@ public final class CartBinding implements ViewBinding {
       id = R.id.constraintLayout4;
       ConstraintLayout constraintLayout4 = ViewBindings.findChildViewById(rootView, id);
       if (constraintLayout4 == null) {
-        break missingId;
-      }
-
-      id = R.id.floatingActionButton;
-      FloatingActionButton floatingActionButton = ViewBindings.findChildViewById(rootView, id);
-      if (floatingActionButton == null) {
         break missingId;
       }
 
@@ -261,6 +236,12 @@ public final class CartBinding implements ViewBinding {
       id = R.id.myRecycler;
       RecyclerView myRecycler = ViewBindings.findChildViewById(rootView, id);
       if (myRecycler == null) {
+        break missingId;
+      }
+
+      id = R.id.order;
+      Button order = ViewBindings.findChildViewById(rootView, id);
+      if (order == null) {
         break missingId;
       }
 
@@ -324,33 +305,9 @@ public final class CartBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.restN;
-      TextView restN = ViewBindings.findChildViewById(rootView, id);
-      if (restN == null) {
-        break missingId;
-      }
-
-      id = R.id.textView10;
-      TextView textView10 = ViewBindings.findChildViewById(rootView, id);
-      if (textView10 == null) {
-        break missingId;
-      }
-
       id = R.id.textView2;
       TextView textView2 = ViewBindings.findChildViewById(rootView, id);
       if (textView2 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView7;
-      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
-      if (textView7 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView8;
-      TextView textView8 = ViewBindings.findChildViewById(rootView, id);
-      if (textView8 == null) {
         break missingId;
       }
 
@@ -366,12 +323,11 @@ public final class CartBinding implements ViewBinding {
         break missingId;
       }
 
-      return new CartBinding((LinearLayout) rootView, adarestaurantcard, addToCartbtn, cardView,
-          cartTitle, constraintLayout2, constraintLayout4, floatingActionButton, from, homeKey,
-          menuKeyS, minusBtn, myOrderPotion, myRecycler, orderFoodName, orderNationality,
-          orderPrice, orderRestaurant, orderingContainer, plusBtn, poundSign, poundSign2,
-          priceOfItem, quantityTxt, restN, textView10, textView2, textView7, textView8,
-          totalOrderPrice, totalPrice);
+      return new CartBinding((LinearLayout) rootView, adarestaurantcard, addToCartbtn, cartTitle,
+          clear, constraintLayout2, constraintLayout4, from, homeKey, menuKeyS, minusBtn,
+          myOrderPotion, myRecycler, order, orderFoodName, orderNationality, orderPrice,
+          orderRestaurant, orderingContainer, plusBtn, poundSign, poundSign2, priceOfItem,
+          quantityTxt, textView2, totalOrderPrice, totalPrice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

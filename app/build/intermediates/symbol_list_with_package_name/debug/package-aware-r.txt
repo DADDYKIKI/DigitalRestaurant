@@ -2055,7 +2055,6 @@ id buttons_container
 id cache_measures
 id cancel_action
 id cancel_button
-id cardView
 id cartConstraint
 id cartTitle
 id center
@@ -2073,6 +2072,7 @@ id chip3
 id chip_group
 id chronometer
 id circle_center
+id clear
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -2351,7 +2351,6 @@ id radio
 id ratio
 id rectangles
 id resaurantNameB
-id restN
 id restaurant
 id restaurantImage
 id restaurantLocation
@@ -2470,16 +2469,16 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
-id textView10
 id textView11
 id textView12
+id textView13
+id textView14
+id textView15
 id textView2
 id textView3
 id textView4
 id textView5
 id textView6
-id textView7
-id textView8
 id textView9
 id text_input_end_icon
 id text_input_error_icon

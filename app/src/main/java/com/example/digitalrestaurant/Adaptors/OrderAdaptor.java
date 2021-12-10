@@ -17,20 +17,19 @@ import java.util.List;
 
 public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHolder>{
 
-    private myOrderListener orderListener;
+
 
     List<OrderDetails> myOder;
-    RecyclerView orderRecycler;
 
 
-    public OrderAdaptor(List<OrderDetails> myOder, myOrderListener orderListener) {
+    public OrderAdaptor(List<OrderDetails> myOder) {
         this.myOder = myOder;
-        this.orderListener= orderListener;
+
 
     }
 
 
-    public  class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public  class OrderViewHolder extends RecyclerView.ViewHolder {
 
 
         TextView foodName, foodTotalPrice, quantity,restaurant;
@@ -39,7 +38,7 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
         public OrderViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            itemView.setOnClickListener(this);
+
 
             foodName = itemView.findViewById(R.id.itemName);
             foodTotalPrice = itemView.findViewById(R.id.itemPrice);
@@ -50,49 +49,36 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
         }
 
 
-        @Override
-        public void onClick(View v) {
-            orderListener.onClick(itemView,getAdapterPosition());
+
         }
-    }
 
-    @NonNull
-    @Override
-    public OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            @NonNull
+            @Override
+            public OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View cartView= LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_container,parent,false);
-
-
-        return  new OrderViewHolder(cartView);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull OrderAdaptor.OrderViewHolder myHolder, int position) {
-
-        myHolder.foodName.setText(myOder.get(position).getRestaurantName());
-        myHolder.quantity.setText(myOder.get(position).getQuantity());
-        myHolder.foodTotalPrice.setText(myOder.get(position).getTotalFoodPrice());
-        myHolder.restaurant.setText(myOder.get(position).getFoodName());
-
-    }
-
-    @Override
-    public int getItemCount() {
-
-        return myOder.size();
-    }
+                View cartView= LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_container,parent,false);
 
 
-    public interface OrderListener {
+                return  new OrderViewHolder(cartView);
+            }
 
-        void onClick(View v, int position);
+             @Override
+             public void onBindViewHolder(@NonNull OrderAdaptor.OrderViewHolder myHolder, int position) {
 
-    }
+            myHolder.foodName.setText(myOder.get(position).getFoodName());
+            myHolder.quantity.setText(myOder.get(position).getQuantity());
+            myHolder.foodTotalPrice.setText(myOder.get(position).getTotalFoodPrice());
+            myHolder.restaurant.setText(myOder.get(position).getRestaurantName());
 
-    public interface myOrderListener{
+        }
 
-        void onClick(View v, int position);
+            @Override
+            public int getItemCount() {
 
-    }
+                return myOder.size();
+            }
+
+
+
 
 }

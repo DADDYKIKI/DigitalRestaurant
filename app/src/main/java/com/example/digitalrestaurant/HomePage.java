@@ -70,6 +70,22 @@ public class HomePage extends AppCompatActivity {
 
     DatabaseHelper helper;
 
+    private long press;
+
+
+    @Override
+    public void onBackPressed() {
+
+
+        if(press+3000>System.currentTimeMillis()){
+            super.onBackPressed();
+        return;}
+
+        else
+            Toast.makeText(this, "Press again to exit", Toast.LENGTH_SHORT).show();
+
+
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -94,26 +110,6 @@ public class HomePage extends AppCompatActivity {
         helper=new DatabaseHelper(this);
 
         customerWelcomeName.setText(LoginPage.getCusName().toUpperCase());
-
-        Toast.makeText(this, LoginPage.getCusName().toUpperCase()+
-                ", If this is your first time\nof using this app, ", Toast.LENGTH_SHORT).show();
-
-        Toast.makeText(this,
-                "I want you to read this.", Toast.LENGTH_SHORT).show();
-
-        Toast.makeText(this,
-                "You can scroll up or down\n ", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,
-                ", right or left\n to make your choice ", Toast.LENGTH_SHORT).show();
-
-        Toast.makeText(this,
-                "The First row, is strickly\nfor advertisment.\n", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,
-                "Use the restaurant to selct and order food", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,
-                "Thank you for your patronage", Toast.LENGTH_SHORT).show();
-
-
 
 
         makeAdaptor();

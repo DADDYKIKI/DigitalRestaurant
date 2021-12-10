@@ -118,7 +118,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
         floater.setOnClickListener(v -> {
 
-            Intent intent=new Intent(this, Cart.class);
+            Intent intent=new Intent(this, Order.class);
 
             startActivity(intent);
 

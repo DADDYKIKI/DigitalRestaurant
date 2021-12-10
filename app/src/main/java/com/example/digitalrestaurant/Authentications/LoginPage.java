@@ -164,6 +164,7 @@ public class LoginPage extends AppCompatActivity {
 
                   else {
                         setTextVisible(v);
+                      setButtonVisible(v);
 
                       attempts--;
 
@@ -189,7 +190,7 @@ public class LoginPage extends AppCompatActivity {
                           Toast.makeText(this, "Try forgot password or signup",
                                   Toast.LENGTH_SHORT).show();
 
-                          this.setButtonVisible(v);
+
 
 
 

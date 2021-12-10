@@ -43,6 +43,8 @@ public class AdaKitchen extends AppCompatActivity {
     private DatabaseHelper helper;
 
 
+
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,10 @@ public class AdaKitchen extends AppCompatActivity {
         basket=findViewById(R.id.floatingActionButton);
 
         helper=new DatabaseHelper(this);
+
+
+
+
 
 
         Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
@@ -85,7 +91,11 @@ public class AdaKitchen extends AppCompatActivity {
 
     public void menuKey(){
         menuKey.setOnClickListener(v -> {
+
+
+
             Intent intent2=new Intent(this, Menu.class);
+
             startActivity(intent2);
             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 
@@ -98,7 +108,10 @@ public class AdaKitchen extends AppCompatActivity {
 
         basket.setOnClickListener(v -> {
 
-            Intent intent =new Intent(AdaKitchen.this, Cart.class);
+
+            Intent intent =new Intent(AdaKitchen.this, Order.class);
+
+
             startActivity(intent);
 
 

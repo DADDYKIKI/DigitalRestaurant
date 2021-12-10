@@ -46,8 +46,22 @@ public class SellerUploadPage extends AppCompatActivity {
 
     List<ItemData> newItems;
 
+    private long press;
 
 
+    @Override
+    public void onBackPressed() {
+
+
+        if(press+3000>System.currentTimeMillis()){
+            super.onBackPressed();
+            return;}
+
+        else
+            Toast.makeText(this, "Press again to exit", Toast.LENGTH_SHORT).show();
+
+
+    }
 
 
 

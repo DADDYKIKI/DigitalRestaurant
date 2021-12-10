@@ -53,11 +53,13 @@ public class Order extends AppCompatActivity {
     Button clear,order;
 
 
+    @SuppressLint("StaticFieldLeak")
+    private  static TextView totalOrderPrice,orderPrice;
 
-    private TextView plusBtn,minusBtn,addToCartBtn,quantityText,orderFoodName,
-            orderNationality,orderPrice,totalOrderPrice,restaurantNameA;
+    private  TextView plusBtn,minusBtn,addToCartBtn,quantityText,orderFoodName,
+            orderNationality,restaurantNameA;
     private ConstraintLayout adaFoodImages;
-    private static int quantityNumber=1;
+    private  int quantityNumber=1;
     private static int foodPrice=0;
     private static String foodName = "";
     private static String NameOfRestaurant="";
@@ -108,9 +110,6 @@ public class Order extends AppCompatActivity {
         myCartUpdated=new DatabaseHelper(this);
 
 
-        Toast.makeText(this, "Add quantity by\nclicking the + or -\nbutton", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "Your total price,\nchanges as well", Toast.LENGTH_SHORT).show();
-
 
         orderList=new ArrayList<>();
         orders=new ArrayList<>();
@@ -135,12 +134,14 @@ public class Order extends AppCompatActivity {
 
         }
 
-        orderFoodName.setText(getFoodName());
-        orderPrice.setText(String.valueOf(getFoodPrice()));
-        orderNationality.setText(getFoodNationality());
-        adaFoodImages.setBackgroundResource(getFoodImage());
-        totalOrderPrice.setText(String.valueOf(getFoodPrice()));
-        restaurantNameA.setText(getNameOfRestaurant());
+
+
+            orderFoodName.setText(getFoodName());
+            orderPrice.setText(String.valueOf(getFoodPrice()));
+            orderNationality.setText(getFoodNationality());
+            adaFoodImages.setBackgroundResource(getFoodImage());
+            totalOrderPrice.setText(String.valueOf(getFoodPrice()));
+            restaurantNameA.setText(getNameOfRestaurant());
 
 
 
@@ -227,7 +228,7 @@ public class Order extends AppCompatActivity {
 
 
 
-    public void clearCart() {//............Calculating total quantity and total price..........
+    public void clearCart() {//............Clear items in basket
 
         clear.setOnClickListener(v -> {
 
@@ -241,8 +242,31 @@ public class Order extends AppCompatActivity {
 
     }
 
+    public void orderT() {//............Clear items in basket
 
-    public void AddToCart(){//............Calculating total quantity and total price..........
+        order.setOnClickListener(v -> {
+
+            myCartUpdated.clearItemsFromCart();
+
+            Intent intent5 =new Intent(getApplicationContext(), Order.class);
+            startActivity(intent5);
+
+
+        });
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+
+        Intent intent = new Intent(this, HomePage.class);
+
+        startActivity(intent);
+
+    }
+
+    public void AddToCart(){//............Change quantity, total price and add items tp my basket.........
 
         plusBtn.setOnClickListener(v -> {
 
@@ -252,21 +276,19 @@ public class Order extends AppCompatActivity {
 
         });
 
-        minusBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        minusBtn.setOnClickListener(v -> {
 
 
-                if(quantityNumber>1) {
+            if(quantityNumber>1) {
 
-                    quantityNumber--;
-                    quantityText.setText(String.valueOf(quantityNumber));
-                    totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
+                quantityNumber--;
+                quantityText.setText(String.valueOf(quantityNumber));
+                totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
 
 
-                }
+            }
 
-            }});
+        });
 
         addToCartBtn.setOnClickListener(v -> {
 
@@ -278,7 +300,6 @@ public class Order extends AppCompatActivity {
                 Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(this, Order.class);
-
 
                 startActivity(intent);
             }
@@ -311,11 +332,11 @@ public class Order extends AppCompatActivity {
                 myOrder.remove(viewHolder.getAdapterPosition());
                 orderAdaptor.notifyDataSetChanged();
 
-                myOrder2=myOrder;
+                setMyOrder2(myOrder);
 
                 myCartUpdated.clearItemsFromCart();
 
-                for(OrderDetails x:myOrder2){
+                for(OrderDetails x:getMyOrder2()){
 
                 myCartUpdated.addData(x.getFoodName(),x.getQuantity(),x.getTotalFoodPrice(),x.getRestaurantName());}
 
@@ -330,6 +351,7 @@ public class Order extends AppCompatActivity {
         cartRecycler.setAdapter(orderAdaptor);
 
     }
+
 
 
 

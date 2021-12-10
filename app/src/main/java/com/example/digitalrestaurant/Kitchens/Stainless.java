@@ -54,9 +54,6 @@ public class Stainless extends AppCompatActivity {
         homeKey=(TextView) findViewById(R.id.homeKey);
         menuKey=findViewById(R.id.menuKeyS);
 
-        Toast.makeText(this, "Welcome to Stainless", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
-
 
         helper=new DatabaseHelper(this);
 
@@ -71,7 +68,7 @@ public class Stainless extends AppCompatActivity {
 
         floater.setOnClickListener(v -> {
 
-            Intent intent=new Intent(this, Cart.class);
+            Intent intent=new Intent(this, Order.class);
 
             startActivity(intent);
 

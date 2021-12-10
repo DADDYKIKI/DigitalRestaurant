@@ -62,7 +62,7 @@ public class AdaKitchen extends AppCompatActivity {
         Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
 
 
-        //openMyBasket();
+        openMyBasket();
 
         makeAdaRestaurantAdaptor();
 

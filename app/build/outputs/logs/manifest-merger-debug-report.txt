@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-115:12
-INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-115:12
-INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-115:12
-INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-115:12
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-133:12
+INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-133:12
+INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-133:12
+INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-133:12
 MERGED from [androidx.databinding:viewbinding:7.0.3] /Users/godwinonah/.gradle/caches/transforms-3/aedac3ef7d5f2c617ead8656bf92c449/transformed/jetified-viewbinding-7.0.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] /Users/godwinonah/.gradle/caches/transforms-3/e84b042f48f9f14485261c47d99dc9c6/transformed/navigation-ui-2.3.5/AndroidManifest.xml:17:1-24:12
-MERGED from [com.karumi:dexter:5.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d817290f8dbb41148d06020b15a1c089/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:17:1-32:12
+MERGED from [com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.android.material:material:1.3.0] /Users/godwinonah/.gradle/caches/transforms-3/fc0e4e87d95d67f047ecdbed3a04c4cc/transformed/material-1.3.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/godwinonah/.gradle/caches/transforms-3/d3dc1b04020dde5349a563828b949efc/transformed/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/godwinonah/.gradle/caches/transforms-3/d76f35a08c08216004feed386d7db8d0/transformed/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
@@ -23,9 +23,11 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/godwinonah/.grad
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d2646664f8d9727246d320f24126df9c/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] /Users/godwinonah/.gradle/caches/transforms-3/b22f09835f27489a2aae9ff397dd29be/transformed/navigation-fragment-2.3.5/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:17:1-44:12
-MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/06f08a7c9eb92bee56db18779f31a479/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/2fd72d8224e477335a7a34c602035317/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/5b4a5af03789cf1669cedf0b85ed5f41/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/godwinonah/.gradle/caches/transforms-3/f344c027e0105c5e64e6e0f8ea0c6865/transformed/jetified-play-services-location-19.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/c06fd3a3fdef78da88f554eb3537a124/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/75dc6404e2bd4f38bd0a41849fabf325/transformed/jetified-play-services-tasks-18.0.0/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/4065ffa9f933b654ef0b655a200e3015/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.2.4] /Users/godwinonah/.gradle/caches/transforms-3/ea7dbf9f1399342c2057816c3ef73319/transformed/fragment-1.2.4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/godwinonah/.gradle/caches/transforms-3/1ad7e64fbfa1ec575baaf2daa876363e/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.3.0] /Users/godwinonah/.gradle/caches/transforms-3/a1a1e69281ae7c6c18ca54bfb619027b/transformed/transition-1.3.0/AndroidManifest.xml:17:1-24:12
@@ -62,41 +64,49 @@ MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.19] /Users/godwinonah
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/godwinonah/.gradle/caches/transforms-3/dad45be7fb3d40cd3f820bd1d6623c5b/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.pnikosis:materialish-progress:1.7] /Users/godwinonah/.gradle/caches/transforms-3/9ab3b8a7d6b1c5b53effc13cac550d0d/transformed/jetified-materialish-progress-1.7/AndroidManifest.xml:2:1-13:12
 MERGED from [pl.droidsonroids:relinker:1.3.1] /Users/godwinonah/.gradle/caches/transforms-3/d74162fbebbb81267f9767b75caaa54f/transformed/jetified-relinker-1.3.1/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-115:12
-INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-115:12
-INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-115:12
+INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-133:12
+INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-133:12
+INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-133:12
 	package
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:4:5-44
 		INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-115:12
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-133:12
 		INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-115:12
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:1-133:12
 		INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:2:11-69
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:11:5-79
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:11:22-76
 uses-permission#android.permission.INTERNET
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:12:5-14:46
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:11:5-66
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:24:5-67
-	tools:ignore
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:14:9-43
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:13:9-51
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:11:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:12:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:12:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:13:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:14:22-78
 application
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:16:5-113:19
-MERGED from [com.karumi:dexter:5.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d817290f8dbb41148d06020b15a1c089/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:26:5-30:19
-MERGED from [com.karumi:dexter:5.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d817290f8dbb41148d06020b15a1c089/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:26:5-30:19
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:18:5-131:19
+MERGED from [com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:26:5-30:19
+MERGED from [com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:26:5-30:19
 MERGED from [com.google.android.material:material:1.3.0] /Users/godwinonah/.gradle/caches/transforms-3/fc0e4e87d95d67f047ecdbed3a04c4cc/transformed/material-1.3.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] /Users/godwinonah/.gradle/caches/transforms-3/fc0e4e87d95d67f047ecdbed3a04c4cc/transformed/material-1.3.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/godwinonah/.gradle/caches/transforms-3/d3dc1b04020dde5349a563828b949efc/transformed/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
@@ -105,12 +115,16 @@ MERGED from [com.r0adkll:slidableactivity:2.0.6] /Users/godwinonah/.gradle/cache
 MERGED from [com.r0adkll:slidableactivity:2.0.6] /Users/godwinonah/.gradle/caches/transforms-3/7c224b3262b4da1666d508e2cf32fa57/transformed/jetified-slidableactivity-2.0.6/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:36:5-42:19
-MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/06f08a7c9eb92bee56db18779f31a479/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/06f08a7c9eb92bee56db18779f31a479/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/2fd72d8224e477335a7a34c602035317/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/2fd72d8224e477335a7a34c602035317/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/5b4a5af03789cf1669cedf0b85ed5f41/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/5b4a5af03789cf1669cedf0b85ed5f41/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/godwinonah/.gradle/caches/transforms-3/f344c027e0105c5e64e6e0f8ea0c6865/transformed/jetified-play-services-location-19.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/godwinonah/.gradle/caches/transforms-3/f344c027e0105c5e64e6e0f8ea0c6865/transformed/jetified-play-services-location-19.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/c06fd3a3fdef78da88f554eb3537a124/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/c06fd3a3fdef78da88f554eb3537a124/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/75dc6404e2bd4f38bd0a41849fabf325/transformed/jetified-play-services-tasks-18.0.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/75dc6404e2bd4f38bd0a41849fabf325/transformed/jetified-play-services-tasks-18.0.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/4065ffa9f933b654ef0b655a200e3015/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/4065ffa9f933b654ef0b655a200e3015/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.core:core:1.3.1] /Users/godwinonah/.gradle/caches/transforms-3/e89cc30d83e7763ffd18296e3e008066/transformed/core-1.3.1/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.1] /Users/godwinonah/.gradle/caches/transforms-3/e89cc30d83e7763ffd18296e3e008066/transformed/core-1.3.1/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/godwinonah/.gradle/caches/transforms-3/75cb0929a6f85c2da435fad4c201e57a/transformed/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
@@ -122,173 +136,195 @@ MERGED from [com.pnikosis:materialish-progress:1.7] /Users/godwinonah/.gradle/ca
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] /Users/godwinonah/.gradle/caches/transforms-3/e89cc30d83e7763ffd18296e3e008066/transformed/core-1.3.1/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:23:9-35
 	android:label
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:19:9-41
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:21:9-41
 	android:roundIcon
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:20:9-54
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:22:9-54
 	android:icon
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:20:9-43
 	android:allowBackup
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:17:9-35
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:19:9-35
 	android:theme
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:22:9-55
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:24:9-55
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:32:9-34:55
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:34:9-36:71
 	android:value
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:34:13-52
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:36:13-68
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:33:13-58
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:35:13-58
+meta-data#com.google.android.gms.version
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:38:9-40:69
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/4065ffa9f933b654ef0b655a200e3015/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/4065ffa9f933b654ef0b655a200e3015/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:40:13-66
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:39:13-58
+uses-library#org.apache.http.legacy
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:43:9-48:11
+MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:39:9-41:40
+MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:46:9-33
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:45:9-46
 activity#com.example.digitalrestaurant.Authentications.NewPassword
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:36:9-39:71
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:50:9-53:71
 	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:39:13-68
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:53:13-68
 	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:38:13-37
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:52:13-37
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:37:13-56
-activity#com.example.digitalrestaurant.Authentications.ForgotPassword
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:40:9-43:71
-	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:43:13-68
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:51:13-56
+activity#com.example.digitalrestaurant.GetMyLocation
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:54:9-57:14
 	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:42:13-37
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:41:13-59
-activity#com.example.digitalrestaurant.Contacts
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:44:9-47:50
-	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:47:13-47
-	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:46:13-37
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:45:13-37
-activity#com.example.digitalrestaurant.Authentications.SellerUploadPage
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:48:9-51:85
-	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:51:13-82
-	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:50:13-37
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:49:13-61
-activity#com.example.digitalrestaurant.Authentications.Customer
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:52:9-54:40
-	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:54:13-37
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:53:13-53
-activity#com.example.digitalrestaurant.HomePage
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:55:9-57:40
-	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:57:13-37
-	android:name
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:56:13-37
-activity#com.example.digitalrestaurant.Order
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:58:9-61:54
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:55:13-42
+activity#com.example.digitalrestaurant.Authentications.ForgotPassword
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:58:9-61:71
 	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:61:13-51
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:61:13-68
 	android:exported
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:59:13-34
-activity#com.example.digitalrestaurant.Menu
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:62:9-64:40
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:59:13-59
+activity#com.example.digitalrestaurant.Contacts
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:62:9-65:50
+	android:parentActivityName
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:65:13-47
 	android:exported
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:64:13-37
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:63:13-33
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:63:13-37
+activity#com.example.digitalrestaurant.Authentications.SellerUploadPage
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:66:9-69:85
+	android:parentActivityName
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:69:13-82
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:68:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:67:13-61
+activity#com.example.digitalrestaurant.Authentications.Customer
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:70:9-72:40
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:72:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:71:13-53
+activity#com.example.digitalrestaurant.HomePage
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:73:9-75:40
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:75:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:74:13-37
+activity#com.example.digitalrestaurant.Order
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:76:9-79:54
+	android:parentActivityName
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:79:13-51
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:78:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:77:13-34
+activity#com.example.digitalrestaurant.Menu
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:80:9-82:40
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:82:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:81:13-33
 activity#com.example.digitalrestaurant.Kitchens.ApprokoKitchen
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:65:9-67:40
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:83:9-85:40
 	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:67:13-37
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:85:13-37
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:66:13-52
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:84:13-52
 activity#com.example.digitalrestaurant.Kitchens.AdaKitchen
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:68:9-70:40
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:86:9-88:40
 	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:70:13-37
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:88:13-37
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:69:13-48
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:87:13-48
 activity#com.example.digitalrestaurant.Kitchens.ObandeKitchen
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:71:9-73:40
-	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:73:13-37
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:72:13-51
-activity#com.example.digitalrestaurant.Kitchens.Stainless
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:74:9-76:40
-	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:76:13-37
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:75:13-47
-activity#com.example.digitalrestaurant.Cart
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:77:9-80:54
-	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:80:13-51
-	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:79:13-37
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:78:13-33
-activity#com.example.digitalrestaurant.Authentications.SignupPage
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:81:9-84:71
-	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:84:13-68
-	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:83:13-37
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:82:13-55
-activity#com.example.digitalrestaurant.Authentications.SignupPageForFoodSeller2
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:85:9-88:71
-	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:88:13-68
-	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:87:13-37
-	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:86:13-69
-activity#com.example.digitalrestaurant.Authentications.LoginPage
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:89:9-92:71
-	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:92:13-68
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:89:9-91:40
 	android:exported
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:91:13-37
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:90:13-54
-activity#com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:93:9-96:71
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:90:13-51
+activity#com.example.digitalrestaurant.Kitchens.Stainless
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:92:9-94:40
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:94:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:93:13-47
+activity#com.example.digitalrestaurant.Cart
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:95:9-98:54
 	android:parentActivityName
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:96:13-68
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:98:13-51
 	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:95:13-37
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:97:13-37
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:94:13-68
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:96:13-33
+activity#com.example.digitalrestaurant.Authentications.SignupPage
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:99:9-102:71
+	android:parentActivityName
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:102:13-68
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:101:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:100:13-55
+activity#com.example.digitalrestaurant.Authentications.SignupPageForFoodSeller2
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:103:9-106:71
+	android:parentActivityName
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:106:13-68
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:105:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:104:13-69
+activity#com.example.digitalrestaurant.Authentications.LoginPage
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:107:9-110:71
+	android:parentActivityName
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:110:13-68
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:109:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:108:13-54
+activity#com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:111:9-114:71
+	android:parentActivityName
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:114:13-68
+	android:exported
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:113:13-37
+	android:name
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:112:13-68
 activity#com.example.digitalrestaurant.Authentications.FoodSeller
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:97:9-99:40
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:115:9-117:40
 	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:99:13-37
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:117:13-37
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:98:13-55
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:116:13-55
 activity#com.example.digitalrestaurant.Authentications.IntroPage
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:100:9-108:20
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:118:9-126:20
 	android:exported
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:102:13-36
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:120:13-36
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:101:13-54
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:119:13-54
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:103:13-107:29
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:121:13-125:29
 action#android.intent.action.MAIN
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:104:17-69
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:122:17-69
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:104:25-66
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:122:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:106:17-77
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:124:17-77
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:106:27-74
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:124:27-74
 meta-data#preloaded_fonts
-ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:110:9-112:57
+ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:128:9-130:57
 	android:resource
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:112:13-54
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:130:13-54
 	android:name
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:111:13-43
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:129:13-43
 uses-sdk
 INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml
@@ -297,8 +333,8 @@ MERGED from [androidx.databinding:viewbinding:7.0.3] /Users/godwinonah/.gradle/c
 MERGED from [androidx.databinding:viewbinding:7.0.3] /Users/godwinonah/.gradle/caches/transforms-3/aedac3ef7d5f2c617ead8656bf92c449/transformed/jetified-viewbinding-7.0.3/AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-ui:2.3.5] /Users/godwinonah/.gradle/caches/transforms-3/e84b042f48f9f14485261c47d99dc9c6/transformed/navigation-ui-2.3.5/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.3.5] /Users/godwinonah/.gradle/caches/transforms-3/e84b042f48f9f14485261c47d99dc9c6/transformed/navigation-ui-2.3.5/AndroidManifest.xml:20:5-22:41
-MERGED from [com.karumi:dexter:5.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d817290f8dbb41148d06020b15a1c089/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:22:5-24:41
-MERGED from [com.karumi:dexter:5.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d817290f8dbb41148d06020b15a1c089/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:22:5-24:41
+MERGED from [com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:22:5-24:41
+MERGED from [com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:22:5-24:41
 MERGED from [com.google.android.material:material:1.3.0] /Users/godwinonah/.gradle/caches/transforms-3/fc0e4e87d95d67f047ecdbed3a04c4cc/transformed/material-1.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.3.0] /Users/godwinonah/.gradle/caches/transforms-3/fc0e4e87d95d67f047ecdbed3a04c4cc/transformed/material-1.3.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/godwinonah/.gradle/caches/transforms-3/d3dc1b04020dde5349a563828b949efc/transformed/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
@@ -331,12 +367,16 @@ MERGED from [androidx.navigation:navigation-fragment:2.3.5] /Users/godwinonah/.g
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] /Users/godwinonah/.gradle/caches/transforms-3/b22f09835f27489a2aae9ff397dd29be/transformed/navigation-fragment-2.3.5/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/06f08a7c9eb92bee56db18779f31a479/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/06f08a7c9eb92bee56db18779f31a479/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/2fd72d8224e477335a7a34c602035317/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/2fd72d8224e477335a7a34c602035317/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/5b4a5af03789cf1669cedf0b85ed5f41/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/5b4a5af03789cf1669cedf0b85ed5f41/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/godwinonah/.gradle/caches/transforms-3/f344c027e0105c5e64e6e0f8ea0c6865/transformed/jetified-play-services-location-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/godwinonah/.gradle/caches/transforms-3/f344c027e0105c5e64e6e0f8ea0c6865/transformed/jetified-play-services-location-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/c06fd3a3fdef78da88f554eb3537a124/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/c06fd3a3fdef78da88f554eb3537a124/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/75dc6404e2bd4f38bd0a41849fabf325/transformed/jetified-play-services-tasks-18.0.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/75dc6404e2bd4f38bd0a41849fabf325/transformed/jetified-play-services-tasks-18.0.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/4065ffa9f933b654ef0b655a200e3015/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/4065ffa9f933b654ef0b655a200e3015/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:18:5-43
 MERGED from [androidx.fragment:fragment:1.2.4] /Users/godwinonah/.gradle/caches/transforms-3/ea7dbf9f1399342c2057816c3ef73319/transformed/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.2.4] /Users/godwinonah/.gradle/caches/transforms-3/ea7dbf9f1399342c2057816c3ef73319/transformed/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/godwinonah/.gradle/caches/transforms-3/1ad7e64fbfa1ec575baaf2daa876363e/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
@@ -420,15 +460,11 @@ INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml
 activity#com.karumi.dexter.DexterActivity
-ADDED from [com.karumi:dexter:5.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d817290f8dbb41148d06020b15a1c089/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:27:9-29:72
+ADDED from [com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:27:9-29:72
 	android:theme
-		ADDED from [com.karumi:dexter:5.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d817290f8dbb41148d06020b15a1c089/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:29:13-69
+		ADDED from [com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:29:13-69
 	android:name
-		ADDED from [com.karumi:dexter:5.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d817290f8dbb41148d06020b15a1c089/transformed/jetified-dexter-5.0.0/AndroidManifest.xml:28:13-60
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:23:5-79
-	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:23:22-76
+		ADDED from [com.karumi:dexter:6.2.2] /Users/godwinonah/.gradle/caches/transforms-3/6af58dca77a10b1de36f27c5275a8f86/transformed/jetified-dexter-6.2.2/AndroidManifest.xml:28:13-60
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
@@ -441,23 +477,11 @@ package#com.google.android.apps.maps
 ADDED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:33:9-64
 	android:name
 		ADDED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:33:18-61
-uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:39:9-41:40
-	android:required
-		ADDED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:41:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/d4caa067414bba39801ee5864208e2f9/transformed/jetified-play-services-maps-18.0.0/AndroidManifest.xml:40:13-50
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/06f08a7c9eb92bee56db18779f31a479/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/06f08a7c9eb92bee56db18779f31a479/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:22:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/06f08a7c9eb92bee56db18779f31a479/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/06f08a7c9eb92bee56db18779f31a479/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/5b4a5af03789cf1669cedf0b85ed5f41/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/5b4a5af03789cf1669cedf0b85ed5f41/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/godwinonah/.gradle/caches/transforms-3/5b4a5af03789cf1669cedf0b85ed5f41/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-base:18.0.0] /Users/godwinonah/.gradle/caches/transforms-3/85eda648ec6905188170f5b47d36f171/transformed/jetified-play-services-base-18.0.0/AndroidManifest.xml:20:19-85

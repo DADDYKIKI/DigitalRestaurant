@@ -62,7 +62,7 @@ public class Menu extends AppCompatActivity {
 
     public void basket(){
         basket.setOnClickListener(v -> {
-            Intent intent=new Intent(this, Order.class);
+            Intent intent=new Intent(this, Cart.class);
             startActivity(intent);
             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 

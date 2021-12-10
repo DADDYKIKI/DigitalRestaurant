@@ -61,7 +61,7 @@ public class Stainless extends AppCompatActivity {
         helper=new DatabaseHelper(this);
 
         makeAdaRestaurantAdaptor();
-        //gotoBasket();
+        gotoBasket();
         homeKey();
         menuKey();
 

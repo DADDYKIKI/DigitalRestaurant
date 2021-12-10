@@ -343,16 +343,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     @SuppressLint("Range")
-    public ArrayList<OrderDetails> viewCartItems() {
+    public List<OrderDetails> viewCartItems() {
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
-        ArrayList<OrderDetails> mylist = new ArrayList<>();
+        List<OrderDetails> mylist = new ArrayList<>();
 
 
 
         Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);
 
-
+        //if (cur.getCount()<0) {cur.moveToNext();}
         if (cur.getCount()>0) {
             if (cur.moveToFirst())
 

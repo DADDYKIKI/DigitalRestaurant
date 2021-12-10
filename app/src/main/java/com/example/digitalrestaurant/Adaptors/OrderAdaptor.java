@@ -19,11 +19,11 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
 
     private OrderListener orderListener;
 
-    ArrayList<OrderDetails> myOder;
+    List<OrderDetails> myOder;
     RecyclerView orderRecycler;
     Context context;
 
-    public OrderAdaptor(ArrayList<OrderDetails> myOder, Context context ) {
+    public OrderAdaptor(List<OrderDetails> myOder, Context context ) {
         this.myOder = myOder;
         this. context =  context;
     }
@@ -59,7 +59,7 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
     @Override
     public OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View cartView= LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_container,parent,false );
+        View cartView= LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_container,parent,false);
 
 
         return  new OrderViewHolder(cartView);

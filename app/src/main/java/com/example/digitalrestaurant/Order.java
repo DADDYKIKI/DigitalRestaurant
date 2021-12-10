@@ -24,6 +24,7 @@ import com.example.digitalrestaurant.Details.OrderDetails;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order extends AppCompatActivity {
 
@@ -39,7 +40,7 @@ public class Order extends AppCompatActivity {
 
     private RecyclerView cartRecycler;
 
-    ArrayList<OrderDetails> myOrder;
+    List<OrderDetails> myOrder;
 
     FloatingActionButton basket;
 
@@ -47,25 +48,22 @@ public class Order extends AppCompatActivity {
 
 
 
-
-
-
     private TextView plusBtn,minusBtn,addToCartBtn,quantityText,orderFoodName,
             orderNationality,orderPrice,totalOrderPrice,restaurantNameA;
     private ConstraintLayout adaFoodImages;
-    private int quantityNumber=1;
-    private int foodPrice=0;
-    private String foodName = "";
-    private String NameOfRestaurant="";
-    private String foodNationality = "";
-    private int foodImage=0;
+    private static int quantityNumber=1;
+    private static int foodPrice=0;
+    private static String foodName = "";
+    private static String NameOfRestaurant="";
+    private static String foodNationality = "";
+    private static int foodImage=0;
     private int phone=0;
     private String address;
     private String customerName;
 
     DatabaseHelper myCartDataUpload,myCartDataViewed;
 
-    ArrayList<OrderDetails> orderList,orders;
+    List<OrderDetails> orderList,orders;
 
 
     @Override
@@ -115,31 +113,31 @@ public class Order extends AppCompatActivity {
         if(extras!=null){
 
             //Orders from restaurants
-            foodName= extras.getString("name");
-            foodNationality= extras.getString("nationality");
-            foodPrice=extras.getInt("price");
-            foodImage=extras.getInt("imageUrl");
-            NameOfRestaurant=extras.getString("RestaurantName");
+            setFoodName(extras.getString("name"));
+            setFoodNationality(extras.getString("nationality"));
+            setFoodPrice(extras.getInt("price"));
+            setFoodImage(extras.getInt("imageUrl"));
+            setNameOfRestaurant(extras.getString("RestaurantName"));
 
             //Orders from
             //phone=extras.getInt("phone");
-           // address=extras.getString("address");
+            // address=extras.getString("address");
             //customerName=extras.getString("customerName");
 
 
         }
-        orderPrice.setText(String.valueOf(foodPrice));
-        orderFoodName.setText(foodName);
-        orderNationality.setText(foodNationality);
+        orderPrice.setText(String.valueOf(getFoodPrice()));
+        orderFoodName.setText(getFoodName());
+        orderNationality.setText(getFoodNationality());
         adaFoodImages.setBackgroundResource(foodImage);
-        totalOrderPrice.setText(String.valueOf(foodPrice));
-        restaurantNameA.setText(NameOfRestaurant);
+        totalOrderPrice.setText(String.valueOf(getFoodPrice()));
+        restaurantNameA.setText(getNameOfRestaurant());
 
 
 
 
 
- Toast.makeText(this, orders.toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, orders.toString(), Toast.LENGTH_SHORT).show();
 
 
 
@@ -154,98 +152,124 @@ public class Order extends AppCompatActivity {
         openMyBasket();
 
 
-       // setMyAdaptor();
+        // setMyAdaptor();
 
 
-}
+    }
+
+
+    public static String getFoodName() {
+        return foodName;
+    }
+
+
+    public static void setFoodName(String food) {
+
+       foodName=food;
+    }
+    public static String getNameOfRestaurant() {
+        return NameOfRestaurant;
+    }
+
+
+    public static void setNameOfRestaurant(String name) {
+
+        NameOfRestaurant=name;
+    }
+    public static String getFoodNationality() {
+        return foodNationality;
+    }
+
+
+    public static void setFoodNationality(String nationality) {
+
+        foodNationality=nationality;
+    }
+    public static int getFoodPrice() {
+        return foodPrice;
+    }
+
+
+    public static void setFoodPrice(int price) {
+
+        foodPrice=price;
+    }
+    public static int getFoodImage() {
+        return foodImage;
+    }
+
+
+    public static void setFoodImage(int image) {
+
+        foodImage=image;
+    }
 
 
 
-        public void AddToCart(){//............Calculating total quantity and total price..........
+    public void AddToCart(){//............Calculating total quantity and total price..........
 
-            plusBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        plusBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-                    quantityNumber++;
+                quantityNumber++;
+                quantityText.setText(String.valueOf(quantityNumber));
+                totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
+
+            }});
+
+        minusBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                if(quantityNumber>1) {
+
+                    quantityNumber--;
                     quantityText.setText(String.valueOf(quantityNumber));
                     totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
 
-                }});
 
-                    minusBtn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
+                }
 
+            }});
 
-                        if(quantityNumber>1) {
+        addToCartBtn.setOnClickListener(v -> {
 
-                            quantityNumber--;
-                            quantityText.setText(String.valueOf(quantityNumber));
-                            totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
+            boolean addToCart =
+                    myCartDataUpload.addData(foodName, String.valueOf(quantityNumber),
+                            String.valueOf(foodPrice * quantityNumber), NameOfRestaurant);
 
+            if (addToCart == true) {
+                Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
 
-                        }
-
-                }});
-
-            addToCartBtn.setOnClickListener(v -> {
-
-                boolean addToCart=
-                        myCartDataUpload.addData(foodName,String.valueOf(quantityNumber),
-                                String.valueOf(foodPrice*quantityNumber),NameOfRestaurant);
-
-                if(addToCart==true)
-                    Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
-                else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, Order.class);
 
 
-            });
+                startActivity(intent);
+            }
 
 
 
 
-        }
-
-    public void openMyBasket(){
+            else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
 
 
-
-       /*    // Cursor cur1=myCartDatabaseHelper.getOrders();
-            //Cursor cur2=myCartDatabaseHelper.getCustomerContactDetails(phone,address);
-
-            if(cur1.getCount()==0){ Toast.makeText(this, "Basket Empty", Toast.LENGTH_SHORT).show();return;}
-
-            StringBuffer bufferedItems=new StringBuffer();
-
-            if(cur1!=null&&cur1.getCount()>0){
-            while(cur1.moveToNext()){
-                //bufferedItems.append("Name of customer: "+cur2.getString(0)+"\n");
-                //bufferedItems.append("Phone: "+cur2.getString(3)+"\n");
-               // bufferedItems.append("Address: "+cur2.getString(4)+"\n");
-                bufferedItems.append("Food Item: "+cur1.getString(1)+"\n");
-                //bufferedItems.append("Quantity: "+cur2.getString(2)+"\n");
-
-            }}
-            cur1.close();
-            AlertDialog.Builder build=new AlertDialog.Builder(this);
-
-            build.setCancelable(true);
-            build.setTitle("Oders");
-            build.setMessage(bufferedItems);
-            build.show();
         });
 
-    }*/
 
 
+
+    }
+
+    public void openMyBasket(){
 
 
         cartRecycler=findViewById(R.id.myRecycler);
         cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         myOrder=myCart.viewCartItems();
 
-        oderAdaptor=new OrderAdaptor(myOrder,this);
+        orderAdaptor=new OrderAdaptor(myOrder,this);
 
         cartRecycler.setAdapter(orderAdaptor);
 
@@ -275,8 +299,6 @@ public class Order extends AppCompatActivity {
     }
 
 }
-
-
 
 
 

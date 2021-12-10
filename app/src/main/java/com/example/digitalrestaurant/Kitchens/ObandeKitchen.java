@@ -54,9 +54,6 @@ public class ObandeKitchen extends AppCompatActivity {
         menuKey=findViewById(R.id.menuKeyS);
 
 
-        Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
-
-
         floater=findViewById(R.id.floatingActionButton);
 
         obandeItems=new ArrayList<>();
@@ -69,7 +66,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
 
 
-       // gotoBasket();
+        gotoBasket();
 
         homeKey();
         menuKey();

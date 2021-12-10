@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.example.digitalrestaurant.Adaptors.PopulateAdvertismentAdaptor;
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Adaptors.LocationAdaptor;
+import com.example.digitalrestaurant.Authentications.IntroPage;
 import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.AdvertItems;

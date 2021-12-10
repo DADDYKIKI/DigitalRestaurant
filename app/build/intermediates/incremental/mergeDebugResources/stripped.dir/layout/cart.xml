@@ -125,8 +125,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myRecycler"
-            android:layout_width="402dp"
-            android:layout_height="214dp"
+            android:layout_width="421dp"
+            android:layout_height="370dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -134,12 +134,11 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/myOrderPotion"
-            android:layout_width="416dp"
-            android:layout_height="391dp"
+            android:layout_width="418dp"
+            android:layout_height="302dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/myRecycler">
+            app:layout_constraintStart_toStartOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ordering_container"
@@ -194,8 +193,8 @@
                         android:id="@+id/addToCartbtn"
                         android:layout_width="118dp"
                         android:layout_height="39dp"
-                        android:layout_marginEnd="28dp"
-                        android:layout_marginBottom="28dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="164dp"
                         android:background="@drawable/addtocartbtn"
                         android:padding="5dp"
                         android:text="Add to cart"
@@ -211,13 +210,13 @@
                         android:layout_width="45dp"
                         android:layout_height="23dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="112dp"
+                        android:layout_marginBottom="16dp"
                         android:text="Price"
                         android:textSize="15dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toTopOf="@+id/totalPrice"
                         app:layout_constraintEnd_toStartOf="@+id/poundSign"
-                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintHorizontal_bias="0.971"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
@@ -225,13 +224,13 @@
                         android:layout_width="118dp"
                         android:layout_height="23dp"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginBottom="32dp"
+                        android:layout_marginBottom="40dp"
                         android:text="Total Order Price:"
                         android:textSize="15dp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/textView2"
                         app:layout_constraintEnd_toStartOf="@+id/poundSign2"
-                        app:layout_constraintHorizontal_bias="0.4"
+                        app:layout_constraintHorizontal_bias="0.851"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
@@ -239,7 +238,7 @@
                         android:layout_width="54dp"
                         android:layout_height="42dp"
                         android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="96dp"
+                        android:layout_marginBottom="76dp"
                         android:background="@drawable/restaurantbackground"
                         android:padding="5dp"
                         android:text="1"
@@ -255,7 +254,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginEnd="120dp"
-                        android:layout_marginBottom="96dp"
+                        android:layout_marginBottom="76dp"
                         android:background="@drawable/bordera2"
                         android:text="  +"
                         android:textColor="@color/white"
@@ -269,16 +268,18 @@
                         android:id="@+id/minusBtn"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="64dp"
                         android:background="@drawable/bordera2"
                         android:text="  -"
                         android:textColor="@color/white"
                         android:textSize="80dp"
                         android:textStyle="bold"
                         app:autoSizeTextType="uniform"
-                        app:layout_constraintBottom_toTopOf="@+id/totalOrderPrice"
-                        app:layout_constraintEnd_toStartOf="@+id/quantityTxt" />
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/quantityTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/orderPrice"
+                        app:layout_constraintVertical_bias="0.842" />
 
                     <TextView
                         android:id="@+id/orderFoodName"
@@ -307,47 +308,49 @@
                         app:layout_constraintBottom_toTopOf="@+id/textView2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/cardView"
-                        app:layout_constraintVertical_bias="1.0" />
+                        app:layout_constraintVertical_bias="0.413" />
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="82dp"
                         android:layout_height="23dp"
-                        android:layout_marginBottom="44dp"
+                        android:layout_marginBottom="84dp"
                         android:text="Quantity:"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="15dp"
-                        app:layout_constraintBottom_toTopOf="@+id/totalPrice"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/minusBtn"
-                        app:layout_constraintHorizontal_bias="0.727"
+                        app:layout_constraintHorizontal_bias="0.634"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
                         android:id="@+id/totalOrderPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
-                        android:layout_marginEnd="76dp"
-                        android:layout_marginBottom="32dp"
+                        android:layout_marginEnd="68dp"
+                        android:layout_marginBottom="136dp"
                         android:text="10"
                         android:textColor="@color/purple_700"
                         android:textSize="30dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/addToCartbtn" />
+                        app:layout_constraintEnd_toStartOf="@+id/addToCartbtn"
+                        app:layout_constraintTop_toBottomOf="@+id/orderPrice" />
 
                     <TextView
                         android:id="@+id/poundSign2"
                         android:layout_width="20dp"
                         android:layout_height="35dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginBottom="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="136dp"
                         android:text="£"
                         android:textColor="@color/purple_700"
                         android:textSize="30dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/totalOrderPrice" />
+                        app:layout_constraintEnd_toStartOf="@+id/totalOrderPrice"
+                        app:layout_constraintTop_toBottomOf="@+id/orderPrice" />
 
                     <TextView
                         android:id="@+id/from"
@@ -380,13 +383,13 @@
                         android:id="@+id/orderPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="20dp"
                         android:text="10"
                         android:textColor="@color/purple_700"
                         android:textSize="30dp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toStartOf="@+id/orderFoodName"
-                        app:layout_constraintHorizontal_bias="0.118"
+                        app:layout_constraintHorizontal_bias="0.122"
                         app:layout_constraintStart_toEndOf="@+id/priceOfItem"
                         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 

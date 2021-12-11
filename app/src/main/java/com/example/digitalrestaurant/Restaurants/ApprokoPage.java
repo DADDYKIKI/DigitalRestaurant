@@ -1,4 +1,4 @@
-package com.example.digitalrestaurant;
+package com.example.digitalrestaurant.Restaurants;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,10 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.digitalrestaurant.Adaptors.RestaurantOrdersAdaptor;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.VendorOrderDetails;
+import com.example.digitalrestaurant.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +29,29 @@ public class ApprokoPage extends AppCompatActivity {
     RestaurantOrdersAdaptor orderAdaptors2;
 
     private  static List<VendorOrderDetails> myOrder4=new ArrayList<>();
+
+    private long press;
+
+    private  static List<VendorOrderDetails> myOrder3=new ArrayList<>();
+
+    @Override
+    public void onBackPressed() {
+
+
+        if(press+2000>System.currentTimeMillis()){
+
+            finishAffinity();
+            System.exit(0);
+
+            return;}
+
+        else {
+            Toast.makeText(this, "Press again to exit your app", Toast.LENGTH_SHORT).show();
+
+        }press=System.currentTimeMillis();
+
+    }
+
 
 
     @Override

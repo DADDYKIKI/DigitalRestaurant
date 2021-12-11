@@ -13,11 +13,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.R;
+import com.example.digitalrestaurant.Restaurants.AdaPage;
+import com.example.digitalrestaurant.Restaurants.ApprokoPage;
+import com.example.digitalrestaurant.Restaurants.ObandePage;
+import com.example.digitalrestaurant.Restaurants.StainlessPage;
 
 public class LoginPageForFoodSeller2 extends AppCompatActivity {
 
     private Button loginButV,signUpButV ;
-    private EditText loginNameV,loginPassV;
+    private EditText loginEmail,loginPassV;
     private TextView loginWarningTextV;
 
     private int attempts=6;
@@ -53,7 +57,7 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vendor_login);
 
-        loginNameV = findViewById(R.id.enterLoginEmailV);
+        loginEmail = findViewById(R.id.enterLoginEmailV);
         loginPassV = findViewById(R.id.enterLoginPaswdV);
         loginWarningTextV = findViewById(R.id.loginWarningTextV);
         loginButV = (findViewById(R.id.signSubBtnV));
@@ -85,31 +89,48 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
                 data=new DatabaseHelper(this);
 
 
-                if (loginNameV.getText().toString().equals("") || loginPassV.getText().toString().equals("")){
+                if (loginEmail.getText().toString().equals("") || loginPassV.getText().toString().equals("")){
 
                     Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
 
                 }
 
+
                 else {
 
-                    Boolean insert=data.getVendorLoginDetails(loginNameV.getText().toString(),loginPassV.getText().toString());
+                    Boolean insert=data.getVendorLoginDetails(loginEmail.getText().toString(),loginPassV.getText().toString());
 
                     if (insert==true) {
+
+                        String restaurant=data.checkRestaurant(loginEmail.getText().toString());
+
+                        if(restaurant.equals("adakitchen")){
+                            click3(AdaPage.class);
+                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();}
+
+                        if(restaurant.equals("approkokitchen")){
+                            click3(ApprokoPage.class);
+                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();}
+
+                        if(restaurant.equals("obandekitchen")){
+                            click3(ObandePage.class);
+                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();}
+
+                        if(restaurant.equals("stainless")){
+                            click3(StainlessPage.class);
+                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();}
+
 
                         this.setTextInvisible(v);
 
                         Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
 
-                        click3(SellerUploadPage.class);
 
-                        loginNameV.setText("");
-
-                        loginPassV.setText("");
                     }
 
                     else {
                         this.setTextVisible(v);
+                        this.setButtonVisible(v);
 
                         attempts--;
 
@@ -124,7 +145,7 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
                         }
                         if(attempts==0){
 
-                            loginNameV.setEnabled(false);
+                            loginEmail.setEnabled(false);
                             loginPassV.setEnabled(false);
 
                             Toast.makeText(this, "Sorry!!\n\nYou have usedup all your chances",
@@ -134,11 +155,6 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
 
                             Toast.makeText(this, "You might want to signup",
                                     Toast.LENGTH_SHORT).show();
-
-                            this.setButtonVisible(v);
-
-
-
 
                             Toast.makeText(this, "Try signing Up if you haven't done so",
                                     Toast.LENGTH_SHORT).show();

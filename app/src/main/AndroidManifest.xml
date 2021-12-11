@@ -20,16 +20,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalRestaurant">
         <activity
-            android:name=".StainlessPage"
+            android:name=".Restaurants.StainlessPage"
             android:exported="false" />
         <activity
-            android:name=".ObandePage"
+            android:name=".Restaurants.ObandePage"
             android:exported="false" />
         <activity
-            android:name=".ApprokoPage"
+            android:name=".Restaurants.ApprokoPage"
             android:exported="false" />
         <activity
-            android:name=".AdaPage"
+            android:name=".Restaurants.AdaPage"
             android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

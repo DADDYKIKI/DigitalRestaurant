@@ -90,7 +90,7 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
             helper=new DatabaseHelper(this);
 
 
-            String name= signupName.getText().toString();
+            String name= signupName.getText().toString().trim().toLowerCase();
             String email= signupEmail.getText().toString();
             String password= signupPaswd.getText().toString();
 
@@ -98,6 +98,13 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
             if (name.equals("") || email.equals("")|| password.equals("")){
 
                 Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
+
+            }
+            if (!name.trim().equalsIgnoreCase("adakitchen") || !name.trim().equalsIgnoreCase("obandekitchen")||
+            !name.trim().equalsIgnoreCase("approkokitchen") ||!name.trim().equalsIgnoreCase("stainless")){
+
+                Toast.makeText(this, "Not a registered restaurant", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Try: Ada Kitchen, Approkoko kitchen \nObande Kitchen, Stainless", Toast.LENGTH_SHORT).show();
 
             }
 
@@ -108,28 +115,33 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
             else if (!isPaswordValid(password))
                 Toast.makeText(this, "Password must be greater than 3", Toast.LENGTH_SHORT).show();
 
-
-
-
-
             else {
+                boolean check=helper.checkforVendorsUniqueEmailAddress(email);
+
+                if(check==true)Toast.makeText(this, "Email address already in use.\nTry another",
+                        Toast.LENGTH_SHORT).show();
 
 
-                boolean signup =
-                        helper.addVendorData(name, email, password);
-
-                if (signup == true) {
-                    Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
-                    signupName.setText("");
-                    signupEmail.setText("");
-                    signupPaswd.setText("");
-                    Intent i = new Intent(this, LoginPageForFoodSeller2.class);
-                    startActivity(i);
-                    overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-
-                } else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
 
 
+                else {
+
+
+                    boolean signup =
+                            helper.addVendorData(name, email, password);
+
+                    if (signup == true) {
+                        Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
+                        signupName.setText("");
+                        signupEmail.setText("");
+                        signupPaswd.setText("");
+                        Intent i = new Intent(this, LoginPageForFoodSeller2.class);
+                        startActivity(i);
+                        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+
+                    } else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
+
+                }
             }
 
         });

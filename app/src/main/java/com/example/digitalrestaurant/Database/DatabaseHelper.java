@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import com.example.digitalrestaurant.Details.VendorOrderDetails;
 import com.example.digitalrestaurant.Details.ItemData;
@@ -613,7 +614,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     @SuppressLint("Range")
-        public boolean getVendorLoginDetails(String restaurantName, String Password) {
+        public boolean getVendorLoginDetails(String email, String Password) {
 
                     SQLiteDatabase myDatabase = this.getReadableDatabase();
 
@@ -624,7 +625,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     if(cur.getCount()>0) {
                         while (cur.moveToNext()) {
 
-                            if (cur.getString(cur.getColumnIndex(COLUMNVEN2)).equals(restaurantName) &&
+                            if (cur.getString(cur.getColumnIndex(COLUMNVEN3)).equals(email) &&
                                     cur.getString(cur.getColumnIndex(COLUMNVEN4)).equals(Password))
 
                                 return true;
@@ -681,6 +682,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     }
 
                 }return false;
+
+    }
+
+    @SuppressLint("Range")
+    public boolean checkforVendorsUniqueEmailAddress(String email) {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+" from " + VENDOR_DETAILS,
+                // " where "+COLUMNUSER3+" = "+email,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
+
+                    return true;
+                myDatabase.close();
+
+            }
+
+        }return false;
 
     }
 
@@ -782,6 +807,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     }
 
                 }return false;
+
+    }
+
+
+    @SuppressLint("Range")
+    public String checkRestaurant(String email) {
+
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select * from " +VENDOR_DETAILS,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                if(cur.getString(cur.getColumnIndex(COLUMNVEN3)).equals(email) &&
+                        cur.getString(cur.getColumnIndex(COLUMNVEN2)).equalsIgnoreCase("adakitchen"))
+                    return "adakitchen";
+                 if(cur.getString(cur.getColumnIndex(COLUMNVEN3)).equals(email) &&
+                        cur.getString(cur.getColumnIndex(COLUMNVEN2)).equalsIgnoreCase("obandekitchen"))
+                    return "obandekitchen";
+                 if(cur.getString(cur.getColumnIndex(COLUMNVEN3)).equals(email) &&
+                        cur.getString(cur.getColumnIndex(COLUMNVEN2)).equalsIgnoreCase("approkokitchen"))
+                    return "approkokitchen";
+                 if(cur.getString(cur.getColumnIndex(COLUMNVEN3)).equals(email) &&
+                        cur.getString(cur.getColumnIndex(COLUMNVEN2)).equalsIgnoreCase("stainless"))
+                    return "stainless";
+
+
+
+
+                myDatabase.close();
+
+            }
+
+        }return null;
 
     }
 

@@ -28,11 +28,10 @@ public class StainlessPage extends AppCompatActivity {
 
     RestaurantOrdersAdaptor orderAdaptors4;
 
-    private  static List<VendorOrderDetails> myOrder6=new ArrayList<>();
+    private  static List<VendorOrderDetails> myOrder6;
 
     private long press;
 
-    private  static List<VendorOrderDetails> myOrder3=new ArrayList<>();
 
     @Override
     public void onBackPressed() {
@@ -61,6 +60,7 @@ public class StainlessPage extends AppCompatActivity {
         myOrders4=new DatabaseHelper(this);
 
         vOrders4=new ArrayList<>();
+        myOrder6=new ArrayList<>();
 
         MyOrders4();
 
@@ -106,7 +106,7 @@ public class StainlessPage extends AppCompatActivity {
 
                 for (VendorOrderDetails x : getMyOrder6()) {
 
-                    VendorOrderDetails oders2 = new VendorOrderDetails(x.getFoodName(), x.getCusName(),x.getQuantity(), x.getTotalFoodPrice()
+                    VendorOrderDetails oders2 = new VendorOrderDetails(x.getFoodName(), x.getQuantity(),x.getCusName(), x.getTotalFoodPrice()
                             , x.getPhone());
 
 

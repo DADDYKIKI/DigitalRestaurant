@@ -83,95 +83,99 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
     }
 
 
-        public void loginV(){
-            loginButV.setOnClickListener(v -> {
+public void loginV(){
+        loginButV.setOnClickListener(v -> {
 
                 data=new DatabaseHelper(this);
 
 
-                if (loginEmail.getText().toString().equals("") || loginPassV.getText().toString().equals("")){
+        if (loginEmail.getText().toString().equals("") || loginPassV.getText().toString().equals("")) {
 
                     Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
-
                 }
 
-
-                else {
+        else {this.setTextInvisible(v);
 
                     Boolean insert=data.getVendorLoginDetails(loginEmail.getText().toString(),loginPassV.getText().toString());
 
-                    if (insert==true) {
+             if (insert==true) {
 
-                        String restaurant=data.checkRestaurant(loginEmail.getText().toString());
+
+                    String restaurant=data.checkRestaurant(loginEmail.getText().toString());
 
                         if(restaurant.equals("adakitchen")){
+
+                          Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
                             click3(AdaPage.class);
-                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();}
+                            }
 
                         if(restaurant.equals("approkokitchen")){
+
+                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
                             click3(ApprokoPage.class);
-                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();}
+                            }
 
                         if(restaurant.equals("obandekitchen")){
+                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
                             click3(ObandePage.class);
-                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();}
+                            }
 
                         if(restaurant.equals("stainless")){
+                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
                             click3(StainlessPage.class);
-                            Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();}
+                            }
 
 
-                        this.setTextInvisible(v);
-
-                        Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
 
 
-                    }
+             }
 
-                    else {
-                        this.setTextVisible(v);
-                        this.setButtonVisible(v);
+             else{
+                    this.setTextVisible(v);
+                    this.setButtonVisible(v);
 
-                        attempts--;
+                    attempts--;
 
-                        Toast.makeText( this, "Not Successful\nYou have "+attempts+" attempt left", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Not Successful\nYou have " + attempts + " attempt left", Toast.LENGTH_SHORT).show();
 
-                        if(attempts==2){
-                            Toast.makeText(this, "You might Just be playing with this app\nWho Know!!!",
-                                    Toast.LENGTH_SHORT).show();
-                            Toast.makeText(this, "Giving you two chances",
-                                    Toast.LENGTH_SHORT).show();
-
-                        }
-                        if(attempts==0){
-
-                            loginEmail.setEnabled(false);
-                            loginPassV.setEnabled(false);
-
-                            Toast.makeText(this, "Sorry!!\n\nYou have usedup all your chances",
-                                    Toast.LENGTH_SHORT).show();
-
-                            setButtonInvisible(v);
-
-                            Toast.makeText(this, "You might want to signup",
-                                    Toast.LENGTH_SHORT).show();
-
-                            Toast.makeText(this, "Try signing Up if you haven't done so",
-                                    Toast.LENGTH_SHORT).show();
-
-                            Toast.makeText(this, "Close your app and re-run it Again",
-                                    Toast.LENGTH_SHORT).show();
-                            Toast.makeText(this, "Or I will advice you to \nsign up if you haven't done so",
-                                    Toast.LENGTH_SHORT).show();
-                        }
+                    if (attempts == 2) {
+                        Toast.makeText(this, "You might Just be playing with this app\nWho Know!!!",
+                                Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Giving you two chances",
+                                Toast.LENGTH_SHORT).show();
 
                     }
+                    if (attempts == 0) {
+
+                        loginEmail.setEnabled(false);
+                        loginPassV.setEnabled(false);
+
+                        Toast.makeText(this, "Sorry!!\n\nYou have usedup all your chances",
+                                Toast.LENGTH_SHORT).show();
+
+                        setButtonInvisible(v);
+
+                        Toast.makeText(this, "You might want to signup",
+                                Toast.LENGTH_SHORT).show();
+
+                        Toast.makeText(this, "Try signing Up if you haven't done so",
+                                Toast.LENGTH_SHORT).show();
+
+                        Toast.makeText(this, "Close your app and re-run it Again",
+                                Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Or I will advice you to \nsign up if you haven't done so",
+                                Toast.LENGTH_SHORT).show();
+                    }
+
                 }
 
-            });
-        }
 
 
+
+            }
+
+
+});}
 
 
     public void click3(Object x){

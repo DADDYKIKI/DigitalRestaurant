@@ -167,7 +167,7 @@ public class LoginPage extends AppCompatActivity {
 
                          }
 
-                  else {
+              else {
 
                   Boolean insert=data.getCustomerLoginDetails(loginEmail.getText().toString(),loginPass.getText().toString());
 

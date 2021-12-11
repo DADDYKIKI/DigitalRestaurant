@@ -246,8 +246,8 @@ public class Order extends AppCompatActivity {
 
                 if (x.getRestaurantName().equals("Ada Kitchen")) {
 
-                    VendorOrderDetails ada = new VendorOrderDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
-                            LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
+                    VendorOrderDetails ada = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
+                            LoginPage.getCUSTOMERPHONE());
                     Boolean addAda=myCartGet.addAdaData(ada);
 
                     if (addAda == true) {
@@ -265,8 +265,8 @@ public class Order extends AppCompatActivity {
 
                 if (x.getRestaurantName().equals("Approko Kitchen")) {
 
-                    VendorOrderDetails approko = new VendorOrderDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
-                            LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
+                    VendorOrderDetails approko = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
+                            LoginPage.getCUSTOMERPHONE());
                     Boolean addApro=myCartGet.addApprokoData(approko);
 
                     if (addApro == true) {
@@ -284,8 +284,9 @@ public class Order extends AppCompatActivity {
 
                 if (x.getRestaurantName().equals("Obande Kitchen")) {
 
-                    VendorOrderDetails obans = new VendorOrderDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
-                            LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
+                    VendorOrderDetails obans = new VendorOrderDetails(x.getFoodName(),LoginPage.getCusName(),x.getTotalFoodPrice(), x.getQuantity(),
+                             LoginPage.getCUSTOMERPHONE());
+
                     Boolean addOba=myCartGet.addObandeData(obans);
 
                     if (addOba == true) {
@@ -301,8 +302,8 @@ public class Order extends AppCompatActivity {
                 }
                 if (x.getRestaurantName().equals("Stainless")) {
 
-                    VendorOrderDetails stainless = new VendorOrderDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
-                            LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
+                    VendorOrderDetails stainless = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
+                             LoginPage.getCUSTOMERPHONE());
                     Boolean addStainless=myCartGet.addStainlessData(stainless);
 
                     if (addStainless == true) {

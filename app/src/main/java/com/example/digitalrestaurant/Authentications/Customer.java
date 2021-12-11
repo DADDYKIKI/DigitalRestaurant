@@ -29,18 +29,7 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
     public void onBackPressed() {
 
 
-        if(press+2000>System.currentTimeMillis()){
-
-            finishAffinity();
-            System.exit(0);
-
-            return;}
-
-        else {
-            Toast.makeText(this, "Press again to exit your app", Toast.LENGTH_SHORT).show();
-
-        }press=System.currentTimeMillis();
-
+       click1(IntroPage.class);
     }
 
 

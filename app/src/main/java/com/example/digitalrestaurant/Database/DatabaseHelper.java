@@ -61,36 +61,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //Ada tabel
     public static final String COLUMNADA1="CartID";
     public static final String COLUMNADA2="Cart_ood_Name";
-    public static final String COLUMNADA3="Total_Quantity";
+    public static final String COLUMNADA3="CustomerName";
     public static final String COLUMNADA4="Total_Price";
-    public static final String COLUMNADA5="CustomerName";
+    public static final String COLUMNADA5="Total_Quantity";
     public static final String COLUMNADA6="CustomerPhone";
 
 
     //Approko Table
     public static final String COLUMNAPRO1="CartID";
     public static final String COLUMNAPRO2="Cart_ood_Name";
-    public static final String COLUMNAPRO3="Total_Quantity";
+    public static final String COLUMNAPRO3="CustomertName";
     public static final String COLUMNAPRO4="Total_Price";
-    public static final String COLUMNAPRO5="CustomertName";
+    public static final String COLUMNAPRO5="Total_Quantity";
     public static final String COLUMNAPRO6="CustomertPhone";
 
 
     //Obande Table
     public static final String COLUMNOABA1="CartID";
     public static final String COLUMNOABA2="Cart_ood_Name";
-    public static final String COLUMNOABA3="Total_Quantity";
+    public static final String COLUMNOABA3="CustomerName";
     public static final String COLUMNOABA4="Total_Price";
-    public static final String COLUMNOABA5="CustomerName";
+    public static final String COLUMNOABA5="Total_Quantity";
     public static final String COLUMNOABA6="CustomerPhone";
 
 
     //Stainless Table
     public static final String COLUMNST1="CartID";
     public static final String COLUMNST2="Cart_ood_Name";
-    public static final String COLUMNST3="Total_Quantity";
-    public static final String COLUMNST4="Total_Price";
     public static final String COLUMNST5="CustomerName";
+    public static final String COLUMNST4="Total_Price";
+    public static final String COLUMNST3="Total_Quantity";
     public static final String COLUMNST6="CustomerPhone";
 
 
@@ -124,33 +124,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE " + ADA_TABLE + "("
                 + COLUMNADA1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMNADA2 + " TEXT, "
-                + COLUMNADA3 + " INTEGER, "
+                + COLUMNADA3 + " TEXT, "
                 + COLUMNADA4 + " INTEGER, "
-                + COLUMNADA5 + " TEXT, "
+                + COLUMNADA5 + " INTEGER, "
                 + COLUMNADA6 + " INTEGER)");
 
         db.execSQL("CREATE TABLE " + APPROKO_TABLE+ "("
                 + COLUMNAPRO1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMNAPRO2 + " TEXT, "
-                + COLUMNAPRO3 + " INTEGER, "
+                + COLUMNAPRO3 + " TEXT, "
                 + COLUMNAPRO4 + " INTEGER, "
-                + COLUMNAPRO5 + " TEXT, "
+                + COLUMNAPRO5 + " INTEGER, "
                 + COLUMNAPRO6 + " INTEGER)");
 
         db.execSQL("CREATE TABLE " + OBANDE_TABLE + "("
                 + COLUMNOABA1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMNOABA2 + " TEXT, "
-                + COLUMNOABA3 + " INTEGER, "
+                + COLUMNOABA3 + " TEXT, "
                 + COLUMNOABA4 + " INTEGER, "
-                + COLUMNOABA5 + " TEXT, "
+                + COLUMNOABA5 + " INTEGER, "
                 + COLUMNOABA6 + " INTEGER)");
 
         db.execSQL("CREATE TABLE " + STAINLESS + "("
                 + COLUMNST1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMNST2 + " TEXT, "
-                + COLUMNST3 + " INTEGER, "
+                + COLUMNST3 + " TEXT, "
                 + COLUMNST4 + " INTEGER, "
-                + COLUMNST5 + " TEXT, "
+                + COLUMNST5 + " INTEGER, "
                 + COLUMNST6 + "INTEGER)");
 
            //Customer table
@@ -212,9 +212,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         ContentValues contentV=new ContentValues();
         contentV.put(COLUMNADA2,order.getFoodName());
-        contentV.put(COLUMNADA3,order.getQuantity());
+        contentV.put(COLUMNADA3,order.getCusName());
         contentV.put(COLUMNADA4,order.getTotalFoodPrice());
-        contentV.put(COLUMNADA5,order.getCusName());
+        contentV.put(COLUMNADA5,order.getQuantity());
         contentV.put(COLUMNADA6,order.getPhone());
 
         long output=myDatabase.insert(ADA_TABLE,null,contentV);
@@ -230,9 +230,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         ContentValues contentV=new ContentValues();
         contentV.put(COLUMNAPRO2,order.getFoodName());
-        contentV.put(COLUMNAPRO3,order.getQuantity());
+        contentV.put(COLUMNAPRO3,order.getCusName());
         contentV.put(COLUMNAPRO4,order.getTotalFoodPrice());
-        contentV.put(COLUMNAPRO5,order.getCusName());
+        contentV.put(COLUMNAPRO5,order.getQuantity());
         contentV.put(COLUMNAPRO6,order.getPhone());
 
         long output=myDatabase.insert(APPROKO_TABLE,null,contentV);
@@ -248,9 +248,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         ContentValues contentV=new ContentValues();
         contentV.put(COLUMNOABA2,order.getFoodName());
-        contentV.put(COLUMNOABA3,order.getQuantity());
+        contentV.put(COLUMNOABA3,order.getCusName());
         contentV.put(COLUMNOABA4,order.getTotalFoodPrice());
-        contentV.put(COLUMNOABA5,order.getCusName());
+        contentV.put(COLUMNOABA5,order.getQuantity());
         contentV.put(COLUMNOABA6,order.getPhone());
 
         long output=myDatabase.insert(OBANDE_TABLE,null,contentV);
@@ -267,9 +267,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         ContentValues contentV=new ContentValues();
         contentV.put(COLUMNST2,order.getFoodName());
-        contentV.put(COLUMNST3,order.getQuantity());
+        contentV.put(COLUMNST2,order.getCusName());
         contentV.put(COLUMNST4,order.getTotalFoodPrice());
-        contentV.put(COLUMNST5,order.getCusName());
+        contentV.put(COLUMNST5,order.getQuantity());
         contentV.put(COLUMNST6,order.getPhone());
 
         long output=myDatabase.insert(STAINLESS,null,contentV);
@@ -403,13 +403,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 do {
 
                     String name = cur.getString(cur.getColumnIndex(COLUMNADA2));
-                    String quantity = cur.getString(cur.getColumnIndex(COLUMNADA3));
+                    String cusName = cur.getString(cur.getColumnIndex(COLUMNADA3));
                     String totalPrice = cur.getString(cur.getColumnIndex(COLUMNADA4));
-                    String cusName = cur.getString(cur.getColumnIndex(COLUMNADA5));
+                    String quantity = cur.getString(cur.getColumnIndex(COLUMNADA5));
                     String phone = cur.getString(cur.getColumnIndex(COLUMNADA6));
 
 
-                    VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, cusName,totalPrice,quantity,Integer.parseInt(phone));
 
                     mylist.add(myoder);
 
@@ -441,13 +441,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 do {
 
                     String name = cur.getString(cur.getColumnIndex(COLUMNAPRO2));
-                    String quantity = cur.getString(cur.getColumnIndex(COLUMNAPRO3));
+                    String cusName = cur.getString(cur.getColumnIndex(COLUMNAPRO3));
                     String totalPrice = cur.getString(cur.getColumnIndex(COLUMNAPRO4));
-                    String cusName = cur.getString(cur.getColumnIndex(COLUMNAPRO5));
+                    String quantity = cur.getString(cur.getColumnIndex(COLUMNAPRO5));
                     String phone = cur.getString(cur.getColumnIndex(COLUMNAPRO6));
 
 
-                    VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, cusName,totalPrice,quantity, Integer.parseInt(phone));
 
                     mylist.add(myoder);
 
@@ -479,9 +479,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 do {
 
                     String name = cur.getString(cur.getColumnIndex(COLUMNOABA2));
-                    String quantity = cur.getString(cur.getColumnIndex(COLUMNOABA3));
+                    String cusName = cur.getString(cur.getColumnIndex(COLUMNOABA3));
                     String totalPrice = cur.getString(cur.getColumnIndex(COLUMNOABA4));
-                    String cusName = cur.getString(cur.getColumnIndex(COLUMNOABA5));
+                    String quantity = cur.getString(cur.getColumnIndex(COLUMNOABA5));
                     String phone = cur.getString(cur.getColumnIndex(COLUMNOABA6));
 
 
@@ -518,13 +518,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 do {
 
                     String name = cur.getString(cur.getColumnIndex(COLUMNST2));
-                    String quantity = cur.getString(cur.getColumnIndex(COLUMNST3));
+                    String cusName = cur.getString(cur.getColumnIndex(COLUMNST3));
                     String totalPrice = cur.getString(cur.getColumnIndex(COLUMNST4));
-                    String cusName = cur.getString(cur.getColumnIndex(COLUMNST5));
+                    String quantity = cur.getString(cur.getColumnIndex(COLUMNST5));
                     String phone = cur.getString(cur.getColumnIndex(COLUMNST6));
 
 
-                    VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name , cusName,totalPrice,quantity, Integer.parseInt(phone));
 
                     mylist.add(myoder);
 
@@ -690,15 +690,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
 
-        Cursor cur = myDatabase.rawQuery("select " +COLUMNUSER3+" from " + VENDOR_DETAILS,
-                // " where "+COLUMNUSER3+" = "+email,
+        Cursor cur = myDatabase.rawQuery("select " +COLUMNVEN3+" from " + VENDOR_DETAILS,
 
                 null);
 
         if(cur.getCount()>0) {
             while (cur.moveToNext()) {
 
-                if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
+                if(cur.getString(cur.getColumnIndex(COLUMNVEN3)).equals(email))
 
                     return true;
                 myDatabase.close();

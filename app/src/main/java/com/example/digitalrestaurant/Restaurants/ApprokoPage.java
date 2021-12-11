@@ -107,7 +107,7 @@ public class ApprokoPage extends AppCompatActivity {
 
                 for (VendorOrderDetails x : getMyOrder4()) {
 
-                    VendorOrderDetails oders2 = new VendorOrderDetails(x.getFoodName(), x.getCusName(),x.getQuantity(), x.getTotalFoodPrice()
+                    VendorOrderDetails oders2 = new VendorOrderDetails(x.getFoodName(), x.getCusName(), x.getTotalFoodPrice(),x.getQuantity()
                             , x.getPhone());
 
 

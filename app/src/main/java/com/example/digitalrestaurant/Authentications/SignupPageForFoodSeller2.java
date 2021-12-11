@@ -65,24 +65,10 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
         signSubBtnV = (findViewById(R.id.signSubBtnV));
 
 
-        menuKey2();
-
-
         signupV();
 
     }
 
-
-    public void menuKey2(){
-        menuKey.setOnClickListener(v -> {
-            Intent intent2=new Intent(this, Menu.class);
-            startActivity(intent2);
-            overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-
-
-        });
-
-    }
 
     public void signupV(){
         signSubBtnV.setOnClickListener(v -> {
@@ -100,16 +86,8 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
                 Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
 
             }
-            if (!name.trim().equalsIgnoreCase("adakitchen") || !name.trim().equalsIgnoreCase("obandekitchen")||
-            !name.trim().equalsIgnoreCase("approkokitchen") ||!name.trim().equalsIgnoreCase("stainless")){
 
-                Toast.makeText(this, "Not a registered restaurant", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "Try: Ada Kitchen, Approkoko kitchen \nObande Kitchen, Stainless", Toast.LENGTH_SHORT).show();
-
-            }
-
-
-            else if (!isEmailValid(email))
+                if (!isEmailValid(email))
                 Toast.makeText(this, "Invalid email address", Toast.LENGTH_SHORT).show();
 
             else if (!isPaswordValid(password))
@@ -141,8 +119,8 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
                     } else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
 
-                }
-            }
+                }}
+
 
         });
         }

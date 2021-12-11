@@ -2297,7 +2297,6 @@ id navigation_header_container
 id neutral_button
 id never
 id nigerian1
-id no
 id noScroll
 id none
 id normal
@@ -2470,7 +2469,6 @@ id textStart
 id textTop
 id textView
 id textView11
-id textView12
 id textView13
 id textView14
 id textView15
@@ -2478,7 +2476,6 @@ id textView2
 id textView3
 id textView4
 id textView5
-id textView6
 id textView9
 id text_input_end_icon
 id text_input_error_icon
@@ -2529,7 +2526,6 @@ id wrap
 id wrap_content
 id x
 id y
-id yes
 id z
 id zero_corner_chip
 integer abc_config_activityDefaultDur
@@ -2594,7 +2590,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_delete_cart_item
 layout activity_food_seller
 layout activity_forgot_password
 layout activity_intro_page
@@ -2688,7 +2683,6 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout obande_restaurant_homepage
-layout order
 layout popular_food_display_container
 layout restaurant_page_container
 layout select_dialog_item_material

@@ -37,7 +37,7 @@
                     android:layout_width="326dp"
                     android:layout_height="256dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginRight="14dp"
+                    android:layout_marginEnd="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/friedriceone" />
@@ -48,7 +48,7 @@
                     android:layout_height="47dp"
                     android:layout_marginEnd="52dp"
                     android:text="10"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/purple_200"
                     android:textSize="35dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -68,10 +68,10 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.024"
+                    app:layout_constraintHorizontal_bias="0.314"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.863" />
+                    app:layout_constraintVertical_bias="0.946" />
 
                 <TextView
                     android:id="@+id/poundSign"
@@ -80,7 +80,7 @@
                     android:layout_marginEnd="76dp"
                     android:height="40dp"
                     android:text="£"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/purple_200"
                     android:textSize="35dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -92,28 +92,25 @@
                     android:id="@+id/nigerian1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="228dp"
                     android:text="African"
                     android:textColor="@android:color/black"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/jelof"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.086"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.095" />
+                    tools:layout_editor_absoluteY="272dp" />
 
                 <TextView
                     android:id="@+id/restaurantName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="176dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="204dp"
                     android:text="TextView"
                     android:textAlignment="center"
-                    android:textColor="@color/redishorang"
-                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -123,13 +120,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="24dp"
                     android:text="Check"
                     android:textAlignment="center"
-                    android:textColor="@color/redishorang"
-                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/restaurantName"
+                    app:layout_constraintHorizontal_bias="0.484"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

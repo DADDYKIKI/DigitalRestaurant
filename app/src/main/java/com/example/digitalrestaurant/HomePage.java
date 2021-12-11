@@ -77,13 +77,18 @@ public class HomePage extends AppCompatActivity {
     public void onBackPressed() {
 
 
-        if(press+3000>System.currentTimeMillis()){
-            super.onBackPressed();
+        if(press+2000>System.currentTimeMillis()){
+
+            finish();
+            System.exit(0);
+            //super.onBackPressed();
+
         return;}
 
-        else
+        else {
             Toast.makeText(this, "Press again to exit", Toast.LENGTH_SHORT).show();
 
+        }press=System.currentTimeMillis();
 
     }
 

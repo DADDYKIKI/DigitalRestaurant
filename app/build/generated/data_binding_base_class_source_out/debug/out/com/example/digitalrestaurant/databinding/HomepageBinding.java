@@ -48,15 +48,12 @@ public final class HomepageBinding implements ViewBinding {
   @NonNull
   public final TextView textView;
 
-  @NonNull
-  public final TextView textView6;
-
   private HomepageBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout constraintLayout, @NonNull ConstraintLayout constraintLayout3,
       @NonNull TextView customerWelcomeName, @NonNull RecyclerView locationRecycler,
       @NonNull TextView menuKeyS, @NonNull RecyclerView obandeKitchen,
       @NonNull RecyclerView restaurantsRecycler, @NonNull ScrollView scrollView2,
-      @NonNull TextView textView, @NonNull TextView textView6) {
+      @NonNull TextView textView) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
     this.constraintLayout3 = constraintLayout3;
@@ -67,7 +64,6 @@ public final class HomepageBinding implements ViewBinding {
     this.restaurantsRecycler = restaurantsRecycler;
     this.scrollView2 = scrollView2;
     this.textView = textView;
-    this.textView6 = textView6;
   }
 
   @Override
@@ -151,15 +147,9 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView6;
-      TextView textView6 = ViewBindings.findChildViewById(rootView, id);
-      if (textView6 == null) {
-        break missingId;
-      }
-
       return new HomepageBinding((ConstraintLayout) rootView, constraintLayout, constraintLayout3,
           customerWelcomeName, locationRecycler, menuKeyS, obandeKitchen, restaurantsRecycler,
-          scrollView2, textView, textView6);
+          scrollView2, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

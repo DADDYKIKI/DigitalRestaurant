@@ -146,12 +146,6 @@ public class Order extends AppCompatActivity {
 
 
 
-
-        Toast.makeText(this, orders.toString(), Toast.LENGTH_SHORT).show();
-
-
-
-
         homeKey();
         menuKey();
 

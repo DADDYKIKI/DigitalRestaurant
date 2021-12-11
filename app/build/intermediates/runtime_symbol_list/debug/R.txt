@@ -2296,7 +2296,6 @@ int id navigation_header_container 0x7f0a015e
 int id neutral_button 0x7f0a015f
 int id never 0x7f0a0160
 int id nigerian1 0x7f0a0161
-int id no 0x7f0a0162
 int id noScroll 0x7f0a0163
 int id none 0x7f0a0164
 int id normal 0x7f0a0165
@@ -2469,7 +2468,6 @@ int id textStart 0x7f0a020b
 int id textTop 0x7f0a020c
 int id textView 0x7f0a020d
 int id textView11 0x7f0a020e
-int id textView12 0x7f0a020f
 int id textView13 0x7f0a0210
 int id textView14 0x7f0a0211
 int id textView15 0x7f0a0212
@@ -2477,7 +2475,6 @@ int id textView2 0x7f0a0213
 int id textView3 0x7f0a0214
 int id textView4 0x7f0a0215
 int id textView5 0x7f0a0216
-int id textView6 0x7f0a0217
 int id textView9 0x7f0a0218
 int id text_input_end_icon 0x7f0a0219
 int id text_input_error_icon 0x7f0a021a
@@ -2528,7 +2525,6 @@ int id wrap 0x7f0a0246
 int id wrap_content 0x7f0a0247
 int id x 0x7f0a0248
 int id y 0x7f0a0249
-int id yes 0x7f0a024a
 int id z 0x7f0a024b
 int id zero_corner_chip 0x7f0a024c
 int integer abc_config_activityDefaultDur 0x7f0b0000
@@ -2593,7 +2589,6 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0d0018
 int layout abc_search_view 0x7f0d0019
 int layout abc_select_dialog_material 0x7f0d001a
 int layout abc_tooltip 0x7f0d001b
-int layout activity_delete_cart_item 0x7f0d001c
 int layout activity_food_seller 0x7f0d001d
 int layout activity_forgot_password 0x7f0d001e
 int layout activity_intro_page 0x7f0d001f
@@ -2687,7 +2682,6 @@ int layout notification_template_media_custom 0x7f0d0076
 int layout notification_template_part_chronometer 0x7f0d0077
 int layout notification_template_part_time 0x7f0d0078
 int layout obande_restaurant_homepage 0x7f0d0079
-int layout order 0x7f0d007a
 int layout popular_food_display_container 0x7f0d007b
 int layout restaurant_page_container 0x7f0d007c
 int layout select_dialog_item_material 0x7f0d007d

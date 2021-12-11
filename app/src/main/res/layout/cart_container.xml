@@ -21,7 +21,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="396dp"
                 android:layout_height="299dp"
-                android:background="@drawable/bordera3">
+                android:background="@drawable/selleruploadbtn">
 
                 <TextView
                     android:id="@+id/itemName"
@@ -52,7 +52,7 @@
                     android:id="@+id/itemPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="212dp"
+                    android:layout_marginEnd="188dp"
                     android:layout_marginBottom="40dp"
                     android:text="10"
                     android:textAlignment="center"
@@ -64,18 +64,17 @@
 
                 <TextView
                     android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="40dp"
+                    android:layout_width="25dp"
+                    android:layout_height="54dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="36dp"
                     android:text="£"
                     android:textAlignment="center"
                     android:textColor="@color/Red"
                     android:textSize="40dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/itemPrice"
-                    app:layout_constraintHorizontal_bias="0.147"
-                    app:layout_constraintStart_toEndOf="@+id/textView15" />
+                    app:layout_constraintEnd_toStartOf="@+id/itemPrice" />
 
                 <TextView
                     android:id="@+id/resaurantNameB"
@@ -96,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="112dp"
                     android:layout_marginTop="12dp"
-                    android:text=" From"
+                    android:text="Bought from"
                     android:textColor="@color/Red"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="28dp"
                     android:layout_marginTop="64dp"
-                    android:text="Item"
+                    android:text="Item:-"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="30dp"
@@ -122,7 +121,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="40dp"
-                    android:text="Quantity"
+                    android:text="Quantity:-"
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     android:textStyle="bold"
@@ -133,16 +132,16 @@
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="28dp"
                     android:layout_marginBottom="40dp"
-                    android:text="Price"
+                    android:text="Price:-"
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView14"
-                    app:layout_constraintVertical_bias="1.0" />
+                    app:layout_constraintEnd_toStartOf="@+id/textView9"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

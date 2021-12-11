@@ -568,7 +568,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
 
 
+    @SuppressLint("Range")
+    public void clearItemsFromStainless() {
 
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+        myDatabase.execSQL("delete from "+ STAINLESS);
+
+    }
+
+    @SuppressLint("Range")
+    public void clearItemsFromObande() {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+        myDatabase.execSQL("delete from "+ OBANDE_TABLE);
+
+    }
 
 
     @SuppressLint("Range")
@@ -584,6 +598,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
         myDatabase.execSQL("delete from "+ ADA_TABLE);
+
+    }
+
+    @SuppressLint("Range")
+    public void clearItemsFromAPProkoTabel() {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+        myDatabase.execSQL("delete from "+ APPROKO_TABLE);
 
     }
 

@@ -16,50 +16,50 @@ import com.example.digitalrestaurant.Details.VendorOrderDetails;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ApprokoPage extends AppCompatActivity {
+public class ObandePage extends AppCompatActivity {
 
-    DatabaseHelper myOrders2;
+    DatabaseHelper myOrders3;
 
-    List<VendorOrderDetails> vOrders2;
+    List<VendorOrderDetails> vOrders3;
 
-    RecyclerView approkoRecycler;
+    RecyclerView obandeRecycler;
 
-    RestaurantOrdersAdaptor orderAdaptors2;
+    RestaurantOrdersAdaptor orderAdaptors3;
 
-    private  static List<VendorOrderDetails> myOrder4=new ArrayList<>();
+    private  static List<VendorOrderDetails> myOrder5=new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_approko_page);
+        setContentView(R.layout.activity_obande_page);
 
-        myOrders2=new DatabaseHelper(this);
+        myOrders3=new DatabaseHelper(this);
 
-        vOrders2=new ArrayList<>();
+        vOrders3=new ArrayList<>();
 
-        MyOrders2();
+        MyOrders3();
 
 
     }
 
-    public static List<VendorOrderDetails> getMyOrder4() {
-        return myOrder4;
+    public static List<VendorOrderDetails> getMyOrder5() {
+        return myOrder5;
     }
 
 
-    public static void setMyOrder4(List<VendorOrderDetails> order) {
+    public static void setMyOrder5(List<VendorOrderDetails> order) {
 
-        myOrder4=order;
+        myOrder5=order;
     }
 
-    public void MyOrders2(){
+    public void MyOrders3(){
 
-        vOrders2=myOrders2.getApprokoCartItems();
+        vOrders3=myOrders3.getApprokoCartItems();
 
-        approkoRecycler=findViewById(R.id.aPprokoMainRecyclerView);
+        obandeRecycler=findViewById(R.id.obandeMainRecyclerView);
 
-        approkoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+       obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
@@ -72,21 +72,21 @@ public class ApprokoPage extends AppCompatActivity {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                vOrders2.remove(viewHolder.getAdapterPosition());
-                orderAdaptors2.notifyDataSetChanged();
+                vOrders3.remove(viewHolder.getAdapterPosition());
+                orderAdaptors3.notifyDataSetChanged();
 
 
-                setMyOrder4(vOrders2);
+                setMyOrder5(vOrders3);
 
-                myOrders2.clearItemsFromAPProkoTabel();
+                myOrders3.clearItemsFromObande();
 
-                for (VendorOrderDetails x : getMyOrder4()) {
+                for (VendorOrderDetails x : getMyOrder5()) {
 
                     VendorOrderDetails oders2 = new VendorOrderDetails(x.getFoodName(), x.getCusName(),x.getQuantity(), x.getTotalFoodPrice()
                             , x.getPhone());
 
 
-                    myOrders2.addApprokoData(oders2);
+                    myOrders3.addObandeData(oders2);
 
 
                 }
@@ -95,12 +95,14 @@ public class ApprokoPage extends AppCompatActivity {
 
         };
 
-        orderAdaptors2=new RestaurantOrdersAdaptor(vOrders2);
+        orderAdaptors3=new RestaurantOrdersAdaptor(vOrders3);
 
-        new ItemTouchHelper(itemtouch).attachToRecyclerView(approkoRecycler);
+        new ItemTouchHelper(itemtouch).attachToRecyclerView(obandeRecycler);
 
-        approkoRecycler.setAdapter( orderAdaptors2);
+       obandeRecycler.setAdapter( orderAdaptors3);
 
 
 
-    }}
+
+    }
+}

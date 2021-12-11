@@ -9,10 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
-import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
 import com.example.digitalrestaurant.Adaptors.RestaurantOrdersAdaptor;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
-import com.example.digitalrestaurant.Details.OrderDetails;
 import com.example.digitalrestaurant.Details.VendorOrderDetails;
 
 import java.util.ArrayList;

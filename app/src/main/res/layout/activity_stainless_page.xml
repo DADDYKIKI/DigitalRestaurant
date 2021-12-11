@@ -7,7 +7,7 @@
     tools:context=".AdaPage">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/adaMainRecyclerView"
+        android:id="@+id/stainlessMainRecyclerView"
         android:layout_width="407dp"
         android:layout_height="607dp"
         android:layout_marginBottom="4dp"
@@ -19,7 +19,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="431dp"
         android:layout_height="117dp"
-        android:background="@drawable/adakitchen"
+        android:background="@drawable/obandekitchen2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,7 +28,9 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome Back Ada"
+            android:background="@drawable/obandekitchen"
+            android:text="Welcome Back Stainless"
+            android:textAlignment="center"
             android:textColor="@color/orange"
             android:textSize="40dp"
             app:layout_constraintBottom_toBottomOf="parent"

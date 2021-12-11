@@ -20,6 +20,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalRestaurant">
         <activity
+            android:name=".StainlessPage"
+            android:exported="false" />
+        <activity
+            android:name=".ObandePage"
+            android:exported="false" />
+        <activity
             android:name=".ApprokoPage"
             android:exported="false" />
         <activity

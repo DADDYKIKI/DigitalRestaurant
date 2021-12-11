@@ -62,10 +62,6 @@ public class AdaKitchen extends AppCompatActivity {
         helper=new DatabaseHelper(this);
 
 
-
-
-
-
         Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
 
 
@@ -117,10 +113,6 @@ public class AdaKitchen extends AppCompatActivity {
 
 
         });
-
-
-
-
     }
 
 
@@ -140,8 +132,6 @@ public class AdaKitchen extends AppCompatActivity {
 
         adaRecycler.setAdapter(adaAdaptor);
 
-
-
     }
 
 
@@ -156,19 +146,11 @@ public class AdaKitchen extends AppCompatActivity {
             intent5.putExtra("imageUrl",adaItems.get(position).getImageURL());
             intent5.putExtra("nationality",adaItems.get(position).getNationality());
             intent5.putExtra("price",adaItems.get(position).getPrice());
-            intent5.putExtra("RestaurantName","Ada Kitchen");
+            intent5.putExtra("restaurant","Ada Kitchen");
 
             startActivity(intent5);};
 
     }
-
-
-
-
-
-
-
-
 
     }
 

@@ -7,8 +7,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.digitalrestaurant.Details.AdaDetails;
+import com.example.digitalrestaurant.Details.ApprokoDetails;
 import com.example.digitalrestaurant.Details.ItemData;
+import com.example.digitalrestaurant.Details.ObandeDetails;
 import com.example.digitalrestaurant.Details.OrderDetails;
+import com.example.digitalrestaurant.Details.StainlessDetails;
 import com.example.digitalrestaurant.Details.UserDetails;
 import com.example.digitalrestaurant.Details.VendorDetails;
 
@@ -26,7 +30,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String MY_USER_AND_PASS_TABLE="GodwinUserInfoTable";
     public static final String FOODS_FOR_SALE="GodwinPopulateFoodIntoRestaurant";
     public static final String VENDOR_DETAILS="VendorStuff";
-    //public static final String ADATABLE="AdaRestaurantTable";
+    public static final String ADA_TABLE="AdaStuff";
+    public static final String APPROKO_TABLE="ApprokoStuff";
+    public static final String OBANDE_TABLE="ObandeStuff";
+    public static final String STAINLESS="StainlessStuff";
 
 
     //Cart details
@@ -52,6 +59,43 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMNVEN2="nameOfVendor";
     public static final String COLUMNVEN3="Vendor_email";
     public static final String COLUMNVEN4="Vendor_Passwords";
+
+    //Ada tabel
+    public static final String COLUMNADA1="CartID";
+    public static final String COLUMNADA2="Cart_ood_Name";
+    public static final String COLUMNADA3="Total_Quantity";
+    public static final String COLUMNADA4="Total_Price";
+    public static final String COLUMNADA5="CustomerName";
+    public static final String COLUMNADA6="CustomerPhone";
+
+
+    //Approko Table
+    public static final String COLUMNAPRO1="CartID";
+    public static final String COLUMNAPRO2="Cart_ood_Name";
+    public static final String COLUMNAPRO3="Total_Quantity";
+    public static final String COLUMNAPRO4="Total_Price";
+    public static final String COLUMNAPRO5="CustomertName";
+    public static final String COLUMNAPRO6="CustomertPhone";
+
+
+    //Obande Table
+    public static final String COLUMNOABA1="CartID";
+    public static final String COLUMNOABA2="Cart_ood_Name";
+    public static final String COLUMNOABA3="Total_Quantity";
+    public static final String COLUMNOABA4="Total_Price";
+    public static final String COLUMNOABA5="CustomerName";
+    public static final String COLUMNOABA6="CustomerPhone";
+
+
+    //Stainless Table
+    public static final String COLUMNST1="CartID";
+    public static final String COLUMNST2="Cart_ood_Name";
+    public static final String COLUMNST3="Total_Quantity";
+    public static final String COLUMNST4="Total_Price";
+    public static final String COLUMNST5="CustomerName";
+    public static final String COLUMNST6="CustomerPhone";
+
+
 
 
     private static ArrayList<OrderDetails> order=new ArrayList<>();
@@ -79,6 +123,38 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                    + COLUMNNAME4 + " INTEGER, "
                    + COLUMNNAME5 + " TEXT)");
 
+        db.execSQL("CREATE TABLE " + ADA_TABLE + "("
+                + COLUMNADA1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COLUMNADA2 + " TEXT, "
+                + COLUMNADA3 + " INTEGER, "
+                + COLUMNADA4 + " INTEGER, "
+                + COLUMNADA5 + " TEXT, "
+                + COLUMNADA6 + " INTEGER)");
+
+        db.execSQL("CREATE TABLE " + APPROKO_TABLE+ "("
+                + COLUMNAPRO1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COLUMNAPRO2 + " TEXT, "
+                + COLUMNAPRO3 + " INTEGER, "
+                + COLUMNAPRO4 + " INTEGER, "
+                + COLUMNAPRO5 + " TEXT, "
+                + COLUMNAPRO6 + " INTEGER)");
+
+        db.execSQL("CREATE TABLE " + OBANDE_TABLE + "("
+                + COLUMNOABA1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COLUMNOABA2 + " TEXT, "
+                + COLUMNOABA3 + " INTEGER, "
+                + COLUMNOABA4 + " INTEGER, "
+                + COLUMNOABA5 + " TEXT, "
+                + COLUMNOABA6 + " INTEGER)");
+
+        db.execSQL("CREATE TABLE " + STAINLESS + "("
+                + COLUMNST1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COLUMNST2 + " TEXT, "
+                + COLUMNST3 + " INTEGER, "
+                + COLUMNST4 + " INTEGER, "
+                + COLUMNST5 + " TEXT, "
+                + COLUMNST6 + "INTEGER)");
+
            //Customer table
            db.execSQL("CREATE TABLE " + MY_USER_AND_PASS_TABLE + "("
                    + COLUMNUSER1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -105,7 +181,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 db.execSQL("DROP TABLE IF EXISTS "+MY_USER_AND_PASS_TABLE );
                 db.execSQL("DROP TABLE IF EXISTS "+FOODS_FOR_SALE);
                 db.execSQL("DROP TABLE IF EXISTS "+VENDOR_DETAILS);
-               // db.execSQL("DROP TABLE IF EXISTS "+ADATABLE);
+                db.execSQL("DROP TABLE IF EXISTS "+ADA_TABLE);
+                db.execSQL("DROP TABLE IF EXISTS "+APPROKO_TABLE);
+                db.execSQL("DROP TABLE IF EXISTS "+OBANDE_TABLE);
+                db.execSQL("DROP TABLE IF EXISTS "+STAINLESS);
+
                 onCreate(db);
     }
 
@@ -127,6 +207,80 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 if(output==-1) return false;
                 else return  true;
             }
+
+    public boolean addAdaData(AdaDetails order){
+
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+
+        ContentValues contentV=new ContentValues();
+        contentV.put(COLUMNADA2,order.getAdafoodName());
+        contentV.put(COLUMNADA3,order.getAdaquantity());
+        contentV.put(COLUMNADA4,order.getAdatotalFoodPrice());
+        contentV.put(COLUMNADA5,order.getCusName());
+        contentV.put(COLUMNADA6,order.getPhone());
+
+        long output=myDatabase.insert(ADA_TABLE,null,contentV);
+        myDatabase.close();
+
+        if(output==-1) return false;
+        else return  true;
+    }
+
+    public boolean addApprokoData(ApprokoDetails order){
+
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+
+        ContentValues contentV=new ContentValues();
+        contentV.put(COLUMNAPRO2,order.getApprokofoodName());
+        contentV.put(COLUMNAPRO3,order.getApprokoquantity());
+        contentV.put(COLUMNAPRO4,order.getApprokototalFoodPrice());
+        contentV.put(COLUMNAPRO5,order.getCusName());
+        contentV.put(COLUMNAPRO6,order.getPhone());
+
+        long output=myDatabase.insert(APPROKO_TABLE,null,contentV);
+        myDatabase.close();
+
+        if(output==-1) return false;
+        else return  true;
+    }
+
+    public boolean addObandeData(ObandeDetails order){
+
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+
+        ContentValues contentV=new ContentValues();
+        contentV.put(COLUMNOABA2,order.getObandefoodName());
+        contentV.put(COLUMNOABA3,order.getObandequantity());
+        contentV.put(COLUMNOABA4,order.getObandetotalFoodPrice());
+        contentV.put(COLUMNOABA5,order.getCusName());
+        contentV.put(COLUMNOABA6,order.getPhone());
+
+        long output=myDatabase.insert(OBANDE_TABLE,null,contentV);
+        myDatabase.close();
+
+        if(output==-1) return false;
+        else return  true;
+    }
+
+
+    public boolean addStainlessData(StainlessDetails order){
+
+        SQLiteDatabase myDatabase=this.getWritableDatabase();
+
+        ContentValues contentV=new ContentValues();
+        contentV.put(COLUMNST2,order.getAdafoodName());
+        contentV.put(COLUMNST3,order.getAdaquantity());
+        contentV.put(COLUMNST4,order.getAdatotalFoodPrice());
+        contentV.put(COLUMNST5,order.getCusName());
+        contentV.put(COLUMNST6,order.getPhone());
+
+        long output=myDatabase.insert(STAINLESS,null,contentV);
+        myDatabase.close();
+
+        if(output==-1) return false;
+        else return  true;
+    }
+
 
 
 
@@ -234,6 +388,160 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         }return mylist;
     }
+
+    @SuppressLint("Range")
+    public List<AdaDetails> getAdaCartItems() {
+
+        SQLiteDatabase myDatabase3 = this.getWritableDatabase();
+        List<AdaDetails> mylist = new ArrayList<>();
+
+
+
+        Cursor cur = myDatabase3.rawQuery("select * from " + ADA_TABLE, null);
+
+        if (cur.getCount()>0) {
+            if (cur.moveToFirst())
+
+                do {
+
+                    String name = cur.getString(cur.getColumnIndex(COLUMNADA2));
+                    String quantity = cur.getString(cur.getColumnIndex(COLUMNADA3));
+                    String totalPrice = cur.getString(cur.getColumnIndex(COLUMNADA4));
+                    String cusName = cur.getString(cur.getColumnIndex(COLUMNADA5));
+                    String phone = cur.getString(cur.getColumnIndex(COLUMNADA6));
+
+
+                    AdaDetails myoder = new AdaDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+
+                    mylist.add(myoder);
+
+
+                } while (cur.moveToNext());
+
+            cur.close();
+            myDatabase3.close();
+
+
+
+
+        }return mylist;
+    }
+
+    @SuppressLint("Range")
+    public List<ApprokoDetails> getApprokoCartItems() {
+
+        SQLiteDatabase myDatabase3 = this.getWritableDatabase();
+        List<ApprokoDetails> mylist = new ArrayList<>();
+
+
+
+        Cursor cur = myDatabase3.rawQuery("select * from " + APPROKO_TABLE, null);
+
+        if (cur.getCount()>0) {
+            if (cur.moveToFirst())
+
+                do {
+
+                    String name = cur.getString(cur.getColumnIndex(COLUMNAPRO2));
+                    String quantity = cur.getString(cur.getColumnIndex(COLUMNAPRO3));
+                    String totalPrice = cur.getString(cur.getColumnIndex(COLUMNAPRO4));
+                    String cusName = cur.getString(cur.getColumnIndex(COLUMNAPRO5));
+                    String phone = cur.getString(cur.getColumnIndex(COLUMNAPRO6));
+
+
+                    ApprokoDetails myoder = new ApprokoDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+
+                    mylist.add(myoder);
+
+
+                } while (cur.moveToNext());
+
+            cur.close();
+            myDatabase3.close();
+
+
+
+
+        }return mylist;
+    }
+
+    @SuppressLint("Range")
+    public List<ObandeDetails> getObandeCartItems() {
+
+        SQLiteDatabase myDatabase3 = this.getWritableDatabase();
+        List<ObandeDetails> mylist = new ArrayList<>();
+
+
+
+        Cursor cur = myDatabase3.rawQuery("select * from " + OBANDE_TABLE, null);
+
+        if (cur.getCount()>0) {
+            if (cur.moveToFirst())
+
+                do {
+
+                    String name = cur.getString(cur.getColumnIndex(COLUMNOABA2));
+                    String quantity = cur.getString(cur.getColumnIndex(COLUMNOABA3));
+                    String totalPrice = cur.getString(cur.getColumnIndex(COLUMNOABA4));
+                    String cusName = cur.getString(cur.getColumnIndex(COLUMNOABA5));
+                    String phone = cur.getString(cur.getColumnIndex(COLUMNOABA6));
+
+
+                    ObandeDetails myoder = new ObandeDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+
+                    mylist.add(myoder);
+
+
+                } while (cur.moveToNext());
+
+            cur.close();
+            myDatabase3.close();
+
+
+
+
+        }return mylist;
+    }
+
+
+    @SuppressLint("Range")
+    public List<StainlessDetails> getStainlessCartItems() {
+
+        SQLiteDatabase myDatabase3 = this.getWritableDatabase();
+        List<StainlessDetails> mylist = new ArrayList<>();
+
+
+
+        Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);
+
+        if (cur.getCount()>0) {
+            if (cur.moveToFirst())
+
+                do {
+
+                    String name = cur.getString(cur.getColumnIndex(COLUMNST2));
+                    String quantity = cur.getString(cur.getColumnIndex(COLUMNST3));
+                    String totalPrice = cur.getString(cur.getColumnIndex(COLUMNST4));
+                    String cusName = cur.getString(cur.getColumnIndex(COLUMNST5));
+                    String phone = cur.getString(cur.getColumnIndex(COLUMNST6));
+
+
+                    StainlessDetails myoder = new StainlessDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+
+                    mylist.add(myoder);
+
+
+                } while (cur.moveToNext());
+
+            cur.close();
+            myDatabase3.close();
+
+
+
+
+        }return mylist;
+    }
+
 
 
 
@@ -396,6 +704,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     }
 
                 }return false;
+
+    }
+
+    @SuppressLint("Range")
+    public int getCustomerPhone(String email) {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+
+        Cursor cur = myDatabase.rawQuery("select * from " +MY_USER_AND_PASS_TABLE,
+
+                null);
+
+        if(cur.getCount()>0) {
+            while (cur.moveToNext()) {
+
+                if (cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
+
+                    return Integer.parseInt(cur.getString(cur.getColumnIndex(COLUMNUSER5)));
+
+                myDatabase.close();
+
+            }
+
+        }return 0;
 
     }
 

@@ -138,7 +138,7 @@ public class ObandeKitchen extends AppCompatActivity {
             intent5.putExtra("imageUrl",obandeItems.get(position).getImageURL());
             intent5.putExtra("nationality",obandeItems.get(position).getNationality());
             intent5.putExtra("price",obandeItems.get(position).getPrice());
-               intent5.putExtra("RestaurantName","Obande Kitchen");
+               intent5.putExtra("restaurant","Obande Kitchen");
 
             startActivity(intent5);
         };

@@ -1,6 +1,5 @@
 package com.example.digitalrestaurant.Adaptors;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.digitalrestaurant.Details.OrderDetails;
 import com.example.digitalrestaurant.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHolder>{
 
 
 
-    List<OrderDetails> myOder;
+    private List<OrderDetails> myOder;
 
 
     public OrderAdaptor(List<OrderDetails> myOder) {
@@ -32,7 +30,7 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
     public  class OrderViewHolder extends RecyclerView.ViewHolder {
 
 
-        TextView foodName, foodTotalPrice, quantity,restaurant;
+        TextView foodFName, foodTotalPrice, quantity,restaurantB;
 
 
         public OrderViewHolder(@NonNull View itemView) {
@@ -40,16 +38,11 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
 
 
 
-            foodName = itemView.findViewById(R.id.itemName);
+            foodFName = itemView.findViewById(R.id.itemFName);
             foodTotalPrice = itemView.findViewById(R.id.itemPrice);
             quantity = itemView.findViewById(R.id.itemQuantity);
-            restaurant = itemView.findViewById(R.id.resaurantNameB);
-
-
+            restaurantB = itemView.findViewById(R.id.resaurantNameBm);
         }
-
-
-
         }
 
             @NonNull
@@ -65,10 +58,10 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
              @Override
              public void onBindViewHolder(@NonNull OrderAdaptor.OrderViewHolder myHolder, int position) {
 
-            myHolder.foodName.setText(myOder.get(position).getFoodName());
+            myHolder.foodFName.setText(myOder.get(position).getFoodName());
             myHolder.quantity.setText(myOder.get(position).getQuantity());
             myHolder.foodTotalPrice.setText(myOder.get(position).getTotalFoodPrice());
-            myHolder.restaurant.setText(myOder.get(position).getRestaurantName());
+            myHolder.restaurantB.setText(myOder.get(position).getRestaurantName());
 
         }
 
@@ -78,7 +71,9 @@ public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHol
                 return myOder.size();
             }
 
+            }
 
 
 
-}
+
+

@@ -128,7 +128,7 @@ public class Stainless extends AppCompatActivity {
             intent5.putExtra("imageUrl",stainlessItems.get(position).getImageURL());
             intent5.putExtra("nationality",stainlessItems.get(position).getNationality());
             intent5.putExtra("price",stainlessItems.get(position).getPrice());
-            intent5.putExtra("RestaurantName","Stainless");
+            intent5.putExtra("restaurant","Stainless");
 
             startActivity(intent5);};
 

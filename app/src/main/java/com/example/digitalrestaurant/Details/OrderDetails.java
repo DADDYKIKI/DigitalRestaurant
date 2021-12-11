@@ -10,7 +10,8 @@ public class OrderDetails implements Serializable {
     public OrderDetails(String foodName, String quantity, String totalFoodPrice,String restaurantName) {
         this.totalFoodPrice = totalFoodPrice;
         this.quantity = quantity;
-        this.foodName = restaurantName;
+        this.foodName = foodName;
+        this.restaurantName = restaurantName;
 
     }
 

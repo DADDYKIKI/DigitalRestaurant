@@ -2198,7 +2198,7 @@ id introWelcomeTxt
 id invisible
 id inward
 id italic
-id itemName
+id itemFName
 id itemPrice
 id itemQuantity
 id item_touch_helper_previous_elevation
@@ -2349,7 +2349,7 @@ id quantityTxt
 id radio
 id ratio
 id rectangles
-id resaurantNameB
+id resaurantNameBm
 id restaurant
 id restaurantImage
 id restaurantLocation

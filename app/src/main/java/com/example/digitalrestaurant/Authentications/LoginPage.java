@@ -20,6 +20,7 @@ public class LoginPage extends AppCompatActivity {
     private static String COUNTRY="";
     private static String CUSNAME="";
     private static  int AGE=0;
+    private static  int CUSTOMERPHONE=0;
 
 
     private Button loginBut,signUpBut;
@@ -68,6 +69,15 @@ public class LoginPage extends AppCompatActivity {
         forgotPass();
         login();
         toSignUpV();
+    }
+
+    public static int getCUSTOMERPHONE() {
+        return CUSTOMERPHONE;
+    }
+
+    public static void setCUSTOMERPHONE(int phone) {
+
+        CUSTOMERPHONE=phone;
     }
 
     public static int getAge() {
@@ -135,12 +145,20 @@ public class LoginPage extends AppCompatActivity {
     }
 
 
+    public int setCustomerPhone(){
+        helperL=new DatabaseHelper(this);
 
-        public void login(){
+        int phone=helperL.getCustomerPhone(loginEmail.getText().toString());
+        return phone;
+    }
 
-            loginBut.setOnClickListener(v -> {
 
-                data=new DatabaseHelper(this);
+
+    public void login(){
+
+        loginBut.setOnClickListener(v -> {
+
+            data=new DatabaseHelper(this);
 
 
               if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
@@ -165,9 +183,10 @@ public class LoginPage extends AppCompatActivity {
 
                       Boolean correct=data.checkCountry(loginEmail.getText().toString());
 
-                      String name=data.setCustomerWelcomeName(loginEmail.getText().toString());
 
-                      setCusName(name);
+
+                      setCusName(setCustomerWelcomeTextF());
+                      setCUSTOMERPHONE(setCustomerPhone());
 
                       Intent intent=new Intent(this,HomePage.class);
 

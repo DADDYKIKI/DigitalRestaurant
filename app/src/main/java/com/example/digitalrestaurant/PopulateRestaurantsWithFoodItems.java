@@ -141,6 +141,8 @@ public class PopulateRestaurantsWithFoodItems {
     public List<ItemData> populateStainlessPage(int age) {
 
         stainlessItems.add(new ItemData(7, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
+        stainlessItems.add(new ItemData(5, "Hero Special", "", R.drawable.adaherobear, "alcoholic"));
+        stainlessItems.add(new ItemData(13, "Best Bears", "", R.drawable.adaassortedbear, "alcoholic"));
 
 
         List<ItemData> allMatch = stainlessItems.stream().filter(p -> p.getAlcoholic().equals(""))

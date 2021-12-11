@@ -4,6 +4,8 @@ com/example/digitalrestaurant/databinding/ContactsBinding.java
  com.example.digitalrestaurant.databinding.ContactsBinding
 com/example/digitalrestaurant/Authentications/Customer.java
  com.example.digitalrestaurant.Authentications.Customer
+com/example/digitalrestaurant/Details/AdaDetails.java
+ com.example.digitalrestaurant.Details.AdaDetails
 com/example/digitalrestaurant/GetMyLocation.java
  com.example.digitalrestaurant.GetMyLocation
 com/example/digitalrestaurant/databinding/LoginBinding.java
@@ -30,6 +32,8 @@ com/example/digitalrestaurant/Details/OrderDetails.java
  com.example.digitalrestaurant.Details.OrderDetails
 com/example/digitalrestaurant/Details/LocationDetails/LocationDetails.java
  com.example.digitalrestaurant.Details.LocationDetails.LocationDetails
+com/example/digitalrestaurant/Details/ObandeDetails.java
+ com.example.digitalrestaurant.Details.ObandeDetails
 com/example/digitalrestaurant/Cart.java
  com.example.digitalrestaurant.Cart
 com/example/digitalrestaurant/databinding/MenuBinding.java
@@ -80,12 +84,16 @@ com/example/digitalrestaurant/databinding/RestaurantPageContainerBinding.java
  com.example.digitalrestaurant.databinding.RestaurantPageContainerBinding
 com/example/digitalrestaurant/BuildConfig.java
  com.example.digitalrestaurant.BuildConfig
+com/example/digitalrestaurant/Details/StainlessDetails.java
+ com.example.digitalrestaurant.Details.StainlessDetails
 com/example/digitalrestaurant/Authentications/SignupPageForFoodSeller2.java
  com.example.digitalrestaurant.Authentications.SignupPageForFoodSeller2
 com/example/digitalrestaurant/Authentications/LoginPage.java
  com.example.digitalrestaurant.Authentications.LoginPage
 com/example/digitalrestaurant/Kitchens/Stainless.java
  com.example.digitalrestaurant.Kitchens.Stainless
+com/example/digitalrestaurant/Details/ApprokoDetails.java
+ com.example.digitalrestaurant.Details.ApprokoDetails
 com/example/digitalrestaurant/Adaptors/LocationAdaptor.java
  com.example.digitalrestaurant.Adaptors.LocationAdaptor
  com.example.digitalrestaurant.Adaptors.LocationAdaptor$LocationListener

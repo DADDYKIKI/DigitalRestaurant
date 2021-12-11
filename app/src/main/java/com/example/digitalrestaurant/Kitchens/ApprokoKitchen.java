@@ -137,7 +137,7 @@ public class ApprokoKitchen extends AppCompatActivity {
             intent5.putExtra("imageUrl",aprokoItems.get(position).getImageURL());
             intent5.putExtra("nationality",aprokoItems.get(position).getNationality());
             intent5.putExtra("price",aprokoItems.get(position).getPrice());
-                intent5.putExtra("RestaurantName","Approko Kitchen");
+                intent5.putExtra("restaurant","Approko Kitchen");
 
             startActivity(intent5);
         };

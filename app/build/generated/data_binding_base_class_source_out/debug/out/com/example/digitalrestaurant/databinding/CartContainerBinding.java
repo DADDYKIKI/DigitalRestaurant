@@ -24,7 +24,7 @@ public final class CartContainerBinding implements ViewBinding {
   public final ConstraintLayout cartConstraint;
 
   @NonNull
-  public final TextView itemName;
+  public final TextView itemFName;
 
   @NonNull
   public final TextView itemPrice;
@@ -33,7 +33,7 @@ public final class CartContainerBinding implements ViewBinding {
   public final TextView itemQuantity;
 
   @NonNull
-  public final TextView resaurantNameB;
+  public final TextView resaurantNameBm;
 
   @NonNull
   public final TextView textView11;
@@ -51,16 +51,16 @@ public final class CartContainerBinding implements ViewBinding {
   public final TextView textView9;
 
   private CartContainerBinding(@NonNull LinearLayout rootView,
-      @NonNull ConstraintLayout cartConstraint, @NonNull TextView itemName,
-      @NonNull TextView itemPrice, @NonNull TextView itemQuantity, @NonNull TextView resaurantNameB,
-      @NonNull TextView textView11, @NonNull TextView textView13, @NonNull TextView textView14,
-      @NonNull TextView textView15, @NonNull TextView textView9) {
+      @NonNull ConstraintLayout cartConstraint, @NonNull TextView itemFName,
+      @NonNull TextView itemPrice, @NonNull TextView itemQuantity,
+      @NonNull TextView resaurantNameBm, @NonNull TextView textView11, @NonNull TextView textView13,
+      @NonNull TextView textView14, @NonNull TextView textView15, @NonNull TextView textView9) {
     this.rootView = rootView;
     this.cartConstraint = cartConstraint;
-    this.itemName = itemName;
+    this.itemFName = itemFName;
     this.itemPrice = itemPrice;
     this.itemQuantity = itemQuantity;
-    this.resaurantNameB = resaurantNameB;
+    this.resaurantNameBm = resaurantNameBm;
     this.textView11 = textView11;
     this.textView13 = textView13;
     this.textView14 = textView14;
@@ -101,9 +101,9 @@ public final class CartContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.itemName;
-      TextView itemName = ViewBindings.findChildViewById(rootView, id);
-      if (itemName == null) {
+      id = R.id.itemFName;
+      TextView itemFName = ViewBindings.findChildViewById(rootView, id);
+      if (itemFName == null) {
         break missingId;
       }
 
@@ -119,9 +119,9 @@ public final class CartContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.resaurantNameB;
-      TextView resaurantNameB = ViewBindings.findChildViewById(rootView, id);
-      if (resaurantNameB == null) {
+      id = R.id.resaurantNameBm;
+      TextView resaurantNameBm = ViewBindings.findChildViewById(rootView, id);
+      if (resaurantNameBm == null) {
         break missingId;
       }
 
@@ -155,8 +155,8 @@ public final class CartContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new CartContainerBinding((LinearLayout) rootView, cartConstraint, itemName, itemPrice,
-          itemQuantity, resaurantNameB, textView11, textView13, textView14, textView15, textView9);
+      return new CartContainerBinding((LinearLayout) rootView, cartConstraint, itemFName, itemPrice,
+          itemQuantity, resaurantNameBm, textView11, textView13, textView14, textView15, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -22,8 +22,13 @@ import androidx.recyclerview.widget.RecyclerView;
 //import com.example.digitalrestaurant.Adaptors.CartAdaptor;
 //import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
 import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
+import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
+import com.example.digitalrestaurant.Details.AdaDetails;
+import com.example.digitalrestaurant.Details.ApprokoDetails;
+import com.example.digitalrestaurant.Details.ObandeDetails;
 import com.example.digitalrestaurant.Details.OrderDetails;
+import com.example.digitalrestaurant.Details.StainlessDetails;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -69,9 +74,19 @@ public class Order extends AppCompatActivity {
     private String address;
     private String customerName;
 
-    DatabaseHelper myCartDataUpload,myCartUpdated;
+    DatabaseHelper myCartDataUpload,myCartUpdated,myCartGet;
 
-    List<OrderDetails> orderList,orders;
+    List<OrderDetails> orderList,orders,myCartx;
+
+
+    @Override
+    public void onBackPressed() {
+
+        Intent intent = new Intent(this, HomePage.class);
+
+        startActivity(intent);
+
+    }
 
 
     @Override
@@ -100,6 +115,7 @@ public class Order extends AppCompatActivity {
         myCart=new DatabaseHelper(this);
 
         myOrder=new ArrayList<>();
+        myCartx=new ArrayList<>();
 
         homeKey=findViewById(R.id.homeKey);
         menuKey=findViewById(R.id.menuKeyS);
@@ -108,6 +124,7 @@ public class Order extends AppCompatActivity {
 
         myCartDataUpload=new DatabaseHelper(this);
         myCartUpdated=new DatabaseHelper(this);
+        myCartGet=new DatabaseHelper(this);
 
 
 
@@ -124,18 +141,14 @@ public class Order extends AppCompatActivity {
             setFoodPrice(extras.getInt("price"));
             setFoodNationality(extras.getString("nationality"));
             setFoodImage(extras.getInt("imageUrl"));
-            setNameOfRestaurant(extras.getString("RestaurantName"));
+            setNameOfRestaurant(extras.getString("restaurant"));
 
             //Orders from
             //phone=extras.getInt("phone");
             // address=extras.getString("address");
             //customerName=extras.getString("customerName");
 
-
         }
-
-
-
             orderFoodName.setText(getFoodName());
             orderPrice.setText(String.valueOf(getFoodPrice()));
             orderNationality.setText(getFoodNationality());
@@ -144,20 +157,12 @@ public class Order extends AppCompatActivity {
             restaurantNameA.setText(getNameOfRestaurant());
 
 
-
-
-        homeKey();
-        menuKey();
-
-        clearCart();
-
-        AddToCart();
-        openMyBasket();
-
-
-        // setMyAdaptor();
-
-
+            homeKey();
+            menuKey();
+            clearCart();
+            AddToCart();
+            openMyBasket();
+        placeOrder();
     }
 
     public static List<OrderDetails> getMyOrder2() {
@@ -167,7 +172,7 @@ public class Order extends AppCompatActivity {
 
     public static void setMyOrder2(List<OrderDetails> order) {
 
-       myOrder2=order;
+           myOrder2=order;
     }
 
 
@@ -236,14 +241,89 @@ public class Order extends AppCompatActivity {
 
     }
 
-    public void orderT() {//............Clear items in basket
+    public void placeOrder() {//............Clear items in basket
 
         order.setOnClickListener(v -> {
+            myCartx=myCartGet.getCartItems();
 
-            myCartUpdated.clearItemsFromCart();
 
-            Intent intent5 =new Intent(getApplicationContext(), Order.class);
-            startActivity(intent5);
+            for(OrderDetails x:myCartx) {
+
+                if (x.getRestaurantName().equals("Ada Kitchen")) {
+
+                    AdaDetails ada = new AdaDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
+                            LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
+                    Boolean addAda=myCartGet.addAdaData(ada);
+
+                    if (addAda == true) {
+                        Toast.makeText(this, "Orders sent to Ada Restaurant", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(this, Order.class);
+
+                        startActivity(intent);
+                    }
+
+                    else Toast.makeText(this, "Orders not sent to AdaRestaurant", Toast.LENGTH_SHORT).show();
+
+                }
+
+
+                if (x.getRestaurantName().equals("Approko Kitchen")) {
+
+                    ApprokoDetails approko = new ApprokoDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
+                            LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
+                    Boolean addApro=myCartGet.addApprokoData(approko);
+
+                    if (addApro == true) {
+                        Toast.makeText(this, "Orders sent to Approko Restaurant", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(this, Order.class);
+
+                        startActivity(intent);
+                    }
+
+                    else Toast.makeText(this, "Orders not sent to Approko Restaurant", Toast.LENGTH_SHORT).show();
+
+                }
+
+
+                if (x.getRestaurantName().equals("Obande Kitchen")) {
+
+                    ObandeDetails obans = new ObandeDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
+                            LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
+                    Boolean addOba=myCartGet.addObandeData(obans);
+
+                    if (addOba == true) {
+                        Toast.makeText(this, "Orders sent to Obande Kitchen", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(this, Order.class);
+
+                        startActivity(intent);
+                    }
+
+                    else Toast.makeText(this, "Orders not sent to Obande Restaurant", Toast.LENGTH_SHORT).show();
+
+                }
+                if (x.getRestaurantName().equals("Stainless")) {
+
+                    StainlessDetails stainless = new StainlessDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
+                            LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
+                    Boolean addStainless=myCartGet.addStainlessData(stainless);
+
+                    if (addStainless == true) {
+                        Toast.makeText(this, "Orders sent to Stainless", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(this, Order.class);
+
+                        startActivity(intent);
+                    }
+
+                    else Toast.makeText(this, "Orders not sent to Stainless", Toast.LENGTH_SHORT).show();
+
+                }
+
+
+            }
 
 
         });
@@ -251,14 +331,7 @@ public class Order extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed() {
 
-        Intent intent = new Intent(this, HomePage.class);
-
-        startActivity(intent);
-
-    }
 
     public void AddToCart(){//............Change quantity, total price and add items tp my basket.........
 
@@ -266,7 +339,7 @@ public class Order extends AppCompatActivity {
 
             quantityNumber++;
             quantityText.setText(String.valueOf(quantityNumber));
-            totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
+            totalOrderPrice.setText(String.valueOf(getFoodPrice()*quantityNumber));
 
         });
 
@@ -277,7 +350,7 @@ public class Order extends AppCompatActivity {
 
                 quantityNumber--;
                 quantityText.setText(String.valueOf(quantityNumber));
-                totalOrderPrice.setText(String.valueOf(foodPrice*quantityNumber));
+                totalOrderPrice.setText(String.valueOf(getFoodPrice()*quantityNumber));
 
 
             }
@@ -286,8 +359,8 @@ public class Order extends AppCompatActivity {
 
         addToCartBtn.setOnClickListener(v -> {
 
-            OrderDetails orders=new OrderDetails(foodName, String.valueOf(quantityNumber),
-                    String.valueOf(foodPrice * quantityNumber), NameOfRestaurant);
+            OrderDetails orders=new OrderDetails(getFoodName(), String.valueOf(quantityNumber),
+                    String.valueOf(getFoodPrice() * quantityNumber), getNameOfRestaurant());
 
             boolean addToCart =
                     myCartDataUpload.addData(orders);
@@ -310,10 +383,11 @@ public class Order extends AppCompatActivity {
 
     public void openMyBasket(){
 
-        cartRecycler=findViewById(R.id.myRecycler);
-        cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         myOrder=myCart.getCartItems();
 
+        cartRecycler=findViewById(R.id.myRecycler);
+
+        cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
@@ -323,6 +397,7 @@ public class Order extends AppCompatActivity {
                 return false;
             }
 
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 myOrder.remove(viewHolder.getAdapterPosition());
@@ -349,8 +424,12 @@ public class Order extends AppCompatActivity {
         };
 
         orderAdaptor=new OrderAdaptor(myOrder);
+
         new ItemTouchHelper(itemtouch).attachToRecyclerView(cartRecycler);
+
         cartRecycler.setAdapter(orderAdaptor);
+
+
 
     }
 

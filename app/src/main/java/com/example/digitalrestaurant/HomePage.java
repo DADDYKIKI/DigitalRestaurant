@@ -79,13 +79,8 @@ public class HomePage extends AppCompatActivity {
 
         if(press+2000>System.currentTimeMillis()){
 
-            Intent intent5 =new Intent(getApplicationContext(), IntroPage.class);
-
-            intent5.putExtra("Exit",true);
-            startActivity(intent5);
-
-            finish();
-            System.exit(0);
+                finishAffinity();
+                System.exit(0);
 
         return;}
 

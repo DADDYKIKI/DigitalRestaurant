@@ -22,21 +22,30 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
 
 
 
+    private long press;
+
+
     @Override
-     public void onBackPressed() {
+    public void onBackPressed() {
 
-        Intent intent5 =new Intent(getApplicationContext(), IntroPage.class);
 
-       intent5.putExtra("Exit",true);
-       startActivity(intent5);
+        if(press+2000>System.currentTimeMillis()){
 
-       finish();
-       System.exit(0);
+            finishAffinity();
+            System.exit(0);
+
+            return;}
+
+        else {
+            Toast.makeText(this, "Press again to exit your app", Toast.LENGTH_SHORT).show();
+
+        }press=System.currentTimeMillis();
+
     }
 
 
 
-    @Override
+                                                             @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

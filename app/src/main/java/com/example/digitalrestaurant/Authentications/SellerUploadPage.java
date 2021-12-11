@@ -49,16 +49,10 @@ public class SellerUploadPage extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-
-
-
         Intent intent5 =new Intent(getApplicationContext(), LoginPageForFoodSeller2.class);
 
-        intent5.putExtra("Exit",true);
         startActivity(intent5);
 
-        finish();
-        System.exit(0);
     }
 
 

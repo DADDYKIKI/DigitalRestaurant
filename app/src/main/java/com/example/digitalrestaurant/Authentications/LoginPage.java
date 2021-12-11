@@ -31,22 +31,26 @@ public class LoginPage extends AppCompatActivity {
 
     DatabaseHelper data, helperL;
 
+    private long press;
+
 
     @Override
     public void onBackPressed() {
 
 
+        if(press+2000>System.currentTimeMillis()){
 
+            finishAffinity();
+            System.exit(0);
 
-        Intent intent5 =new Intent(getApplicationContext(), IntroPage.class);
+            return;}
 
-        intent5.putExtra("Exit",true);
-        startActivity(intent5);
+        else {
+            Toast.makeText(this, "Press again to exit your app", Toast.LENGTH_SHORT).show();
 
-        finish();
-        System.exit(0);
+        }press=System.currentTimeMillis();
+
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

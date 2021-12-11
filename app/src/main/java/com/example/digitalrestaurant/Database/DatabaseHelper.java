@@ -6,27 +6,14 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Environment;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import androidx.annotation.Nullable;
 
 import com.example.digitalrestaurant.Details.ItemData;
 import com.example.digitalrestaurant.Details.OrderDetails;
-import com.example.digitalrestaurant.Details.RestaurantsData.RestaurantLogDetails;
-import com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails;
 import com.example.digitalrestaurant.Details.UserDetails;
-import com.example.digitalrestaurant.R;
-import com.example.digitalrestaurant.VendorDetails;
+import com.example.digitalrestaurant.Details.VendorDetails;
 
-import java.io.ByteArrayOutputStream;
-import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 

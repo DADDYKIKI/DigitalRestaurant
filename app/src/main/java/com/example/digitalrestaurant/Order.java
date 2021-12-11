@@ -5,9 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,11 +22,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.digitalrestaurant.Adaptors.OrderAdaptor;
 import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
-import com.example.digitalrestaurant.Details.AdaDetails;
-import com.example.digitalrestaurant.Details.ApprokoDetails;
-import com.example.digitalrestaurant.Details.ObandeDetails;
+import com.example.digitalrestaurant.Details.VendorOrderDetails;
 import com.example.digitalrestaurant.Details.OrderDetails;
-import com.example.digitalrestaurant.Details.StainlessDetails;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -251,7 +246,7 @@ public class Order extends AppCompatActivity {
 
                 if (x.getRestaurantName().equals("Ada Kitchen")) {
 
-                    AdaDetails ada = new AdaDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
+                    VendorOrderDetails ada = new VendorOrderDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
                             LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
                     Boolean addAda=myCartGet.addAdaData(ada);
 
@@ -270,7 +265,7 @@ public class Order extends AppCompatActivity {
 
                 if (x.getRestaurantName().equals("Approko Kitchen")) {
 
-                    ApprokoDetails approko = new ApprokoDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
+                    VendorOrderDetails approko = new VendorOrderDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
                             LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
                     Boolean addApro=myCartGet.addApprokoData(approko);
 
@@ -289,7 +284,7 @@ public class Order extends AppCompatActivity {
 
                 if (x.getRestaurantName().equals("Obande Kitchen")) {
 
-                    ObandeDetails obans = new ObandeDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
+                    VendorOrderDetails obans = new VendorOrderDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
                             LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
                     Boolean addOba=myCartGet.addObandeData(obans);
 
@@ -306,7 +301,7 @@ public class Order extends AppCompatActivity {
                 }
                 if (x.getRestaurantName().equals("Stainless")) {
 
-                    StainlessDetails stainless = new StainlessDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
+                    VendorOrderDetails stainless = new VendorOrderDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice(),
                             LoginPage.getCusName(), LoginPage.getCUSTOMERPHONE());
                     Boolean addStainless=myCartGet.addStainlessData(stainless);
 

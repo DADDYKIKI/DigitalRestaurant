@@ -21,6 +21,7 @@
         <entry key="app/src/main/res/layout-w936dp/stainless_restaurant_homepage.xml" value="0.16051912568306012" />
         <entry key="app/src/main/res/layout-w936dp/vendorLoginPage.xml" value="0.25" />
         <entry key="app/src/main/res/layout-w936dp/vendorloginpage.xml" value="0.15392561983471073" />
+        <entry key="app/src/main/res/layout/activity_ada_page.xml" value="0.2223731884057971" />
         <entry key="app/src/main/res/layout/activity_customer_loginpage.xml" value="0.13496376811594202" />
         <entry key="app/src/main/res/layout/activity_customer_page.xml" value="0.1821365024073806" />
         <entry key="app/src/main/res/layout/activity_delete_cart_item.xml" value="0.2296195652173913" />
@@ -65,6 +66,7 @@
         <entry key="app/src/main/res/layout/stainless_menu.xml" value="0.19655797101449277" />
         <entry key="app/src/main/res/layout/stainless_restaurant_homepage2.xml" value="0.25" />
         <entry key="app/src/main/res/layout/vendor_login.xml" value="0.23007246376811594" />
+        <entry key="app/src/main/res/layout/vendor_orders.xml" value="0.2223731884057971" />
         <entry key="app/src/main/res/layout/vertical_scroll.xml" value="0.1875" />
       </map>
     </option>

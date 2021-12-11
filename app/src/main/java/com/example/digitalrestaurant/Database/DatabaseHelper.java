@@ -7,12 +7,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.digitalrestaurant.Details.AdaDetails;
-import com.example.digitalrestaurant.Details.ApprokoDetails;
+import com.example.digitalrestaurant.Details.VendorOrderDetails;
 import com.example.digitalrestaurant.Details.ItemData;
-import com.example.digitalrestaurant.Details.ObandeDetails;
 import com.example.digitalrestaurant.Details.OrderDetails;
-import com.example.digitalrestaurant.Details.StainlessDetails;
 import com.example.digitalrestaurant.Details.UserDetails;
 import com.example.digitalrestaurant.Details.VendorDetails;
 
@@ -208,14 +205,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 else return  true;
             }
 
-    public boolean addAdaData(AdaDetails order){
+    public boolean addAdaData(VendorOrderDetails order){
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
 
         ContentValues contentV=new ContentValues();
-        contentV.put(COLUMNADA2,order.getAdafoodName());
-        contentV.put(COLUMNADA3,order.getAdaquantity());
-        contentV.put(COLUMNADA4,order.getAdatotalFoodPrice());
+        contentV.put(COLUMNADA2,order.getFoodName());
+        contentV.put(COLUMNADA3,order.getQuantity());
+        contentV.put(COLUMNADA4,order.getTotalFoodPrice());
         contentV.put(COLUMNADA5,order.getCusName());
         contentV.put(COLUMNADA6,order.getPhone());
 
@@ -226,14 +223,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return  true;
     }
 
-    public boolean addApprokoData(ApprokoDetails order){
+    public boolean addApprokoData(VendorOrderDetails order){
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
 
         ContentValues contentV=new ContentValues();
-        contentV.put(COLUMNAPRO2,order.getApprokofoodName());
-        contentV.put(COLUMNAPRO3,order.getApprokoquantity());
-        contentV.put(COLUMNAPRO4,order.getApprokototalFoodPrice());
+        contentV.put(COLUMNAPRO2,order.getFoodName());
+        contentV.put(COLUMNAPRO3,order.getQuantity());
+        contentV.put(COLUMNAPRO4,order.getTotalFoodPrice());
         contentV.put(COLUMNAPRO5,order.getCusName());
         contentV.put(COLUMNAPRO6,order.getPhone());
 
@@ -244,14 +241,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return  true;
     }
 
-    public boolean addObandeData(ObandeDetails order){
+    public boolean addObandeData(VendorOrderDetails order){
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
 
         ContentValues contentV=new ContentValues();
-        contentV.put(COLUMNOABA2,order.getObandefoodName());
-        contentV.put(COLUMNOABA3,order.getObandequantity());
-        contentV.put(COLUMNOABA4,order.getObandetotalFoodPrice());
+        contentV.put(COLUMNOABA2,order.getFoodName());
+        contentV.put(COLUMNOABA3,order.getQuantity());
+        contentV.put(COLUMNOABA4,order.getTotalFoodPrice());
         contentV.put(COLUMNOABA5,order.getCusName());
         contentV.put(COLUMNOABA6,order.getPhone());
 
@@ -263,14 +260,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public boolean addStainlessData(StainlessDetails order){
+    public boolean addStainlessData(VendorOrderDetails order){
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
 
         ContentValues contentV=new ContentValues();
-        contentV.put(COLUMNST2,order.getAdafoodName());
-        contentV.put(COLUMNST3,order.getAdaquantity());
-        contentV.put(COLUMNST4,order.getAdatotalFoodPrice());
+        contentV.put(COLUMNST2,order.getFoodName());
+        contentV.put(COLUMNST3,order.getQuantity());
+        contentV.put(COLUMNST4,order.getTotalFoodPrice());
         contentV.put(COLUMNST5,order.getCusName());
         contentV.put(COLUMNST6,order.getPhone());
 
@@ -390,10 +387,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public List<AdaDetails> getAdaCartItems() {
+    public List<VendorOrderDetails> getAdaCartItems() {
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
-        List<AdaDetails> mylist = new ArrayList<>();
+        List<VendorOrderDetails> mylist = new ArrayList<>();
 
 
 
@@ -411,7 +408,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String phone = cur.getString(cur.getColumnIndex(COLUMNADA6));
 
 
-                    AdaDetails myoder = new AdaDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
 
                     mylist.add(myoder);
 
@@ -428,10 +425,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public List<ApprokoDetails> getApprokoCartItems() {
+    public List<VendorOrderDetails> getApprokoCartItems() {
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
-        List<ApprokoDetails> mylist = new ArrayList<>();
+        List<VendorOrderDetails> mylist = new ArrayList<>();
 
 
 
@@ -449,7 +446,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String phone = cur.getString(cur.getColumnIndex(COLUMNAPRO6));
 
 
-                    ApprokoDetails myoder = new ApprokoDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
 
                     mylist.add(myoder);
 
@@ -466,10 +463,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public List<ObandeDetails> getObandeCartItems() {
+    public List<VendorOrderDetails> getObandeCartItems() {
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
-        List<ObandeDetails> mylist = new ArrayList<>();
+        List<VendorOrderDetails> mylist = new ArrayList<>();
 
 
 
@@ -487,7 +484,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String phone = cur.getString(cur.getColumnIndex(COLUMNOABA6));
 
 
-                    ObandeDetails myoder = new ObandeDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
 
                     mylist.add(myoder);
 
@@ -505,10 +502,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     @SuppressLint("Range")
-    public List<StainlessDetails> getStainlessCartItems() {
+    public List<VendorOrderDetails> getStainlessCartItems() {
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
-        List<StainlessDetails> mylist = new ArrayList<>();
+        List<VendorOrderDetails> mylist = new ArrayList<>();
 
 
 
@@ -526,7 +523,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String phone = cur.getString(cur.getColumnIndex(COLUMNST6));
 
 
-                    StainlessDetails myoder = new StainlessDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
 
                     mylist.add(myoder);
 
@@ -579,6 +576,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
         myDatabase.execSQL("delete from "+ MY_TABLE_NAME);
+
+    }
+
+    @SuppressLint("Range")
+    public void clearItemsFromAdaTabel() {
+
+        SQLiteDatabase myDatabase = this.getReadableDatabase();
+        myDatabase.execSQL("delete from "+ ADA_TABLE);
 
     }
 

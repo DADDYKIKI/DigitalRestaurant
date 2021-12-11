@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalRestaurant">
         <activity
+            android:name=".ApprokoPage"
+            android:exported="false" />
+        <activity
             android:name=".AdaPage"
             android:exported="false" />
         <!--

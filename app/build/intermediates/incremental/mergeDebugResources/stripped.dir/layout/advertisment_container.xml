@@ -92,14 +92,15 @@
                     android:id="@+id/nigerian1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
                     android:text="African"
                     android:textColor="@android:color/black"
                     android:textSize="15dp"
                     android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.086"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="272dp" />
+                    app:layout_constraintHorizontal_bias="0.069"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/restaurantName"

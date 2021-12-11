@@ -37,30 +37,28 @@ public class SellerUploadPage extends AppCompatActivity {
     private DatabaseHelper helper;
 
     private TextView homeKey,menuKey;
-   // String foodPrice="";
- //  // String foodName="";
-   // String foodNationality="";
-  //  String foodImage="";
-  //  String foodAlcohol="";
-   // String imageLabel="";
 
     List<ItemData> newItems;
 
     private long press;
 
 
+
+
+
     @Override
     public void onBackPressed() {
 
 
-        if(press+3000>System.currentTimeMillis()){
-            super.onBackPressed();
-            return;}
-
-        else
-            Toast.makeText(this, "Press again to exit", Toast.LENGTH_SHORT).show();
 
 
+        Intent intent5 =new Intent(getApplicationContext(), LoginPageForFoodSeller2.class);
+
+        intent5.putExtra("Exit",true);
+        startActivity(intent5);
+
+        finish();
+        System.exit(0);
     }
 
 

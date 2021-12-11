@@ -286,9 +286,11 @@ public class Order extends AppCompatActivity {
 
         addToCartBtn.setOnClickListener(v -> {
 
+            OrderDetails orders=new OrderDetails(foodName, String.valueOf(quantityNumber),
+                    String.valueOf(foodPrice * quantityNumber), NameOfRestaurant);
+
             boolean addToCart =
-                    myCartDataUpload.addData(foodName, String.valueOf(quantityNumber),
-                            String.valueOf(foodPrice * quantityNumber), NameOfRestaurant);
+                    myCartDataUpload.addData(orders);
 
             if (addToCart == true) {
                 Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
@@ -326,18 +328,24 @@ public class Order extends AppCompatActivity {
                 myOrder.remove(viewHolder.getAdapterPosition());
                 orderAdaptor.notifyDataSetChanged();
 
+
                 setMyOrder2(myOrder);
 
                 myCartUpdated.clearItemsFromCart();
 
-                for(OrderDetails x:getMyOrder2()){
+                for (OrderDetails x : getMyOrder2()) {
 
-                myCartUpdated.addData(x.getFoodName(),x.getQuantity(),x.getTotalFoodPrice(),x.getRestaurantName());}
+                    OrderDetails oders2 = new OrderDetails(x.getFoodName(), x.getQuantity(), x.getTotalFoodPrice()
+                            , x.getRestaurantName());
 
 
+                    myCartUpdated.addData(oders2);
 
 
+                }
             }
+
+
         };
 
         orderAdaptor=new OrderAdaptor(myOrder);

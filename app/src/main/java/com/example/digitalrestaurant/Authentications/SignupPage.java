@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.digitalrestaurant.Database.DatabaseHelper;
+import com.example.digitalrestaurant.Details.UserDetails;
 import com.example.digitalrestaurant.Order;
 import com.example.digitalrestaurant.R;
 
@@ -58,12 +59,12 @@ public class SignupPage extends AppCompatActivity {
             String email = signupEmail.getText().toString();
             String age = signupAge.getText().toString();
             String phone = signupPhone.getText().toString();
-            String address = signupAddress.getText().toString();
+            String maidenName = signupAddress.getText().toString();
             String password = signupPaswd.getText().toString();
             String country= signupCountry.getText().toString();
 
             if (name.equals("") || email.equals("") || age.equals("") || phone.equals("") ||
-                    password.equals("") || address.equals("")|| country.equals("")) {
+                    password.equals("") || maidenName.equals("")|| country.equals("")) {
 
                 Toast.makeText(this, "All fields must be entered", Toast.LENGTH_SHORT).show();
 
@@ -86,9 +87,11 @@ public class SignupPage extends AppCompatActivity {
 
                           else{
                              try {
+
+                                 UserDetails user=new UserDetails(name, email, Integer.parseInt(age),
+                                         Integer.parseInt(phone), maidenName,country, password);
                                    boolean signup =
-                                        helper.addCustomerUserAndPAss(name, email, age,
-                                               phone, address,country, password);
+                                        helper.addCustomerUserAndPAss(user);
 
 
                         if (signup == true) {
@@ -96,7 +99,7 @@ public class SignupPage extends AppCompatActivity {
                             Intent i = new Intent(this, Order.class);
                             i.putExtra("customerName", name);
                             i.putExtra("phone", phone);
-                            i.putExtra("address", address);
+                            i.putExtra("address", maidenName);
 
                             Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
 

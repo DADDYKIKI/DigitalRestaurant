@@ -18,11 +18,11 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
 
     LocationListener listener;
 
-    private ArrayList<LocationDetails>  locationLists;
+    private List<LocationDetails>  locationLists;
 
 
 
-    public LocationAdaptor(ArrayList<LocationDetails> locationLists, LocationListener listener) {
+    public LocationAdaptor(List<LocationDetails> locationLists, LocationListener listener) {
         this.locationLists= locationLists;
         this.listener= listener;
         // this.context = context;

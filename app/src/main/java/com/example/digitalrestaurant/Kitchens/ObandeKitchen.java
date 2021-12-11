@@ -18,6 +18,7 @@ import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
+import com.example.digitalrestaurant.PopulateRestaurantsWithFoodItems;
 import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.Details.ItemData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -98,11 +99,13 @@ public class ObandeKitchen extends AppCompatActivity {
 
         setObandeOnclickListener();
 
+        obandeItems=new PopulateRestaurantsWithFoodItems().populateObandePage(LoginPage.getAge());
+
         obandeRecycler =findViewById(R.id.obandeKitchen);
 
         obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        obandeAdaptor=new PopulateKitchensWithItemsAdaptor(populateObandePage(LoginPage.getAge()),obandelistener2);
+        obandeAdaptor=new PopulateKitchensWithItemsAdaptor(obandeItems,obandelistener2);
 
         obandeRecycler.setAdapter(obandeAdaptor);
 
@@ -142,30 +145,5 @@ public class ObandeKitchen extends AppCompatActivity {
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<ItemData> populateObandePage(int age) {
-
-
-        obandeItems.add(new ItemData(7, "MoiMoi", "African", R.drawable.obandemoimoi, ""));
-        obandeItems.add(new ItemData(15, "Egusi soup", "African", R.drawable.obandeegusisoup, ""));
-        obandeItems.add(new ItemData(10, "Fried Rice", "African", R.drawable.obandefriedrice, ""));
-        obandeItems.add(new ItemData(4, "Chin-Chin", "African", R.drawable.obandechinchin, ""));
-        obandeItems.add(new ItemData(21, "Fried Rice with goat meat", "African", R.drawable.friedriceone, ""));
-        obandeItems.add(new ItemData(7, "Pouridge bean and Plantain ", "African", R.drawable.obandepouridgebeans, ""));
-        obandeItems.add(new ItemData(10, "Pounded Yam", "African", R.drawable.towel, ""));
-        obandeItems.add(new ItemData(12, "Hot Dog++", "European", R.drawable.uktwo, ""));
-
-        List<ItemData> allMatch = obandeItems.stream().filter(p -> p.getAlcoholic().equals(""))
-                .collect(Collectors.toList());
-
-        if (!LoginPage.getCountry().equals("Nigeria")) return obandeItems;
-
-        else {
-
-            if (age >= 18) return obandeItems;
-
-            else return allMatch;
-        }
-    }
 
 }

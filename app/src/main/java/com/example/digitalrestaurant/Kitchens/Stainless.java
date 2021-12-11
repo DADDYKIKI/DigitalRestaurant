@@ -18,6 +18,7 @@ import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
+import com.example.digitalrestaurant.PopulateRestaurantsWithFoodItems;
 import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.Details.ItemData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -103,11 +104,13 @@ public class Stainless extends AppCompatActivity {
 
         setStainlessOnclickListener();
 
+        stainlessItems=new PopulateRestaurantsWithFoodItems().populateStainlessPage(LoginPage.getAge());
+
         stainlessRecycler =findViewById(R.id.stainlessKitchen);
 
         stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        stainlessAdaptor=new PopulateKitchensWithItemsAdaptor(populateStainlessPage(LoginPage.getAge()),adalistener2);
+        stainlessAdaptor=new PopulateKitchensWithItemsAdaptor(stainlessItems,adalistener2);
 
         stainlessRecycler.setAdapter(stainlessAdaptor);
 
@@ -131,27 +134,6 @@ public class Stainless extends AppCompatActivity {
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<ItemData> populateStainlessPage(int age) {
-
-         stainlessItems.add(new ItemData(7, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
-
-
-        List<ItemData> allMatch = stainlessItems.stream().filter(p -> p.getAlcoholic().equals(""))
-                .collect(Collectors.toList());
-
-        if (!LoginPage.getCountry().equals("Nigeria")) return stainlessItems;
-
-        else {
-
-
-            if (age >= 18) return stainlessItems;
-
-            else return allMatch;
-        }
-
-
-    }
 
     }
 

@@ -22,6 +22,8 @@ com/example/digitalrestaurant/databinding/ActivityFoodSellerBinding.java
  com.example.digitalrestaurant.databinding.ActivityFoodSellerBinding
 com/example/digitalrestaurant/Authentications/NewPassword.java
  com.example.digitalrestaurant.Authentications.NewPassword
+com/example/digitalrestaurant/PopulateRestaurantsWithFoodItems.java
+ com.example.digitalrestaurant.PopulateRestaurantsWithFoodItems
 com/example/digitalrestaurant/HomePage.java
  com.example.digitalrestaurant.HomePage
 com/example/digitalrestaurant/Details/OrderDetails.java

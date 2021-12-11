@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,9 +19,6 @@ import java.lang.String;
 public final class ActivitySignupPageForVendorBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final TextView menuKeyS;
 
   @NonNull
   public final Button signSubBtnV;
@@ -40,11 +36,9 @@ public final class ActivitySignupPageForVendorBinding implements ViewBinding {
   public final ConstraintLayout signupSubmtBtn;
 
   private ActivitySignupPageForVendorBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView menuKeyS, @NonNull Button signSubBtnV, @NonNull EditText signUpPassword,
-      @NonNull EditText signupEmailV, @NonNull EditText signupNameV,
-      @NonNull ConstraintLayout signupSubmtBtn) {
+      @NonNull Button signSubBtnV, @NonNull EditText signUpPassword, @NonNull EditText signupEmailV,
+      @NonNull EditText signupNameV, @NonNull ConstraintLayout signupSubmtBtn) {
     this.rootView = rootView;
-    this.menuKeyS = menuKeyS;
     this.signSubBtnV = signSubBtnV;
     this.signUpPassword = signUpPassword;
     this.signupEmailV = signupEmailV;
@@ -79,12 +73,6 @@ public final class ActivitySignupPageForVendorBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.menuKeyS;
-      TextView menuKeyS = ViewBindings.findChildViewById(rootView, id);
-      if (menuKeyS == null) {
-        break missingId;
-      }
-
       id = R.id.signSubBtnV;
       Button signSubBtnV = ViewBindings.findChildViewById(rootView, id);
       if (signSubBtnV == null) {
@@ -111,8 +99,8 @@ public final class ActivitySignupPageForVendorBinding implements ViewBinding {
 
       ConstraintLayout signupSubmtBtn = (ConstraintLayout) rootView;
 
-      return new ActivitySignupPageForVendorBinding((ConstraintLayout) rootView, menuKeyS,
-          signSubBtnV, signUpPassword, signupEmailV, signupNameV, signupSubmtBtn);
+      return new ActivitySignupPageForVendorBinding((ConstraintLayout) rootView, signSubBtnV,
+          signUpPassword, signupEmailV, signupNameV, signupSubmtBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

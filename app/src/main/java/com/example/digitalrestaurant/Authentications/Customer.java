@@ -23,6 +23,20 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
 
 
     @Override
+     public void onBackPressed() {
+
+        Intent intent5 =new Intent(getApplicationContext(), IntroPage.class);
+
+       intent5.putExtra("Exit",true);
+       startActivity(intent5);
+
+       finish();
+       System.exit(0);
+    }
+
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -32,23 +46,12 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
         loginText1= findViewById(R.id.customerloginBut);
         signupText1= findViewById(R.id.customersignupBut);
 
-       // signupBut= (Button) findViewById(R.id.loginSubBtn);
 
 
-        loginText1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                click1(LoginPage.class);
 
-            }
-        });
+        loginText1.setOnClickListener(v -> click1(LoginPage.class));
 
-        signupText1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                click1(SignupPage.class);
-            }
-        });
+        signupText1.setOnClickListener(v -> click1(SignupPage.class));
 
     }
 

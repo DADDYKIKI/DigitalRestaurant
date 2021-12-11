@@ -59,12 +59,12 @@ public class HomePage extends AppCompatActivity {
 
     //Parameters for horizontal Restaurants name display
 
-    private ArrayList<RestaurantsDetails> restaurantslist;
+    private List<RestaurantsDetails> restaurantslist;
 
 
     //Parameters for horizontal Location name display
 
-    private ArrayList<LocationDetails> locationLists;
+    private List<LocationDetails> locationLists;
 
     TextView menuKey,customerWelcomeName;
 
@@ -79,9 +79,13 @@ public class HomePage extends AppCompatActivity {
 
         if(press+2000>System.currentTimeMillis()){
 
+            Intent intent5 =new Intent(getApplicationContext(), IntroPage.class);
+
+            intent5.putExtra("Exit",true);
+            startActivity(intent5);
+
             finish();
             System.exit(0);
-            //super.onBackPressed();
 
         return;}
 
@@ -146,6 +150,10 @@ public class HomePage extends AppCompatActivity {
         setMyOnclickListener();
         setLocationListener();
 
+        myItems=new PopulateRestaurantsWithFoodItems().populateAdvertsPage(LoginPage.getAge());
+        restaurantslist=new PopulateRestaurantsWithFoodItems().populateRestaurants();
+        locationLists=new PopulateRestaurantsWithFoodItems().populateLocation();
+
 
         recyclerView=findViewById(R.id.obandeKitchen);
         recyclerView2=findViewById(R.id.restaurantsRecycler);
@@ -155,9 +163,9 @@ public class HomePage extends AppCompatActivity {
         recyclerView2.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView3.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        godwinAdaptor=new PopulateAdvertismentAdaptor(populateAdaPage(LoginPage.getAge()),this);
-        godwinAdaptor2=new RestaurantsAdaptor(populateItemInfo2(),AllInOneListener2);
-        godwinAdaptor3=new LocationAdaptor(populateItemInfo3(),locationListener);
+        godwinAdaptor=new PopulateAdvertismentAdaptor(myItems,this);
+        godwinAdaptor2=new RestaurantsAdaptor(restaurantslist,AllInOneListener2);
+        godwinAdaptor3=new LocationAdaptor(locationLists,locationListener);
 
         recyclerView.setAdapter(godwinAdaptor);
         recyclerView2.setAdapter(godwinAdaptor2);
@@ -260,73 +268,9 @@ public class HomePage extends AppCompatActivity {
     }
 
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<AdvertItems> populateAdaPage(int age) {
-
-
-        myItems.add(new AdvertItems(12,"Catfish peppered soup","African" ,R.drawable.adacatfish,"","Ada Kitchen"));
-        myItems.add(new AdvertItems(9,"MoiMoi","African" ,R.drawable.obandemoimoi,"","Stainless"));
-        myItems.add(new AdvertItems(18,"Egusi soup","African" ,R.drawable.obandeegusisoup,"","Approko Kitchen"));
-        myItems.add(new AdvertItems(6,"Alcoholic drinks","" ,R.drawable.adaassortedbear,"alcoholic",""));
-        myItems.add(new AdvertItems(3,"Chin-Chin","African" ,R.drawable.obandechinchin,"",""));
-        myItems.add(new AdvertItems(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone,"",""));
-        myItems.add(new AdvertItems(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,"Stainless",""));
-        myItems.add(new AdvertItems(3,"Soft drinks","" ,R.drawable.adasoftdrinks,"",""));
-        myItems.add(new AdvertItems(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup,"",""));
-        myItems.add(new AdvertItems(5,"Heineken Pride","" ,R.drawable.adachilledheineken,"alcoholic",""));
-        myItems.add(new AdvertItems(5,"Hero bear","" ,R.drawable.adaherobear,"alcoholic","Stainless"));
-        myItems.add(new AdvertItems(7,"Extra Stout","" ,R.drawable.adaguinessbeer,"alcoholic","Ada Kitchen"));
-
-
-        List<AdvertItems> allMatch=myItems.stream().filter(p->p.getAlcoholic().equals(""))
-                .collect(Collectors.toList());
-
-
-        if (!LoginPage.getCountry().equals("Nigeria")) return myItems;
-
-        else {
-
-
-            if(age>=18)return myItems;
-
-       else return allMatch;
-    }}
-
-
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    public List<RestaurantsDetails> populateItemInfo2(){
-
-
-        restaurantslist.add(new RestaurantsDetails("Approko Kitchen","G1",
-                "Nigerian",R.drawable.aprokokitchen));
-        restaurantslist.add(new RestaurantsDetails("Obande Kitchen","L2",
-                "Nigerian",R.drawable.obandekitchen));
-        restaurantslist.add(new RestaurantsDetails("Ada Restaurant and Bar",
-                "L1","Nigerian",R.drawable.adakitchen));
-        restaurantslist.add(new RestaurantsDetails("Stainless",
-                "G2","Nigerian",R.drawable.silver));
-
-            return restaurantslist;
-    }
 
 
 
-    public ArrayList<LocationDetails> populateItemInfo3(){
-
-        locationLists.add(new LocationDetails("G1","Approko Kitchen"));
-        locationLists.add(new LocationDetails("G2","Stainless"));
-        locationLists.add(new LocationDetails("G3","No restaurants"));
-        locationLists.add(new LocationDetails("L1","Ada Restaurant and Bar"));
-        locationLists.add(new LocationDetails("L2","Obande Kitchen"));
-        locationLists.add(new LocationDetails("L3","No restaurants"));
-        locationLists.add(new LocationDetails("R1","No restaurants"));
-        locationLists.add(new LocationDetails("S5","No restaurants"));
-        locationLists.add(new LocationDetails("All","No restaurants"));
-
-
-
-        return locationLists;
-    }
 
 
 }

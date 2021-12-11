@@ -3,15 +3,28 @@ package com.example.digitalrestaurant;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.digitalrestaurant.Authentications.IntroPage;
 import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Authentications.SignupPage;
 
 public class Menu extends AppCompatActivity {
 
     TextView logout,basket,contacts,signup;
+
+
+    @Override
+    public void onBackPressed() {
+
+
+            Intent intent5 =new Intent(getApplicationContext(), HomePage.class);
+
+            startActivity(intent5);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

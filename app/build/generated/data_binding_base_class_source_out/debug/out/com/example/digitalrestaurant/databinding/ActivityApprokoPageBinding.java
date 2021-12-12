@@ -30,13 +30,17 @@ public final class ActivityApprokoPageBinding implements ViewBinding {
   @NonNull
   public final TextView textView6;
 
+  @NonNull
+  public final TextView textView7;
+
   private ActivityApprokoPageBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button Approkoclearer, @NonNull RecyclerView aPprokoMainRecyclerView,
-      @NonNull TextView textView6) {
+      @NonNull TextView textView6, @NonNull TextView textView7) {
     this.rootView = rootView;
     this.Approkoclearer = Approkoclearer;
     this.aPprokoMainRecyclerView = aPprokoMainRecyclerView;
     this.textView6 = textView6;
+    this.textView7 = textView7;
   }
 
   @Override
@@ -84,8 +88,14 @@ public final class ActivityApprokoPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView7;
+      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
+      if (textView7 == null) {
+        break missingId;
+      }
+
       return new ActivityApprokoPageBinding((ConstraintLayout) rootView, Approkoclearer,
-          aPprokoMainRecyclerView, textView6);
+          aPprokoMainRecyclerView, textView6, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -61,6 +61,7 @@ public class ApprokoPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_approko_page);
 
         myOrders2=new DatabaseHelper(this);
@@ -78,9 +79,9 @@ public class ApprokoPage extends AppCompatActivity {
     public void clearData(){
         Approkoclearer.setOnClickListener(v -> {
 
-            myOrders2.clearItemsFromAdaTabel();
+            myOrders2.clearItemsFromAPProkoTabel();
 
-            Intent intent = new Intent(this, AdaPage.class);
+            Intent intent = new Intent(this, ApprokoPage.class);
 
             startActivity(intent);
 
@@ -108,9 +109,11 @@ public class ApprokoPage extends AppCompatActivity {
         approkoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
+
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder,
+
                                   @NonNull RecyclerView.ViewHolder target) {
                 return false;
             }

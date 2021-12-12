@@ -22,20 +22,30 @@ public final class ActivityAdaPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final RecyclerView Adaclear;
+  public final RecyclerView adaMainRecycler;
 
   @NonNull
   public final Button adaclearer;
 
   @NonNull
+  public final ConstraintLayout constraintLayout5;
+
+  @NonNull
   public final TextView textView6;
 
-  private ActivityAdaPageBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView Adaclear,
-      @NonNull Button adaclearer, @NonNull TextView textView6) {
+  @NonNull
+  public final TextView textView7;
+
+  private ActivityAdaPageBinding(@NonNull ConstraintLayout rootView,
+      @NonNull RecyclerView adaMainRecycler, @NonNull Button adaclearer,
+      @NonNull ConstraintLayout constraintLayout5, @NonNull TextView textView6,
+      @NonNull TextView textView7) {
     this.rootView = rootView;
-    this.Adaclear = Adaclear;
+    this.adaMainRecycler = adaMainRecycler;
     this.adaclearer = adaclearer;
+    this.constraintLayout5 = constraintLayout5;
     this.textView6 = textView6;
+    this.textView7 = textView7;
   }
 
   @Override
@@ -65,9 +75,9 @@ public final class ActivityAdaPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.Adaclear;
-      RecyclerView Adaclear = ViewBindings.findChildViewById(rootView, id);
-      if (Adaclear == null) {
+      id = R.id.adaMainRecycler;
+      RecyclerView adaMainRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (adaMainRecycler == null) {
         break missingId;
       }
 
@@ -77,14 +87,26 @@ public final class ActivityAdaPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.constraintLayout5;
+      ConstraintLayout constraintLayout5 = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout5 == null) {
+        break missingId;
+      }
+
       id = R.id.textView6;
       TextView textView6 = ViewBindings.findChildViewById(rootView, id);
       if (textView6 == null) {
         break missingId;
       }
 
-      return new ActivityAdaPageBinding((ConstraintLayout) rootView, Adaclear, adaclearer,
-          textView6);
+      id = R.id.textView7;
+      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
+      if (textView7 == null) {
+        break missingId;
+      }
+
+      return new ActivityAdaPageBinding((ConstraintLayout) rootView, adaMainRecycler, adaclearer,
+          constraintLayout5, textView6, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

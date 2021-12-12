@@ -62,8 +62,7 @@ public class Order extends AppCompatActivity {
     private static String foodNationality = "";
     private static int foodImage=0;
     private int phone=0;
-    private String address;
-    private String customerName;
+
 
     DatabaseHelper myCartDataUpload,myCartUpdated,myCartGet;
 
@@ -235,35 +234,36 @@ public class Order extends AppCompatActivity {
             myCartx=myCartGet.getCartItems();
 
 
-
-
             //Used to recognise a restaurant using email address as the signature
             for(OrderDetails x:myCartx) {
 
-                if (x.getRestaurantName().trim().equalsIgnoreCase("adakitchen")) {
+
+                if (x.getRestaurantName().equals("adakitchen")) {
 
                     VendorOrderDetails ada = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
 
-                    String.valueOf(LoginPage.getCUSTOMERPHONE()));
+                            String.valueOf(LoginPage.getCUSTOMERPHONE()));
 
                     Boolean addAda=myCartGet.addAdaData(ada);
 
                     if (addAda == true) {
 
-                        Toast.makeText(this, "Orders sent to Ada Restaurant", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Orders sent to Ada Kitchen", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(this, Order.class);
 
                         startActivity(intent);
                     }
 
-                    else Toast.makeText(this, "Orders not sent to AdaRestaurant", Toast.LENGTH_SHORT).show();
+                    else Toast.makeText(this, "Orders not sent to Ada Kitchen", Toast.LENGTH_SHORT).show();
+
                 }
 
 
 
 
-                if (x.getRestaurantName().trim().equalsIgnoreCase("approkokitchen")) {
+
+                if (x.getRestaurantName().equals("approkokitchen")) {
 
                     VendorOrderDetails approko = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
 
@@ -272,6 +272,7 @@ public class Order extends AppCompatActivity {
                     Boolean addApro=myCartGet.addApprokoData(approko);
 
                     if (addApro == true) {
+
                         Toast.makeText(this, "Orders sent to Approko Restaurant", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(this, Order.class);
@@ -285,11 +286,11 @@ public class Order extends AppCompatActivity {
 
 
 
-                if (x.getRestaurantName().trim().equalsIgnoreCase("obandekitchen")) {
+                if (x.getRestaurantName().equals("obandekitchen")) {
 
-                    VendorOrderDetails obans = new VendorOrderDetails(x.getFoodName(),LoginPage.getCusName(),x.getTotalFoodPrice(), x.getQuantity(),
+                    VendorOrderDetails obans = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
 
-                   String.valueOf(LoginPage.getCUSTOMERPHONE()));
+                            String.valueOf(LoginPage.getCUSTOMERPHONE()));
 
                     Boolean addOba=myCartGet.addObandeData(obans);
 
@@ -307,7 +308,7 @@ public class Order extends AppCompatActivity {
 
 
 
-                if (x.getRestaurantName().trim().equalsIgnoreCase("stainless")) {
+                if (x.getRestaurantName().equals("stainless")) {
 
                     VendorOrderDetails stainless = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
 
@@ -365,9 +366,11 @@ public class Order extends AppCompatActivity {
 
         addToCartBtn.setOnClickListener(v -> {
 
+           String res=getNameOfRestaurant().replaceAll("\\s+","").toLowerCase();
+
             OrderDetails orders=new OrderDetails(getFoodName(), String.valueOf(quantityNumber),
 
-            String.valueOf(getFoodPrice() * quantityNumber), getNameOfRestaurant());
+            String.valueOf(getFoodPrice() * quantityNumber), res);
 
             boolean addToCart =
 
@@ -402,6 +405,7 @@ public class Order extends AppCompatActivity {
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
+
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder,
                                   @NonNull RecyclerView.ViewHolder target) {
@@ -411,7 +415,9 @@ public class Order extends AppCompatActivity {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
                 myOrder.remove(viewHolder.getAdapterPosition());
+
                 orderAdaptor.notifyDataSetChanged();
 
 

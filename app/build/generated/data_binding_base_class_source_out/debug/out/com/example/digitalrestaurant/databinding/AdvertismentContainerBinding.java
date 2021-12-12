@@ -47,10 +47,14 @@ public final class AdvertismentContainerBinding implements ViewBinding {
   @NonNull
   public final TextView restaurantName;
 
+  @NonNull
+  public final TextView textView20;
+
   private AdvertismentContainerBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout addTocar, @NonNull TextView jelof, @NonNull TextView nigerian1,
       @NonNull TextView order, @NonNull TextView orderPrice, @NonNull ConstraintLayout pageHolder,
-      @NonNull ImageView pic1, @NonNull TextView poundSign, @NonNull TextView restaurantName) {
+      @NonNull ImageView pic1, @NonNull TextView poundSign, @NonNull TextView restaurantName,
+      @NonNull TextView textView20) {
     this.rootView = rootView;
     this.addTocar = addTocar;
     this.jelof = jelof;
@@ -61,6 +65,7 @@ public final class AdvertismentContainerBinding implements ViewBinding {
     this.pic1 = pic1;
     this.poundSign = poundSign;
     this.restaurantName = restaurantName;
+    this.textView20 = textView20;
   }
 
   @Override
@@ -140,8 +145,14 @@ public final class AdvertismentContainerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView20;
+      TextView textView20 = ViewBindings.findChildViewById(rootView, id);
+      if (textView20 == null) {
+        break missingId;
+      }
+
       return new AdvertismentContainerBinding((ConstraintLayout) rootView, addTocar, jelof,
-          nigerian1, order, orderPrice, pageHolder, pic1, poundSign, restaurantName);
+          nigerian1, order, orderPrice, pageHolder, pic1, poundSign, restaurantName, textView20);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

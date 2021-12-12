@@ -10,21 +10,24 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/obandeMainRecyclerView"
-        android:layout_width="418dp"
-        android:layout_height="571dp"
+        android:layout_width="416dp"
+        android:layout_height="643dp"
         android:layout_marginBottom="4dp"
+        android:background="@drawable/adamakeup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="413dp"
-        android:layout_height="166dp"
+        android:layout_width="416dp"
+        android:layout_height="83dp"
         android:background="@drawable/obandekitchen2"
+        app:layout_constraintBottom_toTopOf="@+id/obandeMainRecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <TextView
             android:id="@+id/textView6"
@@ -43,10 +46,23 @@
         android:id="@+id/obandecleare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/orange"
         android:text="Clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Please attend to this request(s) as soon as possible"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

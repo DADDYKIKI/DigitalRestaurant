@@ -29,18 +29,8 @@ public class SignupPage extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-
-        if(press+2000>System.currentTimeMillis()){
-
-            finishAffinity();
-            System.exit(0);
-
-            return;}
-
-        else {
-            Toast.makeText(this, "Press again to exit your app", Toast.LENGTH_SHORT).show();
-
-        }press=System.currentTimeMillis();
+        Intent i = new Intent(this, Customer.class);
+        startActivity(i);
 
     }
 

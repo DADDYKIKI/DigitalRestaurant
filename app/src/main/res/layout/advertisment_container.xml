@@ -36,17 +36,17 @@
                     android:id="@+id/pic1"
                     android:layout_width="326dp"
                     android:layout_height="256dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/friedriceone" />
 
                 <TextView
                     android:id="@+id/orderPrice"
-                    android:layout_width="44dp"
-                    android:layout_height="47dp"
-                    android:layout_marginEnd="52dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="68dp"
                     android:text="10"
                     android:textColor="@color/Whiteblue"
                     android:textSize="35dp"
@@ -54,7 +54,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.849" />
+                    app:layout_constraintVertical_bias="0.658" />
 
                 <TextView
                     android:id="@+id/jelof"
@@ -68,16 +68,16 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.314"
+                    app:layout_constraintHorizontal_bias="0.151"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.946" />
+                    app:layout_constraintVertical_bias="0.944" />
 
                 <TextView
                     android:id="@+id/poundSign"
-                    android:layout_width="44dp"
-                    android:layout_height="47dp"
-                    android:layout_marginEnd="76dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="108dp"
                     android:height="40dp"
                     android:text="£"
                     android:textColor="@color/Whiteblue"
@@ -86,28 +86,28 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.849" />
+                    app:layout_constraintVertical_bias="0.64" />
 
                 <TextView
                     android:id="@+id/nigerian1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="36dp"
                     android:text="African"
                     android:textColor="@color/Red"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.069"
+                    app:layout_constraintHorizontal_bias="0.172"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/restaurantName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="204dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginEnd="188dp"
                     android:text="TextView"
                     android:textAlignment="center"
                     android:textColor="@color/Red"
@@ -121,16 +121,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="52dp"
                     android:text="Check"
                     android:textAlignment="center"
                     android:textColor="@color/Red"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/restaurantName"
-                    app:layout_constraintHorizontal_bias="0.484"
+                    app:layout_constraintHorizontal_bias="0.385"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="72dp"
+                    android:layout_marginBottom="52dp"
+                    android:text="per plate"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

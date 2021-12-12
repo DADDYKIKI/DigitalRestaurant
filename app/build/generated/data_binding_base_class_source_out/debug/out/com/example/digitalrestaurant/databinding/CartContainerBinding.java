@@ -52,13 +52,17 @@ public final class CartContainerBinding implements ViewBinding {
   public final TextView textView15;
 
   @NonNull
+  public final TextView textView22;
+
+  @NonNull
   public final TextView textView9;
 
   private CartContainerBinding(@NonNull LinearLayout rootView, @NonNull CardView card,
       @NonNull ConstraintLayout cartConstraint, @NonNull TextView itemFName,
       @NonNull TextView itemPrice, @NonNull TextView itemQuantity,
       @NonNull TextView resaurantNameBm, @NonNull TextView textView11, @NonNull TextView textView13,
-      @NonNull TextView textView14, @NonNull TextView textView15, @NonNull TextView textView9) {
+      @NonNull TextView textView14, @NonNull TextView textView15, @NonNull TextView textView22,
+      @NonNull TextView textView9) {
     this.rootView = rootView;
     this.card = card;
     this.cartConstraint = cartConstraint;
@@ -70,6 +74,7 @@ public final class CartContainerBinding implements ViewBinding {
     this.textView13 = textView13;
     this.textView14 = textView14;
     this.textView15 = textView15;
+    this.textView22 = textView22;
     this.textView9 = textView9;
   }
 
@@ -160,6 +165,12 @@ public final class CartContainerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView22;
+      TextView textView22 = ViewBindings.findChildViewById(rootView, id);
+      if (textView22 == null) {
+        break missingId;
+      }
+
       id = R.id.textView9;
       TextView textView9 = ViewBindings.findChildViewById(rootView, id);
       if (textView9 == null) {
@@ -168,7 +179,7 @@ public final class CartContainerBinding implements ViewBinding {
 
       return new CartContainerBinding((LinearLayout) rootView, card, cartConstraint, itemFName,
           itemPrice, itemQuantity, resaurantNameBm, textView11, textView13, textView14, textView15,
-          textView9);
+          textView22, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

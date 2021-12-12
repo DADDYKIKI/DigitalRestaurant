@@ -114,12 +114,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
            //Cart table
-           db.execSQL("CREATE TABLE " + MY_TABLE_NAME + "("
-                   + COLUMNNAME1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                   + COLUMNNAME2 + " TEXT, "
-                   + COLUMNNAME3 + " INTEGER, "
-                   + COLUMNNAME4 + " INTEGER, "
-                   + COLUMNNAME5 + " TEXT)");
+        db.execSQL("CREATE TABLE " + MY_TABLE_NAME + "("
+                + COLUMNNAME1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COLUMNNAME2 + " TEXT, "
+                + COLUMNNAME3 + " INTEGER, "
+                + COLUMNNAME4 + " INTEGER, "
+                + COLUMNNAME5 + " TEXT)");
 
         db.execSQL("CREATE TABLE " + ADA_TABLE + "("
                 + COLUMNADA1 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -353,14 +353,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @SuppressLint("Range")
     public List<OrderDetails> getCartItems() {//For getting order items from database and dipley the in customers basket
 
-                SQLiteDatabase myDatabase3 = this.getWritableDatabase();
+                SQLiteDatabase myDatabase3 = this.getWritableDatabase();//database
                 List<OrderDetails> mylist = new ArrayList<>();
 
 
 
-                Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);
+                Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);//Reads data from the database
 
-                if (cur.getCount()>0) {
+                if (cur.getCount()>0) {//If cursor not empty
                     if (cur.moveToFirst())
 
                         do {
@@ -371,12 +371,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                             String restaurant = cur.getString(cur.getColumnIndex(COLUMNNAME5));
 
 
-                            OrderDetails myoder = new OrderDetails(name, quantity, totalPrice, restaurant);
+                            OrderDetails myoder = new OrderDetails(name, quantity, totalPrice, restaurant);//Stores all cursor values into myorder array and return it
 
                             mylist.add(myoder);
 
 
-                        } while (cur.moveToNext());
+                        } while (cur.moveToNext());//While cursor move to next row
 
                     cur.close();
                     myDatabase3.close();
@@ -732,13 +732,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
+//This is used to test if you are 18 or below
     @SuppressLint("Range")
     public boolean checkforAge(String email) {
 
                 SQLiteDatabase myDatabase = this.getReadableDatabase();
 
-                Cursor cur = myDatabase.rawQuery("select * from " +MY_USER_AND_PASS_TABLE,
+                Cursor cur = myDatabase.rawQuery("select * from " +MY_USER_AND_PASS_TABLE,//Reads data from the database
 
                         null);
 
@@ -783,7 +783,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
+//This is used to check if you reside in nigeria or not. It is for the project testing purpose since one cannote be in
+    //Nigeria when testing this software.
     @SuppressLint("Range")
     public boolean checkCountry(String email) {
 
@@ -810,7 +811,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
+        //This decides which restaurant to login a vendor given an email address
     @SuppressLint("Range")
     public String checkRestaurant(String email) {
 

@@ -22,6 +22,9 @@ public final class ActivityStainlessPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ConstraintLayout constraintLayout6;
+
+  @NonNull
   public final Button stainlessClear;
 
   @NonNull
@@ -30,13 +33,19 @@ public final class ActivityStainlessPageBinding implements ViewBinding {
   @NonNull
   public final TextView textView6;
 
+  @NonNull
+  public final TextView textView7;
+
   private ActivityStainlessPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button stainlessClear, @NonNull RecyclerView stainlessMainRecyclerView,
-      @NonNull TextView textView6) {
+      @NonNull ConstraintLayout constraintLayout6, @NonNull Button stainlessClear,
+      @NonNull RecyclerView stainlessMainRecyclerView, @NonNull TextView textView6,
+      @NonNull TextView textView7) {
     this.rootView = rootView;
+    this.constraintLayout6 = constraintLayout6;
     this.stainlessClear = stainlessClear;
     this.stainlessMainRecyclerView = stainlessMainRecyclerView;
     this.textView6 = textView6;
+    this.textView7 = textView7;
   }
 
   @Override
@@ -66,6 +75,12 @@ public final class ActivityStainlessPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.constraintLayout6;
+      ConstraintLayout constraintLayout6 = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout6 == null) {
+        break missingId;
+      }
+
       id = R.id.stainlessClear;
       Button stainlessClear = ViewBindings.findChildViewById(rootView, id);
       if (stainlessClear == null) {
@@ -84,8 +99,14 @@ public final class ActivityStainlessPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityStainlessPageBinding((ConstraintLayout) rootView, stainlessClear,
-          stainlessMainRecyclerView, textView6);
+      id = R.id.textView7;
+      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
+      if (textView7 == null) {
+        break missingId;
+      }
+
+      return new ActivityStainlessPageBinding((ConstraintLayout) rootView, constraintLayout6,
+          stainlessClear, stainlessMainRecyclerView, textView6, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

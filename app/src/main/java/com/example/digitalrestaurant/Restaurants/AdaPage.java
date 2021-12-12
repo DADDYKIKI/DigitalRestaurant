@@ -38,7 +38,6 @@ public class AdaPage extends AppCompatActivity {
 
     private  static List<VendorOrderDetails> myOrder3=new ArrayList<>();
 
-    FloatingActionButton Adafloating;
 
     @Override
     public void onBackPressed() {
@@ -113,12 +112,14 @@ public class AdaPage extends AppCompatActivity {
 
         vOrders=myOrders.getAdaCartItems();
 
-        adaRecycler=findViewById(R.id.Adaclear);
+        adaRecycler=findViewById(R.id.adaMainRecycler);
 
         adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
+
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
+
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder,
                                   @NonNull RecyclerView.ViewHolder target) {
@@ -128,7 +129,9 @@ public class AdaPage extends AppCompatActivity {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
                 vOrders.remove(viewHolder.getAdapterPosition());
+
                 orderAdaptors.notifyDataSetChanged();
 
 

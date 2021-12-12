@@ -78,9 +78,9 @@ public class StainlessPage extends AppCompatActivity {
     public void clearData(){
         clear.setOnClickListener(v -> {
 
-            myOrders4.clearItemsFromAdaTabel();
+            myOrders4.clearItemsFromStainless();
 
-            Intent intent = new Intent(this, AdaPage.class);
+            Intent intent = new Intent(this,StainlessPage.class);
 
             startActivity(intent);
 
@@ -118,7 +118,9 @@ public class StainlessPage extends AppCompatActivity {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
                 vOrders4.remove(viewHolder.getAdapterPosition());
+
                 orderAdaptors4.notifyDataSetChanged();
 
 

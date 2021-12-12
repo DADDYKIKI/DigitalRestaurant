@@ -35,6 +35,9 @@ public final class VendorOrdersBinding implements ViewBinding {
   public final TextView textView18;
 
   @NonNull
+  public final TextView textView21;
+
+  @NonNull
   public final TextView vCusName;
 
   @NonNull
@@ -51,8 +54,8 @@ public final class VendorOrdersBinding implements ViewBinding {
 
   private VendorOrdersBinding(@NonNull LinearLayout rootView, @NonNull TextView textView10,
       @NonNull TextView textView12, @NonNull TextView textView16, @NonNull TextView textView17,
-      @NonNull TextView textView18, @NonNull TextView vCusName, @NonNull TextView vCusPhone,
-      @NonNull TextView vItemName, @NonNull TextView vItemQuantity,
+      @NonNull TextView textView18, @NonNull TextView textView21, @NonNull TextView vCusName,
+      @NonNull TextView vCusPhone, @NonNull TextView vItemName, @NonNull TextView vItemQuantity,
       @NonNull TextView vItemTotalPrice) {
     this.rootView = rootView;
     this.textView10 = textView10;
@@ -60,6 +63,7 @@ public final class VendorOrdersBinding implements ViewBinding {
     this.textView16 = textView16;
     this.textView17 = textView17;
     this.textView18 = textView18;
+    this.textView21 = textView21;
     this.vCusName = vCusName;
     this.vCusPhone = vCusPhone;
     this.vItemName = vItemName;
@@ -124,6 +128,12 @@ public final class VendorOrdersBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView21;
+      TextView textView21 = ViewBindings.findChildViewById(rootView, id);
+      if (textView21 == null) {
+        break missingId;
+      }
+
       id = R.id.vCusName;
       TextView vCusName = ViewBindings.findChildViewById(rootView, id);
       if (vCusName == null) {
@@ -155,7 +165,8 @@ public final class VendorOrdersBinding implements ViewBinding {
       }
 
       return new VendorOrdersBinding((LinearLayout) rootView, textView10, textView12, textView16,
-          textView17, textView18, vCusName, vCusPhone, vItemName, vItemQuantity, vItemTotalPrice);
+          textView17, textView18, textView21, vCusName, vCusPhone, vItemName, vItemQuantity,
+          vItemTotalPrice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

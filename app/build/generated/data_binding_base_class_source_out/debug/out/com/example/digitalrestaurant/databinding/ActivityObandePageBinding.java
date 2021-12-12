@@ -33,14 +33,18 @@ public final class ActivityObandePageBinding implements ViewBinding {
   @NonNull
   public final TextView textView6;
 
+  @NonNull
+  public final TextView textView7;
+
   private ActivityObandePageBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout obandeClear, @NonNull RecyclerView obandeMainRecyclerView,
-      @NonNull Button obandecleare, @NonNull TextView textView6) {
+      @NonNull Button obandecleare, @NonNull TextView textView6, @NonNull TextView textView7) {
     this.rootView = rootView;
     this.obandeClear = obandeClear;
     this.obandeMainRecyclerView = obandeMainRecyclerView;
     this.obandecleare = obandecleare;
     this.textView6 = textView6;
+    this.textView7 = textView7;
   }
 
   @Override
@@ -90,8 +94,14 @@ public final class ActivityObandePageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView7;
+      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
+      if (textView7 == null) {
+        break missingId;
+      }
+
       return new ActivityObandePageBinding((ConstraintLayout) rootView, obandeClear,
-          obandeMainRecyclerView, obandecleare, textView6);
+          obandeMainRecyclerView, obandecleare, textView6, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -26,27 +26,17 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
 
 
-    private long press;
-
-
     @Override
     public void onBackPressed() {
 
 
-        if(press+2000>System.currentTimeMillis()){
 
-            finishAffinity();
-            System.exit(0);
 
-            return;}
+            Intent i = new Intent(this, FoodSeller.class);
+            startActivity(i);
 
-        else {
-            Toast.makeText(this, "Press again to exit your app", Toast.LENGTH_SHORT).show();
 
-        }press=System.currentTimeMillis();
-
-    }
-
+        }
 
 
 
@@ -76,7 +66,7 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
             helper=new DatabaseHelper(this);
 
 
-            String name= signupName.getText().toString().trim().toLowerCase();
+            String name= signupName.getText().toString().replaceAll("\\s+","").toLowerCase();
             String email= signupEmail.getText().toString();
             String password= signupPaswd.getText().toString();
 
@@ -86,6 +76,8 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
                 Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
 
             }
+
+            if (name.equals("adakitchen") ||name.equals("approkokitchen")|| name.equals("obandekitchen")|| name.equals("stainless")){
 
                 if (!isEmailValid(email))
                 Toast.makeText(this, "Invalid email address", Toast.LENGTH_SHORT).show();
@@ -119,7 +111,12 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
                     } else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
 
-                }}
+                }}}
+
+            else {Toast.makeText(this, "Check your spellings", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "You are only allowed to use\nAda Kitchen, Approkokichen, Obande Kitchen", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "and, Stainless, for the\nthe sake of this project", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "However,\nletter case does not really matter\nThanks", Toast.LENGTH_SHORT).show();}
 
 
         });

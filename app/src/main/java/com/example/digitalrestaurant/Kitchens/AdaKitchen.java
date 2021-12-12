@@ -21,6 +21,7 @@ import com.example.digitalrestaurant.Order;
 import com.example.digitalrestaurant.PopulateRestaurantsWithFoodItems;
 import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.Details.ItemData;
+import com.example.digitalrestaurant.RecyclerSpacing;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -127,6 +128,9 @@ public class AdaKitchen extends AppCompatActivity {
         adaRecycler =findViewById(R.id.adaKitchenRecycler);
 
         adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+
+        RecyclerSpacing space=new RecyclerSpacing(40);
+        adaRecycler.addItemDecoration(space);
 
         adaAdaptor=new PopulateKitchensWithItemsAdaptor(adaItems,adalistener2);
 

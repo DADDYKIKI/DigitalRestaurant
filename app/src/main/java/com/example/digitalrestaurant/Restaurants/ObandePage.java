@@ -77,9 +77,9 @@ public class ObandePage extends AppCompatActivity {
     public void clearData(){
         obandecleare.setOnClickListener(v -> {
 
-            myOrders3.clearItemsFromAdaTabel();
+            myOrders3.clearItemsFromObande();
 
-            Intent intent = new Intent(this, AdaPage.class);
+            Intent intent = new Intent(this, ObandePage.class);
 
             startActivity(intent);
 

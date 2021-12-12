@@ -20,11 +20,11 @@ import java.util.List;
 public class PopulateAdvertismentAdaptor extends RecyclerView.Adapter<PopulateAdvertismentAdaptor.PopulateAdvertismentViewHolder>{
 
        List<AdvertItems> itemDatalist;
-        Context context;
 
-    public PopulateAdvertismentAdaptor(List<AdvertItems> itemDatalist,Context context) {
+
+    public PopulateAdvertismentAdaptor(List<AdvertItems> itemDatalist) {
         this.itemDatalist = itemDatalist;
-        this.context=context;
+        
     }
 
     public class PopulateAdvertismentViewHolder extends RecyclerView.ViewHolder{

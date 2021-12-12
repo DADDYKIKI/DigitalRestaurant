@@ -17,9 +17,15 @@ public class RestaurantOrdersAdaptor extends RecyclerView.Adapter<RestaurantOrde
 
     List<VendorOrderDetails> vOrders;
 
+
+
     public RestaurantOrdersAdaptor(List<VendorOrderDetails> vOrders) {
+
         this.vOrders = vOrders;
     }
+
+
+
 
     public class RestaurantViewHolder extends RecyclerView.ViewHolder{
 

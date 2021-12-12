@@ -26,13 +26,12 @@ public class ObandePage extends AppCompatActivity {
 
     RecyclerView obandeRecycler;
 
-    RestaurantOrdersAdaptor orderAdaptors3;
+    RecyclerView.Adapter orderAdaptors3;
 
     private  static List<VendorOrderDetails> myOrder5=new ArrayList<>();
 
     private long press;
 
-    private  static List<VendorOrderDetails> myOrder3=new ArrayList<>();
 
     @Override
     public void onBackPressed() {

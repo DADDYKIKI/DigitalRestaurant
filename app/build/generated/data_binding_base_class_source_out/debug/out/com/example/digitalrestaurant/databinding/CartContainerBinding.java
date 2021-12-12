@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -19,6 +20,9 @@ import java.lang.String;
 public final class CartContainerBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
+
+  @NonNull
+  public final CardView card;
 
   @NonNull
   public final ConstraintLayout cartConstraint;
@@ -50,12 +54,13 @@ public final class CartContainerBinding implements ViewBinding {
   @NonNull
   public final TextView textView9;
 
-  private CartContainerBinding(@NonNull LinearLayout rootView,
+  private CartContainerBinding(@NonNull LinearLayout rootView, @NonNull CardView card,
       @NonNull ConstraintLayout cartConstraint, @NonNull TextView itemFName,
       @NonNull TextView itemPrice, @NonNull TextView itemQuantity,
       @NonNull TextView resaurantNameBm, @NonNull TextView textView11, @NonNull TextView textView13,
       @NonNull TextView textView14, @NonNull TextView textView15, @NonNull TextView textView9) {
     this.rootView = rootView;
+    this.card = card;
     this.cartConstraint = cartConstraint;
     this.itemFName = itemFName;
     this.itemPrice = itemPrice;
@@ -95,6 +100,12 @@ public final class CartContainerBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.card;
+      CardView card = ViewBindings.findChildViewById(rootView, id);
+      if (card == null) {
+        break missingId;
+      }
+
       id = R.id.cartConstraint;
       ConstraintLayout cartConstraint = ViewBindings.findChildViewById(rootView, id);
       if (cartConstraint == null) {
@@ -155,8 +166,9 @@ public final class CartContainerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new CartContainerBinding((LinearLayout) rootView, cartConstraint, itemFName, itemPrice,
-          itemQuantity, resaurantNameBm, textView11, textView13, textView14, textView15, textView9);
+      return new CartContainerBinding((LinearLayout) rootView, card, cartConstraint, itemFName,
+          itemPrice, itemQuantity, resaurantNameBm, textView11, textView13, textView14, textView15,
+          textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

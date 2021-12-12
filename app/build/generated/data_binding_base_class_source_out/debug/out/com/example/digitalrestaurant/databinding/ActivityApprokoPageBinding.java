@@ -4,6 +4,7 @@ package com.example.digitalrestaurant.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,14 +22,19 @@ public final class ActivityApprokoPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button Approkoclear;
+
+  @NonNull
   public final RecyclerView aPprokoMainRecyclerView;
 
   @NonNull
   public final TextView textView6;
 
   private ActivityApprokoPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView aPprokoMainRecyclerView, @NonNull TextView textView6) {
+      @NonNull Button Approkoclear, @NonNull RecyclerView aPprokoMainRecyclerView,
+      @NonNull TextView textView6) {
     this.rootView = rootView;
+    this.Approkoclear = Approkoclear;
     this.aPprokoMainRecyclerView = aPprokoMainRecyclerView;
     this.textView6 = textView6;
   }
@@ -60,6 +66,12 @@ public final class ActivityApprokoPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.Approkoclear;
+      Button Approkoclear = ViewBindings.findChildViewById(rootView, id);
+      if (Approkoclear == null) {
+        break missingId;
+      }
+
       id = R.id.aPprokoMainRecyclerView;
       RecyclerView aPprokoMainRecyclerView = ViewBindings.findChildViewById(rootView, id);
       if (aPprokoMainRecyclerView == null) {
@@ -72,8 +84,8 @@ public final class ActivityApprokoPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityApprokoPageBinding((ConstraintLayout) rootView, aPprokoMainRecyclerView,
-          textView6);
+      return new ActivityApprokoPageBinding((ConstraintLayout) rootView, Approkoclear,
+          aPprokoMainRecyclerView, textView6);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

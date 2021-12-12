@@ -1945,7 +1945,9 @@ font almendra_sc
 font asset
 id ALT
 id AdaRestLocationAdd
+id Adaclear
 id Adalocate
+id Approkoclear
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -2020,7 +2022,6 @@ id actions
 id activity_chooser_view_content
 id adaC
 id adaKitchenRecycler
-id adaMainRecyclerView
 id adarestaurantcard
 id add
 id addToCartbtn
@@ -2052,11 +2053,14 @@ id beginning
 id blocking
 id bottom
 id bounce
+id button
+id button2
 id buttonPanel
 id buttons_container
 id cache_measures
 id cancel_action
 id cancel_button
+id card
 id cartConstraint
 id cartTitle
 id center
@@ -2307,6 +2311,7 @@ id notification_main_column
 id notification_main_column_container
 id obandeC
 id obandeC2
+id obandeClear
 id obandeKitchen
 id obandeMainRecyclerView
 id obandelocate
@@ -2430,6 +2435,7 @@ id src_atop
 id src_in
 id src_over
 id stainlessC
+id stainlessClear
 id stainlessKitchen
 id stainlessMainRecyclerView
 id stainlessRestLocationAdd

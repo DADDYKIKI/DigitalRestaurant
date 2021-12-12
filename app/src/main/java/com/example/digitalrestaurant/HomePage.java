@@ -158,7 +158,7 @@ public class HomePage extends AppCompatActivity {
         recyclerView2.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView3.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        godwinAdaptor=new PopulateAdvertismentAdaptor(myItems,this);
+        godwinAdaptor=new PopulateAdvertismentAdaptor(myItems);
         godwinAdaptor2=new RestaurantsAdaptor(restaurantslist,AllInOneListener2);
         godwinAdaptor3=new LocationAdaptor(locationLists,locationListener);
 

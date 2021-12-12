@@ -34,10 +34,6 @@ public class Order extends AppCompatActivity {
 
     private RecyclerView.Adapter orderAdaptor;
 
-    private OrderAdaptor oderAdaptor;
-
-    private RecyclerView recycler;
-
     private DatabaseHelper myCart;
 
     private RecyclerView cartRecycler;
@@ -89,9 +85,6 @@ public class Order extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cart);
 
-        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.READ_EXTERNAL_STORAGE},PackageManager.PERMISSION_GRANTED);
-
 
         orderPrice=findViewById(R.id.orderPrice);
         orderNationality=findViewById(R.id.orderNationality);
@@ -131,17 +124,12 @@ public class Order extends AppCompatActivity {
 
         if(extras!=null){
 
-            //Orders from restaurants
+            //Bundle elements from all restaurants
             setFoodName(extras.getString("name"));
             setFoodPrice(extras.getInt("price"));
             setFoodNationality(extras.getString("nationality"));
             setFoodImage(extras.getInt("imageUrl"));
             setNameOfRestaurant(extras.getString("restaurant"));
-
-            //Orders from
-            //phone=extras.getInt("phone");
-            // address=extras.getString("address");
-            //customerName=extras.getString("customerName");
 
         }
             orderFoodName.setText(getFoodName());
@@ -157,9 +145,13 @@ public class Order extends AppCompatActivity {
             clearCart();
             AddToCart();
             openMyBasket();
-        placeOrder();
+            placeOrder();
     }
 
+
+
+
+    //Static elements for holding memory of order elements when the order page is returned to infrom of last attempts
     public static List<OrderDetails> getMyOrder2() {
         return myOrder2;
     }
@@ -222,7 +214,7 @@ public class Order extends AppCompatActivity {
 
 
 
-    public void clearCart() {//............Clear items in basket
+    public void clearCart() {//............Clear items from basket
 
         clear.setOnClickListener(v -> {
 
@@ -236,21 +228,28 @@ public class Order extends AppCompatActivity {
 
     }
 
-    public void placeOrder() {//............Clear items in basket
+    public void placeOrder() {//............used for placing orders to different restaurants
 
         order.setOnClickListener(v -> {
+
             myCartx=myCartGet.getCartItems();
 
 
+
+
+            //Used to recognise a restaurant using email address as the signature
             for(OrderDetails x:myCartx) {
 
-                if (x.getRestaurantName().equals("Ada Kitchen")) {
+                if (x.getRestaurantName().trim().equalsIgnoreCase("adakitchen")) {
 
                     VendorOrderDetails ada = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
-                            LoginPage.getCUSTOMERPHONE());
+
+                    String.valueOf(LoginPage.getCUSTOMERPHONE()));
+
                     Boolean addAda=myCartGet.addAdaData(ada);
 
                     if (addAda == true) {
+
                         Toast.makeText(this, "Orders sent to Ada Restaurant", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(this, Order.class);
@@ -259,14 +258,17 @@ public class Order extends AppCompatActivity {
                     }
 
                     else Toast.makeText(this, "Orders not sent to AdaRestaurant", Toast.LENGTH_SHORT).show();
-
                 }
 
 
-                if (x.getRestaurantName().equals("Approko Kitchen")) {
+
+
+                if (x.getRestaurantName().trim().equalsIgnoreCase("approkokitchen")) {
 
                     VendorOrderDetails approko = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
-                            LoginPage.getCUSTOMERPHONE());
+
+                    String.valueOf(LoginPage.getCUSTOMERPHONE()));
+
                     Boolean addApro=myCartGet.addApprokoData(approko);
 
                     if (addApro == true) {
@@ -278,18 +280,21 @@ public class Order extends AppCompatActivity {
                     }
 
                     else Toast.makeText(this, "Orders not sent to Approko Restaurant", Toast.LENGTH_SHORT).show();
-
                 }
 
 
-                if (x.getRestaurantName().equals("Obande Kitchen")) {
+
+
+                if (x.getRestaurantName().trim().equalsIgnoreCase("obandekitchen")) {
 
                     VendorOrderDetails obans = new VendorOrderDetails(x.getFoodName(),LoginPage.getCusName(),x.getTotalFoodPrice(), x.getQuantity(),
-                             LoginPage.getCUSTOMERPHONE());
+
+                   String.valueOf(LoginPage.getCUSTOMERPHONE()));
 
                     Boolean addOba=myCartGet.addObandeData(obans);
 
                     if (addOba == true) {
+
                         Toast.makeText(this, "Orders sent to Obande Kitchen", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(this, Order.class);
@@ -298,16 +303,21 @@ public class Order extends AppCompatActivity {
                     }
 
                     else Toast.makeText(this, "Orders not sent to Obande Restaurant", Toast.LENGTH_SHORT).show();
-
                 }
-                if (x.getRestaurantName().equals("Stainless")) {
+
+
+
+                if (x.getRestaurantName().trim().equalsIgnoreCase("stainless")) {
 
                     VendorOrderDetails stainless = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
-                             LoginPage.getCUSTOMERPHONE());
+
+                    String.valueOf(LoginPage.getCUSTOMERPHONE()));
+
                     Boolean addStainless=myCartGet.addStainlessData(stainless);
 
                     if (addStainless == true) {
-                        Toast.makeText(this, "Orders sent to Stainless", Toast.LENGTH_SHORT).show();
+
+                        Toast.makeText(this, "Orders sent to Stainless Bar", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(this, Order.class);
 
@@ -331,7 +341,7 @@ public class Order extends AppCompatActivity {
 
     public void AddToCart(){//............Change quantity, total price and add items tp my basket.........
 
-        plusBtn.setOnClickListener(v -> {
+        plusBtn.setOnClickListener(v -> {//  Increases  the quantity of items
 
             quantityNumber++;
             quantityText.setText(String.valueOf(quantityNumber));
@@ -339,7 +349,7 @@ public class Order extends AppCompatActivity {
 
         });
 
-        minusBtn.setOnClickListener(v -> {
+        minusBtn.setOnClickListener(v -> {//decreases the quantity of items
 
 
             if(quantityNumber>1) {
@@ -356,9 +366,11 @@ public class Order extends AppCompatActivity {
         addToCartBtn.setOnClickListener(v -> {
 
             OrderDetails orders=new OrderDetails(getFoodName(), String.valueOf(quantityNumber),
-                    String.valueOf(getFoodPrice() * quantityNumber), getNameOfRestaurant());
+
+            String.valueOf(getFoodPrice() * quantityNumber), getNameOfRestaurant());
 
             boolean addToCart =
+
                     myCartDataUpload.addData(orders);
 
             if (addToCart == true) {
@@ -376,7 +388,7 @@ public class Order extends AppCompatActivity {
     }
 
 
-
+           //      Used for viewing all the order made and display it in the basket
     public void openMyBasket(){
 
         myOrder=myCart.getCartItems();
@@ -384,6 +396,9 @@ public class Order extends AppCompatActivity {
         cartRecycler=findViewById(R.id.myRecycler);
 
         cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+
+
+        // Delete Items when swiped in the recyclerview
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {

@@ -25,7 +25,7 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
     public LocationAdaptor(List<LocationDetails> locationLists, LocationListener listener) {
         this.locationLists= locationLists;
         this.listener= listener;
-        // this.context = context;
+
 
     }
 

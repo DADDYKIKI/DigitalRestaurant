@@ -4,6 +4,7 @@ package com.example.digitalrestaurant.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,14 +22,19 @@ public final class ActivityStainlessPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button stainlessClear;
+
+  @NonNull
   public final RecyclerView stainlessMainRecyclerView;
 
   @NonNull
   public final TextView textView6;
 
   private ActivityStainlessPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView stainlessMainRecyclerView, @NonNull TextView textView6) {
+      @NonNull Button stainlessClear, @NonNull RecyclerView stainlessMainRecyclerView,
+      @NonNull TextView textView6) {
     this.rootView = rootView;
+    this.stainlessClear = stainlessClear;
     this.stainlessMainRecyclerView = stainlessMainRecyclerView;
     this.textView6 = textView6;
   }
@@ -60,6 +66,12 @@ public final class ActivityStainlessPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.stainlessClear;
+      Button stainlessClear = ViewBindings.findChildViewById(rootView, id);
+      if (stainlessClear == null) {
+        break missingId;
+      }
+
       id = R.id.stainlessMainRecyclerView;
       RecyclerView stainlessMainRecyclerView = ViewBindings.findChildViewById(rootView, id);
       if (stainlessMainRecyclerView == null) {
@@ -72,7 +84,7 @@ public final class ActivityStainlessPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityStainlessPageBinding((ConstraintLayout) rootView,
+      return new ActivityStainlessPageBinding((ConstraintLayout) rootView, stainlessClear,
           stainlessMainRecyclerView, textView6);
     }
     String missingId = rootView.getResources().getResourceName(id);

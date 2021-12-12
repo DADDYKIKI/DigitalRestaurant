@@ -126,7 +126,7 @@ public class AdaKitchen extends AppCompatActivity {
 
         adaRecycler =findViewById(R.id.adaKitchenRecycler);
 
-        adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+        adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         adaAdaptor=new PopulateKitchensWithItemsAdaptor(adaItems,adalistener2);
 

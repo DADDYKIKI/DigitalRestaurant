@@ -32,11 +32,12 @@ public class Stainless extends AppCompatActivity {
 
     private PopulateKitchensWithItemsAdaptor.RestaurantsRecyclerViewListener adalistener2;
 
-    private RecyclerView.Adapter stainlessAdaptor;
+    RecyclerView.Adapter stainlessAdaptor;
 
-    private RecyclerView stainlessRecycler;
+    RecyclerView stainlessRecycler;
 
     private List<ItemData> stainlessItems;
+
     FloatingActionButton floater;
 
     TextView homeKey,menuKey;
@@ -98,7 +99,7 @@ public class Stainless extends AppCompatActivity {
 
     }
 
-
+     //For displaying items for sale
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void makeAdaRestaurantAdaptor(){
 
@@ -108,7 +109,7 @@ public class Stainless extends AppCompatActivity {
 
         stainlessRecycler =findViewById(R.id.stainlessKitchen);
 
-        stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+        stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         stainlessAdaptor=new PopulateKitchensWithItemsAdaptor(stainlessItems,adalistener2);
 
@@ -117,6 +118,9 @@ public class Stainless extends AppCompatActivity {
 
 
     }
+
+
+    //For sending data to Order class
 
     public void setStainlessOnclickListener(){
 

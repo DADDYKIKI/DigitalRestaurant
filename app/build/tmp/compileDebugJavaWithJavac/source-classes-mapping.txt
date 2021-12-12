@@ -155,6 +155,8 @@ com/example/digitalrestaurant/databinding/AdaRestaurantHomepageBinding.java
  com.example.digitalrestaurant.databinding.AdaRestaurantHomepageBinding
 com/example/digitalrestaurant/Details/RestaurantsData/RestaurantsDetails.java
  com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails
+com/example/digitalrestaurant/RecyclerSpacing.java
+ com.example.digitalrestaurant.RecyclerSpacing
 com/example/digitalrestaurant/Authentications/LoginPageForFoodSeller2.java
  com.example.digitalrestaurant.Authentications.LoginPageForFoodSeller2
 com/example/digitalrestaurant/databinding/ObandeRestaurantHomepageBinding.java

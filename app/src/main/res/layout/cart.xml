@@ -31,6 +31,7 @@
                     android:layout_width="156dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="44dp"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/restaurantbackground"
                     android:text="My Basket"
                     android:textAlignment="center"
@@ -83,7 +84,7 @@
             android:scrollbarStyle="outsideOverlay"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.375"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
             app:layout_constraintVertical_bias="0.0" />
@@ -119,19 +120,6 @@
                     app:layout_constraintVertical_bias="0.0">
 
                     <TextView
-                        android:id="@+id/orderNationality"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Nigerian"
-                        android:textColor="@color/redishorang"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.099"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <TextView
                         android:id="@+id/addToCartbtn"
                         android:layout_width="87dp"
                         android:layout_height="46dp"
@@ -142,7 +130,7 @@
                         android:text="Add to cart"
                         android:textAlignment="center"
                         android:textColor="@color/purple_700"
-                        android:textSize="17dp"
+                        android:textSize="16dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
@@ -152,7 +140,7 @@
                         android:layout_width="45dp"
                         android:layout_height="23dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="32dp"
+                        android:layout_marginBottom="16dp"
                         android:text="Price:-"
                         android:textAlignment="center"
                         android:textColor="@color/white"
@@ -160,7 +148,7 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toTopOf="@+id/totalPrice"
                         app:layout_constraintEnd_toStartOf="@+id/poundSign"
-                        app:layout_constraintHorizontal_bias="0.842"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
@@ -224,20 +212,6 @@
                         app:autoSizeTextType="uniform"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/quantityTxt" />
-
-                    <TextView
-                        android:id="@+id/orderFoodName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="288dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="Jelof"
-                        android:textAlignment="center"
-                        android:textColor="@color/redishorang"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
 
                     <TextView
                         android:id="@+id/poundSign"
@@ -321,34 +295,61 @@
                         tools:layout_editor_absoluteY="-5dp">
 
                         <TextView
-                            android:id="@+id/from"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="From"
+                            android:id="@+id/orderFoodName"
+                            android:layout_width="48dp"
+                            android:layout_height="14dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="Jelof"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="15dp"
-                            android:textStyle="bold"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/orderRestaurant"
-                            app:layout_constraintHorizontal_bias="0.595"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="1.0" />
-
-                        <TextView
-                            android:id="@+id/orderRestaurant"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="16dp"
-                            android:text="TextView"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
+                            android:textColor="@color/redishorang"
                             android:textSize="15dp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/orderNationality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nigerian"
+                            android:textColor="@color/redishorang"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/orderFoodName"
+                            app:layout_constraintHorizontal_bias="0.38"
+                            app:layout_constraintStart_toStartOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="76dp"
+                        android:text="From"
+                        android:textAlignment="center"
+                        android:textColor="@color/redishorang"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/totalOrderPrice"
+                        app:layout_constraintStart_toStartOf="@+id/orderPrice"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.112" />
+
+                    <TextView
+                        android:id="@+id/orderRestaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textColor="@color/redishorang"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/plusBtn"
+                        app:layout_constraintStart_toEndOf="@+id/from"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.086" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

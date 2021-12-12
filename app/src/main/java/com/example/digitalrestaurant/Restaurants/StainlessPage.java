@@ -26,9 +26,9 @@ public class StainlessPage extends AppCompatActivity {
 
     RecyclerView stainlessRecycler;
 
-    RestaurantOrdersAdaptor orderAdaptors4;
+    RecyclerView.Adapter orderAdaptors4;
 
-    private  static List<VendorOrderDetails> myOrder6;
+    private  static List<VendorOrderDetails> myOrder6=new ArrayList<>();;
 
     private long press;
 
@@ -60,7 +60,7 @@ public class StainlessPage extends AppCompatActivity {
         myOrders4=new DatabaseHelper(this);
 
         vOrders4=new ArrayList<>();
-        myOrder6=new ArrayList<>();
+
 
         MyOrders4();
 
@@ -106,7 +106,7 @@ public class StainlessPage extends AppCompatActivity {
 
                 for (VendorOrderDetails x : getMyOrder6()) {
 
-                    VendorOrderDetails oders2 = new VendorOrderDetails(x.getFoodName(), x.getQuantity(),x.getCusName(), x.getTotalFoodPrice()
+                    VendorOrderDetails oders2 = new VendorOrderDetails(x.getFoodName(),x.getCusName(), x.getTotalFoodPrice() ,x.getQuantity()
                             , x.getPhone());
 
 

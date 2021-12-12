@@ -88,9 +88,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //Stainless Table
     public static final String COLUMNST1="CartID";
     public static final String COLUMNST2="Cart_ood_Name";
-    public static final String COLUMNST5="CustomerName";
+    public static final String COLUMNST3="CustomerName";
     public static final String COLUMNST4="Total_Price";
-    public static final String COLUMNST3="Total_Quantity";
+    public static final String COLUMNST5="Total_Quantity";
     public static final String COLUMNST6="CustomerPhone";
 
 
@@ -151,7 +151,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + COLUMNST3 + " TEXT, "
                 + COLUMNST4 + " INTEGER, "
                 + COLUMNST5 + " INTEGER, "
-                + COLUMNST6 + "INTEGER)");
+                + COLUMNST6 + " INTEGER)");
 
            //Customer table
            db.execSQL("CREATE TABLE " + MY_USER_AND_PASS_TABLE + "("
@@ -189,7 +189,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public boolean addData(OrderDetails order){
+    public boolean addData(OrderDetails order){// Add data to Order table
 
                 SQLiteDatabase myDatabase=this.getWritableDatabase();
 
@@ -206,7 +206,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 else return  true;
             }
 
-    public boolean addAdaData(VendorOrderDetails order){
+    public boolean addAdaData(VendorOrderDetails order){//Add data to Ada table
 
         SQLiteDatabase myDatabase=this.getWritableDatabase();
 
@@ -267,7 +267,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         ContentValues contentV=new ContentValues();
         contentV.put(COLUMNST2,order.getFoodName());
-        contentV.put(COLUMNST2,order.getCusName());
+        contentV.put(COLUMNST3,order.getCusName());
         contentV.put(COLUMNST4,order.getTotalFoodPrice());
         contentV.put(COLUMNST5,order.getQuantity());
         contentV.put(COLUMNST6,order.getPhone());
@@ -409,7 +409,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String phone = cur.getString(cur.getColumnIndex(COLUMNADA6));
 
 
-                    VendorOrderDetails myoder = new VendorOrderDetails(name, cusName,totalPrice,quantity,Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, cusName,totalPrice,quantity,phone);
 
                     mylist.add(myoder);
 
@@ -447,7 +447,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String phone = cur.getString(cur.getColumnIndex(COLUMNAPRO6));
 
 
-                    VendorOrderDetails myoder = new VendorOrderDetails(name, cusName,totalPrice,quantity, Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, cusName,totalPrice,quantity, phone);
 
                     mylist.add(myoder);
 
@@ -485,7 +485,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String phone = cur.getString(cur.getColumnIndex(COLUMNOABA6));
 
 
-                    VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,phone);
 
                     mylist.add(myoder);
 
@@ -510,7 +510,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-        Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);
+        Cursor cur = myDatabase3.rawQuery("select * from " + STAINLESS, null);
 
         if (cur.getCount()>0) {
             if (cur.moveToFirst())
@@ -524,7 +524,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String phone = cur.getString(cur.getColumnIndex(COLUMNST6));
 
 
-                    VendorOrderDetails myoder = new VendorOrderDetails(name , cusName,totalPrice,quantity, Integer.parseInt(phone));
+                    VendorOrderDetails myoder = new VendorOrderDetails(name , cusName,totalPrice,quantity,phone);
 
                     mylist.add(myoder);
 

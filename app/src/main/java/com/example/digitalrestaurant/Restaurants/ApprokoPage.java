@@ -26,13 +26,13 @@ public class ApprokoPage extends AppCompatActivity {
 
     RecyclerView approkoRecycler;
 
-    RestaurantOrdersAdaptor orderAdaptors2;
+    RecyclerView.Adapter orderAdaptors2;
 
     private  static List<VendorOrderDetails> myOrder4=new ArrayList<>();
 
     private long press;
 
-    private  static List<VendorOrderDetails> myOrder3=new ArrayList<>();
+
 
     @Override
     public void onBackPressed() {

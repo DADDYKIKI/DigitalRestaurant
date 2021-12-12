@@ -14,6 +14,7 @@ import com.example.digitalrestaurant.Adaptors.RestaurantOrdersAdaptor;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.VendorOrderDetails;
 import com.example.digitalrestaurant.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,11 +27,13 @@ public class AdaPage extends AppCompatActivity {
 
     RecyclerView adaRecycler;
 
-    RestaurantOrdersAdaptor orderAdaptors;
+    RecyclerView.Adapter orderAdaptors;
 
     private long press;
 
     private  static List<VendorOrderDetails> myOrder3=new ArrayList<>();
+
+    FloatingActionButton Adafloating;
 
     @Override
     public void onBackPressed() {
@@ -61,6 +64,7 @@ public class AdaPage extends AppCompatActivity {
 
         vOrders=new ArrayList<>();
 
+
         MyOrders();
 
 
@@ -76,11 +80,16 @@ public class AdaPage extends AppCompatActivity {
         myOrder3=order;
     }
 
+
+
+
+
     public void MyOrders(){
+
 
         vOrders=myOrders.getAdaCartItems();
 
-        adaRecycler=findViewById(R.id.adaMainRecyclerView);
+        adaRecycler=findViewById(R.id.Adaclear);
 
         adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
@@ -126,6 +135,8 @@ public class AdaPage extends AppCompatActivity {
 
 
 
-    }
 
-}
+
+
+
+}}

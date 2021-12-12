@@ -4,6 +4,7 @@ package com.example.digitalrestaurant.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,14 +22,23 @@ public final class ActivityObandePageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button button2;
+
+  @NonNull
+  public final ConstraintLayout obandeClear;
+
+  @NonNull
   public final RecyclerView obandeMainRecyclerView;
 
   @NonNull
   public final TextView textView6;
 
-  private ActivityObandePageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView obandeMainRecyclerView, @NonNull TextView textView6) {
+  private ActivityObandePageBinding(@NonNull ConstraintLayout rootView, @NonNull Button button2,
+      @NonNull ConstraintLayout obandeClear, @NonNull RecyclerView obandeMainRecyclerView,
+      @NonNull TextView textView6) {
     this.rootView = rootView;
+    this.button2 = button2;
+    this.obandeClear = obandeClear;
     this.obandeMainRecyclerView = obandeMainRecyclerView;
     this.textView6 = textView6;
   }
@@ -60,6 +70,14 @@ public final class ActivityObandePageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.button2;
+      Button button2 = ViewBindings.findChildViewById(rootView, id);
+      if (button2 == null) {
+        break missingId;
+      }
+
+      ConstraintLayout obandeClear = (ConstraintLayout) rootView;
+
       id = R.id.obandeMainRecyclerView;
       RecyclerView obandeMainRecyclerView = ViewBindings.findChildViewById(rootView, id);
       if (obandeMainRecyclerView == null) {
@@ -72,8 +90,8 @@ public final class ActivityObandePageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityObandePageBinding((ConstraintLayout) rootView, obandeMainRecyclerView,
-          textView6);
+      return new ActivityObandePageBinding((ConstraintLayout) rootView, button2, obandeClear,
+          obandeMainRecyclerView, textView6);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

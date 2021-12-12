@@ -9,14 +9,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/pageHolder"
         android:layout_width="350dp"
-        android:layout_height="320dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
             android:layout_width="350dp"
-            android:layout_height="320dp"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/bordera2"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +28,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="350dp"
-                android:layout_height="320dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/bordera3">
 
 
@@ -48,7 +48,7 @@
                     android:layout_height="47dp"
                     android:layout_marginEnd="52dp"
                     android:text="10"
-                    android:textColor="@color/purple_200"
+                    android:textColor="@color/Whiteblue"
                     android:textSize="35dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -63,7 +63,7 @@
                     android:layout_margin="10dp"
                     android:text="Jelof Rice"
                     android:textAlignment="center"
-                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textColor="@color/design_default_color_error"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +80,7 @@
                     android:layout_marginEnd="76dp"
                     android:height="40dp"
                     android:text="£"
-                    android:textColor="@color/purple_200"
+                    android:textColor="@color/Whiteblue"
                     android:textSize="35dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
                     android:text="African"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/Red"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -110,7 +110,7 @@
                     android:layout_marginEnd="204dp"
                     android:text="TextView"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/Red"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +124,7 @@
                     android:layout_marginTop="24dp"
                     android:text="Check"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/Red"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/restaurantName"

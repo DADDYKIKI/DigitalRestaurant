@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class VendorOrderDetails implements Serializable {
 
-    private String foodName, cusName, totalFoodPrice, quantity;
-    private int phone;
+    private String foodName, cusName, totalFoodPrice, quantity,phone;
 
-    public VendorOrderDetails(String foodName, String cusName, String totalFoodPrice, String quantity, int phone) {
+
+    public VendorOrderDetails(String foodName, String cusName, String totalFoodPrice, String quantity, String phone) {
         this.foodName = foodName;
         this.cusName = cusName;
         this.totalFoodPrice = totalFoodPrice;
@@ -47,11 +47,11 @@ public class VendorOrderDetails implements Serializable {
         this.quantity = quantity;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 }

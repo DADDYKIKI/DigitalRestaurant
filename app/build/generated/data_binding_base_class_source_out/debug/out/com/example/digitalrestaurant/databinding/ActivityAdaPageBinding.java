@@ -4,6 +4,7 @@ package com.example.digitalrestaurant.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,15 +22,19 @@ public final class ActivityAdaPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final RecyclerView adaMainRecyclerView;
+  public final RecyclerView Adaclear;
+
+  @NonNull
+  public final Button button;
 
   @NonNull
   public final TextView textView6;
 
-  private ActivityAdaPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView adaMainRecyclerView, @NonNull TextView textView6) {
+  private ActivityAdaPageBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView Adaclear,
+      @NonNull Button button, @NonNull TextView textView6) {
     this.rootView = rootView;
-    this.adaMainRecyclerView = adaMainRecyclerView;
+    this.Adaclear = Adaclear;
+    this.button = button;
     this.textView6 = textView6;
   }
 
@@ -60,9 +65,15 @@ public final class ActivityAdaPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.adaMainRecyclerView;
-      RecyclerView adaMainRecyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (adaMainRecyclerView == null) {
+      id = R.id.Adaclear;
+      RecyclerView Adaclear = ViewBindings.findChildViewById(rootView, id);
+      if (Adaclear == null) {
+        break missingId;
+      }
+
+      id = R.id.button;
+      Button button = ViewBindings.findChildViewById(rootView, id);
+      if (button == null) {
         break missingId;
       }
 
@@ -72,8 +83,7 @@ public final class ActivityAdaPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAdaPageBinding((ConstraintLayout) rootView, adaMainRecyclerView,
-          textView6);
+      return new ActivityAdaPageBinding((ConstraintLayout) rootView, Adaclear, button, textView6);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

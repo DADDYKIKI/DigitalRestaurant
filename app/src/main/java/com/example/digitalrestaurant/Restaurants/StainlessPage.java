@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.digitalrestaurant.Adaptors.RestaurantOrdersAdaptor;
@@ -28,7 +30,9 @@ public class StainlessPage extends AppCompatActivity {
 
     RecyclerView.Adapter orderAdaptors4;
 
-    private  static List<VendorOrderDetails> myOrder6=new ArrayList<>();;
+    private  static List<VendorOrderDetails> myOrder6=new ArrayList<>();
+
+    Button clear;
 
     private long press;
 
@@ -57,12 +61,30 @@ public class StainlessPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stainless_page);
 
+        clear=findViewById(R.id.stainlessClear);
+
         myOrders4=new DatabaseHelper(this);
 
         vOrders4=new ArrayList<>();
 
 
         MyOrders4();
+
+        clearData();
+
+
+    }
+
+    public void clearData(){
+        clear.setOnClickListener(v -> {
+
+            myOrders4.clearItemsFromAdaTabel();
+
+            Intent intent = new Intent(this, AdaPage.class);
+
+            startActivity(intent);
+
+        });
 
 
     }

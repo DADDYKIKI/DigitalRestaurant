@@ -1946,7 +1946,7 @@ int id ALT 0x7f0a0000
 int id AdaRestLocationAdd 0x7f0a0001
 int id Adaclear 0x7f0a025a
 int id Adalocate 0x7f0a0002
-int id Approkoclear 0x7f0a025b
+int id Approkoclearer 0x7f0a0260
 int id BOTTOM_END 0x7f0a0003
 int id BOTTOM_START 0x7f0a0004
 int id CTRL 0x7f0a0005
@@ -2021,6 +2021,7 @@ int id actions 0x7f0a0049
 int id activity_chooser_view_content 0x7f0a004a
 int id adaC 0x7f0a004b
 int id adaKitchenRecycler 0x7f0a004d
+int id adaclearer 0x7f0a0261
 int id adarestaurantcard 0x7f0a004f
 int id add 0x7f0a0050
 int id addToCartbtn 0x7f0a0051
@@ -2052,8 +2053,6 @@ int id beginning 0x7f0a006a
 int id blocking 0x7f0a006b
 int id bottom 0x7f0a006c
 int id bounce 0x7f0a006d
-int id button 0x7f0a025c
-int id button2 0x7f0a025d
 int id buttonPanel 0x7f0a006e
 int id buttons_container 0x7f0a006f
 int id cache_measures 0x7f0a0070
@@ -2313,6 +2312,7 @@ int id obandeC2 0x7f0a016c
 int id obandeClear 0x7f0a025e
 int id obandeKitchen 0x7f0a016d
 int id obandeMainRecyclerView 0x7f0a016e
+int id obandecleare 0x7f0a0262
 int id obandelocate 0x7f0a016f
 int id off 0x7f0a0170
 int id on 0x7f0a0171

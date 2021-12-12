@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.digitalrestaurant.Adaptors.RestaurantOrdersAdaptor;
@@ -29,6 +31,8 @@ public class ObandePage extends AppCompatActivity {
     RecyclerView.Adapter orderAdaptors3;
 
     private  static List<VendorOrderDetails> myOrder5=new ArrayList<>();
+
+    Button obandecleare;
 
     private long press;
 
@@ -60,12 +64,30 @@ public class ObandePage extends AppCompatActivity {
 
         myOrders3=new DatabaseHelper(this);
 
+        obandecleare=findViewById(R.id.obandecleare);
+
         vOrders3=new ArrayList<>();
 
         MyOrders3();
+        clearData();
 
 
     }
+
+    public void clearData(){
+        obandecleare.setOnClickListener(v -> {
+
+            myOrders3.clearItemsFromAdaTabel();
+
+            Intent intent = new Intent(this, AdaPage.class);
+
+            startActivity(intent);
+
+        });
+
+
+    }
+
 
     public static List<VendorOrderDetails> getMyOrder5() {
         return myOrder5;

@@ -7,12 +7,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.digitalrestaurant.Adaptors.RestaurantOrdersAdaptor;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.VendorOrderDetails;
+import com.example.digitalrestaurant.Order;
 import com.example.digitalrestaurant.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -28,6 +31,8 @@ public class AdaPage extends AppCompatActivity {
     RecyclerView adaRecycler;
 
     RecyclerView.Adapter orderAdaptors;
+
+    Button adaclearer;
 
     private long press;
 
@@ -59,6 +64,8 @@ public class AdaPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ada_page);
 
+        adaclearer=findViewById(R.id.adaclearer);
+
 
         myOrders=new DatabaseHelper(this);
 
@@ -66,6 +73,23 @@ public class AdaPage extends AppCompatActivity {
 
 
         MyOrders();
+
+        clearData();
+
+
+    }
+
+
+    public void clearData(){
+        adaclearer.setOnClickListener(v -> {
+
+            myOrders.clearItemsFromAdaTabel();
+
+            Intent intent = new Intent(this, AdaPage.class);
+
+            startActivity(intent);
+
+        });
 
 
     }

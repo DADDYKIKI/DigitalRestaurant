@@ -304,7 +304,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public boolean addCustomerUserAndPAss(UserDetails user){
+    public boolean addCustomerUserAndPAss(UserDetails user){//For registering a new user
 
                 SQLiteDatabase myDatabase=this.getWritableDatabase();
 
@@ -351,7 +351,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     @SuppressLint("Range")
-    public List<OrderDetails> getCartItems() {
+    public List<OrderDetails> getCartItems() {//For getting order items from database and dipley the in customers basket
 
                 SQLiteDatabase myDatabase3 = this.getWritableDatabase();
                 List<OrderDetails> mylist = new ArrayList<>();
@@ -609,6 +609,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         myDatabase.execSQL("delete from "+ APPROKO_TABLE);
 
     }
+
 
 
 

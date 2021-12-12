@@ -1947,7 +1947,7 @@ id ALT
 id AdaRestLocationAdd
 id Adaclear
 id Adalocate
-id Approkoclear
+id Approkoclearer
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -2022,6 +2022,7 @@ id actions
 id activity_chooser_view_content
 id adaC
 id adaKitchenRecycler
+id adaclearer
 id adarestaurantcard
 id add
 id addToCartbtn
@@ -2053,8 +2054,6 @@ id beginning
 id blocking
 id bottom
 id bounce
-id button
-id button2
 id buttonPanel
 id buttons_container
 id cache_measures
@@ -2314,6 +2313,7 @@ id obandeC2
 id obandeClear
 id obandeKitchen
 id obandeMainRecyclerView
+id obandecleare
 id obandelocate
 id off
 id on

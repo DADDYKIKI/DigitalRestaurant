@@ -22,7 +22,7 @@ public final class ActivityApprokoPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button Approkoclear;
+  public final Button Approkoclearer;
 
   @NonNull
   public final RecyclerView aPprokoMainRecyclerView;
@@ -31,10 +31,10 @@ public final class ActivityApprokoPageBinding implements ViewBinding {
   public final TextView textView6;
 
   private ActivityApprokoPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button Approkoclear, @NonNull RecyclerView aPprokoMainRecyclerView,
+      @NonNull Button Approkoclearer, @NonNull RecyclerView aPprokoMainRecyclerView,
       @NonNull TextView textView6) {
     this.rootView = rootView;
-    this.Approkoclear = Approkoclear;
+    this.Approkoclearer = Approkoclearer;
     this.aPprokoMainRecyclerView = aPprokoMainRecyclerView;
     this.textView6 = textView6;
   }
@@ -66,9 +66,9 @@ public final class ActivityApprokoPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.Approkoclear;
-      Button Approkoclear = ViewBindings.findChildViewById(rootView, id);
-      if (Approkoclear == null) {
+      id = R.id.Approkoclearer;
+      Button Approkoclearer = ViewBindings.findChildViewById(rootView, id);
+      if (Approkoclearer == null) {
         break missingId;
       }
 
@@ -84,7 +84,7 @@ public final class ActivityApprokoPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityApprokoPageBinding((ConstraintLayout) rootView, Approkoclear,
+      return new ActivityApprokoPageBinding((ConstraintLayout) rootView, Approkoclearer,
           aPprokoMainRecyclerView, textView6);
     }
     String missingId = rootView.getResources().getResourceName(id);

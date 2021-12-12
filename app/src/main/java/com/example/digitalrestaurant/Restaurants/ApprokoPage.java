@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.digitalrestaurant.Adaptors.RestaurantOrdersAdaptor;
@@ -29,6 +31,8 @@ public class ApprokoPage extends AppCompatActivity {
     RecyclerView.Adapter orderAdaptors2;
 
     private  static List<VendorOrderDetails> myOrder4=new ArrayList<>();
+
+    Button Approkoclearer;
 
     private long press;
 
@@ -61,9 +65,26 @@ public class ApprokoPage extends AppCompatActivity {
 
         myOrders2=new DatabaseHelper(this);
 
+        Approkoclearer=findViewById(R.id.Approkoclearer);
+
         vOrders2=new ArrayList<>();
 
         MyOrders2();
+        clearData();
+
+
+    }
+
+    public void clearData(){
+        Approkoclearer.setOnClickListener(v -> {
+
+            myOrders2.clearItemsFromAdaTabel();
+
+            Intent intent = new Intent(this, AdaPage.class);
+
+            startActivity(intent);
+
+        });
 
 
     }

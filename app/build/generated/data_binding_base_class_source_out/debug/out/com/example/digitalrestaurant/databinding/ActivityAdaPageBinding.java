@@ -25,16 +25,16 @@ public final class ActivityAdaPageBinding implements ViewBinding {
   public final RecyclerView Adaclear;
 
   @NonNull
-  public final Button button;
+  public final Button adaclearer;
 
   @NonNull
   public final TextView textView6;
 
   private ActivityAdaPageBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView Adaclear,
-      @NonNull Button button, @NonNull TextView textView6) {
+      @NonNull Button adaclearer, @NonNull TextView textView6) {
     this.rootView = rootView;
     this.Adaclear = Adaclear;
-    this.button = button;
+    this.adaclearer = adaclearer;
     this.textView6 = textView6;
   }
 
@@ -71,9 +71,9 @@ public final class ActivityAdaPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.button;
-      Button button = ViewBindings.findChildViewById(rootView, id);
-      if (button == null) {
+      id = R.id.adaclearer;
+      Button adaclearer = ViewBindings.findChildViewById(rootView, id);
+      if (adaclearer == null) {
         break missingId;
       }
 
@@ -83,7 +83,8 @@ public final class ActivityAdaPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAdaPageBinding((ConstraintLayout) rootView, Adaclear, button, textView6);
+      return new ActivityAdaPageBinding((ConstraintLayout) rootView, Adaclear, adaclearer,
+          textView6);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

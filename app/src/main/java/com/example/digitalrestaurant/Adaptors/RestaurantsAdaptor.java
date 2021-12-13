@@ -25,8 +25,6 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
     public RestaurantsAdaptor(List<RestaurantsDetails> restaurantslist, AllInOneRecyclerViewListener allInOneListener) {
         this.restaurantslist = restaurantslist;
         this.allInOneListener=allInOneListener;
-
-
     }
 
 
@@ -40,7 +38,6 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
             super(itemView);
 
             itemView.setOnClickListener(this);
-
 
             restaurantName = itemView.findViewById(R.id.restaurantName);
             restaurantLocation = itemView.findViewById(R.id.restaurantLocation);
@@ -65,7 +62,7 @@ public class RestaurantsAdaptor extends RecyclerView.Adapter<RestaurantsAdaptor.
 
 
     @Override
-    public void onBindViewHolder(@NonNull RestaurantsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RestaurantsViewHolder holder, int position) {//Positioning views
 
         holder.restaurantName.setText(restaurantslist.get(position).getRestaurantsName());
         holder.restaurantLocation.setText(restaurantslist.get(position).getRestaurantsLocation());

@@ -15,12 +15,7 @@ import com.example.digitalrestaurant.R;
 
 public class Customer extends AppCompatActivity //implements AdapterView.OnItemSelectedListener
                                                          {
-
-
     TextView loginText1,signupText1;;
-
-
-
 
     private long press;
 
@@ -28,24 +23,17 @@ public class Customer extends AppCompatActivity //implements AdapterView.OnItemS
     @Override
     public void onBackPressed() {
 
-
        click1(IntroPage.class);
     }
 
 
-
-                                                             @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         loginText1= findViewById(R.id.customerloginBut);
         signupText1= findViewById(R.id.customersignupBut);
-
-
-
 
         loginText1.setOnClickListener(v -> click1(LoginPage.class));
 

@@ -19,31 +19,15 @@ public class OrderDetails implements Serializable {
         return restaurantName;
     }
 
-    public void setRestaurantName(String restaurantName) {
-        this.restaurantName = restaurantName;
-    }
-
     public String getTotalFoodPrice() {
         return totalFoodPrice;
-    }
-
-    public void setTotalFoodPrice(String totalFoodPrice) {
-        this.totalFoodPrice = totalFoodPrice;
     }
 
     public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
-
     public String getFoodName() {
         return foodName;
-    }
-
-    public void setFoodName(String foodName) {
-        this.foodName = foodName;
     }
 }

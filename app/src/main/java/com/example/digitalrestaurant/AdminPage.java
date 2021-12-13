@@ -14,8 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PopulateRestaurantsWithFoodItems {
+public class AdminPage {
 
+
+    //Initializing all containers for each restaurant properties
     private List<ItemData> adaItems = new ArrayList<>();
     private List<ItemData> aprokoItems = new ArrayList<>();
     private List<ItemData> obandeItems= new ArrayList<>();
@@ -49,6 +51,8 @@ public class PopulateRestaurantsWithFoodItems {
         adaItems.add(new ItemData(7, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
 
 
+
+        //This uses stream Api to filter out alcoholic food items if your location is Nigeria
         List<ItemData> allMatch = adaItems.stream().filter(p -> p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
 

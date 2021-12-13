@@ -30,31 +30,15 @@ public class RestaurantsDetails implements Serializable {
         return restaurantImage;
     }
 
-    public void setRestaurantImage(int restaurantImage) {
-        this.restaurantImage = restaurantImage;
-    }
-
     public String getRestaurantNationality() {
         return restaurantNationality;
-    }
-
-    public void setRestaurantNationality(String restaurantNationality) {
-        this.restaurantNationality = restaurantNationality;
     }
 
     public String getRestaurantsName() {
         return restaurantsName;
     }
 
-    public void setRestaurantsName(String restaurantsName) {
-        this.restaurantsName = restaurantsName;
-    }
-
     public String getRestaurantsLocation() {
         return restaurantsLocation;
-    }
-
-    public void setRestaurantsLocation(String restaurantsLocation) {
-        this.restaurantsLocation = restaurantsLocation;
     }
 }

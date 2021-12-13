@@ -13,19 +13,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Authentications.LoginPage;
-import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
-import com.example.digitalrestaurant.PopulateRestaurantsWithFoodItems;
+import com.example.digitalrestaurant.AdminPage;
 import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.Details.ItemData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ObandeKitchen extends AppCompatActivity {
 
@@ -61,7 +59,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
         helper=new DatabaseHelper(this);
 
-
+        Toast.makeText(this, "Make your choice \n scrolling food items\nvertically", Toast.LENGTH_SHORT).show();
 
         makeObandeRestaurantAdaptor();
 
@@ -74,7 +72,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
 }
 
-    public void homeKey(){
+    public void homeKey(){//Back home
             homeKey.setOnClickListener(v -> {
             Intent intent=new Intent(this, HomePage.class);
             startActivity(intent);
@@ -84,7 +82,7 @@ public class ObandeKitchen extends AppCompatActivity {
 
     }
 
-    public void menuKey(){
+    public void menuKey(){//Menu
         menuKey.setOnClickListener(v -> {
             Intent intent2=new Intent(this, Menu.class);
             startActivity(intent2);
@@ -95,11 +93,11 @@ public class ObandeKitchen extends AppCompatActivity {
 
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void makeObandeRestaurantAdaptor(){
+    public void makeObandeRestaurantAdaptor(){//Attaching list of food items with recycler view for display
 
         setObandeOnclickListener();
 
-        obandeItems=new PopulateRestaurantsWithFoodItems().populateObandePage(LoginPage.getAge());
+        obandeItems=new AdminPage().populateObandePage(LoginPage.getAge());
 
         obandeRecycler =findViewById(R.id.obandeKitchen);
 
@@ -128,7 +126,7 @@ public class ObandeKitchen extends AppCompatActivity {
         });
 
     }
-            public void setObandeOnclickListener(){
+            public void setObandeOnclickListener(){//This will send my order details to my order/basket page
 
            obandelistener2= (v, position) -> {
 

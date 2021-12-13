@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class AdvertItems implements Serializable {
 
     private int price,imageURL;
-    private String name, nationality,alcoholic,pictureLabel,restaurantName;
+    private String name, nationality,alcoholic,restaurantName;
 
     public AdvertItems(int price,  String name, String nationality, int imageURL,String alcoholic, String restaurantName) {
         this.price = price;
@@ -13,7 +13,6 @@ public class AdvertItems implements Serializable {
         this.name = name;
         this.nationality = nationality;
         this.alcoholic = alcoholic;
-        this.pictureLabel = pictureLabel;
         this.restaurantName = restaurantName;
     }
 
@@ -27,10 +26,6 @@ public class AdvertItems implements Serializable {
 
     public int getImageURL() {
         return imageURL;
-    }
-
-    public void setImageURL(int imageURL) {
-        this.imageURL = imageURL;
     }
 
     public String getName() {
@@ -53,23 +48,9 @@ public class AdvertItems implements Serializable {
         return alcoholic;
     }
 
-    public void setAlcoholic(String alcoholic) {
-        this.alcoholic = alcoholic;
-    }
-
-    public String getPictureLabel() {
-        return pictureLabel;
-    }
-
-    public void setPictureLabel(String pictureLabel) {
-        this.pictureLabel = pictureLabel;
-    }
 
     public String getRestaurantName() {
         return restaurantName;
     }
 
-    public void setRestaurantName(String restaurantName) {
-        this.restaurantName = restaurantName;
     }
-}

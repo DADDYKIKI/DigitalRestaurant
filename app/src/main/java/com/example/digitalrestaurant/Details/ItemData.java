@@ -16,24 +16,11 @@ public class ItemData implements Serializable {
         this.nationality = nationality;
         this.alcoholic=alcoholic;
         this.imageURL= imageURL;
-        this.pictureLabel=pictureLabel;
 
     }
-
-   /* public String getPictureLabel() {
-        return pictureLabel;
-    }
-
-    public void setPictureLabel(String pictureLabel) {
-        this.pictureLabel = pictureLabel;
-    }*/
 
     public String getAlcoholic() {
         return alcoholic;
-    }
-
-    public void setAlcoholic(String alcoholic) {
-        this.alcoholic = alcoholic;
     }
 
     public int getPrice() {
@@ -66,7 +53,4 @@ public class ItemData implements Serializable {
         return imageURL;
     }
 
-    public void setImageURL(int imageURL) {
-        this.imageURL = imageURL;
-    }
 }

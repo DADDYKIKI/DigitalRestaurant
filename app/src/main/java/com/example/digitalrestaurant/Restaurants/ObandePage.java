@@ -38,7 +38,7 @@ public class ObandePage extends AppCompatActivity {
 
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed() {//Exit app
 
 
         if(press+2000>System.currentTimeMillis()){
@@ -74,7 +74,7 @@ public class ObandePage extends AppCompatActivity {
 
     }
 
-    public void clearData(){
+    public void clearData(){//Clear order items from Obande kitchen
         obandecleare.setOnClickListener(v -> {
 
             myOrders3.clearItemsFromObande();
@@ -99,13 +99,17 @@ public class ObandePage extends AppCompatActivity {
         myOrder5=order;
     }
 
-    public void MyOrders3(){
+
+
+    public void MyOrders3(){//Controls which restaurant  will receive items needed from them
 
         vOrders3=myOrders3.getObandeCartItems();
 
         obandeRecycler=findViewById(R.id.obandeMainRecyclerView);
 
        obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+
+       //Swiping and deleting
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
@@ -122,7 +126,7 @@ public class ObandePage extends AppCompatActivity {
                 orderAdaptors3.notifyDataSetChanged();
 
 
-                setMyOrder5(vOrders3);
+                setMyOrder5(vOrders3);//current order received
 
                 myOrders3.clearItemsFromObande();
 
@@ -132,7 +136,7 @@ public class ObandePage extends AppCompatActivity {
                             , x.getPhone());
 
 
-                    myOrders3.addObandeData(oders2);
+                    myOrders3.addObandeData(oders2);//Current order stored
 
 
                 }

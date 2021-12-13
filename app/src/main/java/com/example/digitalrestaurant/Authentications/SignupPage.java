@@ -18,24 +18,18 @@ public class SignupPage extends AppCompatActivity {
 
     private EditText signupName,signupEmail,signupAge,signupPhone,signupAddress,signupPaswd,signupCountry;
 
-   private  Button signSubBtn;
+    private  Button signSubBtn;
 
     private DatabaseHelper helper;
 
 
-    private long press;
-
-
     @Override
-    public void onBackPressed() {
+    public void onBackPressed() {//backward
 
         Intent i = new Intent(this, Customer.class);
         startActivity(i);
 
     }
-
-
-
 
 
     @Override
@@ -55,10 +49,10 @@ public class SignupPage extends AppCompatActivity {
 
         signSubBtn = (findViewById(R.id.signSubBtnV));
 
-
-
         signUpC();
     }
+
+
 
     public void signUpC(){
         signSubBtn.setOnClickListener(v -> {
@@ -87,8 +81,6 @@ public class SignupPage extends AppCompatActivity {
                 Toast.makeText(this, "Password must be greater than 3", Toast.LENGTH_SHORT).show();
 
 
-
-
             else {
                              boolean check=helper.checkforUniqueEmailAddress(email);
 
@@ -106,11 +98,6 @@ public class SignupPage extends AppCompatActivity {
 
                         if (signup == true) {
 
-                            Intent i = new Intent(this, Order.class);
-                            i.putExtra("customerName", name);
-                            i.putExtra("phone", phone);
-                            i.putExtra("address", maidenName);
-
                             Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
 
                             signupName.setText("");
@@ -126,16 +113,12 @@ public class SignupPage extends AppCompatActivity {
 
                         } else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
 
-                    }catch (Exception e){Toast.makeText(this, "Your age or phone number\n must be in number format", Toast.LENGTH_SHORT).show();}
-
+                    }catch (Exception e){Toast.makeText(this, "Your age or phone number\n must be in number format", Toast.LENGTH_SHORT).show();
+                             }
             }}
 
         });
     }
-
-
-
-
 
 public boolean isEmailValid(String email){
 

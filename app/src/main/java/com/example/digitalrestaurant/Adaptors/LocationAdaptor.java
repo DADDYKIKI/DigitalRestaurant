@@ -25,14 +25,11 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
     public LocationAdaptor(List<LocationDetails> locationLists, LocationListener listener) {
         this.locationLists= locationLists;
         this.listener= listener;
-
-
     }
 
 
 
-
-    public class LocationViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class LocationViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{//View holder class
 
         TextView locationName,restaurants;
 
@@ -45,9 +42,8 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
 
             locationName = itemView.findViewById(R.id.locationName);
             restaurants = itemView.findViewById(R.id.restaurant);
-
-
         }
+
 
         @Override
         public void onClick(View v) {
@@ -75,19 +71,13 @@ public class LocationAdaptor extends RecyclerView.Adapter<LocationAdaptor.Locati
     @Override
     public int getItemCount() {
 
-
         return locationLists.size();
     }
 
 
-    public interface LocationListener {
+    public interface LocationListener {//Interface for onclickListener
 
         void onClick(View v, int position);
 
     }
-
-
-
-
-
 }

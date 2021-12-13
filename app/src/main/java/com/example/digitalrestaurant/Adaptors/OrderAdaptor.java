@@ -15,28 +15,20 @@ import java.util.List;
 
 public class OrderAdaptor extends RecyclerView.Adapter<OrderAdaptor.OrderViewHolder>{
 
-
-
     private List<OrderDetails> myOder;
-
 
     public OrderAdaptor(List<OrderDetails> myOder) {
         this.myOder = myOder;
-
-
     }
+
 
 
     public  class OrderViewHolder extends RecyclerView.ViewHolder {
 
-
         TextView foodFName, foodTotalPrice, quantity,restaurantB;
-
 
         public OrderViewHolder(@NonNull View itemView) {
             super(itemView);
-
-
 
             foodFName = itemView.findViewById(R.id.itemFName);
             foodTotalPrice = itemView.findViewById(R.id.itemPrice);

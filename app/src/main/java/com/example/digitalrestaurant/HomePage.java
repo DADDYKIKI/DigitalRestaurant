@@ -2,15 +2,10 @@ package com.example.digitalrestaurant;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.LocationListener;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -18,13 +13,10 @@ import android.widget.Toast;
 
 
 import com.example.digitalrestaurant.Adaptors.PopulateAdvertismentAdaptor;
-import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Adaptors.LocationAdaptor;
-import com.example.digitalrestaurant.Authentications.IntroPage;
 import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.Details.AdvertItems;
-import com.example.digitalrestaurant.Details.ItemData;
 import com.example.digitalrestaurant.Kitchens.AdaKitchen;
 import com.example.digitalrestaurant.Kitchens.ApprokoKitchen;
 import com.example.digitalrestaurant.Kitchens.ObandeKitchen;
@@ -35,7 +27,6 @@ import com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class HomePage extends AppCompatActivity {
 
@@ -48,21 +39,11 @@ public class HomePage extends AppCompatActivity {
 
      private LocationAdaptor.LocationListener locationListener;
 
-    private PopulateKitchensWithItemsAdaptor.RestaurantsRecyclerViewListener restaurantslistener2;
-
     private RecyclerView recyclerView,recyclerView2,recyclerView3;
 
-
     private List<AdvertItems> myItems;
-    Context context;
-
-
-    //Parameters for horizontal Restaurants name display
 
     private List<RestaurantsDetails> restaurantslist;
-
-
-    //Parameters for horizontal Location name display
 
     private List<LocationDetails> locationLists;
 
@@ -108,24 +89,15 @@ public class HomePage extends AppCompatActivity {
         restaurantslist=new ArrayList<>();
         locationLists=new ArrayList<>();
 
-
-
-
         helper=new DatabaseHelper(this);
 
         customerWelcomeName.setText(LoginPage.getCusName().toUpperCase());
-
-
         makeAdaptor();
         menuKey();
-
-
     }
 
 
-
-
-    public void menuKey(){
+    public void menuKey(){//Menu
             menuKey.setOnClickListener(v -> {
             Intent intent2=new Intent(this, Menu.class);
             startActivity(intent2);
@@ -137,7 +109,7 @@ public class HomePage extends AppCompatActivity {
     }
 
 
-
+//Where all the items from all the restaurants are assembled and attached with their respectful recyclerviews for display and selection
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void makeAdaptor(){
 
@@ -145,11 +117,13 @@ public class HomePage extends AppCompatActivity {
         setMyOnclickListener();
         setLocationListener();
 
-        myItems=new PopulateRestaurantsWithFoodItems().populateAdvertsPage(LoginPage.getAge());
-        restaurantslist=new PopulateRestaurantsWithFoodItems().populateRestaurants();
-        locationLists=new PopulateRestaurantsWithFoodItems().populateLocation();
 
+        //Calling all the arrays populating each restaurant and passing the age checker to the one that need food items
+        myItems=new AdminPage().populateAdvertsPage(LoginPage.getAge());
+        restaurantslist=new AdminPage().populateRestaurants();
+        locationLists=new AdminPage().populateLocation();
 
+        //Finding all the recylerviews
         recyclerView=findViewById(R.id.obandeKitchen);
         recyclerView2=findViewById(R.id.restaurantsRecycler);
         recyclerView3=findViewById(R.id.locationRecycler);
@@ -162,22 +136,17 @@ public class HomePage extends AppCompatActivity {
         godwinAdaptor2=new RestaurantsAdaptor(restaurantslist,AllInOneListener2);
         godwinAdaptor3=new LocationAdaptor(locationLists,locationListener);
 
+
+        //Adapting elements with views
         recyclerView.setAdapter(godwinAdaptor);
         recyclerView2.setAdapter(godwinAdaptor2);
         recyclerView3.setAdapter(godwinAdaptor3);
-
-
-
-
-
-
     }
 
 
-    public  void setLocationListener(){
+    public  void setLocationListener(){//For choosing restaurants available in a location
 
         locationListener= (v, position) -> {
-
 
             Intent intent =new Intent(getApplicationContext(), ApprokoKitchen.class);
             Intent intent2 =new Intent(getApplicationContext(), ObandeKitchen.class);
@@ -188,12 +157,9 @@ public class HomePage extends AppCompatActivity {
 
             if(locationLists.get(position).getLocation().equals("G1")){
 
-
                 startActivity(intent);
 
             }
-
-
 
             if(locationLists.get(position).getLocation().equals("L2")){
 
@@ -221,7 +187,7 @@ public class HomePage extends AppCompatActivity {
 
 
 
-    public void setMyOnclickListener(){
+    public void setMyOnclickListener(){//Move activity from home page to a chosen restaurant
 
         AllInOneListener2= (v, position) -> {
 
@@ -232,15 +198,11 @@ public class HomePage extends AppCompatActivity {
 
             if(restaurantslist.get(position).getRestaurantsName().equals("Approko Kitchen")){
 
-
-
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
             }
 
             else if(restaurantslist.get(position).getRestaurantsName().equals("Obande Kitchen")){
-
-
 
                 startActivity(intent2);
                 overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
@@ -248,10 +210,7 @@ public class HomePage extends AppCompatActivity {
 
             else if (restaurantslist.get(position).getRestaurantsName().equals("Ada Restaurant and Bar")){
 
-
-
                 startActivity(intent3);
-
             }
 
             else if (restaurantslist.get(position).getRestaurantsName().equals("Stainless")){

@@ -87,16 +87,17 @@
 
     <EditText
         android:id="@+id/enterCountry"
-        android:layout_width="207dp"
-        android:layout_height="31dp"
+        android:layout_width="226dp"
+        android:layout_height="36dp"
         android:layout_margin="25dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/homekeyback"
         android:ems="10"
-        android:hint="Enter your country"
+        android:hint="Current country of location"
         android:textAlignment="center"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterMaidenName"
         tools:ignore="MissingConstraints,NotSibling" />

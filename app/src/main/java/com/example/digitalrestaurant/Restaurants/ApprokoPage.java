@@ -100,7 +100,9 @@ public class ApprokoPage extends AppCompatActivity {
         myOrder4=order;
     }
 
-    public void MyOrders2(){
+
+
+    public void MyOrders2(){//Controls which restaurant  will receive items needed from them
 
         vOrders2=myOrders2.getApprokoCartItems();
 
@@ -125,7 +127,7 @@ public class ApprokoPage extends AppCompatActivity {
                 orderAdaptors2.notifyDataSetChanged();
 
 
-                setMyOrder4(vOrders2);
+                setMyOrder4(vOrders2);//Receive current state
 
                 myOrders2.clearItemsFromAPProkoTabel();
 
@@ -135,7 +137,7 @@ public class ApprokoPage extends AppCompatActivity {
                             , x.getPhone());
 
 
-                    myOrders2.addApprokoData(oders2);
+                    myOrders2.addApprokoData(oders2);//Store current state
 
 
                 }

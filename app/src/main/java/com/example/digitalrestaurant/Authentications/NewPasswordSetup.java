@@ -12,7 +12,7 @@ import com.example.digitalrestaurant.Authentications.LoginPage;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.R;
 
-public class NewPassword extends AppCompatActivity {
+public class NewPasswordSetup extends AppCompatActivity {
 
     Button submitButton;
     EditText newPassword,confrimNewPassword;

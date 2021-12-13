@@ -38,7 +38,7 @@ public class StainlessPage extends AppCompatActivity {
 
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed() {//Exit app
 
 
         if(press+2000>System.currentTimeMillis()){
@@ -75,7 +75,7 @@ public class StainlessPage extends AppCompatActivity {
 
     }
 
-    public void clearData(){
+    public void clearData(){//Will delete all orders from stainless bar
         clear.setOnClickListener(v -> {
 
             myOrders4.clearItemsFromStainless();
@@ -99,7 +99,10 @@ public class StainlessPage extends AppCompatActivity {
         myOrder6=order;
     }
 
-    public void MyOrders4(){
+
+
+
+    public void MyOrders4(){//Controls which restaurant  will receive items needed from them
 
         vOrders4=myOrders4.getStainlessCartItems();
 
@@ -124,7 +127,7 @@ public class StainlessPage extends AppCompatActivity {
                 orderAdaptors4.notifyDataSetChanged();
 
 
-                setMyOrder6(vOrders4);
+                setMyOrder6(vOrders4);//Receive current state
 
                 myOrders4.clearItemsFromStainless();
 
@@ -134,7 +137,7 @@ public class StainlessPage extends AppCompatActivity {
                             , x.getPhone());
 
 
-                    myOrders4.addStainlessData(oders2);
+                    myOrders4.addStainlessData(oders2);//Store current state
 
 
                 }

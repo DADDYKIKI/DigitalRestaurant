@@ -69,7 +69,7 @@
             android:required="false" />
 
         <activity
-            android:name="com.example.digitalrestaurant.Authentications.NewPassword"
+            android:name="com.example.digitalrestaurant.Authentications.NewPasswordSetup"
             android:exported="false"
             android:parentActivityName="com.example.digitalrestaurant.Authentications.LoginPage" />
         <activity
@@ -112,10 +112,6 @@
         <activity
             android:name="com.example.digitalrestaurant.Kitchens.Stainless"
             android:exported="false" />
-        <activity
-            android:name="com.example.digitalrestaurant.Cart"
-            android:exported="false"
-            android:parentActivityName="com.example.digitalrestaurant.HomePage" />
         <activity
             android:name="com.example.digitalrestaurant.Authentications.SignupPage"
             android:exported="false"

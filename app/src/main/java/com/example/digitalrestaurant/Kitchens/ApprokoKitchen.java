@@ -14,19 +14,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Authentications.LoginPage;
-import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
-import com.example.digitalrestaurant.PopulateRestaurantsWithFoodItems;
+import com.example.digitalrestaurant.AdminPage;
 import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.Details.ItemData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ApprokoKitchen extends AppCompatActivity {
 
@@ -61,7 +59,7 @@ public class ApprokoKitchen extends AppCompatActivity {
         helper=new DatabaseHelper(this);
 
 
-        Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Make your choice\n scrolling food items\nvertically", Toast.LENGTH_SHORT).show();
 
 
         makeApprokoRestaurantAdaptor();
@@ -74,7 +72,7 @@ public class ApprokoKitchen extends AppCompatActivity {
     }
 
 
-    public void homeKey(){
+    public void homeKey(){//back home
         homeKey.setOnClickListener(v -> {
             Intent intent=new Intent(this, HomePage.class);
             startActivity(intent);
@@ -84,7 +82,7 @@ public class ApprokoKitchen extends AppCompatActivity {
 
     }
 
-    public void menuKey(){
+    public void menuKey(){//Menu
         menuKey.setOnClickListener(v -> {
             Intent intent2=new Intent(this, Menu.class);
             startActivity(intent2);
@@ -96,11 +94,11 @@ public class ApprokoKitchen extends AppCompatActivity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void makeApprokoRestaurantAdaptor(){
+    public void makeApprokoRestaurantAdaptor(){//Attaching list of food items with recycler view for display
 
         setAprokoOnclickListener();
 
-        aprokoItems=new PopulateRestaurantsWithFoodItems().populateAprokoPage(LoginPage.getAge());
+        aprokoItems=new AdminPage().populateAprokoPage(LoginPage.getAge());
 
         aprokoRecycler =findViewById(R.id.aprokoKitchen);
 
@@ -127,7 +125,7 @@ public class ApprokoKitchen extends AppCompatActivity {
 
     }
 
-    public void setAprokoOnclickListener(){
+    public void setAprokoOnclickListener(){//This will send my order details to my order/basket page
 
             approkolistener2= (v, position) -> {
 

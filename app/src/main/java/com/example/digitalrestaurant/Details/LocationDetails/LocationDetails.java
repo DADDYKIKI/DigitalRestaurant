@@ -24,7 +24,4 @@ public class LocationDetails implements Serializable {
         return restaurants;
     }
 
-    public void setRsetaurants(String rsetaurants) {
-        this.restaurants = rsetaurants;
-    }
 }

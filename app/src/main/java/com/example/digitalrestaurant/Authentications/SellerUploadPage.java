@@ -44,15 +44,12 @@ public class SellerUploadPage extends AppCompatActivity {
 
 
 
-
-
     @Override
     public void onBackPressed() {
 
         Intent intent5 =new Intent(getApplicationContext(), LoginPageForFoodSeller2.class);
 
         startActivity(intent5);
-
     }
 
 
@@ -62,13 +59,9 @@ public class SellerUploadPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_upload_page);
 
-
-
-
         newItems=new ArrayList<>();
 
         helper=new DatabaseHelper(this);
-
 
         price=findViewById(R.id.priceOfFood);
         name=findViewById(R.id.nameOfFoodItem);
@@ -84,8 +77,6 @@ public class SellerUploadPage extends AppCompatActivity {
 
         homeKey2();
         menuKey2();
-
-
 }
 
 
@@ -110,67 +101,6 @@ public class SellerUploadPage extends AppCompatActivity {
 
     }
 
-   /* public void populateOurDatabase(){
-        upload.setOnClickListener(v -> {
-
-            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                    Manifest.permission.READ_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
-
-
-            String foodImagelabel=pictureLabel.getText().toString();
-           // String file= Environment.getExternalStorageDirectory().getPath() + "/Downloads/" + foodImagelabel + ".jpeg";
-            String foodPrice=price.getText().toString();
-            String foodName=name.getText().toString();
-            String foodNationality=nationality.getText().toString();
-            String foodAlcohol=alcoholic.getText().toString();
-
-           // Bitmap toBitmap = BitmapFactory.decodeFile(file);
-            ByteArrayOutputStream byteOutput = new ByteArrayOutputStream();
-           // toBitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteOutput);
-            byte[] imageByte = byteOutput.toByteArray();
-
-
-            // if (foodPrice.equals("") || foodName.equals("")|| foodNationality.equals(""))
-            //  {
-
-            //  Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();}
-
-            //     else{
-
-            // newItems.add(new ItemData(foodPrice,
-            //  foodName,foodNationality,uploadFoodImage(),imageLabel,foodAlcohol);
-
-
-         /*   boolean populate=helper.uploadStatement(foodPrice,
-                    foodName,foodNationality,foodAlcohol);
-
-
-            if(populate==true){
-
-                price.setText("");
-                name.setText("");
-                nationality.setText("");
-                pictureLabel.setText("");
-                alcoholic.setText("");
-
-                Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();}
-
-            else Toast.makeText(this, "Not added", Toast.LENGTH_SHORT).show();
-
-
-        });}*/
-
-
-
-
-
-       /* public Bitmap converToBitmap(String txt){
-
-                byte [] encodeByte = Base64.decode(txt,Base64.DEFAULT);
-                Bitmap bitmap = BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
-                return bitmap;
-
-            }*/
         }
 
 

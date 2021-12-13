@@ -13,20 +13,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Authentications.LoginPage;
-import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
-import com.example.digitalrestaurant.PopulateRestaurantsWithFoodItems;
+import com.example.digitalrestaurant.AdminPage;
 import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.Details.ItemData;
-import com.example.digitalrestaurant.RecyclerSpacing;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class AdaKitchen extends AppCompatActivity {
 
@@ -54,6 +51,7 @@ public class AdaKitchen extends AppCompatActivity {
         setContentView(R.layout.ada_restaurant_homepage);
 
         homeKey=findViewById(R.id.homeKey);
+
         menuKey=findViewById(R.id.menuKeyS);
 
         adaItems= new ArrayList<>();
@@ -63,7 +61,7 @@ public class AdaKitchen extends AppCompatActivity {
         helper=new DatabaseHelper(this);
 
 
-        Toast.makeText(this, "Make your choice\n scrolling food items\nhorizontally", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Make your choice\n scrolling food items\nvertically", Toast.LENGTH_SHORT).show();
 
 
         openMyBasket();
@@ -77,7 +75,7 @@ public class AdaKitchen extends AppCompatActivity {
 
     }
 
-    public void homeKey(){
+    public void homeKey(){//Take back to home
         homeKey.setOnClickListener(v -> {
             Intent intent=new Intent(this, HomePage.class);
             startActivity(intent);
@@ -87,7 +85,7 @@ public class AdaKitchen extends AppCompatActivity {
 
     }
 
-    public void menuKey(){
+    public void menuKey(){//Menu
         menuKey.setOnClickListener(v -> {
 
 
@@ -102,7 +100,7 @@ public class AdaKitchen extends AppCompatActivity {
 
     }
 
-    public void openMyBasket(){
+    public void openMyBasket(){//View basket
 
         basket.setOnClickListener(v -> {
 
@@ -118,19 +116,16 @@ public class AdaKitchen extends AppCompatActivity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void makeAdaRestaurantAdaptor(){
+    public void makeAdaRestaurantAdaptor(){//Attaching list of food items with recycler view for display
 
 
         setAdaOnclickListener();
 
-        adaItems=new PopulateRestaurantsWithFoodItems().populateAdaPage(LoginPage.getAge());
+        adaItems=new AdminPage().populateAdaPage(LoginPage.getAge());
 
         adaRecycler =findViewById(R.id.adaKitchenRecycler);
 
         adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-
-        RecyclerSpacing space=new RecyclerSpacing(40);
-        adaRecycler.addItemDecoration(space);
 
         adaAdaptor=new PopulateKitchensWithItemsAdaptor(adaItems,adalistener2);
 
@@ -140,7 +135,7 @@ public class AdaKitchen extends AppCompatActivity {
 
 
 
-    public void setAdaOnclickListener(){
+    public void setAdaOnclickListener(){//This will send my order details to my order/basket page
 
         adalistener2= (v, position) -> {
 

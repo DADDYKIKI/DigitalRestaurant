@@ -1387,6 +1387,7 @@ dimen action_bar_size
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen alert_width
+dimen app_bar_height
 dimen appcompat_dialog_background_inset
 dimen buttons_stroke_width
 dimen cardview_compat_inset_shadow
@@ -1702,6 +1703,7 @@ dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
 dimen test_mtrl_calendar_day_cornerSize
+dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -2042,6 +2044,7 @@ id all
 id always
 id animateToEnd
 id animateToStart
+id app_bar
 id approkoC
 id aprokoKitchen
 id areYouNewSell
@@ -2162,6 +2165,7 @@ id error_x
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab
 id fade
 id fill
 id fill_horizontal
@@ -2522,6 +2526,8 @@ id titleDividerNoCustom
 id title_template
 id title_text
 id toggle
+id toolbar
+id toolbar_layout
 id top
 id topPanel
 id totalOrderPrice
@@ -2629,6 +2635,7 @@ layout activity_ada_page
 layout activity_approko_page
 layout activity_food_seller
 layout activity_forgot_password
+layout activity_help_section
 layout activity_intro_page
 layout activity_main
 layout activity_new_password
@@ -2644,6 +2651,7 @@ layout aproko_resataurant_homepage
 layout cart
 layout cart_container
 layout contacts
+layout content_scrolling
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2746,6 +2754,7 @@ layout text_view_without_line_height
 layout vendor_login
 layout vendor_orders
 menu activity_main_drawer
+menu menu_help_section
 menu my_location
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -2824,6 +2833,7 @@ string icon_content_description
 string invalid_password
 string invalid_username
 string item_view_role_description
+string large_text
 string login
 string login_failed
 string material_clock_display_divider
@@ -2899,6 +2909,7 @@ string search_menu_title
 string signinLabel
 string signup
 string status_bar_notification_info_overflow
+string title_activity_help_section
 string title_activity_login
 string title_activity_my_location
 string welcome

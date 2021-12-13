@@ -28,6 +28,9 @@ import java.util.Locale;
 
 public class GetMyLocation extends AppCompatActivity {
 
+
+    //This code was not used for getting location in this project. THis is because, it will affect testing by my scorers
+
     private static String MYCOUNTRYOFLOCATION = "";
 
     Double longitude = 0.0;

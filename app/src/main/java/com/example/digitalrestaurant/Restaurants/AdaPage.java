@@ -79,7 +79,7 @@ public class AdaPage extends AppCompatActivity {
     }
 
 
-    public void clearData(){
+    public void clearData(){//Will delete all ordered items from Ada Kitchen
         adaclearer.setOnClickListener(v -> {
 
             myOrders.clearItemsFromAdaTabel();
@@ -93,10 +93,10 @@ public class AdaPage extends AppCompatActivity {
 
     }
 
+    //The store the state of items after a delete
     public static List<VendorOrderDetails> getMyOrder3() {
         return myOrder3;
     }
-
 
     public static void setMyOrder3(List<VendorOrderDetails> order) {
 
@@ -107,7 +107,7 @@ public class AdaPage extends AppCompatActivity {
 
 
 
-    public void MyOrders(){
+    public void MyOrders(){//Controls which restaurant  will receive items needed from them
 
 
         vOrders=myOrders.getAdaCartItems();
@@ -116,6 +116,8 @@ public class AdaPage extends AppCompatActivity {
 
         adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
+
+          //For swiping and deleting
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
 
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
@@ -135,7 +137,7 @@ public class AdaPage extends AppCompatActivity {
                 orderAdaptors.notifyDataSetChanged();
 
 
-                setMyOrder3(vOrders);
+                setMyOrder3(vOrders);//Current received  here
 
                 myOrders.clearItemsFromAdaTabel();
 
@@ -145,7 +147,7 @@ public class AdaPage extends AppCompatActivity {
                             , x.getPhone());
 
 
-                    myOrders.addAdaData(oders2);
+                    myOrders.addAdaData(oders2);//Current state stored here
 
 
                 }

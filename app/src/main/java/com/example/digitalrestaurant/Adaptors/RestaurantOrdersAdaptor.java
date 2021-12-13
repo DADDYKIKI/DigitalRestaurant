@@ -18,16 +18,14 @@ public class RestaurantOrdersAdaptor extends RecyclerView.Adapter<RestaurantOrde
     List<VendorOrderDetails> vOrders;
 
 
-
-    public RestaurantOrdersAdaptor(List<VendorOrderDetails> vOrders) {
+    public RestaurantOrdersAdaptor(List<VendorOrderDetails> vOrders) {//Constructor
 
         this.vOrders = vOrders;
     }
 
 
 
-
-    public class RestaurantViewHolder extends RecyclerView.ViewHolder{
+    public class RestaurantViewHolder extends RecyclerView.ViewHolder{//View holder
 
         TextView customerName, phone, itemName,quantity,totalPrice;
 
@@ -53,7 +51,7 @@ public class RestaurantOrdersAdaptor extends RecyclerView.Adapter<RestaurantOrde
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RestaurantOrdersAdaptor.RestaurantViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RestaurantOrdersAdaptor.RestaurantViewHolder holder, int position) {// all the view to their positions
 
         holder.customerName.setText(vOrders.get(position).getCusName());
         holder.phone.setText(vOrders.get(position).getPhone());

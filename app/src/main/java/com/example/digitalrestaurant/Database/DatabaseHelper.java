@@ -109,9 +109,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-
-
+    public void onCreate(SQLiteDatabase db) {//Creating of all tables when application is run for the first time
 
            //Cart table
         db.execSQL("CREATE TABLE " + MY_TABLE_NAME + "("
@@ -174,7 +172,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {//Upgrade database if detect an upgrade
                 db.execSQL("DROP TABLE IF EXISTS "+MY_TABLE_NAME);
                 db.execSQL("DROP TABLE IF EXISTS "+MY_USER_AND_PASS_TABLE );
                 db.execSQL("DROP TABLE IF EXISTS "+FOODS_FOR_SALE);
@@ -328,7 +326,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             }
 
-    public boolean updateUserPassword(String email,String password){
+    public boolean updateUserPassword(String email,String password){//For password updates
 
                 SQLiteDatabase myDatabase=this.getWritableDatabase();
 
@@ -356,12 +354,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SQLiteDatabase myDatabase3 = this.getWritableDatabase();//database
                 List<OrderDetails> mylist = new ArrayList<>();
 
-
-
                 Cursor cur = myDatabase3.rawQuery("select * from " + MY_TABLE_NAME, null);//Reads data from the database
 
-                if (cur.getCount()>0) {//If cursor not empty
-                    if (cur.moveToFirst())
+                if (cur.getCount()>0) {        //If cursor not empty
+                    if (cur.moveToFirst())       //If cursor will move to another element
 
                         do {
 
@@ -388,7 +384,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public List<VendorOrderDetails> getAdaCartItems() {
+    public List<VendorOrderDetails> getAdaCartItems() {//Getting items to be displayed in customer basket
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
         List<VendorOrderDetails> mylist = new ArrayList<>();
@@ -409,7 +405,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String phone = cur.getString(cur.getColumnIndex(COLUMNADA6));
 
 
-                    VendorOrderDetails myoder = new VendorOrderDetails(name, cusName,totalPrice,quantity,phone);
+                    VendorOrderDetails myoder = new VendorOrderDetails(name, cusName,totalPrice,quantity,phone);//Storing all collect data for shipment
 
                     mylist.add(myoder);
 
@@ -426,12 +422,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public List<VendorOrderDetails> getApprokoCartItems() {
+    public List<VendorOrderDetails> getApprokoCartItems() {//Get items to be displayed in Approko kitchen as customer orders
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
         List<VendorOrderDetails> mylist = new ArrayList<>();
-
-
 
         Cursor cur = myDatabase3.rawQuery("select * from " + APPROKO_TABLE, null);
 
@@ -451,14 +445,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     mylist.add(myoder);
 
-
                 } while (cur.moveToNext());
 
             cur.close();
             myDatabase3.close();
-
-
-
 
         }return mylist;
     }
@@ -468,8 +458,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
         List<VendorOrderDetails> mylist = new ArrayList<>();
-
-
 
         Cursor cur = myDatabase3.rawQuery("select * from " + OBANDE_TABLE, null);
 
@@ -484,19 +472,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String quantity = cur.getString(cur.getColumnIndex(COLUMNOABA5));
                     String phone = cur.getString(cur.getColumnIndex(COLUMNOABA6));
 
-
                     VendorOrderDetails myoder = new VendorOrderDetails(name, quantity, totalPrice, cusName,phone);
 
                     mylist.add(myoder);
 
-
                 } while (cur.moveToNext());
 
             cur.close();
+
             myDatabase3.close();
-
-
-
 
         }return mylist;
     }
@@ -507,8 +491,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase myDatabase3 = this.getWritableDatabase();
         List<VendorOrderDetails> mylist = new ArrayList<>();
-
-
 
         Cursor cur = myDatabase3.rawQuery("select * from " + STAINLESS, null);
 
@@ -570,7 +552,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     @SuppressLint("Range")
-    public void clearItemsFromStainless() {
+    public void clearItemsFromStainless() {//For clearing items in Stainless restaurant order lists
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
         myDatabase.execSQL("delete from "+ STAINLESS);
@@ -640,15 +622,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
 
     @SuppressLint("Range")
-    public String setCustomerWelcomeName(String email) {
+    public String setCustomerWelcomeName(String email) {//This used to set Customer name during login using their emails to detect the and send their name for static storage.
 
                 SQLiteDatabase myDatabase = this.getReadableDatabase();
 
                 Cursor cur = myDatabase.rawQuery("select * from " +MY_USER_AND_PASS_TABLE,
                         null);
 
-                if(cur.getCount()>0) {
-                    while (cur.moveToNext()) {
+                if(cur.getCount()>0) {//If cursor is not empty
+                    while (cur.moveToNext()) {//If cursor will move to another element
 
                         if(cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
 
@@ -663,7 +645,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public boolean checkforUniqueEmailAddress(String email) {
+    public boolean checkforUniqueEmailAddress(String email) {//Will check if a customer's  email address is already taken
 
                 SQLiteDatabase myDatabase = this.getReadableDatabase();
 
@@ -687,7 +669,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public boolean checkforVendorsUniqueEmailAddress(String email) {
+    public boolean checkforVendorsUniqueEmailAddress(String email) {//For vendor as above
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
 

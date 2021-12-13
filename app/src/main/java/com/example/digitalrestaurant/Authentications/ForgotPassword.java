@@ -16,12 +16,12 @@ import com.example.digitalrestaurant.R;
 public class ForgotPassword extends AppCompatActivity {
 
     Button checkUser,signup;
+
     EditText enterEmail,enterMaidenName;
 
     TextView userExistText;
 
     DatabaseHelper checker;
-
 
     private long press;
 
@@ -63,7 +63,7 @@ public class ForgotPassword extends AppCompatActivity {
         checkUser();
     }
 
-    public void checkUser() {
+    public void checkUser() {//Will authenticate your password
 
         checkUser.setOnClickListener(v -> {
 
@@ -71,19 +71,19 @@ public class ForgotPassword extends AppCompatActivity {
 
             if(yes==true){
 
-                Intent intent=new Intent(this,NewPassword.class);
+                Intent intent=new Intent(this, NewPasswordSetup.class);
                 intent.putExtra("emailSentForPass",enterEmail.getText().toString());
                 startActivity(intent);
             }
 
             else{   setTextVisible(v);
-                Toast.makeText(this, "You can creat a new account", Toast.LENGTH_SHORT).show();}
+                Toast.makeText(this, "You can create a new account if you like", Toast.LENGTH_SHORT).show();}
 
 
         });
     }
 
-    public void signupAgain() {
+    public void signupAgain() {//back to signup page
 
         signup.setOnClickListener(v -> {
             Intent intent=new Intent(this,SignupPage.class);
@@ -92,7 +92,7 @@ public class ForgotPassword extends AppCompatActivity {
         });
     }
 
-    void setTextVisible(View view){
+    void setTextVisible(View view){//sets warning text visibility
         userExistText.setVisibility(View.VISIBLE);
 
     }

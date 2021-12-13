@@ -21,14 +21,11 @@ public class LoginPage extends AppCompatActivity {
     private static String CUSNAME="";
     private static  int AGE=0;
     private static  int CUSTOMERPHONE=0;
-
-
     private Button loginBut,signUpBut;
     private EditText loginEmail,loginPass;
     private     TextView loginWarningText,forgotPass;
 
     private int attempts=6;
-
 
     DatabaseHelper data, helperL;
 
@@ -38,10 +35,8 @@ public class LoginPage extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-
         Intent i = new Intent(this, Customer.class);
         startActivity(i);
-
     }
 
     @Override
@@ -147,18 +142,18 @@ public class LoginPage extends AppCompatActivity {
 
     public void login(){
 
-        loginBut.setOnClickListener(v -> {
+        loginBut.setOnClickListener(v -> {//Login authentication
 
             data=new DatabaseHelper(this);
 
 
-              if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){
+              if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){//Is a text field empty?
 
                      Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
 
                          }
 
-              else {
+              else {//Are your login details correct?
 
                   Boolean insert=data.getCustomerLoginDetails(loginEmail.getText().toString(),loginPass.getText().toString());
 
@@ -167,21 +162,19 @@ public class LoginPage extends AppCompatActivity {
 
                       LoginPage.this.setTextInvisible(v);
 
-
                       Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
 
                       Boolean yes=data.checkforAge(loginEmail.getText().toString());
 
-                      Boolean correct=data.checkCountry(loginEmail.getText().toString());
-
-
+                      Boolean correct=data.checkCountry(loginEmail.getText().toString());//Is your country Nigeria or else where?
 
                       setCusName(setCustomerWelcomeTextF());
-                      setCUSTOMERPHONE(setCustomerPhone());
+
+                      setCUSTOMERPHONE(setCustomerPhone());//Save a customer's phone number with registered email address
 
                       Intent intent=new Intent(this,HomePage.class);
 
-                      if(yes==true)setAge(17);
+                      if(yes==true)setAge(17);//set the global age used by other class for age authentication
 
                       else setAge(18);
 
@@ -193,8 +186,10 @@ public class LoginPage extends AppCompatActivity {
 
                   }
 
-                  else {
-                        setTextVisible(v);
+                  else {//Controls number of failed attempts in login
+
+                      setTextVisible(v);
+
                       setButtonVisible(v);
 
                       attempts--;
@@ -208,7 +203,7 @@ public class LoginPage extends AppCompatActivity {
                                   Toast.LENGTH_SHORT).show();
 
                       }
-                      if(attempts==0){
+                      if(attempts==0){//Action taken when no login attempts is left
 
                           loginEmail.setEnabled(false);
                           loginPass.setEnabled(false);

@@ -29,10 +29,6 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
     DatabaseHelper data;
 
 
-
-
-
-
     @Override
     public void onBackPressed() {
 
@@ -74,13 +70,14 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
     }
 
 
-public void loginV(){
+public void loginV(){//Food vendor's loging authentication
+
         loginButV.setOnClickListener(v -> {
 
                 data=new DatabaseHelper(this);
 
 
-        if (loginEmail.getText().toString().equals("") || loginPassV.getText().toString().equals("")) {
+        if (loginEmail.getText().toString().equals("") || loginPassV.getText().toString().equals("")) {//Are all fields complete?
 
                     Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
                 }
@@ -90,7 +87,8 @@ public void loginV(){
 
                     Boolean insert=data.getVendorLoginDetails(loginEmail.getText().toString(),loginPassV.getText().toString());
 
-             if (insert==true) {
+
+             if (insert==true) {//Controls restaurant agent login to their page
 
 
                     String restaurant=data.checkRestaurant(loginEmail.getText().toString());
@@ -116,14 +114,13 @@ public void loginV(){
                             Toast.makeText(this, "Success!!!", Toast.LENGTH_SHORT).show();
                             click3(StainlessPage.class);
                             }
-
-
-
-
              }
 
-             else{
+
+
+             else{//Controls number of failed attempts
                     this.setTextVisible(v);
+
                     this.setButtonVisible(v);
 
                     attempts--;
@@ -137,7 +134,7 @@ public void loginV(){
                                 Toast.LENGTH_SHORT).show();
 
                     }
-                    if (attempts == 0) {
+                    if (attempts == 0) {//Action if no attmept is left
 
                         loginEmail.setEnabled(false);
                         loginPassV.setEnabled(false);
@@ -158,45 +155,31 @@ public void loginV(){
                         Toast.makeText(this, "Or I will advice you to \nsign up if you haven't done so",
                                 Toast.LENGTH_SHORT).show();
                     }
-
                 }
-
-
-
-
             }
-
-
 });}
 
 
-    public void click3(Object x){
+    public void click3(Object x){//Intents
 
         Intent intent=new Intent(this, (Class<?>) x);
 
         startActivity(intent);
-
         }
-
 
     void setTextVisible(View view){
         loginWarningTextV.setVisibility(View.VISIBLE);
-
     }
 
     void setButtonInvisible(View view){
         loginButV.setVisibility(View.INVISIBLE);
-
-
     }
 
     void setTextInvisible(View view){
         loginWarningTextV.setVisibility(View.INVISIBLE);
-
     }
 
     void setButtonVisible(View view){
 
         signUpButV.setVisibility(View.VISIBLE);}
-
 }

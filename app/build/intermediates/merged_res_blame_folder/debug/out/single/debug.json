@@ -84,6 +84,10 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/obandechinchin.jpeg"
     },
     {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/layout_content_scrolling.xml.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/content_scrolling.xml"
+    },
+    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/layout_vendor_login.xml.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/vendor_login.xml"
     },
@@ -140,6 +144,10 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/stainless_restaurant_homepage2.xml"
     },
     {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/layout-w936dp_content_scrolling.xml.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout-w936dp/content_scrolling.xml"
+    },
+    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_oba.jpeg.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/oba.jpeg"
     },
@@ -148,12 +156,12 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_signup_page_for_vendor.xml"
     },
     {
-        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_adaherobear.jpeg.flat",
-        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/adaherobear.jpeg"
-    },
-    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_obd.jpeg.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/obd.jpeg"
+    },
+    {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_adaherobear.jpeg.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/adaherobear.jpeg"
     },
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-v24_chickenlaps.jpeg.flat",
@@ -232,6 +240,10 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/obandemoimoi.jpeg"
     },
     {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/layout-w1240dp_content_scrolling.xml.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout-w1240dp/content_scrolling.xml"
+    },
+    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/layout_contacts.xml.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/contacts.xml"
     },
@@ -280,6 +292,10 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/obandepouridgebeans.jpeg"
     },
     {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/layout_activity_help_section.xml.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_help_section.xml"
+    },
+    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_adamakeup.jpeg.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/adamakeup.jpeg"
     },
@@ -306,6 +322,10 @@
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/layout_popular_food_display_container.xml.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/popular_food_display_container.xml"
+    },
+    {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/menu_menu_help_section.xml.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/menu/menu_help_section.xml"
     },
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_obandeegusisoup.jpeg.flat",

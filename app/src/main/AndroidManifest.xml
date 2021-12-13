@@ -51,7 +51,7 @@
             android:required="false" />
 
         <activity
-            android:name=".Authentications.NewPassword"
+            android:name=".Authentications.NewPasswordSetup"
             android:exported="false"
             android:parentActivityName=".Authentications.LoginPage" />
         <activity
@@ -94,10 +94,6 @@
         <activity
             android:name=".Kitchens.Stainless"
             android:exported="false" />
-        <activity
-            android:name=".Cart"
-            android:exported="false"
-            android:parentActivityName=".HomePage" />
         <activity
             android:name=".Authentications.SignupPage"
             android:exported="false"

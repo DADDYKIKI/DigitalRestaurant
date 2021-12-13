@@ -25,16 +25,11 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
     private TextView homeKey,menuKey;
 
 
-
     @Override
-    public void onBackPressed() {
-
-
-
+    public void onBackPressed() {//Move Backward
 
             Intent i = new Intent(this, FoodSeller.class);
             startActivity(i);
-
 
         }
 
@@ -61,7 +56,7 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
 
 
     public void signupV(){
-        signSubBtnV.setOnClickListener(v -> {
+        signSubBtnV.setOnClickListener(v -> {//For login authentication
 
             helper=new DatabaseHelper(this);
 
@@ -91,11 +86,7 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
                 if(check==true)Toast.makeText(this, "Email address already in use.\nTry another",
                         Toast.LENGTH_SHORT).show();
 
-
-
-
                 else {
-
 
                     boolean signup =
                             helper.addVendorData(name, email, password);

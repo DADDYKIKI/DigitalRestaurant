@@ -8,9 +8,6 @@ public class UserDetails implements Serializable {
     int age,phone;
 
 
-
-
-
     public UserDetails(String nameOfUser, String email, int age,int phone, String maidenName, String country, String password) {
         this.nameOfUser = nameOfUser;
         this.email = email;
@@ -24,32 +21,17 @@ public class UserDetails implements Serializable {
     public String getMaidenName() {
         return maidenName;
     }
-    public void setMaideName(String maidenName) {
-        this.maidenName = maidenName;
-    }
 
     public String getCountry() {
         return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     public int getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
-
     public String getNameOfUser() {
         return nameOfUser;
-    }
-
-    public void setNameOfUser(String nameOfUser) {
-        this.nameOfUser = nameOfUser;
     }
 
     public String getEmail() {

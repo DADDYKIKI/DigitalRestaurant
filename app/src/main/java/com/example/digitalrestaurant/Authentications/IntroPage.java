@@ -26,13 +26,10 @@ public class IntroPage extends AppCompatActivity {
 
     TextView customerTxt, foodSellerTxt;
 
-
     private long press;
-
 
     @Override
     public void onBackPressed() {
-
 
         if(press+2000>System.currentTimeMillis()){
 
@@ -60,11 +57,8 @@ public class IntroPage extends AppCompatActivity {
 
         customerTxt.setOnClickListener(v -> clickIntro(Customer.class));
 
-
         foodSellerTxt.setOnClickListener(v -> clickIntro(FoodSeller.class));
     }
-
-
 
 
 

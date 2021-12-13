@@ -13,19 +13,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor;
 import com.example.digitalrestaurant.Authentications.LoginPage;
-import com.example.digitalrestaurant.Cart;
 import com.example.digitalrestaurant.Database.DatabaseHelper;
 import com.example.digitalrestaurant.HomePage;
 import com.example.digitalrestaurant.Menu;
 import com.example.digitalrestaurant.Order;
-import com.example.digitalrestaurant.PopulateRestaurantsWithFoodItems;
+import com.example.digitalrestaurant.AdminPage;
 import com.example.digitalrestaurant.R;
 import com.example.digitalrestaurant.Details.ItemData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Stainless extends AppCompatActivity {
 
@@ -55,6 +53,8 @@ public class Stainless extends AppCompatActivity {
         floater=findViewById(R.id.floatingActionButton);
         homeKey=(TextView) findViewById(R.id.homeKey);
         menuKey=findViewById(R.id.menuKeyS);
+
+        Toast.makeText(this, "Make your choice\n scrolling food items\nvertically", Toast.LENGTH_SHORT).show();
 
 
         helper=new DatabaseHelper(this);
@@ -101,11 +101,11 @@ public class Stainless extends AppCompatActivity {
 
      //For displaying items for sale
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void makeAdaRestaurantAdaptor(){
+    public void makeAdaRestaurantAdaptor(){//Attaching list of food items with recycler view for display
 
         setStainlessOnclickListener();
 
-        stainlessItems=new PopulateRestaurantsWithFoodItems().populateStainlessPage(LoginPage.getAge());
+        stainlessItems=new AdminPage().populateStainlessPage(LoginPage.getAge());
 
         stainlessRecycler =findViewById(R.id.stainlessKitchen);
 

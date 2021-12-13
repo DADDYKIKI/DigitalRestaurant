@@ -20,15 +20,15 @@ public class PopulateKitchensWithItemsAdaptor extends RecyclerView.Adapter<Popul
 
     private RestaurantsRecyclerViewListener restaurantListener;
 
-
-
     List<ItemData> itemDatalist;
+
 
     public PopulateKitchensWithItemsAdaptor(List<ItemData> itemDatalist, RestaurantsRecyclerViewListener restaurantListener) {
         this.itemDatalist = itemDatalist;
         this.restaurantListener=restaurantListener;
 
     }
+
 
     public class GodwinViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView price,name,nationality;

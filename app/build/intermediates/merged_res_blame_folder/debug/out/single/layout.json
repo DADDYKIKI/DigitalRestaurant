@@ -4,6 +4,10 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_approko_page.xml"
     },
     {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/content_scrolling.xml",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/content_scrolling.xml"
+    },
+    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_food_seller.xml",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_food_seller.xml"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ada_restaurant_homepage.xml",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/ada_restaurant_homepage.xml"
+    },
+    {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_help_section.xml",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_help_section.xml"
     },
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/cart_container.xml",

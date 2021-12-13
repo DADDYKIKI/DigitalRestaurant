@@ -1,9 +1,15 @@
 com/example/digitalrestaurant/Database/DatabaseHelper.java
  com.example.digitalrestaurant.Database.DatabaseHelper
-com/example/digitalrestaurant/Cart.java
- com.example.digitalrestaurant.Cart
-com/example/digitalrestaurant/data/model/LoggedInUser.java
- com.example.digitalrestaurant.data.model.LoggedInUser
+com/example/digitalrestaurant/Details/OrderDetails.java
+ com.example.digitalrestaurant.Details.OrderDetails
+com/example/digitalrestaurant/Details/LocationDetails/LocationDetails.java
+ com.example.digitalrestaurant.Details.LocationDetails.LocationDetails
+com/example/digitalrestaurant/Details/VendorOrderDetails.java
+ com.example.digitalrestaurant.Details.VendorOrderDetails
+com/example/digitalrestaurant/BuildConfig.java
+ com.example.digitalrestaurant.BuildConfig
+com/example/digitalrestaurant/Details/RestaurantsData/RestaurantsDetails.java
+ com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails
 com/example/digitalrestaurant/data/Result.java
  com.example.digitalrestaurant.data.Result
  com.example.digitalrestaurant.data.Result$1
@@ -11,32 +17,18 @@ com/example/digitalrestaurant/data/Result.java
  com.example.digitalrestaurant.data.Result$Success
 com/example/digitalrestaurant/data/LoginDataSource.java
  com.example.digitalrestaurant.data.LoginDataSource
-com/example/digitalrestaurant/RecyclerSpacing.java
- com.example.digitalrestaurant.RecyclerSpacing
-com/example/digitalrestaurant/Details/RestaurantsData/RestaurantsDetails.java
- com.example.digitalrestaurant.Details.RestaurantsData.RestaurantsDetails
-com/example/digitalrestaurant/Details/ItemData.java
- com.example.digitalrestaurant.Details.ItemData
 com/example/digitalrestaurant/Details/UserDetails.java
  com.example.digitalrestaurant.Details.UserDetails
 com/example/digitalrestaurant/Details/VendorDetails.java
  com.example.digitalrestaurant.Details.VendorDetails
 com/example/digitalrestaurant/Details/AdvertItems.java
  com.example.digitalrestaurant.Details.AdvertItems
+com/example/digitalrestaurant/Details/ItemData.java
+ com.example.digitalrestaurant.Details.ItemData
 com/example/digitalrestaurant/data/LoginRepository.java
  com.example.digitalrestaurant.data.LoginRepository
-com/example/digitalrestaurant/BuildConfig.java
- com.example.digitalrestaurant.BuildConfig
-com/example/digitalrestaurant/Details/RestaurantsData/RestaurantLogDetails.java
- com.example.digitalrestaurant.Details.RestaurantsData.RestaurantLogDetails
-com/example/digitalrestaurant/Details/AllInOneKitchenData.java
- com.example.digitalrestaurant.Details.AllInOneKitchenData
-com/example/digitalrestaurant/Details/VendorOrderDetails.java
- com.example.digitalrestaurant.Details.VendorOrderDetails
-com/example/digitalrestaurant/Details/OrderDetails.java
- com.example.digitalrestaurant.Details.OrderDetails
-com/example/digitalrestaurant/Details/LocationDetails/LocationDetails.java
- com.example.digitalrestaurant.Details.LocationDetails.LocationDetails
+com/example/digitalrestaurant/data/model/LoggedInUser.java
+ com.example.digitalrestaurant.data.model.LoggedInUser
 com/example/digitalrestaurant/databinding/ActivityNewPasswordBinding.java
  com.example.digitalrestaurant.databinding.ActivityNewPasswordBinding
 com/example/digitalrestaurant/databinding/ContactsBinding.java
@@ -58,12 +50,8 @@ com/example/digitalrestaurant/Authentications/SignupPage.java
  com.example.digitalrestaurant.Authentications.SignupPage
 com/example/digitalrestaurant/databinding/ActivityFoodSellerBinding.java
  com.example.digitalrestaurant.databinding.ActivityFoodSellerBinding
-com/example/digitalrestaurant/Authentications/NewPassword.java
- com.example.digitalrestaurant.Authentications.NewPassword
 com/example/digitalrestaurant/databinding/ActivityApprokoPageBinding.java
  com.example.digitalrestaurant.databinding.ActivityApprokoPageBinding
-com/example/digitalrestaurant/PopulateRestaurantsWithFoodItems.java
- com.example.digitalrestaurant.PopulateRestaurantsWithFoodItems
 com/example/digitalrestaurant/HomePage.java
  com.example.digitalrestaurant.HomePage
 com/example/digitalrestaurant/databinding/MenuBinding.java
@@ -109,14 +97,20 @@ com/example/digitalrestaurant/databinding/AprokoResataurantHomepageBinding.java
  com.example.digitalrestaurant.databinding.AprokoResataurantHomepageBinding
 com/example/digitalrestaurant/databinding/ActivityIntroPageBinding.java
  com.example.digitalrestaurant.databinding.ActivityIntroPageBinding
+com/example/digitalrestaurant/Authentications/NewPasswordSetup.java
+ com.example.digitalrestaurant.Authentications.NewPasswordSetup
 com/example/digitalrestaurant/Menu.java
  com.example.digitalrestaurant.Menu
 com/example/digitalrestaurant/databinding/RestaurantPageContainerBinding.java
  com.example.digitalrestaurant.databinding.RestaurantPageContainerBinding
 com/example/digitalrestaurant/Authentications/SignupPageForFoodSeller2.java
  com.example.digitalrestaurant.Authentications.SignupPageForFoodSeller2
+com/example/digitalrestaurant/databinding/ActivityHelpSectionBinding.java
+ com.example.digitalrestaurant.databinding.ActivityHelpSectionBinding
 com/example/digitalrestaurant/Authentications/LoginPage.java
  com.example.digitalrestaurant.Authentications.LoginPage
+com/example/digitalrestaurant/databinding/ContentScrollingBinding.java
+ com.example.digitalrestaurant.databinding.ContentScrollingBinding
 com/example/digitalrestaurant/Kitchens/Stainless.java
  com.example.digitalrestaurant.Kitchens.Stainless
 com/example/digitalrestaurant/Adaptors/LocationAdaptor.java
@@ -140,6 +134,8 @@ com/example/digitalrestaurant/Adaptors/PopulateKitchensWithItemsAdaptor.java
  com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor
  com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor$GodwinViewHolder
  com.example.digitalrestaurant.Adaptors.PopulateKitchensWithItemsAdaptor$RestaurantsRecyclerViewListener
+com/example/digitalrestaurant/AdminPage.java
+ com.example.digitalrestaurant.AdminPage
 com/example/digitalrestaurant/Adaptors/RestaurantsAdaptor.java
  com.example.digitalrestaurant.Adaptors.RestaurantsAdaptor
  com.example.digitalrestaurant.Adaptors.RestaurantsAdaptor$AllInOneRecyclerViewListener

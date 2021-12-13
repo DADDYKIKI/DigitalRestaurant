@@ -2181,6 +2181,7 @@ id foodsellerSignupBut
 id forever
 id forgotPass
 id fragment_container_view_tag
+id from
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2328,7 +2329,10 @@ id obandelocate
 id off
 id on
 id order
+id orderFoodName
+id orderNationality
 id orderPrice
+id orderRestaurant
 id ordering_container
 id outline
 id outward

@@ -28,12 +28,12 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/justmeats.jpeg"
     },
     {
-        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/menu_activity_main_drawer.xml.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-v24_food.gif.flat",
@@ -56,12 +56,12 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/aproko_resataurant_homepage.xml"
     },
     {
-        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
-    },
-    {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/layout_activity_forgot_password.xml.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/activity_forgot_password.xml"
+    },
+    {
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_maneatingfriedrice.jpeg.flat",
@@ -116,16 +116,16 @@
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_obandemeat.jpeg.flat",
-        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/obandemeat.jpeg"
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_adakitchen.webp.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/adakitchen.webp"
     },
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/layout_login.xml.flat",
         "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/layout/login.xml"
     },
     {
-        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_adakitchen.webp.flat",
-        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/adakitchen.webp"
+        "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_obandemeat.jpeg.flat",
+        "source": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/res/drawable-hdpi/obandemeat.jpeg"
     },
     {
         "merged": "/Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/build/intermediates/merged_res/debug/drawable-hdpi_obf.jpeg.flat",

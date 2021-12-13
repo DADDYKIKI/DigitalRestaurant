@@ -138,7 +138,7 @@ MERGED from [com.pnikosis:materialish-progress:1.7] /Users/godwinonah/.gradle/ca
 	android:supportsRtl
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:18:9-41
+		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:18:9-44
 	android:roundIcon
 		ADDED from /Users/godwinonah/AndroidStudioProjects/DigitalRestaurant/app/src/main/AndroidManifest.xml:19:9-54
 	android:icon

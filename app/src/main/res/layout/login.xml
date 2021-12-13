@@ -11,7 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/tea"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/signSubBtn"
@@ -54,9 +57,10 @@
         android:background="@color/white"
         android:ems="10"
         android:hint="Enter Password"
-        android:textColorHint="#87ceeb"
         android:inputType="textPassword"
         android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="#87ceeb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"

@@ -86,10 +86,7 @@ public class Order extends AppCompatActivity {
 
 
         orderPrice=findViewById(R.id.orderPrice);
-        orderNationality=findViewById(R.id.orderNationality);
-        orderFoodName=findViewById(R.id.orderFoodName);
         adaFoodImages=findViewById(R.id.adarestaurantcard);
-        restaurantNameA=findViewById(R.id.orderRestaurant);
         quantityText=findViewById(R.id.quantityTxt);
         addToCartBtn=findViewById(R.id.addToCartbtn);
         plusBtn=findViewById(R.id.plusBtn);

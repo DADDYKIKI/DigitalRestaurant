@@ -28,7 +28,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/restaurantbackground">
+                android:background="@drawable/selleruploadbtn">
 
                 <TextView
                     android:id="@+id/orderPrice"

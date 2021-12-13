@@ -11,7 +11,7 @@
         android:layout_width="410dp"
         android:layout_height="641dp"
         android:layout_marginBottom="4dp"
-        android:background="@drawable/aniversary"
+        android:background="@drawable/aprokokitchen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.75"

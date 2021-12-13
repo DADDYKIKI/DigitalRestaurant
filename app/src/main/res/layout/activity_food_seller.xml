@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/obandemeat"
+    android:background="@drawable/bordera3"
     tools:context=".Authentications.FoodSeller">
 
 
@@ -59,7 +59,7 @@
         android:fontFamily="sans-serif-thin"
         android:text="Welcome to Obande Digital Restaurants"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_blue_light"
+        android:textColor="@android:color/black"
         android:textColorHighlight="@color/black"
         android:textSize="70dp"
         android:textStyle="bold"

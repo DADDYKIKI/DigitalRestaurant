@@ -2757,6 +2757,7 @@ menu activity_main_drawer
 menu menu_help_section
 menu my_location
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string LOADING

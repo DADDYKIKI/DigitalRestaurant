@@ -38,8 +38,9 @@ public class NewPasswordSetup extends AppCompatActivity {
         setContentView(R.layout.activity_new_password);
 
         newPassword=findViewById(R.id.password);
+        newPassword.setHint("Enter new password");
         confrimNewPassword=findViewById(R.id.password2);
-
+        confrimNewPassword.setHint("Confirm new password");
         submitButton=findViewById(R.id.submitButton);
 
         data=new DatabaseHelper(this);

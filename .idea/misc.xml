@@ -28,6 +28,7 @@
         <entry key="app/src/main/res/layout/activity_delete_cart_item.xml" value="0.2296195652173913" />
         <entry key="app/src/main/res/layout/activity_food_seller.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.23645833333333333" />
+        <entry key="app/src/main/res/layout/activity_help_section.xml" value="0.24864130434782608" />
         <entry key="app/src/main/res/layout/activity_intro_page.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2477355072463768" />
         <entry key="app/src/main/res/layout/activity_login_page.xml" value="0.25" />
@@ -72,6 +73,11 @@
         <entry key="app/src/main/res/layout/vendor_login.xml" value="0.23007246376811594" />
         <entry key="app/src/main/res/layout/vendor_orders.xml" value="0.25" />
         <entry key="app/src/main/res/layout/vertical_scroll.xml" value="0.1875" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/menu/menu_help_section.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/menu/my_location.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3260416666666667" />
       </map>
     </option>
   </component>

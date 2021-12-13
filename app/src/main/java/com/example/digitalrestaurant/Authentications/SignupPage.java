@@ -16,7 +16,7 @@ import com.example.digitalrestaurant.R;
 
 public class SignupPage extends AppCompatActivity {
 
-    private EditText signupName,signupEmail,signupAge,signupPhone,signupAddress,signupPaswd,signupCountry;
+    private EditText signupName,signupEmail,signupAge,signupPhone,signupMaidenName,signupPaswd,signupCountry;
 
     private  Button signSubBtn;
 
@@ -40,12 +40,19 @@ public class SignupPage extends AppCompatActivity {
 
 
         signupName = findViewById(R.id.signupNameV);
+        signupName.setHint("Enter Name");
         signupEmail = findViewById(R.id.signupEmailV);
+        signupEmail.setHint("Enter Email");
         signupAge = findViewById(R.id.signupAge);
+        signupAge.setHint("Enter Age");
         signupPhone = findViewById(R.id.signUpPhone);
-        signupAddress= findViewById(R.id.enterMaidenName);
+        signupPhone.setHint("Enter phone number");
+        signupMaidenName= findViewById(R.id.enterMaidenName);
+        signupMaidenName.setHint("Enter Maiden Name");
         signupPaswd = findViewById(R.id.signUpPassV3);
+        signupPaswd.setHint("Enter Password");
         signupCountry = findViewById(R.id.enterCountry);
+        signupCountry.setHint("Country of Location");
 
         signSubBtn = (findViewById(R.id.signSubBtnV));
 
@@ -63,7 +70,7 @@ public class SignupPage extends AppCompatActivity {
             String email = signupEmail.getText().toString();
             String age = signupAge.getText().toString();
             String phone = signupPhone.getText().toString();
-            String maidenName = signupAddress.getText().toString();
+            String maidenName = signupMaidenName.getText().toString();
             String password = signupPaswd.getText().toString();
             String country= signupCountry.getText().toString();
 
@@ -104,7 +111,7 @@ public class SignupPage extends AppCompatActivity {
                             signupEmail.setText("");
                             signupAge.setText("");
                             signupPhone.setText("");
-                            signupAddress.setText("");
+                            signupMaidenName.setText("");
                             signupPaswd.setText("");
 
                             Intent intent = new Intent(this, LoginPage.class);

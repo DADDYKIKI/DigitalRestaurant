@@ -44,8 +44,11 @@ public class SignupPageForFoodSeller2 extends AppCompatActivity {
         menuKey=findViewById(R.id.menuKeyS);
 
         signupName = findViewById(R.id.signupNameV);
+        signupName.setHint("Enter Restaurant");
         signupEmail = findViewById(R.id.signupEmailV);
+        signupEmail.setHint("Enter Email");
         signupPaswd = (findViewById(R.id.signUpPassword));
+        signupPaswd.setHint("Enter password");
 
         signSubBtnV = (findViewById(R.id.signSubBtnV));
 

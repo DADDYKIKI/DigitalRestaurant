@@ -43,11 +43,8 @@ public class LoginPageForFoodSeller2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vendor_login);
-
         loginEmail = findViewById(R.id.enterLoginEmailV);
-        loginEmail.setHint("Enter Email");
         loginPassV = findViewById(R.id.enterLoginPaswdV);
-        loginPassV.setHint("Enter Password");
         loginWarningTextV = findViewById(R.id.loginWarningTextV);
         loginButV = (findViewById(R.id.signSubBtnV));
 

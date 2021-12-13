@@ -46,9 +46,6 @@ public class LoginPage extends AppCompatActivity {
 
         loginEmail = findViewById(R.id.enterLoginEmail);
         loginPass = findViewById(R.id.enterLoginPaswd);
-        loginEmail.setHint("Enter Email");
-        loginEmail.setHintTextColor(0000);
-        loginPass.setHint("Enter Password");
         loginWarningText = findViewById(R.id.loginWarningText);
         loginBut = findViewById(R.id.signSubBtn);
         signUpBut = findViewById(R.id.signupAgain);

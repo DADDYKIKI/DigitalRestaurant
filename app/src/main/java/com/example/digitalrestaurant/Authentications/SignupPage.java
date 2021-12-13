@@ -40,19 +40,12 @@ public class SignupPage extends AppCompatActivity {
 
 
         signupName = findViewById(R.id.signupNameV);
-        signupName.setHint("Enter Name");
         signupEmail = findViewById(R.id.signupEmailV);
-        signupEmail.setHint("Enter Email");
         signupAge = findViewById(R.id.signupAge);
-        signupAge.setHint("Enter Age");
         signupPhone = findViewById(R.id.signUpPhone);
-        signupPhone.setHint("Enter phone number");
         signupMaidenName= findViewById(R.id.enterMaidenName);
-        signupMaidenName.setHint("Enter Maiden Name");
         signupPaswd = findViewById(R.id.signUpPassV3);
-        signupPaswd.setHint("Enter Password");
         signupCountry = findViewById(R.id.enterCountry);
-        signupCountry.setHint("Country of Location");
 
         signSubBtn = (findViewById(R.id.signSubBtnV));
 

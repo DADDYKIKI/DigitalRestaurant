@@ -52,11 +52,9 @@ public class ForgotPassword extends AppCompatActivity {
 
         checkUser=findViewById(R.id.checkUser);
         enterEmail=findViewById(R.id.enterEmail);
-        enterEmail.setHint("Enter Email");
         signup=findViewById(R.id.signupAgain);
         userExistText=findViewById(R.id.userExistText);
         enterMaidenName=findViewById(R.id.enterMaidenName);
-        enterMaidenName.setHint("Enter Maiden Name");
 
         checker=new DatabaseHelper(this);
 

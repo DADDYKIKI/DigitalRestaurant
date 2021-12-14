@@ -8,14 +8,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/stainlessMainRecyclerView"
-        android:layout_width="412dp"
-        android:layout_height="575dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="390dp"
+        android:layout_height="592dp"
+        android:layout_margin="10dp"
         android:background="@drawable/silver"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="163dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout6"
@@ -31,7 +31,7 @@
             android:layout_width="396dp"
             android:layout_height="103dp"
             android:background="@drawable/obandekitchen"
-            android:text="Welcome Back Stainless"
+            android:text="Stainless Bar"
             android:textAlignment="center"
             android:textColor="@color/Whiteblue"
             android:textSize="40dp"

@@ -41,14 +41,19 @@ public class AdminPage {
         adaItems.add(new ItemData(9, "MoiMoi", "African", R.drawable.obandemoimoi, ""));
         adaItems.add(new ItemData(18, "Egusi soup", "African", R.drawable.obandeegusisoup, ""));
         adaItems.add(new ItemData(6, "Alcoholic drinks", "", R.drawable.adaassortedbear, "alcoholic"));
-        adaItems.add(new ItemData(3, "Chin-Chin", "African", R.drawable.obandechinchin, ""));
+        adaItems.add(new ItemData(3, "Xclusic", "European", R.drawable.euro2, ""));
+        adaItems.add(new ItemData(11, "Classic", "European", R.drawable.euro3, ""));
+        adaItems.add(new ItemData(7, "Runtown", "Europena", R.drawable.euro3, ""));
+        adaItems.add(new ItemData(23, "Exotic", "", R.drawable.euro4, ""));
+        adaItems.add(new ItemData(30, "Vintage", "", R.drawable.euro5, ""));
+        adaItems.add(new ItemData(7, "Chin-Chin", "African", R.drawable.obandechinchin, ""));
         adaItems.add(new ItemData(11, "Fried Rice with goat meat", "African", R.drawable.friedriceone, ""));
-        adaItems.add(new ItemData(7, "Porridge bean and Plantain ", "African", R.drawable.obandepouridgebeans, ""));
-        adaItems.add(new ItemData(3, "Soft drinks", "", R.drawable.adasoftdrinks, ""));
+        adaItems.add(new ItemData(14, "Porridge bean and Plantain ", "African", R.drawable.obandepouridgebeans, ""));
+        adaItems.add(new ItemData(5, "Soft drinks", "", R.drawable.adasoftdrinks, ""));
         adaItems.add(new ItemData(20, "Goat Peppered soup", "African", R.drawable.adapepersoup, ""));
-        adaItems.add(new ItemData(5, "Heineken Pride", "", R.drawable.adachilledheineken, "alcoholic"));
-        adaItems.add(new ItemData(5, "Hero bear", "", R.drawable.adaherobear, "alcoholic"));
-        adaItems.add(new ItemData(7, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
+        adaItems.add(new ItemData(10, "Heineken Pride", "", R.drawable.adachilledheineken, "alcoholic"));
+        adaItems.add(new ItemData(12, "Hero bear", "", R.drawable.adaherobear, "alcoholic"));
+        adaItems.add(new ItemData(25, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
 
 
 
@@ -114,14 +119,22 @@ public class AdminPage {
     public List<ItemData> populateObandePage(int age) {
 
 
-        obandeItems.add(new ItemData(7, "MoiMoi", "African", R.drawable.obandemoimoi, ""));
-        obandeItems.add(new ItemData(15, "Egusi soup", "African", R.drawable.obandeegusisoup, ""));
-        obandeItems.add(new ItemData(10, "Fried Rice", "African", R.drawable.obandefriedrice, ""));
-        obandeItems.add(new ItemData(4, "Chin-Chin", "African", R.drawable.obandechinchin, ""));
-        obandeItems.add(new ItemData(21, "Fried Rice with goat meat", "African", R.drawable.friedriceone, ""));
-        obandeItems.add(new ItemData(7, "Pouridge bean and Plantain ", "African", R.drawable.obandepouridgebeans, ""));
-        obandeItems.add(new ItemData(10, "Pounded Yam", "African", R.drawable.towel, ""));
-        obandeItems.add(new ItemData(12, "Hot Dog++", "European", R.drawable.uktwo, ""));
+        obandeItems.add(new ItemData(7, "Vegeterian", "Asia", R.drawable.vegeterian, ""));
+        obandeItems.add(new ItemData(15, "Vegeterian", "Asia", R.drawable.vegeterian2, ""));
+        obandeItems.add(new ItemData(10, "Vegeterian", "Europian", R.drawable.vegeterian3, ""));
+        obandeItems.add(new ItemData(15, "Vegeterian", "Asia", R.drawable.vegeterian4, ""));
+        obandeItems.add(new ItemData(21, "Vegeterian", "European", R.drawable.vegeterian5, ""));
+        obandeItems.add(new ItemData(9, "Vegeterian", "Asia", R.drawable.vegeterian6, ""));
+        obandeItems.add(new ItemData(10, "Vegeterian", "Asia", R.drawable.vegeterian7, ""));
+        obandeItems.add(new ItemData(12, "Vegeterian", "European", R.drawable.vegeterian8, ""));
+        obandeItems.add(new ItemData(21, "Vegeterian", "European", R.drawable.vegeterian9, ""));
+        obandeItems.add(new ItemData(9, "Vegeterian", "Asia", R.drawable.vegeterian10, ""));
+        obandeItems.add(new ItemData(10, "Vegeterian", "Asia", R.drawable.vegeterian11, ""));
+        obandeItems.add(new ItemData(12, "Vegeterian", "European", R.drawable.vegeterian12, ""));
+        obandeItems.add(new ItemData(21, "Fired chicken", "African", R.drawable.friedwholechicken, ""));
+        obandeItems.add(new ItemData(9, "Chicken and chips", "Asia", R.drawable.chickenwithchips, ""));
+        obandeItems.add(new ItemData(10, "Chips", "European", R.drawable.euro9, ""));
+        obandeItems.add(new ItemData(12, "Vegeterian", "European", R.drawable.vegeterian8, ""));
 
         List<ItemData> allMatch = obandeItems.stream().filter(p -> p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
@@ -144,9 +157,18 @@ public class AdminPage {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public List<ItemData> populateStainlessPage(int age) {
 
-        stainlessItems.add(new ItemData(7, "Extra Stout", "", R.drawable.adaguinessbeer, "alcoholic"));
-        stainlessItems.add(new ItemData(5, "Hero Special", "", R.drawable.adaherobear, "alcoholic"));
-        stainlessItems.add(new ItemData(13, "Best Bears", "", R.drawable.adaassortedbear, "alcoholic"));
+        stainlessItems.add(new ItemData(7, "Extra Stout", "European", R.drawable.adaguinessbeer, "alcoholic"));
+        stainlessItems.add(new ItemData(21, "Hero Special", "African", R.drawable.adaherobear, "alcoholic"));
+        stainlessItems.add(new ItemData(19, "Best Bears", "European", R.drawable.adaassortedbear, "alcoholic"));
+        stainlessItems.add(new ItemData(13, "Budacos", "European", R.drawable.budacos, "alcoholic"));
+        stainlessItems.add(new ItemData(18, "Best Bears", "European", R.drawable.adaassortedbear, "alcoholic"));
+        stainlessItems.add(new ItemData(13, "crsytal", "European", R.drawable.crystalcopy, "alcoholic"));
+        stainlessItems.add(new ItemData(22, "dos", "European", R.drawable.dos, "alcoholic"));
+        stainlessItems.add(new ItemData(13, "Bud", "European", R.drawable.budcopy, "alcoholic"));
+        stainlessItems.add(new ItemData(20, "Luadini Collection", "European", R.drawable.luadini, "alcoholic"));
+        stainlessItems.add(new ItemData(50, "Full Collection", "European", R.drawable.collecetedbeer, "alcoholic"));
+        stainlessItems.add(new ItemData(32, "London Pale", "European", R.drawable.londonpalealeopy, "alcoholic"));
+        stainlessItems.add(new ItemData(20, "Heineken", "European", R.drawable.henekencopy, "alcoholic"));
 
 
         List<ItemData> allMatch = stainlessItems.stream().filter(p -> p.getAlcoholic().equals(""))
@@ -180,7 +202,14 @@ public class AdminPage {
         myItems.add(new AdvertItems(18,"Egusi soup","African" ,R.drawable.obandeegusisoup,"","Approko Kitchen"));
         myItems.add(new AdvertItems(6,"Alcoholic drinks","" ,R.drawable.adaassortedbear,"alcoholic",""));
         myItems.add(new AdvertItems(3,"Chin-Chin","African" ,R.drawable.obandechinchin,"",""));
+        myItems.add(new AdvertItems(13, "Budacos", "European", R.drawable.budacos, "alcoholic","Stainless"));
+        myItems.add(new AdvertItems(18, "Best Bears", "European", R.drawable.adaassortedbear, "alcoholic","Stainless"));
+        myItems.add(new AdvertItems(13, "crsytal", "European", R.drawable.crystalcopy, "alcoholic","Stainless"));
         myItems.add(new AdvertItems(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone,"",""));
+        myItems.add(new AdvertItems(7, "Runtown", "Europena", R.drawable.euro3, "","Ada Kitchen"));
+        myItems.add(new AdvertItems(23, "Exotic", "", R.drawable.euro4, "","Ada Kitchen"));
+        myItems.add(new AdvertItems(30, "Vintage", "", R.drawable.euro5, "","Ada Kitchen"));
+        myItems.add(new AdvertItems(7, "Chin-Chin", "African", R.drawable.obandechinchin, "","Ada Kitchen"));
         myItems.add(new AdvertItems(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,"Stainless",""));
         myItems.add(new AdvertItems(3,"Soft drinks","" ,R.drawable.adasoftdrinks,"",""));
         myItems.add(new AdvertItems(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup,"",""));

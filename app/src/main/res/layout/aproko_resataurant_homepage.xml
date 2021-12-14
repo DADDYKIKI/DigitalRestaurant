@@ -29,12 +29,12 @@
                         android:id="@+id/menuKeyS"
                         android:layout_width="55dp"
                         android:layout_height="24dp"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="28dp"
-                        android:background="@drawable/bordera2"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginTop="44dp"
+                        android:background="@drawable/bordera3"
                         android:text="Menu"
                         android:textAlignment="center"
-                        android:textColor="@color/design_default_color_on_primary"
+                        android:textColor="@color/design_default_color_on_secondary"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -43,29 +43,28 @@
                         android:id="@+id/homeKey"
                         android:layout_width="62dp"
                         android:layout_height="22dp"
-                        android:layout_marginStart="16dp"
-                        android:background="@drawable/bordera2"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bordera3"
                         android:text="Home"
                         android:textAlignment="center"
-                        android:textColor="@color/design_default_color_on_primary"
+                        android:textColor="@color/design_default_color_on_secondary"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/menuKeyS"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.135" />
+                        app:layout_constraintVertical_bias="0.214" />
 
                     <TextView
                         android:id="@+id/welcometxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="156dp"
+                        android:layout_marginStart="96dp"
+                        android:layout_marginTop="96dp"
                         android:text="Welcome to"
                         android:textAlignment="center"
                         android:textColor="@color/Red"
                         android:textSize="30dp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/stainlesslabel"
-                        app:layout_constraintHorizontal_bias="0.428"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,6 +72,7 @@
                         android:id="@+id/stainlesslabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="140dp"
                         android:text="Aproko Kitchen"
                         android:textAlignment="center"
                         android:textColor="@color/Red"
@@ -81,16 +81,16 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.8" />
+                        app:layout_constraintVertical_bias="0.821" />
 
                     <TextView
                         android:id="@+id/obandelocate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="308dp"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="256dp"
+                        android:layout_marginBottom="16dp"
                         android:text="Location"
-                        android:textColor="@color/black"
+                        android:textColor="@color/Red"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -101,12 +101,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:text="G1"
-                        android:textColor="@color/black"
+                        android:textColor="@color/Red"
                         android:textSize="20dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.417"
+                        app:layout_constraintHorizontal_bias="0.106"
                         app:layout_constraintStart_toEndOf="@+id/obandelocate" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -117,8 +117,9 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/aprokoKitchen"
-                        android:layout_width="match_parent"
-                        android:layout_height="500dp"
+                        android:layout_width="388dp"
+                        android:layout_height="512dp"
+                        android:layout_margin="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"

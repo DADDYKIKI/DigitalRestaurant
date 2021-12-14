@@ -14,6 +14,7 @@ import com.example.digitalrestaurant.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
+import pl.droidsonroids.gif.GifImageView;
 
 public final class ActivityIntroPageBinding implements ViewBinding {
   @NonNull
@@ -21,6 +22,9 @@ public final class ActivityIntroPageBinding implements ViewBinding {
 
   @NonNull
   public final ConstraintLayout bac;
+
+  @NonNull
+  public final GifImageView gifImageView;
 
   @NonNull
   public final TextView introCustmerText;
@@ -32,10 +36,12 @@ public final class ActivityIntroPageBinding implements ViewBinding {
   public final TextView introWelcomeTxt;
 
   private ActivityIntroPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout bac, @NonNull TextView introCustmerText,
-      @NonNull TextView introFoodsellerText, @NonNull TextView introWelcomeTxt) {
+      @NonNull ConstraintLayout bac, @NonNull GifImageView gifImageView,
+      @NonNull TextView introCustmerText, @NonNull TextView introFoodsellerText,
+      @NonNull TextView introWelcomeTxt) {
     this.rootView = rootView;
     this.bac = bac;
+    this.gifImageView = gifImageView;
     this.introCustmerText = introCustmerText;
     this.introFoodsellerText = introFoodsellerText;
     this.introWelcomeTxt = introWelcomeTxt;
@@ -70,6 +76,12 @@ public final class ActivityIntroPageBinding implements ViewBinding {
     missingId: {
       ConstraintLayout bac = (ConstraintLayout) rootView;
 
+      id = R.id.gifImageView;
+      GifImageView gifImageView = ViewBindings.findChildViewById(rootView, id);
+      if (gifImageView == null) {
+        break missingId;
+      }
+
       id = R.id.introCustmerText;
       TextView introCustmerText = ViewBindings.findChildViewById(rootView, id);
       if (introCustmerText == null) {
@@ -88,8 +100,8 @@ public final class ActivityIntroPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityIntroPageBinding((ConstraintLayout) rootView, bac, introCustmerText,
-          introFoodsellerText, introWelcomeTxt);
+      return new ActivityIntroPageBinding((ConstraintLayout) rootView, bac, gifImageView,
+          introCustmerText, introFoodsellerText, introWelcomeTxt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

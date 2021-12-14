@@ -25,7 +25,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="396dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bordera3">
+                android:background="@drawable/bordera2">
 
                 <TextView
                     android:id="@+id/textView22"
@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="Swipe to right or left to delete"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.71"
                     app:layout_constraintStart_toStartOf="parent"
@@ -124,13 +124,13 @@
 
                 <TextView
                     android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="83dp"
+                    android:layout_height="41dp"
                     android:layout_marginStart="28dp"
                     android:layout_marginTop="16dp"
                     android:text="Item:-"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/purple_200"
                     android:textSize="30dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +143,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="40dp"
                     android:text="Quantity:-"
-                    android:textColor="@color/black"
+                    android:textColor="@color/purple_200"
                     android:textSize="30dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -156,7 +156,7 @@
                     android:layout_marginStart="28dp"
                     android:layout_marginBottom="40dp"
                     android:text="Price:-"
-                    android:textColor="@color/black"
+                    android:textColor="@color/purple_200"
                     android:textSize="30dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"

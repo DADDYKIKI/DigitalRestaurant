@@ -22,6 +22,9 @@ public final class ActivityObandePageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ConstraintLayout constraintLayout7;
+
+  @NonNull
   public final ConstraintLayout obandeClear;
 
   @NonNull
@@ -37,9 +40,11 @@ public final class ActivityObandePageBinding implements ViewBinding {
   public final TextView textView7;
 
   private ActivityObandePageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout obandeClear, @NonNull RecyclerView obandeMainRecyclerView,
-      @NonNull Button obandecleare, @NonNull TextView textView6, @NonNull TextView textView7) {
+      @NonNull ConstraintLayout constraintLayout7, @NonNull ConstraintLayout obandeClear,
+      @NonNull RecyclerView obandeMainRecyclerView, @NonNull Button obandecleare,
+      @NonNull TextView textView6, @NonNull TextView textView7) {
     this.rootView = rootView;
+    this.constraintLayout7 = constraintLayout7;
     this.obandeClear = obandeClear;
     this.obandeMainRecyclerView = obandeMainRecyclerView;
     this.obandecleare = obandecleare;
@@ -74,6 +79,12 @@ public final class ActivityObandePageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.constraintLayout7;
+      ConstraintLayout constraintLayout7 = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout7 == null) {
+        break missingId;
+      }
+
       ConstraintLayout obandeClear = (ConstraintLayout) rootView;
 
       id = R.id.obandeMainRecyclerView;
@@ -100,8 +111,8 @@ public final class ActivityObandePageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityObandePageBinding((ConstraintLayout) rootView, obandeClear,
-          obandeMainRecyclerView, obandecleare, textView6, textView7);
+      return new ActivityObandePageBinding((ConstraintLayout) rootView, constraintLayout7,
+          obandeClear, obandeMainRecyclerView, obandecleare, textView6, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

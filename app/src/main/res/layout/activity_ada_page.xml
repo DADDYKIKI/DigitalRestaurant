@@ -9,8 +9,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/adaMainRecycler"
-        android:layout_width="423dp"
-        android:layout_height="581dp"
+        android:layout_width="381dp"
+        android:layout_height="585dp"
+        android:layout_margin="10dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/adaguinessbeer"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,8 +21,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout5"
-        android:layout_width="411dp"
-        android:layout_height="84dp"
+        android:layout_width="387dp"
+        android:layout_height="74dp"
+        android:layout_margin="10dp"
         android:background="@color/purple_500"
         app:layout_constraintBottom_toTopOf="@+id/adaMainRecycler"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +34,7 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome Back Ada"
+            android:text="Ada Kitchen"
             android:textColor="@color/Whiteblue"
             android:textSize="40dp"
             android:textStyle="bold"
@@ -46,8 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/orange"
+        android:layout_marginBottom="84dp"
+        android:backgroundTint="@color/redishorang"
         android:text="Clear"
         android:textColor="@color/white"
         android:textSize="20dp"

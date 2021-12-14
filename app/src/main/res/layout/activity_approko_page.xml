@@ -8,14 +8,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/aPprokoMainRecyclerView"
-        android:layout_width="407dp"
-        android:layout_height="593dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="377dp"
+        android:layout_height="608dp"
+        android:layout_margin="10dp"
         android:background="@drawable/aprokokitchen"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="154dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="416dp"
@@ -27,9 +27,10 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="367dp"
-            android:layout_height="55dp"
-            android:text="Welcome Back Approko"
+            android:layout_width="347dp"
+            android:layout_height="56dp"
+            android:text="Approko Restaurant"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30dp"
             android:textStyle="bold"

@@ -90,7 +90,7 @@ public class SignupPage extends AppCompatActivity {
                           else{
                              try {
 
-                                 UserDetails user=new UserDetails(name, email, age,
+                                 UserDetails user=new UserDetails(name, email, Integer.parseInt(age),
                                          phone, maidenName,country, password);
                                    boolean signup =
                                         helper.addCustomerUserAndPAss(user);

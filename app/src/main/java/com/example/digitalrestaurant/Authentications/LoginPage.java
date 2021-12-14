@@ -20,7 +20,7 @@ public class LoginPage extends AppCompatActivity {
     private static String COUNTRY="";
     private static String CUSNAME="";
     private static  int AGE=0;
-    private static  int CUSTOMERPHONE=0;
+    private static  String CUSTOMERPHONE="";
     private Button loginBut,signUpBut;
     private EditText loginEmail,loginPass;
     private     TextView loginWarningText,forgotPass;
@@ -57,11 +57,11 @@ public class LoginPage extends AppCompatActivity {
         toSignUpV();
     }
 
-    public static int getCUSTOMERPHONE() {
+    public static String getCUSTOMERPHONE() {
         return CUSTOMERPHONE;
     }
 
-    public static void setCUSTOMERPHONE(int phone) {
+    public static void setCUSTOMERPHONE(String phone) {
 
         CUSTOMERPHONE=phone;
     }
@@ -131,10 +131,10 @@ public class LoginPage extends AppCompatActivity {
     }
 
 
-    public int setCustomerPhone(){
+    public String setCustomerPhone(){
         helperL=new DatabaseHelper(this);
 
-        int phone=helperL.getCustomerPhone(loginEmail.getText().toString());
+       String phone=helperL.getCustomerPhone(loginEmail.getText().toString());
         return phone;
     }
 

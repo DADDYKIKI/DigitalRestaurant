@@ -742,7 +742,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public int getCustomerPhone(String email) {
+    public String getCustomerPhone(String email) {
 
         SQLiteDatabase myDatabase = this.getReadableDatabase();
 
@@ -755,13 +755,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 if (cur.getString(cur.getColumnIndex(COLUMNUSER3)).equals(email))
 
-                    return Integer.parseInt(cur.getString(cur.getColumnIndex(COLUMNUSER5)));
+                    return cur.getString(cur.getColumnIndex(COLUMNUSER5));
 
                 myDatabase.close();
 
             }
 
-        }return 0;
+        }return null;
 
     }
 

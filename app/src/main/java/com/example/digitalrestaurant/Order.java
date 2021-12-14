@@ -96,8 +96,8 @@ public class Order extends AppCompatActivity {
         minusBtn=findViewById(R.id.minusBtn);
         totalOrderPrice=findViewById(R.id.totalOrderPrice);
         basket=findViewById(R.id.floatingActionButton);
-       clear=findViewById(R.id.clear);
-       order=findViewById(R.id.order);
+        clear=findViewById(R.id.clear);
+        order=findViewById(R.id.order);
 
         myCart=new DatabaseHelper(this);
 
@@ -131,20 +131,20 @@ public class Order extends AppCompatActivity {
             setNameOfRestaurant(extras.getString("restaurant"));
 
         }
-            orderFoodName.setText(getFoodName());
-            orderPrice.setText(String.valueOf(getFoodPrice()));
-            orderNationality.setText(getFoodNationality());
-            adaFoodImages.setBackgroundResource(getFoodImage());
-            totalOrderPrice.setText(String.valueOf(getFoodPrice()));
-            restaurantNameA.setText(getNameOfRestaurant());
+        orderFoodName.setText(getFoodName());
+        orderPrice.setText(String.valueOf(getFoodPrice()));
+        orderNationality.setText(getFoodNationality());
+        adaFoodImages.setBackgroundResource(getFoodImage());
+        totalOrderPrice.setText(String.valueOf(getFoodPrice()));
+        restaurantNameA.setText(getNameOfRestaurant());
 
 
-            homeKey();
-            menuKey();
-            clearCart();
-            AddToCart();
-            openMyBasket();
-            placeOrder();
+        homeKey();
+        menuKey();
+        clearCart();
+        AddToCart();
+        openMyBasket();
+        placeOrder();
     }
 
 
@@ -158,7 +158,7 @@ public class Order extends AppCompatActivity {
 
     public static void setMyOrder2(List<OrderDetails> order) {
 
-           myOrder2=order;
+        myOrder2=order;
     }
 
 
@@ -169,7 +169,7 @@ public class Order extends AppCompatActivity {
 
     public static void setFoodName(String food) {
 
-       foodName=food;
+        foodName=food;
     }
     public static String getNameOfRestaurant() {
         return NameOfRestaurant;
@@ -217,13 +217,13 @@ public class Order extends AppCompatActivity {
 
         clear.setOnClickListener(v -> {
 
-          myCartUpdated.clearItemsFromCart();
+            myCartUpdated.clearItemsFromCart();
 
             Intent intent5 =new Intent(getApplicationContext(), Order.class);
             startActivity(intent5);
 
 
-    });
+        });
 
     }
 
@@ -267,7 +267,7 @@ public class Order extends AppCompatActivity {
 
                     VendorOrderDetails approko = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
 
-                    String.valueOf(LoginPage.getCUSTOMERPHONE()));
+                            String.valueOf(LoginPage.getCUSTOMERPHONE()));
 
                     Boolean addApro=myCartGet.addApprokoData(approko);
 
@@ -312,7 +312,7 @@ public class Order extends AppCompatActivity {
 
                     VendorOrderDetails stainless = new VendorOrderDetails(x.getFoodName(), LoginPage.getCusName(),x.getTotalFoodPrice(),x.getQuantity(),
 
-                    String.valueOf(LoginPage.getCUSTOMERPHONE()));
+                            String.valueOf(LoginPage.getCUSTOMERPHONE()));
 
                     Boolean addStainless=myCartGet.addStainlessData(stainless);
 
@@ -366,11 +366,11 @@ public class Order extends AppCompatActivity {
 
         addToCartBtn.setOnClickListener(v -> {
 
-           String res=getNameOfRestaurant().replaceAll("\\s+","").toLowerCase();
+            String res=getNameOfRestaurant().replaceAll("\\s+","").toLowerCase();
 
             OrderDetails orders=new OrderDetails(getFoodName(), String.valueOf(quantityNumber),
 
-            String.valueOf(getFoodPrice() * quantityNumber), res);
+                    String.valueOf(getFoodPrice() * quantityNumber), res);
 
             boolean addToCart =
 
@@ -391,7 +391,7 @@ public class Order extends AppCompatActivity {
     }
 
 
-           //      Used for viewing all the order made and display it in the basket
+    //      Used for viewing all the order made and display it in the basket
     public void openMyBasket(){
 
         myOrder=myCart.getCartItems();
@@ -478,10 +478,5 @@ public class Order extends AppCompatActivity {
     }
 
 }
-
-
-
-
-
 
 

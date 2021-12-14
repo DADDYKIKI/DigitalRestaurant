@@ -37,7 +37,7 @@ public class HomePage extends AppCompatActivity {
 
     private RestaurantsAdaptor.AllInOneRecyclerViewListener AllInOneListener2;
 
-     private LocationAdaptor.LocationListener locationListener;
+    private LocationAdaptor.LocationListener locationListener;
 
     private RecyclerView recyclerView,recyclerView2,recyclerView3;
 
@@ -60,10 +60,10 @@ public class HomePage extends AppCompatActivity {
 
         if(press+2000>System.currentTimeMillis()){
 
-                finishAffinity();
-                System.exit(0);
+            finishAffinity();
+            System.exit(0);
 
-        return;}
+            return;}
 
         else {
             Toast.makeText(this, "Press again to exit", Toast.LENGTH_SHORT).show();
@@ -98,7 +98,7 @@ public class HomePage extends AppCompatActivity {
 
 
     public void menuKey(){//Menu
-            menuKey.setOnClickListener(v -> {
+        menuKey.setOnClickListener(v -> {
             Intent intent2=new Intent(this, Menu.class);
             startActivity(intent2);
             overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
@@ -109,7 +109,7 @@ public class HomePage extends AppCompatActivity {
     }
 
 
-//Where all the items from all the restaurants are assembled and attached with their respectful recyclerviews for display and selection
+    //Where all the items from all the restaurants are assembled and attached with their respectful recyclerviews for display and selection
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void makeAdaptor(){
 
@@ -183,7 +183,7 @@ public class HomePage extends AppCompatActivity {
             }
 
         };
-        }
+    }
 
 
 

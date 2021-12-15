@@ -33,12 +33,12 @@
                     android:layout_width="156dp"
                     android:layout_height="33dp"
                     android:layout_marginStart="44dp"
-                    android:layout_marginTop="16dp"
                     android:background="@color/white"
                     android:text="My Basket"
                     android:textAlignment="center"
                     android:textColor="@color/purple_500"
                     android:textSize="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,28 +46,28 @@
                     android:id="@+id/homeKey"
                     android:layout_width="55dp"
                     android:layout_height="25dp"
-                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="44dp"
                     android:background="@drawable/bordera3"
                     android:text="Home"
                     android:textAlignment="center"
                     android:textColor="@color/design_default_color_on_secondary"
                     android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/menuKeyS"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/menuKeyS"
                     android:layout_width="55dp"
                     android:layout_height="25dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
                     android:background="@drawable/bordera3"
                     android:text="Menu"
                     android:textAlignment="center"
                     android:textColor="@color/design_default_color_on_secondary"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/homeKey"
-                    app:layout_constraintHorizontal_bias="0.556"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cartTitle"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,7 +126,7 @@
                         android:id="@+id/addToCartbtn"
                         android:layout_width="87dp"
                         android:layout_height="46dp"
-                        android:layout_marginEnd="20dp"
+                        android:layout_marginEnd="36dp"
                         android:layout_marginBottom="28dp"
                         android:background="@drawable/addtocartbtn"
                         android:padding="5dp"
@@ -136,7 +136,9 @@
                         android:textSize="16dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/adarestaurantcard"
+                        app:layout_constraintVertical_bias="1.0" />
 
                     <TextView
                         android:id="@+id/priceOfItem"
@@ -149,10 +151,12 @@
                         android:textColor="@color/white"
                         android:textSize="15dp"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/totalPrice"
                         app:layout_constraintEnd_toStartOf="@+id/poundSign"
-                        app:layout_constraintHorizontal_bias="0.842"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.166" />
 
                     <TextView
                         android:id="@+id/totalPrice"
@@ -221,7 +225,7 @@
                         android:layout_width="20dp"
                         android:layout_height="35dp"
                         android:layout_marginStart="72dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="16dp"
                         android:text="£"
                         android:textColor="@color/white"
                         android:textSize="25dp"
@@ -298,22 +302,24 @@
                             android:id="@+id/orderFoodName"
                             android:layout_width="48dp"
                             android:layout_height="14dp"
-                            android:layout_marginEnd="32dp"
+                            android:layout_marginEnd="16dp"
                             android:layout_marginBottom="4dp"
                             android:text="Jelof"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
+                            android:textColor="@color/teal_200"
                             android:textSize="15dp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/orderRestaurant"
+                            app:layout_constraintVertical_bias="1.0" />
 
                         <TextView
                             android:id="@+id/orderNationality"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Nigerian"
-                            android:textColor="@color/white"
+                            android:textColor="@color/teal_200"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/orderFoodName"
@@ -324,25 +330,29 @@
                             android:id="@+id/orderRestaurant"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
                             android:text="TextView"
                             android:textAlignment="center"
                             android:textColor="@color/teal_200"
                             android:textSize="15dp"
                             android:textStyle="bold"
-                            tools:layout_editor_absoluteX="86dp"
-                            tools:layout_editor_absoluteY="11dp" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/from"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/from"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
                             android:text="From"
                             android:textAlignment="center"
                             android:textColor="@color/teal_200"
                             android:textSize="15dp"
                             android:textStyle="bold"
-                            tools:layout_editor_absoluteX="46dp"
-                            tools:layout_editor_absoluteY="9dp" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

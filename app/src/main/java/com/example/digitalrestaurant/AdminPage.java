@@ -86,11 +86,13 @@ public class AdminPage {
         aprokoItems.add(new ItemData(8, "Rice/Plantain", "Asian", R.drawable.jelofplantrain, ""));
         aprokoItems.add(new ItemData(4, "Hot Dog", "European", R.drawable.uktwo, ""));
         aprokoItems.add(new ItemData(15, "Sauce", "Asain", R.drawable.mixture, ""));
-        aprokoItems.add(new ItemData(15, "Sauce", "Asain", R.drawable.mixture, ""));
         aprokoItems.add(new ItemData(21, "Fried Rice", "African", R.drawable.friedriceone, ""));
         aprokoItems.add(new ItemData(7, "Assorted meats", "Asian", R.drawable.tablefoodpic, ""));
         aprokoItems.add(new ItemData(10, "Pounded Yam", "African", R.drawable.towel, ""));
         aprokoItems.add(new ItemData(12, "Hot Dog++", "European", R.drawable.uktwo, ""));
+        aprokoItems.add(new ItemData(13, "crsytal", "European", R.drawable.crystalcopy, "alcoholic"));
+        aprokoItems.add(new ItemData(22, "dos", "European", R.drawable.dos, "alcoholic"));
+        aprokoItems.add(new ItemData(13, "Bud", "European", R.drawable.budcopy, "alcoholic"));
 
         List<ItemData> allMatch = aprokoItems.stream().filter(p -> p.getAlcoholic().equals(""))
                 .collect(Collectors.toList());
@@ -161,7 +163,6 @@ public class AdminPage {
         stainlessItems.add(new ItemData(21, "Hero Special", "African", R.drawable.adaherobear, "alcoholic"));
         stainlessItems.add(new ItemData(19, "Best Bears", "European", R.drawable.adaassortedbear, "alcoholic"));
         stainlessItems.add(new ItemData(13, "Budacos", "European", R.drawable.budacos, "alcoholic"));
-        stainlessItems.add(new ItemData(18, "Best Bears", "European", R.drawable.adaassortedbear, "alcoholic"));
         stainlessItems.add(new ItemData(13, "crsytal", "European", R.drawable.crystalcopy, "alcoholic"));
         stainlessItems.add(new ItemData(22, "dos", "European", R.drawable.dos, "alcoholic"));
         stainlessItems.add(new ItemData(13, "Bud", "European", R.drawable.budcopy, "alcoholic"));
@@ -200,9 +201,14 @@ public class AdminPage {
         myItems.add(new AdvertItems(12,"Catfish peppered soup","African" ,R.drawable.adacatfish,"","Ada Kitchen"));
         myItems.add(new AdvertItems(9,"MoiMoi","African" ,R.drawable.obandemoimoi,"","Stainless"));
         myItems.add(new AdvertItems(18,"Egusi soup","African" ,R.drawable.obandeegusisoup,"","Approko Kitchen"));
-        myItems.add(new AdvertItems(6,"Alcoholic drinks","" ,R.drawable.adaassortedbear,"alcoholic",""));
+        myItems.add(new AdvertItems(6,"Alcoholic drinks","" ,R.drawable.adaassortedbear,"alcoholic","Stainless"));
         myItems.add(new AdvertItems(3,"Chin-Chin","African" ,R.drawable.obandechinchin,"",""));
         myItems.add(new AdvertItems(13, "Budacos", "European", R.drawable.budacos, "alcoholic","Stainless"));
+        myItems.add(new AdvertItems(9, "Vegeterian", "Asia", R.drawable.vegeterian6, "","Obande Kitchen"));
+        myItems.add(new AdvertItems(10, "Vegeterian", "Asia", R.drawable.vegeterian7, "","Obande Kitchen"));
+        myItems.add(new AdvertItems(12, "Vegeterian", "European", R.drawable.vegeterian8, "","Obande Kitchen"));
+        myItems.add(new AdvertItems(21, "Vegeterian", "European", R.drawable.vegeterian9, "","Obande Kitchen"));
+        myItems.add(new AdvertItems(9, "Vegeterian", "Asia", R.drawable.vegeterian10, "","Obande Kitchen"));
         myItems.add(new AdvertItems(18, "Best Bears", "European", R.drawable.adaassortedbear, "alcoholic","Stainless"));
         myItems.add(new AdvertItems(13, "crsytal", "European", R.drawable.crystalcopy, "alcoholic","Stainless"));
         myItems.add(new AdvertItems(11,"Fried Rice with goat meat","African" ,R.drawable.friedriceone,"",""));
@@ -211,9 +217,9 @@ public class AdminPage {
         myItems.add(new AdvertItems(30, "Vintage", "", R.drawable.euro5, "","Ada Kitchen"));
         myItems.add(new AdvertItems(7, "Chin-Chin", "African", R.drawable.obandechinchin, "","Ada Kitchen"));
         myItems.add(new AdvertItems(7,"Porridge bean and Plantain ","African" ,R.drawable.obandepouridgebeans,"Stainless",""));
-        myItems.add(new AdvertItems(3,"Soft drinks","" ,R.drawable.adasoftdrinks,"",""));
+        myItems.add(new AdvertItems(3,"Soft drinks","" ,R.drawable.adasoftdrinks,"","Ada kitchen"));
         myItems.add(new AdvertItems(20,"Goat Peppered soup","African" ,R.drawable.adapepersoup,"",""));
-        myItems.add(new AdvertItems(5,"Heineken Pride","" ,R.drawable.adachilledheineken,"alcoholic",""));
+        myItems.add(new AdvertItems(5,"Heineken Pride","" ,R.drawable.adachilledheineken,"alcoholic","Stainless"));
         myItems.add(new AdvertItems(5,"Hero bear","" ,R.drawable.adaherobear,"alcoholic","Stainless"));
         myItems.add(new AdvertItems(7,"Extra Stout","" ,R.drawable.adaguinessbeer,"alcoholic","Ada Kitchen"));
 

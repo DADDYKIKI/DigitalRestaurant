@@ -78,9 +78,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myRecycler"
-            android:layout_width="407dp"
-            android:layout_height="450dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="398dp"
+            android:layout_height="432dp"
+            android:layout_margin="5dp"
             android:background="@drawable/bordera3"
             android:keepScreenOn="false"
             android:scrollbarSize="7dp"
@@ -93,6 +93,7 @@
             android:id="@+id/myOrderPotion"
             android:layout_width="430dp"
             android:layout_height="166dp"
+            android:layout_margin="10dp"
             android:background="@drawable/adakitchen"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -373,17 +374,17 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/myOrderPotion"
             app:layout_constraintEnd_toStartOf="@+id/order"
-            app:layout_constraintHorizontal_bias="0.69"
+            app:layout_constraintHorizontal_bias="0.926"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
-            app:layout_constraintVertical_bias="0.84" />
+            app:layout_constraintVertical_bias="0.75" />
 
         <Button
             android:id="@+id/order"
-            android:layout_width="91dp"
+            android:layout_width="92dp"
             android:layout_height="34dp"
             android:layout_marginTop="352dp"
-            android:layout_marginEnd="96dp"
+            android:layout_marginEnd="4dp"
             android:backgroundTint="@color/redishorang"
             android:text="Order"
             android:textSize="12sp"
@@ -391,7 +392,7 @@
             app:layout_constraintBottom_toTopOf="@+id/myOrderPotion"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
-            app:layout_constraintVertical_bias="0.84" />
+            app:layout_constraintVertical_bias="0.75" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

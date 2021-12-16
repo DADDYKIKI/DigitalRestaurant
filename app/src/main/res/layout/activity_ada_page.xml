@@ -12,6 +12,7 @@
         android:layout_width="381dp"
         android:layout_height="585dp"
         android:layout_margin="10dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/adaguinessbeer"
         app:layout_constraintBottom_toBottomOf="parent"

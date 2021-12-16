@@ -102,7 +102,13 @@ public class ApprokoKitchen extends AppCompatActivity {
 
         aprokoRecycler =findViewById(R.id.aprokoKitchen);
 
-        aprokoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        LinearLayoutManager linear=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+
+        aprokoRecycler.setLayoutManager(linear);
+
+        linear.setReverseLayout(true);
+
+        linear.setStackFromEnd(true);
 
         aprokoAdaptor=new PopulateKitchensWithItemsAdaptor(aprokoItems,approkolistener2);
 

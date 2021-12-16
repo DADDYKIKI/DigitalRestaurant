@@ -398,7 +398,13 @@ public class Order extends AppCompatActivity {
 
         cartRecycler=findViewById(R.id.myRecycler);
 
-        cartRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        LinearLayoutManager layout=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+
+        cartRecycler.setLayoutManager(layout);
+
+        layout.setReverseLayout(true);
+
+        layout.setStackFromEnd(true);
 
 
         // Delete Items when swiped in the recyclerview

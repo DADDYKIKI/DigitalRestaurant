@@ -101,7 +101,13 @@ public class ObandeKitchen extends AppCompatActivity {
 
         obandeRecycler =findViewById(R.id.obandeKitchen);
 
-        obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        LinearLayoutManager linear=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+
+        obandeRecycler.setLayoutManager(linear);
+
+        linear.setReverseLayout(true);
+
+        linear.setStackFromEnd(true);
 
         obandeAdaptor=new PopulateKitchensWithItemsAdaptor(obandeItems,obandelistener2);
 

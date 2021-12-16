@@ -114,10 +114,16 @@ public class AdaPage extends AppCompatActivity {
 
         adaRecycler=findViewById(R.id.adaMainRecycler);
 
-        adaRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        LinearLayoutManager layout=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+
+        adaRecycler.setLayoutManager(layout);
+
+        layout.setReverseLayout(true);
+
+        layout.setStackFromEnd(true);
 
 
-          //For swiping and deleting
+        //For swiping and deleting
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
 
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {

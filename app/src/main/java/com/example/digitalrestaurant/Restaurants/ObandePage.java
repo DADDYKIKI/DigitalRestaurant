@@ -107,9 +107,15 @@ public class ObandePage extends AppCompatActivity {
 
         obandeRecycler=findViewById(R.id.obandeMainRecyclerView);
 
-       obandeRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        LinearLayoutManager layout=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
 
-       //Swiping and deleting
+        obandeRecycler.setLayoutManager(layout);
+
+        layout.setReverseLayout(true);
+
+        layout.setStackFromEnd(true);
+
+        //Swiping and deleting
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {

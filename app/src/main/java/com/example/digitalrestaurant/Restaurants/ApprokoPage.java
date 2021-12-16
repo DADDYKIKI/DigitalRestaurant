@@ -108,7 +108,14 @@ public class ApprokoPage extends AppCompatActivity {
 
         approkoRecycler=findViewById(R.id.aPprokoMainRecyclerView);
 
-        approkoRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        LinearLayoutManager layout=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+
+        approkoRecycler.setLayoutManager(layout);
+
+        layout.setReverseLayout(true);
+
+        layout.setStackFromEnd(true);
+
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
 

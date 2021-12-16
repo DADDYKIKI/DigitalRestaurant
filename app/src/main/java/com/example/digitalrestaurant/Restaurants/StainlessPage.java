@@ -108,7 +108,13 @@ public class StainlessPage extends AppCompatActivity {
 
         stainlessRecycler=findViewById(R.id.stainlessMainRecyclerView);
 
-        stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        LinearLayoutManager layout=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+
+        stainlessRecycler.setLayoutManager(layout);
+
+        layout.setReverseLayout(true);
+
+        layout.setStackFromEnd(true);
 
         ItemTouchHelper.SimpleCallback itemtouch=new ItemTouchHelper.SimpleCallback(0,
                 ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {

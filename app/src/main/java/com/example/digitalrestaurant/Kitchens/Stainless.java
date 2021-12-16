@@ -109,7 +109,13 @@ public class Stainless extends AppCompatActivity {
 
         stainlessRecycler =findViewById(R.id.stainlessKitchen);
 
-        stainlessRecycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        LinearLayoutManager linear=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+
+        stainlessRecycler.setLayoutManager(linear);
+
+        linear.setReverseLayout(true);
+
+        linear.setStackFromEnd(true);
 
         stainlessAdaptor=new PopulateKitchensWithItemsAdaptor(stainlessItems,adalistener2);
 

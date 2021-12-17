@@ -27,8 +27,8 @@
             app:layout_constraintVertical_bias="0.0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="281dp"
+                android:layout_height="244dp"
                 android:background="@drawable/bordera3">
 
 
@@ -36,11 +36,12 @@
                     android:id="@+id/pic1"
                     android:layout_width="279dp"
                     android:layout_height="225dp"
-                    android:layout_marginTop="8dp"
                     android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.526"
                     app:srcCompat="@drawable/friedriceone" />
 
                 <TextView
@@ -56,7 +57,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.771" />
+                    app:layout_constraintVertical_bias="0.895" />
 
                 <TextView
                     android:id="@+id/jelof"
@@ -67,14 +68,14 @@
                     android:text="Jelof Rice"
                     android:textAlignment="center"
                     android:textColor="@color/design_default_color_on_primary"
-                    android:textSize="15dp"
+                    android:textSize="10dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintHorizontal_bias="0.067"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.924" />
+                    app:layout_constraintVertical_bias="0.847" />
 
                 <TextView
                     android:id="@+id/poundSign"
@@ -89,34 +90,34 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/orderPrice"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.774" />
+                    app:layout_constraintVertical_bias="0.895" />
 
                 <TextView
                     android:id="@+id/nigerian1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="44dp"
+                    android:layout_marginBottom="56dp"
                     android:background="@color/black"
                     android:text="African"
                     android:textColor="@color/white"
-                    android:textSize="15dp"
+                    android:textSize="10dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.103"
+                    app:layout_constraintHorizontal_bias="0.096"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/order"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@color/black"
                     android:text="Check"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="15dp"
+                    android:textSize="10dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -125,15 +126,15 @@
                     android:id="@+id/textView20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@color/black"
                     android:text="for order"
                     android:textColor="@color/white"
-                    android:textSize="15dp"
+                    android:textSize="10dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.078"
+                    app:layout_constraintHorizontal_bias="0.056"
                     app:layout_constraintStart_toEndOf="@+id/restaurantName" />
 
                 <TextView
@@ -141,12 +142,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginBottom="12dp"
                     android:background="@color/black"
                     android:text="TextView"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="15dp"
+                    android:textSize="10dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/pic1"
                     app:layout_constraintStart_toEndOf="@+id/order" />

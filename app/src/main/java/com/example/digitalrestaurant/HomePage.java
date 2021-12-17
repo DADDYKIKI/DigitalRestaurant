@@ -30,8 +30,6 @@ import java.util.List;
 
 public class HomePage extends AppCompatActivity {
 
-
-
     //Parameters for horizontal dish display
     RecyclerView.Adapter godwinAdaptor,godwinAdaptor2,godwinAdaptor3;
 

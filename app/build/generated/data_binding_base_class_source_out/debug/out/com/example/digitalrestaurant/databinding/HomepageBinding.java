@@ -49,9 +49,6 @@ public final class HomepageBinding implements ViewBinding {
   public final TextView textView;
 
   @NonNull
-  public final TextView textView19;
-
-  @NonNull
   public final TextView textView8;
 
   private HomepageBinding(@NonNull ConstraintLayout rootView,
@@ -59,7 +56,7 @@ public final class HomepageBinding implements ViewBinding {
       @NonNull TextView customerWelcomeName, @NonNull RecyclerView locationRecycler,
       @NonNull TextView menuKeyS, @NonNull RecyclerView obandeKitchen,
       @NonNull RecyclerView restaurantsRecycler, @NonNull ScrollView scrollView2,
-      @NonNull TextView textView, @NonNull TextView textView19, @NonNull TextView textView8) {
+      @NonNull TextView textView, @NonNull TextView textView8) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
     this.constraintLayout3 = constraintLayout3;
@@ -70,7 +67,6 @@ public final class HomepageBinding implements ViewBinding {
     this.restaurantsRecycler = restaurantsRecycler;
     this.scrollView2 = scrollView2;
     this.textView = textView;
-    this.textView19 = textView19;
     this.textView8 = textView8;
   }
 
@@ -155,12 +151,6 @@ public final class HomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView19;
-      TextView textView19 = ViewBindings.findChildViewById(rootView, id);
-      if (textView19 == null) {
-        break missingId;
-      }
-
       id = R.id.textView8;
       TextView textView8 = ViewBindings.findChildViewById(rootView, id);
       if (textView8 == null) {
@@ -169,7 +159,7 @@ public final class HomepageBinding implements ViewBinding {
 
       return new HomepageBinding((ConstraintLayout) rootView, constraintLayout, constraintLayout3,
           customerWelcomeName, locationRecycler, menuKeyS, obandeKitchen, restaurantsRecycler,
-          scrollView2, textView, textView19, textView8);
+          scrollView2, textView, textView8);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

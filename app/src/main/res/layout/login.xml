@@ -20,16 +20,14 @@
         android:id="@+id/signSubBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="176dp"
+        android:layout_marginTop="40dp"
         android:background="@color/white"
         android:text="Submit"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPass"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotPass" />
 
     <EditText
         android:id="@+id/enterLoginEmail"
@@ -105,33 +103,35 @@
 
     <Button
         android:id="@+id/signupAgain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="192dp"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="112dp"
         android:text="Signup"
         android:textAlignment="center"
         android:textColor="@color/Red"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.89"
 
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signSubBtn"
+        app:layout_constraintVertical_bias="0.736" />
 
     <TextView
         android:id="@+id/forgotPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:text="Forgot password"
         android:textColor="@color/purple_500"
         android:textSize="20dp"
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterLoginPaswd" />
+        app:layout_constraintTop_toBottomOf="@+id/loginWarningText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

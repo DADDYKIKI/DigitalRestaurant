@@ -358,8 +358,6 @@ public class Order extends AppCompatActivity {
                 quantityNumber--;
                 quantityText.setText(String.valueOf(quantityNumber));
                 totalOrderPrice.setText(String.valueOf(getFoodPrice()*quantityNumber));
-
-
             }
 
         });

@@ -14,8 +14,6 @@ public class FoodSeller extends AppCompatActivity {
 
     TextView sellerLoginTxt,sellerSignUpTxt;
 
-    private long press;
-
 
     @Override
     public void onBackPressed() {

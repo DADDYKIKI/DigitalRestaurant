@@ -2282,6 +2282,7 @@ id loginWarningTextV
 id logout
 id logout2
 id logout3
+id mar
 id mask_left
 id mask_right
 id masked
@@ -2539,7 +2540,6 @@ id textView15
 id textView16
 id textView17
 id textView18
-id textView19
 id textView2
 id textView20
 id textView21

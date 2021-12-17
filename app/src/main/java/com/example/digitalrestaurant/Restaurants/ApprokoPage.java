@@ -131,6 +131,7 @@ public class ApprokoPage extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 vOrders2.remove(viewHolder.getAdapterPosition());
+
                 orderAdaptors2.notifyDataSetChanged();
 
 

@@ -820,9 +820,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         cur.getString(cur.getColumnIndex(COLUMNVEN2)).equalsIgnoreCase("stainless"))
                     return "stainless";
 
-
-
-
                 myDatabase.close();
 
             }

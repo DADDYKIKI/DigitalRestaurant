@@ -29,8 +29,6 @@ public class LoginPage extends AppCompatActivity {
 
     DatabaseHelper data, helperL;
 
-    private long press;
-
 
     @Override
     public void onBackPressed() {
@@ -149,9 +147,9 @@ public class LoginPage extends AppCompatActivity {
 
               if (loginEmail.getText().toString().equals("") || loginPass.getText().toString().equals("")){//Is a text field empty?
 
-                     Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(this, "All fields must be complete", Toast.LENGTH_SHORT).show();}
 
-                         }
+
 
               else {//Are your login details correct?
 
@@ -190,7 +188,7 @@ public class LoginPage extends AppCompatActivity {
 
                       setTextVisible(v);
 
-                      setButtonVisible(v);
+
 
                       attempts--;
 
@@ -212,6 +210,7 @@ public class LoginPage extends AppCompatActivity {
                                   Toast.LENGTH_SHORT).show();
 
                           setButtonInvisible(v);
+                          setButtonVisible(v);
 
                           Toast.makeText(this, "Try forgot password or signup",
                                   Toast.LENGTH_SHORT).show();

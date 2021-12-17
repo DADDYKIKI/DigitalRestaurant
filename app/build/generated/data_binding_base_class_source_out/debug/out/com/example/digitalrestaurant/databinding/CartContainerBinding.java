@@ -37,6 +37,9 @@ public final class CartContainerBinding implements ViewBinding {
   public final TextView itemQuantity;
 
   @NonNull
+  public final ConstraintLayout mar;
+
+  @NonNull
   public final TextView resaurantNameBm;
 
   @NonNull
@@ -59,7 +62,7 @@ public final class CartContainerBinding implements ViewBinding {
 
   private CartContainerBinding(@NonNull LinearLayout rootView, @NonNull CardView card,
       @NonNull ConstraintLayout cartConstraint, @NonNull TextView itemFName,
-      @NonNull TextView itemPrice, @NonNull TextView itemQuantity,
+      @NonNull TextView itemPrice, @NonNull TextView itemQuantity, @NonNull ConstraintLayout mar,
       @NonNull TextView resaurantNameBm, @NonNull TextView textView11, @NonNull TextView textView13,
       @NonNull TextView textView14, @NonNull TextView textView15, @NonNull TextView textView22,
       @NonNull TextView textView9) {
@@ -69,6 +72,7 @@ public final class CartContainerBinding implements ViewBinding {
     this.itemFName = itemFName;
     this.itemPrice = itemPrice;
     this.itemQuantity = itemQuantity;
+    this.mar = mar;
     this.resaurantNameBm = resaurantNameBm;
     this.textView11 = textView11;
     this.textView13 = textView13;
@@ -135,6 +139,12 @@ public final class CartContainerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.mar;
+      ConstraintLayout mar = ViewBindings.findChildViewById(rootView, id);
+      if (mar == null) {
+        break missingId;
+      }
+
       id = R.id.resaurantNameBm;
       TextView resaurantNameBm = ViewBindings.findChildViewById(rootView, id);
       if (resaurantNameBm == null) {
@@ -178,8 +188,8 @@ public final class CartContainerBinding implements ViewBinding {
       }
 
       return new CartContainerBinding((LinearLayout) rootView, card, cartConstraint, itemFName,
-          itemPrice, itemQuantity, resaurantNameBm, textView11, textView13, textView14, textView15,
-          textView22, textView9);
+          itemPrice, itemQuantity, mar, resaurantNameBm, textView11, textView13, textView14,
+          textView15, textView22, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

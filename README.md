@@ -1,3 +1,0 @@
-# DigitalRestaurant
-This is an android application for software version of android 10 and above that can register a new user either as a customer or a food vendor. This application uses the details of users previousely saved to determine the food items that can be advertised, sold, or placement of orders; a teenager bellow the age of 18, living in a country such as  Nigeria shoulkd not be able to find alcoholic food items but can do so if lives in another country not watched by the application. It has a good authentication and varification techniques for credibility and recognition. Ease of use and efficiency was put into consideration when building the app.
-
